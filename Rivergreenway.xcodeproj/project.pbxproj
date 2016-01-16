@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */; };
+		D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */; };
+		D26E6BE81C4AC22C00186A9A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE71C4AC22C00186A9A /* MasterViewController.swift */; };
+		D26E6BEA1C4AC22C00186A9A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE91C4AC22C00186A9A /* DetailViewController.swift */; };
+		D26E6BED1C4AC22C00186A9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26E6BEB1C4AC22C00186A9A /* Main.storyboard */; };
+		D26E6BEF1C4AC22C00186A9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26E6BEE1C4AC22C00186A9A /* Assets.xcassets */; };
+		D26E6BF21C4AC22C00186A9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26E6BF01C4AC22C00186A9A /* LaunchScreen.storyboard */; };
+		D26E6C081C4AC22C00186A9A /* RivergreenwayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C071C4AC22C00186A9A /* RivergreenwayUITests.swift */; };
+		D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C151C4AC25500186A9A /* TrailActivity.swift */; };
+		D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */; };
+		D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D26E6BF91C4AC22C00186A9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D26E6BD71C4AC22C00186A9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D26E6BDE1C4AC22C00186A9A;
+			remoteInfo = Rivergreenway;
+		};
+		D26E6C041C4AC22C00186A9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D26E6BD71C4AC22C00186A9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D26E6BDE1C4AC22C00186A9A;
+			remoteInfo = Rivergreenway;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D26E6BDF1C4AC22C00186A9A /* Rivergreenway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivergreenway.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D26E6BE51C4AC22C00186A9A /* Rivergreenway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rivergreenway.xcdatamodel; sourceTree = "<group>"; };
+		D26E6BE71C4AC22C00186A9A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		D26E6BE91C4AC22C00186A9A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D26E6BEC1C4AC22C00186A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D26E6BEE1C4AC22C00186A9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D26E6BF11C4AC22C00186A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D26E6BF31C4AC22C00186A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26E6BF81C4AC22C00186A9A /* RivergreenwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RivergreenwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26E6BFE1C4AC22C00186A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26E6C031C4AC22C00186A9A /* RivergreenwayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RivergreenwayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26E6C071C4AC22C00186A9A /* RivergreenwayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RivergreenwayUITests.swift; sourceTree = "<group>"; };
+		D26E6C091C4AC22C00186A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26E6C151C4AC25500186A9A /* TrailActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivity.swift; sourceTree = "<group>"; };
+		D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityState.swift; sourceTree = "<group>"; };
+		D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D26E6BDC1C4AC22C00186A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26E6BF51C4AC22C00186A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26E6C001C4AC22C00186A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D26E6BD61C4AC22C00186A9A = {
+			isa = PBXGroup;
+			children = (
+				D26E6BE11C4AC22C00186A9A /* Rivergreenway */,
+				D26E6BFB1C4AC22C00186A9A /* RivergreenwayTests */,
+				D26E6C061C4AC22C00186A9A /* RivergreenwayUITests */,
+				D26E6BE01C4AC22C00186A9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D26E6BE01C4AC22C00186A9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D26E6BDF1C4AC22C00186A9A /* Rivergreenway.app */,
+				D26E6BF81C4AC22C00186A9A /* RivergreenwayTests.xctest */,
+				D26E6C031C4AC22C00186A9A /* RivergreenwayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D26E6BE11C4AC22C00186A9A /* Rivergreenway */ = {
+			isa = PBXGroup;
+			children = (
+				D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */,
+				D26E6BE71C4AC22C00186A9A /* MasterViewController.swift */,
+				D26E6BE91C4AC22C00186A9A /* DetailViewController.swift */,
+				D26E6BEB1C4AC22C00186A9A /* Main.storyboard */,
+				D26E6BEE1C4AC22C00186A9A /* Assets.xcassets */,
+				D26E6BF01C4AC22C00186A9A /* LaunchScreen.storyboard */,
+				D26E6BF31C4AC22C00186A9A /* Info.plist */,
+				D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */,
+				D26E6C1C1C4AC27A00186A9A /* Models */,
+			);
+			path = Rivergreenway;
+			sourceTree = "<group>";
+		};
+		D26E6BFB1C4AC22C00186A9A /* RivergreenwayTests */ = {
+			isa = PBXGroup;
+			children = (
+				D26E6BFE1C4AC22C00186A9A /* Info.plist */,
+				D26E6C1B1C4AC27200186A9A /* ModelTests */,
+			);
+			path = RivergreenwayTests;
+			sourceTree = "<group>";
+		};
+		D26E6C061C4AC22C00186A9A /* RivergreenwayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D26E6C071C4AC22C00186A9A /* RivergreenwayUITests.swift */,
+				D26E6C091C4AC22C00186A9A /* Info.plist */,
+			);
+			path = RivergreenwayUITests;
+			sourceTree = "<group>";
+		};
+		D26E6C1B1C4AC27200186A9A /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */,
+			);
+			name = ModelTests;
+			sourceTree = "<group>";
+		};
+		D26E6C1C1C4AC27A00186A9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D26E6C151C4AC25500186A9A /* TrailActivity.swift */,
+				D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D26E6BDE1C4AC22C00186A9A /* Rivergreenway */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D26E6C0C1C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "Rivergreenway" */;
+			buildPhases = (
+				D26E6BDB1C4AC22C00186A9A /* Sources */,
+				D26E6BDC1C4AC22C00186A9A /* Frameworks */,
+				D26E6BDD1C4AC22C00186A9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rivergreenway;
+			productName = Rivergreenway;
+			productReference = D26E6BDF1C4AC22C00186A9A /* Rivergreenway.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D26E6BF71C4AC22C00186A9A /* RivergreenwayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D26E6C0F1C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "RivergreenwayTests" */;
+			buildPhases = (
+				D26E6BF41C4AC22C00186A9A /* Sources */,
+				D26E6BF51C4AC22C00186A9A /* Frameworks */,
+				D26E6BF61C4AC22C00186A9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D26E6BFA1C4AC22C00186A9A /* PBXTargetDependency */,
+			);
+			name = RivergreenwayTests;
+			productName = RivergreenwayTests;
+			productReference = D26E6BF81C4AC22C00186A9A /* RivergreenwayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D26E6C021C4AC22C00186A9A /* RivergreenwayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D26E6C121C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "RivergreenwayUITests" */;
+			buildPhases = (
+				D26E6BFF1C4AC22C00186A9A /* Sources */,
+				D26E6C001C4AC22C00186A9A /* Frameworks */,
+				D26E6C011C4AC22C00186A9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D26E6C051C4AC22C00186A9A /* PBXTargetDependency */,
+			);
+			name = RivergreenwayUITests;
+			productName = RivergreenwayUITests;
+			productReference = D26E6C031C4AC22C00186A9A /* RivergreenwayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D26E6BD71C4AC22C00186A9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "City of Fort Wayne Rivergreenways";
+				TargetAttributes = {
+					D26E6BDE1C4AC22C00186A9A = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					D26E6BF71C4AC22C00186A9A = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = D26E6BDE1C4AC22C00186A9A;
+					};
+					D26E6C021C4AC22C00186A9A = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = D26E6BDE1C4AC22C00186A9A;
+					};
+				};
+			};
+			buildConfigurationList = D26E6BDA1C4AC22C00186A9A /* Build configuration list for PBXProject "Rivergreenway" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D26E6BD61C4AC22C00186A9A;
+			productRefGroup = D26E6BE01C4AC22C00186A9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D26E6BDE1C4AC22C00186A9A /* Rivergreenway */,
+				D26E6BF71C4AC22C00186A9A /* RivergreenwayTests */,
+				D26E6C021C4AC22C00186A9A /* RivergreenwayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D26E6BDD1C4AC22C00186A9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D26E6BF21C4AC22C00186A9A /* LaunchScreen.storyboard in Resources */,
+				D26E6BEF1C4AC22C00186A9A /* Assets.xcassets in Resources */,
+				D26E6BED1C4AC22C00186A9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26E6BF61C4AC22C00186A9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26E6C011C4AC22C00186A9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D26E6BDB1C4AC22C00186A9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */,
+				D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */,
+				D26E6BE81C4AC22C00186A9A /* MasterViewController.swift in Sources */,
+				D26E6BEA1C4AC22C00186A9A /* DetailViewController.swift in Sources */,
+				D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */,
+				D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26E6BF41C4AC22C00186A9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26E6BFF1C4AC22C00186A9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D26E6C081C4AC22C00186A9A /* RivergreenwayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D26E6BFA1C4AC22C00186A9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D26E6BDE1C4AC22C00186A9A /* Rivergreenway */;
+			targetProxy = D26E6BF91C4AC22C00186A9A /* PBXContainerItemProxy */;
+		};
+		D26E6C051C4AC22C00186A9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D26E6BDE1C4AC22C00186A9A /* Rivergreenway */;
+			targetProxy = D26E6C041C4AC22C00186A9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D26E6BEB1C4AC22C00186A9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D26E6BEC1C4AC22C00186A9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D26E6BF01C4AC22C00186A9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D26E6BF11C4AC22C00186A9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D26E6C0A1C4AC22C00186A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D26E6C0B1C4AC22C00186A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D26E6C0D1C4AC22C00186A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Rivergreenway/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.Rivergreenway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D26E6C0E1C4AC22C00186A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Rivergreenway/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.Rivergreenway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D26E6C101C4AC22C00186A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RivergreenwayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rivergreenway.app/Rivergreenway";
+			};
+			name = Debug;
+		};
+		D26E6C111C4AC22C00186A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RivergreenwayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rivergreenway.app/Rivergreenway";
+			};
+			name = Release;
+		};
+		D26E6C131C4AC22C00186A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RivergreenwayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rivergreenway;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D26E6C141C4AC22C00186A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RivergreenwayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rivergreenway;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D26E6BDA1C4AC22C00186A9A /* Build configuration list for PBXProject "Rivergreenway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D26E6C0A1C4AC22C00186A9A /* Debug */,
+				D26E6C0B1C4AC22C00186A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D26E6C0C1C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "Rivergreenway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D26E6C0D1C4AC22C00186A9A /* Debug */,
+				D26E6C0E1C4AC22C00186A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D26E6C0F1C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "RivergreenwayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D26E6C101C4AC22C00186A9A /* Debug */,
+				D26E6C111C4AC22C00186A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D26E6C121C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "RivergreenwayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D26E6C131C4AC22C00186A9A /* Debug */,
+				D26E6C141C4AC22C00186A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D26E6BE51C4AC22C00186A9A /* Rivergreenway.xcdatamodel */,
+			);
+			currentVersion = D26E6BE51C4AC22C00186A9A /* Rivergreenway.xcdatamodel */;
+			path = Rivergreenway.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D26E6BD71C4AC22C00186A9A /* Project object */;
+}
