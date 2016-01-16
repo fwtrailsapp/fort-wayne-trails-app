@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.1'
-link_with 'Rivergreenway App', 'Rivergreenway AppTests', 'Rivergreenway AppTests'
+link_with 'Rivergreenway', 'RivergreenwayTests', 'RivergreenwayTests'
 
 pod 'GoogleMaps'
 pod 'iOS-KML-Framework'

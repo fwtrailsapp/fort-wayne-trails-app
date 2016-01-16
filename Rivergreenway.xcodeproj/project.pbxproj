@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29B3C523D37E3307F3977A18 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
+		49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
 		D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */; };
 		D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */; };
 		D26E6BE81C4AC22C00186A9A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE71C4AC22C00186A9A /* MasterViewController.swift */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9013802832BC7175DACC38D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26E6BDF1C4AC22C00186A9A /* Rivergreenway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivergreenway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26E6BE51C4AC22C00186A9A /* Rivergreenway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rivergreenway.xcdatamodel; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B3C523D37E3307F3977A18 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541F92E6E8AB20D2D1F1A551 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9013802832BC7175DACC38D2 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B00C470C0FABE4A846973151 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */,
+				01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D26E6BD61C4AC22C00186A9A = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +113,8 @@
 				D26E6BFB1C4AC22C00186A9A /* RivergreenwayTests */,
 				D26E6C061C4AC22C00186A9A /* RivergreenwayUITests */,
 				D26E6BE01C4AC22C00186A9A /* Products */,
+				B00C470C0FABE4A846973151 /* Pods */,
+				541F92E6E8AB20D2D1F1A551 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D26E6C0C1C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "Rivergreenway" */;
 			buildPhases = (
+				3AC556B8866E57A2D6B06016 /* Check Pods Manifest.lock */,
 				D26E6BDB1C4AC22C00186A9A /* Sources */,
 				D26E6BDC1C4AC22C00186A9A /* Frameworks */,
 				D26E6BDD1C4AC22C00186A9A /* Resources */,
+				E82D1255BA782D2FCE92B225 /* Embed Pods Frameworks */,
+				01EF67450B2173178C069F4D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D26E6C0F1C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "RivergreenwayTests" */;
 			buildPhases = (
+				AB007E130388B0AE4FBC4EB6 /* Check Pods Manifest.lock */,
 				D26E6BF41C4AC22C00186A9A /* Sources */,
 				D26E6BF51C4AC22C00186A9A /* Frameworks */,
 				D26E6BF61C4AC22C00186A9A /* Resources */,
+				6DF922BD6658051154C098B2 /* Embed Pods Frameworks */,
+				D5C208FD65BBC23E584FFCC0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,6 +310,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01EF67450B2173178C069F4D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AC556B8866E57A2D6B06016 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6DF922BD6658051154C098B2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB007E130388B0AE4FBC4EB6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5C208FD65BBC23E584FFCC0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E82D1255BA782D2FCE92B225 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D26E6BDB1C4AC22C00186A9A /* Sources */ = {
@@ -429,6 +554,7 @@
 		};
 		D26E6C0D1C4AC22C00186A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Rivergreenway/Info.plist;
@@ -440,6 +566,7 @@
 		};
 		D26E6C0E1C4AC22C00186A9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Rivergreenway/Info.plist;
@@ -451,6 +578,7 @@
 		};
 		D26E6C101C4AC22C00186A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RivergreenwayTests/Info.plist;
@@ -463,6 +591,7 @@
 		};
 		D26E6C111C4AC22C00186A9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RivergreenwayTests/Info.plist;
