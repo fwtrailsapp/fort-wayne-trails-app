@@ -11,8 +11,13 @@ import XCTest
 
 class TrailActivityTests : XCTestCase {
     
+    var activity: TrailActivity?
+    
     override func setUp() {
         super.setUp()
+        let timeStamp = NSDate().timeIntervalSince1970
+        activity = TrailActivity(timeStamp: timeStamp)
+        
     }
     
     override func tearDown() {
@@ -25,6 +30,25 @@ class TrailActivityTests : XCTestCase {
         
         assert(activity.timeStamp == timeStamp)
         assert(activity.state == TrailActivityState.CREATED)
+    }
+    
+    func testTransitionState() {
+        let state = TrailActivityState.STARTED
+        
+        activity!.transitionState(state)
+        assert(activity!.state == state)
+    }
+    
+    func testAddPathSegment() {
+        let pathSegment = GMSMutablePath()
+        
+        for index in 0...4 {
+            let coordinate = CLLocationCoordinate2D(latitude: Double(index), longitude: Double(index))
+            pathSegment.addCoordinate(coordinate)
+        }
+        
+        activity!.addSegment(pathSegment)
+        assert(contains(activity.path, pathSegment))
     }
 }
 

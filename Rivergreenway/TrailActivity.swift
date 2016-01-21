@@ -18,5 +18,8 @@ class TrailActivity {
         state = TrailActivityState.CREATED
     }
     
+    func transitionState(newState: TrailActivityState) {
+        state = newState
+    }
 }
 

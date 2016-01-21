@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		29B3C523D37E3307F3977A18 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
 		49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
+		D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */; };
 		D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */; };
 		D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */; };
 		D26E6BE81C4AC22C00186A9A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE71C4AC22C00186A9A /* MasterViewController.swift */; };
@@ -43,6 +44,8 @@
 		01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9013802832BC7175DACC38D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
+		D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rivergreenway-Bridging-Header.h"; sourceTree = "<group>"; };
 		D26E6BDF1C4AC22C00186A9A /* Rivergreenway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivergreenway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26E6BE51C4AC22C00186A9A /* Rivergreenway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rivergreenway.xcdatamodel; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 				D26E6BF01C4AC22C00186A9A /* LaunchScreen.storyboard */,
 				D26E6BF31C4AC22C00186A9A /* Info.plist */,
 				D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */,
+				D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */,
 				D26E6C1C1C4AC27A00186A9A /* Models */,
 			);
 			path = Rivergreenway;
@@ -175,6 +179,7 @@
 			children = (
 				D26E6C151C4AC25500186A9A /* TrailActivity.swift */,
 				D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */,
+				D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -247,12 +252,13 @@
 		D26E6BD71C4AC22C00186A9A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "City of Fort Wayne Rivergreenways";
 				TargetAttributes = {
 					D26E6BDE1C4AC22C00186A9A = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 6V2NLDVNQH;
 					};
 					D26E6BF71C4AC22C00186A9A = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -410,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */,
+				D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */,
 				D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */,
 				D26E6BE81C4AC22C00186A9A /* MasterViewController.swift in Sources */,
 				D26E6BEA1C4AC22C00186A9A /* DetailViewController.swift in Sources */,
@@ -557,10 +564,22 @@
 			baseConfigurationReference = 1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}\"/**",
+				);
 				INFOPLIST_FILE = Rivergreenway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.Rivergreenway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rivergreenway/Rivergreenway-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -569,10 +588,21 @@
 			baseConfigurationReference = 01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}\"/**",
+				);
 				INFOPLIST_FILE = Rivergreenway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.Rivergreenway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rivergreenway/Rivergreenway-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -581,6 +611,12 @@
 			baseConfigurationReference = 1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}\"/**",
+				);
 				INFOPLIST_FILE = RivergreenwayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayTests;
@@ -594,6 +630,12 @@
 			baseConfigurationReference = 01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}\"/**",
+				);
 				INFOPLIST_FILE = RivergreenwayTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayTests;
