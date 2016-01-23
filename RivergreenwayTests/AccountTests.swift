@@ -2,17 +2,35 @@
 //  AccountTests.swift
 //  Rivergreenway
 //
-//  Created by Scott Weidenkopf on 1/22/16.
+//  Created by Scott Weidenkopf on 1/21/16.
 //  Copyright © 2016 City of Fort Wayne Rivergreenways. All rights reserved.
 //
 
 import XCTest
+@testable import Rivergreenway
 
 class AccountTests: XCTestCase {
     
+    var emptyAccount: Account?
+    var scottAccount: Account?
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        let email = "test@email.com"
+        emptyAccount = Account(email: email)
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dob = dateFormatter.dateFromString("1994-07-15")
+
+        scottAccount = Account(email: "scott@email.com",
+            firstName: "Scott",
+            lastName: "Weidenkopf",
+            dob: dob,
+            height: 68,
+            weight: 155,
+            sex: Sex.MALE)
     }
     
     override func tearDown() {
@@ -20,16 +38,12 @@ class AccountTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBMR() {
+        let BMR = emptyAccount!.BMR()
+        assert(BMR == nil)
+        
+        let scottBMR = scottAccount!.BMR()
+        print(scottBMR!)
+        assert(scottBMR! == 1752.45)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
