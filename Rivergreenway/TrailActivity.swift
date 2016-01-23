@@ -10,16 +10,40 @@ import Foundation
 
 class TrailActivity {
     
-    var timeStamp: NSTimeInterval
-    var state: TrailActivityState
+    var startTime: NSTimeInterval
+    var endTime: NSTimeInterval
+    var path: [GMSMutablePath]
+    var topSpeed: Double?
+    var exerciseType: ExerciseType
+    var caloriesBurned: Double
     
-    init(timeStamp: NSTimeInterval) {
-        self.timeStamp = timeStamp
-        state = TrailActivityState.CREATED
+    init(startTime: NSTimeInterval, endTime: NSTimeInterval, topSpeed: Double, path: [GMSMutablePath], exerciseType: ExerciseType, caloriesBurned: Double) {
+        self.startTime = startTime
+        self.endTime = endTime
+        self.exerciseType = exerciseType
+        self.caloriesBurned = caloriesBurned
+        self.path = path
+        self.topSpeed = topSpeed
     }
     
-    func transitionState(newState: TrailActivityState) {
-        state = newState
+    func getDistance() -> Double {
+        var distance:Double = 0
+        
+        for segment in path {
+            distance += Converter.metersToFeet(segment.lengthOfKind(kGMSLengthGeodesic))
+        }
+        return distance
+    }
+    
+    func getDuration() -> NSTimeInterval{
+        return Converter.millisecondsToHours(endTime - startTime)
+        
+    }
+    
+    func getAverageSpeed() -> Double {
+        let duration = getDuration()
+        let distance = getDistance()
+        return (duration == 0) ? distance : distance / duration
     }
 }
 

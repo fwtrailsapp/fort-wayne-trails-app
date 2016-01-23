@@ -11,44 +11,55 @@ import XCTest
 
 class TrailActivityTests : XCTestCase {
     
-    var activity: TrailActivity?
+    var emptyActivity: TrailActivity?
+    var basicActivity: TrailActivity?
     
     override func setUp() {
         super.setUp()
-        let timeStamp = NSDate().timeIntervalSince1970
-        activity = TrailActivity(timeStamp: timeStamp)
         
+        // initialize empty activity
+        initializeEmptyActivity()
+        
+        // initialize basic activity
+        initializeBasicActivity()
     }
     
     override func tearDown() {
         super.tearDown()
     }
     
-    func testConstructor() {
-        let timeStamp = NSDate().timeIntervalSince1970
-        let activity = TrailActivity(timeStamp: timeStamp)
-        
-        assert(activity.timeStamp == timeStamp)
-        assert(activity.state == TrailActivityState.CREATED)
+    func testDistance() {
+        let distanceTraveled = emptyActivity!.getDistance()
+        assert(distanceTraveled == 0)
     }
     
-    func testTransitionState() {
-        let state = TrailActivityState.STARTED
-        
-        activity!.transitionState(state)
-        assert(activity!.state == state)
+    func testDuration() {
+        let duration = emptyActivity!.getDuration()
+        assert(duration == 0)
     }
     
-    func testAddPathSegment() {
-        let pathSegment = GMSMutablePath()
-        
-        for index in 0...4 {
-            let coordinate = CLLocationCoordinate2D(latitude: Double(index), longitude: Double(index))
-            pathSegment.addCoordinate(coordinate)
-        }
-        
-        activity!.addSegment(pathSegment)
-        assert(contains(activity.path, pathSegment))
+    func testAverageSpeed() {
+        let averageSpeed = emptyActivity!.getAverageSpeed()
+        assert(averageSpeed == 0)
+    }
+    
+    func initializeEmptyActivity() {
+        let startTime = NSDate().timeIntervalSince1970 * 1000
+        let endTime = startTime
+        let exerciseType = ExerciseType.RUNNING
+        let caloriesBurned: Double = 0
+        let path = [GMSMutablePath]()
+        let topSpeed: Double = 0
+        self.emptyActivity = TrailActivity(startTime: startTime, endTime: endTime, topSpeed: topSpeed, path: path, exerciseType: exerciseType, caloriesBurned: caloriesBurned)
+    }
+    
+    func initializeBasicActivity() {
+        let startTime = NSDate().timeIntervalSince1970 * 1000
+        let endTime = startTime + 60000 // add a minute
+        let exerciseType = ExerciseType.RUNNING
+        let caloriesBurned: Double = 1000
+        let path = [GMSMutablePath]()
+        let topSpeed: Double = 10
+        self.basicActivity = TrailActivity(startTime: startTime, endTime: endTime, topSpeed: topSpeed, path: path, exerciseType: exerciseType, caloriesBurned: caloriesBurned)
     }
 }
-

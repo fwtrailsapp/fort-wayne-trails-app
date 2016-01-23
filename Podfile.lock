@@ -3,7 +3,7 @@ PODS:
   - iOS-KML-Framework (0.0.2):
     - TBXML (~> 1.5)
   - JSONJoy-Swift (1.0.0)
-  - SwiftHTTP (1.0.2)
+  - SwiftHTTP (1.0.3)
   - TBXML (1.5)
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ SPEC CHECKSUMS:
   GoogleMaps: c947160008f414c66707a5ea60f35e92055c7670
   iOS-KML-Framework: a3428baabee9bba6fa8d8246223619277f1bc430
   JSONJoy-Swift: 3e8129c282470614da69759208e9c923732f6cb4
-  SwiftHTTP: 6d8ca031a9ce613a01e8f18b497503887b0b50c0
+  SwiftHTTP: fface018ab365bfb49fa3dca9fdfe77cafccde8b
   TBXML: 9f9dadb239f2f2af1dadb87fe43a0ce6e479379a
 
 COCOAPODS: 0.39.0

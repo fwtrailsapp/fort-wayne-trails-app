@@ -1,0 +1,1 @@
+ const unsigned char iOS_KML_FrameworkVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:iOS_KML_Framework  PROJECT:Pods-1" "\n"; const double iOS_KML_FrameworkVersionNumber __attribute__ ((used)) = (double)1.;

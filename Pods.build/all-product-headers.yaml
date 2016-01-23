@@ -1,0 +1,511 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/JSONJoy.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "JSONJoy-Swift-umbrella.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/Target Support Files/JSONJoy-Swift/JSONJoy-Swift-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "JSONJoy-Swift.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/JSONJoy.framework/Headers/JSONJoy-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/JSONJoy.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods.build/Debug-iphonesimulator/JSONJoy-Swift.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/Pods.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-Swift.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/Pods.framework/Headers/Pods-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods-umbrella.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/Target Support Files/Pods/Pods-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/Pods.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods.build/Debug-iphonesimulator/Pods.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/SwiftHTTP.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "SwiftHTTP-Swift.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/SwiftHTTP.framework/Headers/SwiftHTTP-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "SwiftHTTP-umbrella.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/Target Support Files/SwiftHTTP/SwiftHTTP-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/SwiftHTTP.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods.build/Debug-iphonesimulator/SwiftHTTP.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/TBXML.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "TBXML+Compression.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/TBXML/TBXML-Headers/TBXML+Compression.h"
+        },
+        {
+          'type': 'file',
+          'name': "TBXML+HTTP.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/TBXML/TBXML-Headers/TBXML+HTTP.h"
+        },
+        {
+          'type': 'file',
+          'name': "TBXML-Swift.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/TBXML.framework/Headers/TBXML-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "TBXML-umbrella.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/Target Support Files/TBXML/TBXML-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "TBXML.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/TBXML/TBXML-Headers/TBXML.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/TBXML.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods.build/Debug-iphonesimulator/TBXML.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/iOS_KML_Framework.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "KML.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KML.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractColorStyle.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractColorStyle.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractContainer.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractContainer.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractFeature.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractFeature.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractGeometry.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractGeometry.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractObject.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractOverlay.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractOverlay.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractStyleSelector.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractStyleSelector.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractSubStyle.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractSubStyle.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractTimePrimitive.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractTimePrimitive.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAbstractView.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractView.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLAlias.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAlias.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLBalloonStyle.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLBalloonStyle.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLCamera.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLCamera.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLChange.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLChange.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLConst.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLConst.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLCoordinate.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLCoordinate.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLCreate.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLCreate.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLData.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLData.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLDelete.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLDelete.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLDocument.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLDocument.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLElement.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLElement.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLElementSubclass.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLElementSubclass.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLExtendedData.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLExtendedData.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLFolder.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLFolder.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLGroundOverlay.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLGroundOverlay.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLIcon.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLIcon.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLIconStyle.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLIconStyle.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLImagePyramid.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLImagePyramid.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLItemIcon.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLItemIcon.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLabelStyle.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLabelStyle.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLatLonAltBox.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLatLonAltBox.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLatLonBox.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLatLonBox.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLineString.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLineString.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLineStyle.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLineStyle.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLinearRing.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLinearRing.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLink.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLink.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLListStyle.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLListStyle.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLocation.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLocation.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLod.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLod.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLLookAt.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLookAt.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLMetadata.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLMetadata.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLModel.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLMultiGeometry.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLMultiGeometry.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLNetworkLink.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLNetworkLink.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLNetworkLinkControl.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLNetworkLinkControl.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLOrientation.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLOrientation.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLPair.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPair.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLParser.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLParser.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLPhotoOverlay.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPhotoOverlay.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLPlacemark.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPlacemark.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLPoint.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPoint.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLPolyStyle.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPolyStyle.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLPolygon.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPolygon.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLRegion.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLRegion.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLResourceMap.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLResourceMap.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLRoot.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLRoot.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLScale.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLScale.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLSchema.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSchema.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLSchemaData.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSchemaData.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLScreenOverlay.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLScreenOverlay.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLSimpleData.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSimpleData.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLSimpleField.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSimpleField.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLStyle.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLStyle.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLStyleMap.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLStyleMap.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLTimeSpan.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLTimeSpan.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLTimeStamp.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLTimeStamp.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLType.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLType.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLUpdate.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLUpdate.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLVec2.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLVec2.h"
+        },
+        {
+          'type': 'file',
+          'name': "KMLViewVolume.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLViewVolume.h"
+        },
+        {
+          'type': 'file',
+          'name': "iOS-KML-Framework-umbrella.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods/Target Support Files/iOS-KML-Framework/iOS-KML-Framework-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "iOS_KML_Framework-Swift.h",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/iOS_KML_Framework.framework/Headers/iOS_KML_Framework-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/iOS_KML_Framework.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/Scott/Documents/GitHub/iOS/Pods.build/Debug-iphonesimulator/iOS-KML-Framework.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

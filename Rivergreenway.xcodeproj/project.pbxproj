@@ -10,6 +10,14 @@
 		29B3C523D37E3307F3977A18 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
 		49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
 		D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */; };
+		D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEE41C51C28100BDFCE8 /* Account.swift */; };
+		D232FEED1C52EC7200BDFCE8 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEEC1C52EC7200BDFCE8 /* Sex.swift */; };
+		D232FEF11C52F27C00BDFCE8 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEF01C52F27C00BDFCE8 /* AccountTests.swift */; };
+		D2612DF61C53EB94009232AC /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DF51C53EB94009232AC /* Converter.swift */; };
+		D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DF81C53EC20009232AC /* ConverterTests.swift */; };
+		D2612DFB1C53F432009232AC /* TrailActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */; };
+		D2612DFD1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */; };
+		D2612DFE1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */; };
 		D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */; };
 		D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */; };
 		D26E6BE81C4AC22C00186A9A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE71C4AC22C00186A9A /* MasterViewController.swift */; };
@@ -46,6 +54,13 @@
 		9013802832BC7175DACC38D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
 		D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rivergreenway-Bridging-Header.h"; sourceTree = "<group>"; };
+		D232FEE41C51C28100BDFCE8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		D232FEEC1C52EC7200BDFCE8 /* Sex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		D232FEF01C52F27C00BDFCE8 /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		D2612DF51C53EB94009232AC /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		D2612DF81C53EC20009232AC /* ConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
+		D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityViewController.swift; sourceTree = "<group>"; };
+		D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityViewControllerTests.swift; sourceTree = "<group>"; };
 		D26E6BDF1C4AC22C00186A9A /* Rivergreenway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivergreenway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26E6BE51C4AC22C00186A9A /* Rivergreenway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rivergreenway.xcdatamodel; sourceTree = "<group>"; };
@@ -109,6 +124,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D20979501C53EAFC00826CC9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2612DF51C53EB94009232AC /* Converter.swift */,
+				D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D2612DF71C53EC05009232AC /* ControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2612DF81C53EC20009232AC /* ConverterTests.swift */,
+				D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */,
+			);
+			name = ControllerTests;
+			sourceTree = "<group>";
+		};
 		D26E6BD61C4AC22C00186A9A = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +176,7 @@
 				D26E6BF31C4AC22C00186A9A /* Info.plist */,
 				D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */,
 				D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */,
+				D20979501C53EAFC00826CC9 /* Controllers */,
 				D26E6C1C1C4AC27A00186A9A /* Models */,
 			);
 			path = Rivergreenway;
@@ -151,6 +185,7 @@
 		D26E6BFB1C4AC22C00186A9A /* RivergreenwayTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2612DF71C53EC05009232AC /* ControllerTests */,
 				D26E6BFE1C4AC22C00186A9A /* Info.plist */,
 				D26E6C1B1C4AC27200186A9A /* ModelTests */,
 			);
@@ -170,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */,
+				D232FEF01C52F27C00BDFCE8 /* AccountTests.swift */,
 			);
 			name = ModelTests;
 			sourceTree = "<group>";
@@ -180,6 +216,8 @@
 				D26E6C151C4AC25500186A9A /* TrailActivity.swift */,
 				D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */,
 				D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */,
+				D232FEE41C51C28100BDFCE8 /* Account.swift */,
+				D232FEEC1C52EC7200BDFCE8 /* Sex.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -415,13 +453,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2612DFB1C53F432009232AC /* TrailActivityViewController.swift in Sources */,
 				D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */,
 				D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */,
 				D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */,
 				D26E6BE81C4AC22C00186A9A /* MasterViewController.swift in Sources */,
+				D2612DF61C53EB94009232AC /* Converter.swift in Sources */,
 				D26E6BEA1C4AC22C00186A9A /* DetailViewController.swift in Sources */,
+				D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */,
 				D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */,
 				D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */,
+				D232FEED1C52EC7200BDFCE8 /* Sex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +471,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2612DFD1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */,
+				D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */,
 				D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */,
+				D232FEF11C52F27C00BDFCE8 /* AccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2612DFE1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */,
 				D26E6C081C4AC22C00186A9A /* RivergreenwayUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

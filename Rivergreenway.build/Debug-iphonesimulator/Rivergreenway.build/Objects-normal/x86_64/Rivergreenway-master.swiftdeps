@@ -1,0 +1,13 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "f12dcc14dd49ed8d71e4a2904d25f656"
+build_time: [506820338, 227654000]
+inputs:
+  "/Users/Scott/Documents/GitHub/iOS/RivergreenwayTests/AccountTests.swift": !dirty [9223372036854775807, 0]
+  "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/ExerciseType.swift": [506651675, 0]
+  "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/TrailActivity.swift": [506819112, 0]
+  "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/Sex.swift": [506818933, 0]
+  "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/MasterViewController.swift": [506572826, 0]
+  "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/Account.swift": [506819413, 0]
+  "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/TrailActivityState.swift": [506818648, 0]
+  "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/DetailViewController.swift": [506572826, 0]
+  "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/AppDelegate.swift": [506572826, 0]

@@ -1,0 +1,343 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DetailViewController"
+provides-nominal:
+- "C13Rivergreenway20DetailViewController"
+provides-member:
+- ["C13Rivergreenway20DetailViewController", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "detailDescriptionLabel"
+- "viewDidLoad"
+- "detailItem"
+- "configureView"
+depends-top-level:
+- "DetailViewController"
+- "UILabel"
+- "AnyObject"
+- !private "StringLiteralType"
+- "UIViewController"
+depends-member:
+- ["PSs9AnyObject", "configureView"]
+- !private ["PSs9AnyObject", "description"]
+- ["PSs9AnyObject", "detailDescriptionLabel"]
+- ["PSs9AnyObject", "detailItem"]
+- ["PSs9AnyObject", "didReceiveMemoryWarning"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "text"]
+- !private ["PSs9AnyObject", "valueForKey"]
+- ["PSs9AnyObject", "viewDidLoad"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "configureView"]
+- ["PSs11CVarArgType", "detailDescriptionLabel"]
+- ["PSs11CVarArgType", "detailItem"]
+- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "text"]
+- ["PSs11CVarArgType", "viewDidLoad"]
+- ["PSs11CVarArgType", ""]
+- ["PSs28CustomDebugStringConvertible", "Some"]
+- ["PSs23CustomStringConvertible", "Some"]
+- ["PSs23CustomStringConvertible", "configureView"]
+- ["PSs23CustomStringConvertible", "detailDescriptionLabel"]
+- ["PSs23CustomStringConvertible", "detailItem"]
+- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "text"]
+- ["PSs23CustomStringConvertible", "viewDidLoad"]
+- ["PSs23CustomStringConvertible", ""]
+- ["C13Rivergreenway20DetailViewController", "AnyObject"]
+- ["C13Rivergreenway20DetailViewController", "UILabel"]
+- ["C13Rivergreenway20DetailViewController", "configureView"]
+- ["C13Rivergreenway20DetailViewController", "deinit"]
+- ["C13Rivergreenway20DetailViewController", "detailDescriptionLabel"]
+- ["C13Rivergreenway20DetailViewController", "detailItem"]
+- ["C13Rivergreenway20DetailViewController", "didReceiveMemoryWarning"]
+- ["C13Rivergreenway20DetailViewController", "init"]
+- ["C13Rivergreenway20DetailViewController", "viewDidLoad"]
+- ["PSs9Equatable", "configureView"]
+- ["PSs9Equatable", "detailDescriptionLabel"]
+- ["PSs9Equatable", "detailItem"]
+- ["PSs9Equatable", "didReceiveMemoryWarning"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "text"]
+- ["PSs9Equatable", "viewDidLoad"]
+- ["PSs9Equatable", ""]
+- ["PSs8Hashable", "configureView"]
+- ["PSs8Hashable", "detailDescriptionLabel"]
+- ["PSs8Hashable", "detailItem"]
+- ["PSs8Hashable", "didReceiveMemoryWarning"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "text"]
+- ["PSs8Hashable", "viewDidLoad"]
+- ["PSs8Hashable", ""]
+- ["SQ", "Some"]
+- ["PSo8NSCoding", "configureView"]
+- ["PSo8NSCoding", "detailDescriptionLabel"]
+- ["PSo8NSCoding", "detailItem"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "text"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "configureView"]
+- ["PSo26NSExtensionRequestHandling", "detailDescriptionLabel"]
+- ["PSo26NSExtensionRequestHandling", "detailItem"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "configureView"]
+- ["CSo8NSObject", "detailDescriptionLabel"]
+- ["CSo8NSObject", "detailItem"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "configureView"]
+- ["PSo16NSObjectProtocol", "detailDescriptionLabel"]
+- ["PSo16NSObjectProtocol", "detailItem"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSs21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "text"]
+- ["PSo21UIAppearanceContainer", "configureView"]
+- ["PSo21UIAppearanceContainer", "detailDescriptionLabel"]
+- ["PSo21UIAppearanceContainer", "detailItem"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "configureView"]
+- ["PSo18UIContentContainer", "detailDescriptionLabel"]
+- ["PSo18UIContentContainer", "detailItem"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "text"]
+- ["PSo18UIFocusEnvironment", "configureView"]
+- ["PSo18UIFocusEnvironment", "detailDescriptionLabel"]
+- ["PSo18UIFocusEnvironment", "detailItem"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo7UILabel", "text"]
+- ["CSo11UIResponder", "AnyObject"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "configureView"]
+- ["CSo11UIResponder", "detailDescriptionLabel"]
+- ["CSo11UIResponder", "detailItem"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "configureView"]
+- ["PSo16UIStateRestoring", "detailDescriptionLabel"]
+- ["PSo16UIStateRestoring", "detailItem"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- ["PSo18UITraitEnvironment", "configureView"]
+- ["PSo18UITraitEnvironment", "detailDescriptionLabel"]
+- ["PSo18UITraitEnvironment", "detailItem"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "AnyObject"]
+- ["CSo16UIViewController", "UILabel"]
+- ["CSo16UIViewController", "configureView"]
+- ["CSo16UIViewController", "detailDescriptionLabel"]
+- ["CSo16UIViewController", "detailItem"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- ["PSs21_ObjectiveCBridgeable", "Some"]
+- ["PSs12_Reflectable", "Some"]
+- !private ["PSs12_Reflectable", "text"]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs28CustomDebugStringConvertible"
+- "PSs23CustomStringConvertible"
+- "C13Rivergreenway20DetailViewController"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "SQ"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSs21NilLiteralConvertible"
+- "Sq"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- "PSs21_ObjectiveCBridgeable"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+- !private "description"
+- !private "valueForKey"
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/Rivergreenway-Bridging-Header.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GoogleMaps.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAddress.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapView.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCALayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSUISettings.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteFetcher.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlacesClient.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlace.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlacesMacros.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSUserAddedPlace.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteFilter.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteMatchFragment.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompletePrediction.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteResultsViewController.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCoordinateBounds.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSProjection.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteTableDataSource.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteViewController.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCameraPosition.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCameraUpdate.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCircle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSGeocoder.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSGeometryUtils.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPath.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSGroundOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSIndoorBuilding.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSIndoorDisplay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSIndoorLevel.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapView+Animation.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMarker.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMarkerLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMutablePath.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSOrientation.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanorama.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaCamera.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaCameraUpdate.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaLink.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaService.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaView.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlaceLikelihood.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlaceLikelihoodList.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlacePicker.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlacePickerConfig.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlaceTypes.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPolygon.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPolyline.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSServices.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSSyncTileLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSTileLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSURLTileLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KML.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLParser.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLConst.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLType.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLRoot.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLElement.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractObject.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractFeature.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLNetworkLink.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPlacemark.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPhotoOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLScreenOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLGroundOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractContainer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLDocument.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLFolder.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractGeometry.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPoint.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLineString.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLinearRing.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPolygon.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLMultiGeometry.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLModel.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLink.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLIcon.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLOrientation.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLocation.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLScale.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractStyleSelector.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLStyleMap.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractTimePrimitive.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLTimeSpan.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLTimeStamp.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractView.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLCamera.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLookAt.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLRegion.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLod.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLatLonBox.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLatLonAltBox.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractSubStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLBalloonStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLListStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractColorStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLineStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPolyStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLIconStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLabelStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLNetworkLinkControl.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLMetadata.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLExtendedData.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLImagePyramid.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPair.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLItemIcon.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLResourceMap.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAlias.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSchema.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSchemaData.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSimpleData.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLData.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSimpleField.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLViewVolume.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLUpdate.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLCreate.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLChange.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLDelete.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLVec2.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLCoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "be783959a60854d3a83672b807773ea2"

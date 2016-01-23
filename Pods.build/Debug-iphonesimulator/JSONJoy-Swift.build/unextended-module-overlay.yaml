@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/Scott/Documents/GitHub/iOS/Debug-iphonesimulator/JSONJoy.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/Scott/Documents/GitHub/iOS/Pods.build/Debug-iphonesimulator/JSONJoy-Swift.build/unextended-module.modulemap',
+    }]
+  }]
+}

@@ -1,0 +1,1305 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AppDelegate"
+provides-nominal:
+- "C13Rivergreenway11AppDelegate"
+provides-member:
+- ["C13Rivergreenway11AppDelegate", ""]
+provides-dynamic-lookup:
+- "persistentStoreCoordinator"
+- "window"
+- "applicationWillTerminate"
+- "applicationWillEnterForeground"
+- "applicationDidBecomeActive"
+- "managedObjectContext"
+- "splitViewController"
+- "applicationDidEnterBackground"
+- "saveContext"
+- "application"
+- "applicationWillResignActive"
+- "managedObjectModel"
+- "applicationDocumentsDirectory"
+depends-top-level:
+- !private "BooleanLiteralType"
+- !private "NSUnderlyingErrorKey"
+- !private "MasterViewController"
+- "NSURL"
+- !private "=="
+- "NSPersistentStoreCoordinator"
+- !private "DetailViewController"
+- "NSManagedObjectContext"
+- "UISplitViewControllerDelegate"
+- "UIApplicationDelegate"
+- "UISplitViewController"
+- !private "NSLocalizedDescriptionKey"
+- "UIApplication"
+- !private "NSBundle"
+- "StringLiteralType"
+- "NSObject"
+- !private "NSLog"
+- "AppDelegate"
+- !private "NSFileManager"
+- !private "UINavigationController"
+- !private "NSError"
+- !private "NSLocalizedFailureReasonErrorKey"
+- !private "-"
+- "NSManagedObjectModel"
+- "AnyObject"
+- "Bool"
+- !private "String"
+- !private "abort"
+- "UIWindow"
+- !private "NSSQLiteStoreType"
+- "UIViewController"
+- "UIResponder"
+depends-member:
+- !private ["PSs9AnyObject", "AnyObject"]
+- !private ["PSs9AnyObject", "NSBundle"]
+- !private ["PSs9AnyObject", "NSError"]
+- !private ["PSs9AnyObject", "NSFileManager"]
+- !private ["PSs9AnyObject", "NSLocalizedDescriptionKey"]
+- !private ["PSs9AnyObject", "NSLocalizedFailureReasonErrorKey"]
+- !private ["PSs9AnyObject", "NSLog"]
+- !private ["PSs9AnyObject", "NSManagedObjectContext"]
+- !private ["PSs9AnyObject", "NSManagedObjectModel"]
+- !private ["PSs9AnyObject", "NSPersistentStoreCoordinator"]
+- !private ["PSs9AnyObject", "NSSQLiteStoreType"]
+- !private ["PSs9AnyObject", "NSUnderlyingErrorKey"]
+- !private ["PSs9AnyObject", "String"]
+- !private ["PSs9AnyObject", "URLByAppendingPathComponent"]
+- !private ["PSs9AnyObject", "URLForResource"]
+- !private ["PSs9AnyObject", "URLsForDirectory"]
+- !private ["PSs9AnyObject", "abort"]
+- !private ["PSs9AnyObject", "addPersistentStoreWithType"]
+- ["PSs9AnyObject", "application"]
+- ["PSs9AnyObject", "applicationDidBecomeActive"]
+- ["PSs9AnyObject", "applicationDidEnterBackground"]
+- ["PSs9AnyObject", "applicationDidFinishLaunching"]
+- ["PSs9AnyObject", "applicationDidReceiveMemoryWarning"]
+- ["PSs9AnyObject", "applicationDocumentsDirectory"]
+- ["PSs9AnyObject", "applicationDocumentsDirectory.storage"]
+- ["PSs9AnyObject", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs9AnyObject", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs9AnyObject", "applicationShouldRequestHealthAuthorization"]
+- ["PSs9AnyObject", "applicationSignificantTimeChange"]
+- ["PSs9AnyObject", "applicationWillEnterForeground"]
+- ["PSs9AnyObject", "applicationWillResignActive"]
+- ["PSs9AnyObject", "applicationWillTerminate"]
+- !private ["PSs9AnyObject", "defaultManager"]
+- !private ["PSs9AnyObject", "deinit"]
+- !private ["PSs9AnyObject", "delegate"]
+- !private ["PSs9AnyObject", "detailItem"]
+- !private ["PSs9AnyObject", "displayModeButtonItem"]
+- !private ["PSs9AnyObject", "hasChanges"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "leftBarButtonItem"]
+- !private ["PSs9AnyObject", "mainBundle"]
+- ["PSs9AnyObject", "managedObjectContext"]
+- ["PSs9AnyObject", "managedObjectContext.storage"]
+- ["PSs9AnyObject", "managedObjectModel"]
+- ["PSs9AnyObject", "managedObjectModel.storage"]
+- !private ["PSs9AnyObject", "navigationItem"]
+- ["PSs9AnyObject", "persistentStoreCoordinator"]
+- ["PSs9AnyObject", "persistentStoreCoordinator.storage"]
+- ["PSs9AnyObject", "primaryViewControllerForCollapsingSplitViewController"]
+- ["PSs9AnyObject", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["PSs9AnyObject", "rootViewController"]
+- !private ["PSs9AnyObject", "save"]
+- ["PSs9AnyObject", "saveContext"]
+- ["PSs9AnyObject", "splitViewController"]
+- ["PSs9AnyObject", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["PSs9AnyObject", "splitViewControllerSupportedInterfaceOrientations"]
+- ["PSs9AnyObject", "targetDisplayModeForActionInSplitViewController"]
+- !private ["PSs9AnyObject", "topViewController"]
+- !private ["PSs9AnyObject", "userInfo"]
+- !private ["PSs9AnyObject", "viewControllers"]
+- ["PSs9AnyObject", "window"]
+- ["PSs9AnyObject", ""]
+- ["C13Rivergreenway11AppDelegate", "AnyObject"]
+- ["C13Rivergreenway11AppDelegate", "Bool"]
+- !private ["C13Rivergreenway11AppDelegate", "DetailViewController"]
+- !private ["C13Rivergreenway11AppDelegate", "MasterViewController"]
+- !private ["C13Rivergreenway11AppDelegate", "NSBundle"]
+- !private ["C13Rivergreenway11AppDelegate", "NSError"]
+- !private ["C13Rivergreenway11AppDelegate", "NSFileManager"]
+- !private ["C13Rivergreenway11AppDelegate", "NSLocalizedDescriptionKey"]
+- !private ["C13Rivergreenway11AppDelegate", "NSLocalizedFailureReasonErrorKey"]
+- !private ["C13Rivergreenway11AppDelegate", "NSLog"]
+- ["C13Rivergreenway11AppDelegate", "NSManagedObjectContext"]
+- ["C13Rivergreenway11AppDelegate", "NSManagedObjectModel"]
+- ["C13Rivergreenway11AppDelegate", "NSObject"]
+- ["C13Rivergreenway11AppDelegate", "NSPersistentStoreCoordinator"]
+- !private ["C13Rivergreenway11AppDelegate", "NSSQLiteStoreType"]
+- ["C13Rivergreenway11AppDelegate", "NSURL"]
+- !private ["C13Rivergreenway11AppDelegate", "NSUnderlyingErrorKey"]
+- !private ["C13Rivergreenway11AppDelegate", "String"]
+- ["C13Rivergreenway11AppDelegate", "UIApplication"]
+- !private ["C13Rivergreenway11AppDelegate", "UINavigationController"]
+- ["C13Rivergreenway11AppDelegate", "UISplitViewController"]
+- ["C13Rivergreenway11AppDelegate", "UIViewController"]
+- ["C13Rivergreenway11AppDelegate", "UIWindow"]
+- !private ["C13Rivergreenway11AppDelegate", "abort"]
+- ["C13Rivergreenway11AppDelegate", "application"]
+- ["C13Rivergreenway11AppDelegate", "applicationDidBecomeActive"]
+- ["C13Rivergreenway11AppDelegate", "applicationDidEnterBackground"]
+- ["C13Rivergreenway11AppDelegate", "applicationDidFinishLaunching"]
+- ["C13Rivergreenway11AppDelegate", "applicationDidReceiveMemoryWarning"]
+- ["C13Rivergreenway11AppDelegate", "applicationDocumentsDirectory"]
+- !private ["C13Rivergreenway11AppDelegate", "applicationDocumentsDirectory.storage"]
+- ["C13Rivergreenway11AppDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["C13Rivergreenway11AppDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["C13Rivergreenway11AppDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["C13Rivergreenway11AppDelegate", "applicationSignificantTimeChange"]
+- ["C13Rivergreenway11AppDelegate", "applicationWillEnterForeground"]
+- ["C13Rivergreenway11AppDelegate", "applicationWillResignActive"]
+- ["C13Rivergreenway11AppDelegate", "applicationWillTerminate"]
+- ["C13Rivergreenway11AppDelegate", "deinit"]
+- ["C13Rivergreenway11AppDelegate", "init"]
+- ["C13Rivergreenway11AppDelegate", "managedObjectContext"]
+- !private ["C13Rivergreenway11AppDelegate", "managedObjectContext.storage"]
+- ["C13Rivergreenway11AppDelegate", "managedObjectModel"]
+- !private ["C13Rivergreenway11AppDelegate", "managedObjectModel.storage"]
+- ["C13Rivergreenway11AppDelegate", "persistentStoreCoordinator"]
+- !private ["C13Rivergreenway11AppDelegate", "persistentStoreCoordinator.storage"]
+- ["C13Rivergreenway11AppDelegate", "primaryViewControllerForCollapsingSplitViewController"]
+- ["C13Rivergreenway11AppDelegate", "primaryViewControllerForExpandingSplitViewController"]
+- ["C13Rivergreenway11AppDelegate", "saveContext"]
+- ["C13Rivergreenway11AppDelegate", "splitViewController"]
+- ["C13Rivergreenway11AppDelegate", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["C13Rivergreenway11AppDelegate", "splitViewControllerSupportedInterfaceOrientations"]
+- ["C13Rivergreenway11AppDelegate", "targetDisplayModeForActionInSplitViewController"]
+- ["C13Rivergreenway11AppDelegate", "window"]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "count"]
+- !private ["Sa", "deinit"]
+- !private ["Sa", "subscript"]
+- !private ["PSs23ArrayLiteralConvertible", "Generator"]
+- !private ["PSs23ArrayLiteralConvertible", "Index"]
+- !private ["PSs23ArrayLiteralConvertible", "SubSequence"]
+- !private ["PSs23ArrayLiteralConvertible", "UserDomainMask"]
+- !private ["PSs23ArrayLiteralConvertible", "count"]
+- !private ["PSs23ArrayLiteralConvertible", "subscript"]
+- !private ["VSs10ArraySlice", "Generator"]
+- !private ["VSs10ArraySlice", "Index"]
+- !private ["PSs22BidirectionalIndexType", "Distance"]
+- !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["PSs22BidirectionalIndexType", "Stride"]
+- !private ["PSs21BitwiseOperationsType", "Distance"]
+- !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["PSs21BitwiseOperationsType", "Stride"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
+- !private ["PSs11CVarArgType", "AnyObject"]
+- !private ["PSs11CVarArgType", "Distance"]
+- !private ["PSs11CVarArgType", "IntegerLiteralType"]
+- !private ["PSs11CVarArgType", "NSBundle"]
+- !private ["PSs11CVarArgType", "NSError"]
+- !private ["PSs11CVarArgType", "NSFileManager"]
+- !private ["PSs11CVarArgType", "NSLocalizedDescriptionKey"]
+- !private ["PSs11CVarArgType", "NSLocalizedFailureReasonErrorKey"]
+- !private ["PSs11CVarArgType", "NSLog"]
+- !private ["PSs11CVarArgType", "NSManagedObjectContext"]
+- !private ["PSs11CVarArgType", "NSManagedObjectModel"]
+- !private ["PSs11CVarArgType", "NSPersistentStoreCoordinator"]
+- !private ["PSs11CVarArgType", "NSSQLiteStoreType"]
+- !private ["PSs11CVarArgType", "NSUnderlyingErrorKey"]
+- !private ["PSs11CVarArgType", "Stride"]
+- !private ["PSs11CVarArgType", "String"]
+- !private ["PSs11CVarArgType", "URLByAppendingPathComponent"]
+- !private ["PSs11CVarArgType", "URLForResource"]
+- !private ["PSs11CVarArgType", "URLsForDirectory"]
+- !private ["PSs11CVarArgType", "abort"]
+- !private ["PSs11CVarArgType", "addPersistentStoreWithType"]
+- ["PSs11CVarArgType", "application"]
+- ["PSs11CVarArgType", "applicationDidBecomeActive"]
+- ["PSs11CVarArgType", "applicationDidEnterBackground"]
+- ["PSs11CVarArgType", "applicationDidFinishLaunching"]
+- ["PSs11CVarArgType", "applicationDidReceiveMemoryWarning"]
+- ["PSs11CVarArgType", "applicationDocumentsDirectory"]
+- ["PSs11CVarArgType", "applicationDocumentsDirectory.storage"]
+- ["PSs11CVarArgType", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs11CVarArgType", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs11CVarArgType", "applicationShouldRequestHealthAuthorization"]
+- ["PSs11CVarArgType", "applicationSignificantTimeChange"]
+- ["PSs11CVarArgType", "applicationWillEnterForeground"]
+- ["PSs11CVarArgType", "applicationWillResignActive"]
+- ["PSs11CVarArgType", "applicationWillTerminate"]
+- !private ["PSs11CVarArgType", "defaultManager"]
+- !private ["PSs11CVarArgType", "delegate"]
+- !private ["PSs11CVarArgType", "detailItem"]
+- !private ["PSs11CVarArgType", "displayModeButtonItem"]
+- !private ["PSs11CVarArgType", "hasChanges"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "leftBarButtonItem"]
+- !private ["PSs11CVarArgType", "mainBundle"]
+- ["PSs11CVarArgType", "managedObjectContext"]
+- ["PSs11CVarArgType", "managedObjectContext.storage"]
+- ["PSs11CVarArgType", "managedObjectModel"]
+- ["PSs11CVarArgType", "managedObjectModel.storage"]
+- !private ["PSs11CVarArgType", "navigationItem"]
+- ["PSs11CVarArgType", "persistentStoreCoordinator"]
+- ["PSs11CVarArgType", "persistentStoreCoordinator.storage"]
+- ["PSs11CVarArgType", "primaryViewControllerForCollapsingSplitViewController"]
+- ["PSs11CVarArgType", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["PSs11CVarArgType", "rootViewController"]
+- !private ["PSs11CVarArgType", "save"]
+- ["PSs11CVarArgType", "saveContext"]
+- ["PSs11CVarArgType", "splitViewController"]
+- ["PSs11CVarArgType", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["PSs11CVarArgType", "splitViewControllerSupportedInterfaceOrientations"]
+- ["PSs11CVarArgType", "targetDisplayModeForActionInSplitViewController"]
+- !private ["PSs11CVarArgType", "topViewController"]
+- !private ["PSs11CVarArgType", "userInfo"]
+- !private ["PSs11CVarArgType", "viewControllers"]
+- ["PSs11CVarArgType", "window"]
+- ["PSs11CVarArgType", ""]
+- !private ["VSs9Character", "deinit"]
+- !private ["PSs14CollectionType", "Generator"]
+- !private ["PSs14CollectionType", "Index"]
+- !private ["PSs14CollectionType", "SubSequence"]
+- !private ["PSs14CollectionType", "_Element"]
+- !private ["PSs14CollectionType", "count"]
+- !private ["PSs14CollectionType", "init"]
+- !private ["PSs14CollectionType", "subscript"]
+- !private ["PSs10Comparable", "Distance"]
+- !private ["PSs10Comparable", "IntegerLiteralType"]
+- !private ["PSs10Comparable", "Stride"]
+- !private ["PSs10Comparable", "init"]
+- !private ["PSs28CustomDebugStringConvertible", "Generator"]
+- !private ["PSs28CustomDebugStringConvertible", "Index"]
+- ["PSs28CustomDebugStringConvertible", "Some"]
+- !private ["PSs28CustomDebugStringConvertible", "SubSequence"]
+- !private ["PSs28CustomDebugStringConvertible", "count"]
+- !private ["PSs28CustomDebugStringConvertible", "init"]
+- !private ["PSs28CustomDebugStringConvertible", "subscript"]
+- !private ["PSs23CustomStringConvertible", "AnyObject"]
+- !private ["PSs23CustomStringConvertible", "Distance"]
+- !private ["PSs23CustomStringConvertible", "Generator"]
+- !private ["PSs23CustomStringConvertible", "Index"]
+- !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["PSs23CustomStringConvertible", "NSBundle"]
+- !private ["PSs23CustomStringConvertible", "NSError"]
+- !private ["PSs23CustomStringConvertible", "NSFileManager"]
+- !private ["PSs23CustomStringConvertible", "NSLocalizedDescriptionKey"]
+- !private ["PSs23CustomStringConvertible", "NSLocalizedFailureReasonErrorKey"]
+- !private ["PSs23CustomStringConvertible", "NSLog"]
+- !private ["PSs23CustomStringConvertible", "NSManagedObjectContext"]
+- !private ["PSs23CustomStringConvertible", "NSManagedObjectModel"]
+- !private ["PSs23CustomStringConvertible", "NSPersistentStoreCoordinator"]
+- !private ["PSs23CustomStringConvertible", "NSSQLiteStoreType"]
+- !private ["PSs23CustomStringConvertible", "NSUnderlyingErrorKey"]
+- !private ["PSs23CustomStringConvertible", "Stride"]
+- !private ["PSs23CustomStringConvertible", "String"]
+- !private ["PSs23CustomStringConvertible", "SubSequence"]
+- !private ["PSs23CustomStringConvertible", "URLByAppendingPathComponent"]
+- !private ["PSs23CustomStringConvertible", "URLForResource"]
+- !private ["PSs23CustomStringConvertible", "URLsForDirectory"]
+- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs23CustomStringConvertible", "abort"]
+- !private ["PSs23CustomStringConvertible", "addPersistentStoreWithType"]
+- ["PSs23CustomStringConvertible", "application"]
+- ["PSs23CustomStringConvertible", "applicationDidBecomeActive"]
+- ["PSs23CustomStringConvertible", "applicationDidEnterBackground"]
+- ["PSs23CustomStringConvertible", "applicationDidFinishLaunching"]
+- ["PSs23CustomStringConvertible", "applicationDidReceiveMemoryWarning"]
+- ["PSs23CustomStringConvertible", "applicationDocumentsDirectory"]
+- ["PSs23CustomStringConvertible", "applicationDocumentsDirectory.storage"]
+- ["PSs23CustomStringConvertible", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs23CustomStringConvertible", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs23CustomStringConvertible", "applicationShouldRequestHealthAuthorization"]
+- ["PSs23CustomStringConvertible", "applicationSignificantTimeChange"]
+- ["PSs23CustomStringConvertible", "applicationWillEnterForeground"]
+- ["PSs23CustomStringConvertible", "applicationWillResignActive"]
+- ["PSs23CustomStringConvertible", "applicationWillTerminate"]
+- !private ["PSs23CustomStringConvertible", "count"]
+- !private ["PSs23CustomStringConvertible", "defaultManager"]
+- !private ["PSs23CustomStringConvertible", "delegate"]
+- !private ["PSs23CustomStringConvertible", "detailItem"]
+- !private ["PSs23CustomStringConvertible", "displayModeButtonItem"]
+- !private ["PSs23CustomStringConvertible", "hasChanges"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "leftBarButtonItem"]
+- !private ["PSs23CustomStringConvertible", "mainBundle"]
+- ["PSs23CustomStringConvertible", "managedObjectContext"]
+- ["PSs23CustomStringConvertible", "managedObjectContext.storage"]
+- ["PSs23CustomStringConvertible", "managedObjectModel"]
+- ["PSs23CustomStringConvertible", "managedObjectModel.storage"]
+- !private ["PSs23CustomStringConvertible", "navigationItem"]
+- ["PSs23CustomStringConvertible", "persistentStoreCoordinator"]
+- ["PSs23CustomStringConvertible", "persistentStoreCoordinator.storage"]
+- ["PSs23CustomStringConvertible", "primaryViewControllerForCollapsingSplitViewController"]
+- ["PSs23CustomStringConvertible", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["PSs23CustomStringConvertible", "rootViewController"]
+- !private ["PSs23CustomStringConvertible", "save"]
+- ["PSs23CustomStringConvertible", "saveContext"]
+- ["PSs23CustomStringConvertible", "splitViewController"]
+- ["PSs23CustomStringConvertible", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["PSs23CustomStringConvertible", "splitViewControllerSupportedInterfaceOrientations"]
+- !private ["PSs23CustomStringConvertible", "subscript"]
+- ["PSs23CustomStringConvertible", "targetDisplayModeForActionInSplitViewController"]
+- !private ["PSs23CustomStringConvertible", "topViewController"]
+- !private ["PSs23CustomStringConvertible", "userInfo"]
+- !private ["PSs23CustomStringConvertible", "viewControllers"]
+- ["PSs23CustomStringConvertible", "window"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["C13Rivergreenway20DetailViewController", "detailItem"]
+- !private ["VSs10Dictionary", "init"]
+- !private ["VSs10Dictionary", "subscript"]
+- !private ["PSs28DictionaryLiteralConvertible", "init"]
+- !private ["PSs28DictionaryLiteralConvertible", "subscript"]
+- !private ["Sd", "deinit"]
+- !private ["PSs9Equatable", "AnyObject"]
+- !private ["PSs9Equatable", "Distance"]
+- !private ["PSs9Equatable", "DocumentDirectory"]
+- !private ["PSs9Equatable", "IntegerLiteralType"]
+- !private ["PSs9Equatable", "MainQueueConcurrencyType"]
+- !private ["PSs9Equatable", "NSBundle"]
+- !private ["PSs9Equatable", "NSError"]
+- !private ["PSs9Equatable", "NSFileManager"]
+- !private ["PSs9Equatable", "NSLocalizedDescriptionKey"]
+- !private ["PSs9Equatable", "NSLocalizedFailureReasonErrorKey"]
+- !private ["PSs9Equatable", "NSLog"]
+- !private ["PSs9Equatable", "NSManagedObjectContext"]
+- !private ["PSs9Equatable", "NSManagedObjectModel"]
+- !private ["PSs9Equatable", "NSPersistentStoreCoordinator"]
+- !private ["PSs9Equatable", "NSSQLiteStoreType"]
+- !private ["PSs9Equatable", "NSUnderlyingErrorKey"]
+- !private ["PSs9Equatable", "Stride"]
+- !private ["PSs9Equatable", "String"]
+- !private ["PSs9Equatable", "URLByAppendingPathComponent"]
+- !private ["PSs9Equatable", "URLForResource"]
+- !private ["PSs9Equatable", "URLsForDirectory"]
+- !private ["PSs9Equatable", "UserDomainMask"]
+- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
+- !private ["PSs9Equatable", "abort"]
+- !private ["PSs9Equatable", "addPersistentStoreWithType"]
+- ["PSs9Equatable", "application"]
+- ["PSs9Equatable", "applicationDidBecomeActive"]
+- ["PSs9Equatable", "applicationDidEnterBackground"]
+- ["PSs9Equatable", "applicationDidFinishLaunching"]
+- ["PSs9Equatable", "applicationDidReceiveMemoryWarning"]
+- ["PSs9Equatable", "applicationDocumentsDirectory"]
+- ["PSs9Equatable", "applicationDocumentsDirectory.storage"]
+- ["PSs9Equatable", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs9Equatable", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs9Equatable", "applicationShouldRequestHealthAuthorization"]
+- ["PSs9Equatable", "applicationSignificantTimeChange"]
+- ["PSs9Equatable", "applicationWillEnterForeground"]
+- ["PSs9Equatable", "applicationWillResignActive"]
+- ["PSs9Equatable", "applicationWillTerminate"]
+- !private ["PSs9Equatable", "defaultManager"]
+- !private ["PSs9Equatable", "delegate"]
+- !private ["PSs9Equatable", "detailItem"]
+- !private ["PSs9Equatable", "displayModeButtonItem"]
+- !private ["PSs9Equatable", "hasChanges"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "leftBarButtonItem"]
+- !private ["PSs9Equatable", "mainBundle"]
+- ["PSs9Equatable", "managedObjectContext"]
+- ["PSs9Equatable", "managedObjectContext.storage"]
+- ["PSs9Equatable", "managedObjectModel"]
+- ["PSs9Equatable", "managedObjectModel.storage"]
+- !private ["PSs9Equatable", "navigationItem"]
+- ["PSs9Equatable", "persistentStoreCoordinator"]
+- ["PSs9Equatable", "persistentStoreCoordinator.storage"]
+- ["PSs9Equatable", "primaryViewControllerForCollapsingSplitViewController"]
+- ["PSs9Equatable", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["PSs9Equatable", "rootViewController"]
+- !private ["PSs9Equatable", "save"]
+- ["PSs9Equatable", "saveContext"]
+- ["PSs9Equatable", "splitViewController"]
+- ["PSs9Equatable", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["PSs9Equatable", "splitViewControllerSupportedInterfaceOrientations"]
+- ["PSs9Equatable", "targetDisplayModeForActionInSplitViewController"]
+- !private ["PSs9Equatable", "topViewController"]
+- !private ["PSs9Equatable", "userInfo"]
+- !private ["PSs9Equatable", "viewControllers"]
+- ["PSs9Equatable", "window"]
+- ["PSs9Equatable", ""]
+- !private ["PSs9ErrorType", "init"]
+- !private ["PSs9ErrorType", "userInfo"]
+- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- !private ["PSs16ForwardIndexType", "Distance"]
+- !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
+- !private ["PSs16ForwardIndexType", "Stride"]
+- !private ["PSs13GeneratorType", "Element"]
+- !private ["PSs8Hashable", "AnyObject"]
+- !private ["PSs8Hashable", "Distance"]
+- !private ["PSs8Hashable", "DocumentDirectory"]
+- !private ["PSs8Hashable", "IntegerLiteralType"]
+- !private ["PSs8Hashable", "MainQueueConcurrencyType"]
+- !private ["PSs8Hashable", "NSBundle"]
+- !private ["PSs8Hashable", "NSError"]
+- !private ["PSs8Hashable", "NSFileManager"]
+- !private ["PSs8Hashable", "NSLocalizedDescriptionKey"]
+- !private ["PSs8Hashable", "NSLocalizedFailureReasonErrorKey"]
+- !private ["PSs8Hashable", "NSLog"]
+- !private ["PSs8Hashable", "NSManagedObjectContext"]
+- !private ["PSs8Hashable", "NSManagedObjectModel"]
+- !private ["PSs8Hashable", "NSPersistentStoreCoordinator"]
+- !private ["PSs8Hashable", "NSSQLiteStoreType"]
+- !private ["PSs8Hashable", "NSUnderlyingErrorKey"]
+- !private ["PSs8Hashable", "Stride"]
+- !private ["PSs8Hashable", "String"]
+- !private ["PSs8Hashable", "URLByAppendingPathComponent"]
+- !private ["PSs8Hashable", "URLForResource"]
+- !private ["PSs8Hashable", "URLsForDirectory"]
+- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
+- !private ["PSs8Hashable", "abort"]
+- !private ["PSs8Hashable", "addPersistentStoreWithType"]
+- ["PSs8Hashable", "application"]
+- ["PSs8Hashable", "applicationDidBecomeActive"]
+- ["PSs8Hashable", "applicationDidEnterBackground"]
+- ["PSs8Hashable", "applicationDidFinishLaunching"]
+- ["PSs8Hashable", "applicationDidReceiveMemoryWarning"]
+- ["PSs8Hashable", "applicationDocumentsDirectory"]
+- ["PSs8Hashable", "applicationDocumentsDirectory.storage"]
+- ["PSs8Hashable", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSs8Hashable", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSs8Hashable", "applicationShouldRequestHealthAuthorization"]
+- ["PSs8Hashable", "applicationSignificantTimeChange"]
+- ["PSs8Hashable", "applicationWillEnterForeground"]
+- ["PSs8Hashable", "applicationWillResignActive"]
+- ["PSs8Hashable", "applicationWillTerminate"]
+- !private ["PSs8Hashable", "defaultManager"]
+- !private ["PSs8Hashable", "delegate"]
+- !private ["PSs8Hashable", "detailItem"]
+- !private ["PSs8Hashable", "displayModeButtonItem"]
+- !private ["PSs8Hashable", "hasChanges"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "leftBarButtonItem"]
+- !private ["PSs8Hashable", "mainBundle"]
+- ["PSs8Hashable", "managedObjectContext"]
+- ["PSs8Hashable", "managedObjectContext.storage"]
+- ["PSs8Hashable", "managedObjectModel"]
+- ["PSs8Hashable", "managedObjectModel.storage"]
+- !private ["PSs8Hashable", "navigationItem"]
+- ["PSs8Hashable", "persistentStoreCoordinator"]
+- ["PSs8Hashable", "persistentStoreCoordinator.storage"]
+- ["PSs8Hashable", "primaryViewControllerForCollapsingSplitViewController"]
+- ["PSs8Hashable", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["PSs8Hashable", "rootViewController"]
+- !private ["PSs8Hashable", "save"]
+- ["PSs8Hashable", "saveContext"]
+- ["PSs8Hashable", "splitViewController"]
+- ["PSs8Hashable", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["PSs8Hashable", "splitViewControllerSupportedInterfaceOrientations"]
+- ["PSs8Hashable", "targetDisplayModeForActionInSplitViewController"]
+- !private ["PSs8Hashable", "topViewController"]
+- !private ["PSs8Hashable", "userInfo"]
+- !private ["PSs8Hashable", "viewControllers"]
+- ["PSs8Hashable", "window"]
+- ["PSs8Hashable", ""]
+- !private ["PSs9Indexable", "Generator"]
+- !private ["PSs9Indexable", "Index"]
+- !private ["PSs9Indexable", "SubSequence"]
+- !private ["PSs9Indexable", "_Element"]
+- !private ["PSs9Indexable", "count"]
+- !private ["PSs9Indexable", "init"]
+- !private ["PSs9Indexable", "subscript"]
+- !private ["VSs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "Stride"]
+- !private ["Si", "deinit"]
+- !private ["VSs5Int16", "deinit"]
+- !private ["VSs5Int32", "deinit"]
+- !private ["VSs5Int64", "deinit"]
+- !private ["VSs4Int8", "deinit"]
+- !private ["PSs21IntegerArithmeticType", "Distance"]
+- !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["PSs21IntegerArithmeticType", "Stride"]
+- !private ["PSs25IntegerLiteralConvertible", "Distance"]
+- !private ["PSs25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["PSs25IntegerLiteralConvertible", "Stride"]
+- !private ["PSs11IntegerType", "Distance"]
+- !private ["PSs11IntegerType", "IntegerLiteralType"]
+- !private ["PSs11IntegerType", "Stride"]
+- !private ["C13Rivergreenway20MasterViewController", "managedObjectContext"]
+- !private ["PSs14MirrorPathType", "Distance"]
+- !private ["PSs14MirrorPathType", "IntegerLiteralType"]
+- !private ["PSs14MirrorPathType", "Stride"]
+- !private ["PSs14MirrorPathType", "init"]
+- !private ["PSs21MutableCollectionType", "Generator"]
+- !private ["PSs21MutableCollectionType", "Index"]
+- !private ["PSs21MutableCollectionType", "SubSequence"]
+- !private ["PSs21MutableCollectionType", "count"]
+- !private ["PSs21MutableCollectionType", "subscript"]
+- !private ["PSs16MutableIndexable", "Generator"]
+- !private ["PSs16MutableIndexable", "Index"]
+- !private ["PSs16MutableIndexable", "SubSequence"]
+- !private ["PSs16MutableIndexable", "count"]
+- !private ["PSs16MutableIndexable", "subscript"]
+- !private ["PSs16MutableSliceable", "Generator"]
+- !private ["PSs16MutableSliceable", "Index"]
+- !private ["PSs16MutableSliceable", "SubSequence"]
+- !private ["PSs16MutableSliceable", "count"]
+- !private ["PSs16MutableSliceable", "subscript"]
+- !private ["CSo8NSBundle", "URLForResource"]
+- !private ["CSo8NSBundle", "mainBundle"]
+- !private ["PSo8NSCoding", "URLByAppendingPathComponent"]
+- !private ["PSo8NSCoding", "delegate"]
+- !private ["PSo8NSCoding", "detailItem"]
+- !private ["PSo8NSCoding", "displayModeButtonItem"]
+- !private ["PSo8NSCoding", "hasChanges"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "leftBarButtonItem"]
+- !private ["PSo8NSCoding", "managedObjectContext"]
+- !private ["PSo8NSCoding", "navigationItem"]
+- !private ["PSo8NSCoding", "persistentStoreCoordinator"]
+- !private ["PSo8NSCoding", "rootViewController"]
+- !private ["PSo8NSCoding", "save"]
+- !private ["PSo8NSCoding", "topViewController"]
+- !private ["PSo8NSCoding", "userInfo"]
+- !private ["PSo8NSCoding", "viewControllers"]
+- !private ["PSo9NSCopying", "URLByAppendingPathComponent"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "userInfo"]
+- !private ["CSo7NSError", "init"]
+- !private ["CSo7NSError", "userInfo"]
+- !private ["PSo26NSExtensionRequestHandling", "delegate"]
+- !private ["PSo26NSExtensionRequestHandling", "detailItem"]
+- !private ["PSo26NSExtensionRequestHandling", "displayModeButtonItem"]
+- !private ["PSo26NSExtensionRequestHandling", "managedObjectContext"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
+- !private ["PSo26NSExtensionRequestHandling", "topViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "viewControllers"]
+- !private ["PSo17NSFastEnumeration", "init"]
+- !private ["PSo34NSFetchedResultsControllerDelegate", "managedObjectContext"]
+- !private ["CSo13NSFileManager", "URLsForDirectory"]
+- !private ["CSo13NSFileManager", "defaultManager"]
+- !private ["PSo9NSLocking", "addPersistentStoreWithType"]
+- !private ["PSo9NSLocking", "hasChanges"]
+- !private ["PSo9NSLocking", "init"]
+- !private ["PSo9NSLocking", "persistentStoreCoordinator"]
+- !private ["PSo9NSLocking", "save"]
+- !private ["CSo22NSManagedObjectContext", "hasChanges"]
+- !private ["CSo22NSManagedObjectContext", "init"]
+- !private ["CSo22NSManagedObjectContext", "persistentStoreCoordinator"]
+- !private ["CSo22NSManagedObjectContext", "save"]
+- !private ["OSC37NSManagedObjectContextConcurrencyType", "MainQueueConcurrencyType"]
+- !private ["CSo20NSManagedObjectModel", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "DetailViewController"]
+- !private ["CSo8NSObject", "MasterViewController"]
+- !private ["CSo8NSObject", "NSBundle"]
+- !private ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "NSFileManager"]
+- !private ["CSo8NSObject", "NSLocalizedDescriptionKey"]
+- !private ["CSo8NSObject", "NSLocalizedFailureReasonErrorKey"]
+- !private ["CSo8NSObject", "NSLog"]
+- ["CSo8NSObject", "NSManagedObjectContext"]
+- ["CSo8NSObject", "NSManagedObjectModel"]
+- ["CSo8NSObject", "NSObject"]
+- ["CSo8NSObject", "NSPersistentStoreCoordinator"]
+- !private ["CSo8NSObject", "NSSQLiteStoreType"]
+- ["CSo8NSObject", "NSURL"]
+- !private ["CSo8NSObject", "NSUnderlyingErrorKey"]
+- !private ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIApplication"]
+- !private ["CSo8NSObject", "UINavigationController"]
+- ["CSo8NSObject", "UISplitViewController"]
+- ["CSo8NSObject", "UIViewController"]
+- ["CSo8NSObject", "UIWindow"]
+- !private ["CSo8NSObject", "URLByAppendingPathComponent"]
+- !private ["CSo8NSObject", "URLForResource"]
+- !private ["CSo8NSObject", "URLsForDirectory"]
+- !private ["CSo8NSObject", "abort"]
+- !private ["CSo8NSObject", "addPersistentStoreWithType"]
+- ["CSo8NSObject", "application"]
+- ["CSo8NSObject", "applicationDidBecomeActive"]
+- ["CSo8NSObject", "applicationDidEnterBackground"]
+- ["CSo8NSObject", "applicationDidFinishLaunching"]
+- ["CSo8NSObject", "applicationDidReceiveMemoryWarning"]
+- ["CSo8NSObject", "applicationDocumentsDirectory"]
+- ["CSo8NSObject", "applicationDocumentsDirectory.storage"]
+- ["CSo8NSObject", "applicationProtectedDataDidBecomeAvailable"]
+- ["CSo8NSObject", "applicationProtectedDataWillBecomeUnavailable"]
+- ["CSo8NSObject", "applicationShouldRequestHealthAuthorization"]
+- ["CSo8NSObject", "applicationSignificantTimeChange"]
+- ["CSo8NSObject", "applicationWillEnterForeground"]
+- ["CSo8NSObject", "applicationWillResignActive"]
+- ["CSo8NSObject", "applicationWillTerminate"]
+- !private ["CSo8NSObject", "defaultManager"]
+- !private ["CSo8NSObject", "delegate"]
+- !private ["CSo8NSObject", "detailItem"]
+- !private ["CSo8NSObject", "displayModeButtonItem"]
+- !private ["CSo8NSObject", "hasChanges"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "leftBarButtonItem"]
+- !private ["CSo8NSObject", "mainBundle"]
+- ["CSo8NSObject", "managedObjectContext"]
+- ["CSo8NSObject", "managedObjectContext.storage"]
+- ["CSo8NSObject", "managedObjectModel"]
+- ["CSo8NSObject", "managedObjectModel.storage"]
+- !private ["CSo8NSObject", "navigationItem"]
+- ["CSo8NSObject", "persistentStoreCoordinator"]
+- ["CSo8NSObject", "persistentStoreCoordinator.storage"]
+- ["CSo8NSObject", "primaryViewControllerForCollapsingSplitViewController"]
+- ["CSo8NSObject", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["CSo8NSObject", "rootViewController"]
+- !private ["CSo8NSObject", "save"]
+- ["CSo8NSObject", "saveContext"]
+- ["CSo8NSObject", "splitViewController"]
+- ["CSo8NSObject", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["CSo8NSObject", "splitViewControllerSupportedInterfaceOrientations"]
+- ["CSo8NSObject", "targetDisplayModeForActionInSplitViewController"]
+- !private ["CSo8NSObject", "topViewController"]
+- !private ["CSo8NSObject", "userInfo"]
+- !private ["CSo8NSObject", "viewControllers"]
+- ["CSo8NSObject", "window"]
+- !private ["PSo16NSObjectProtocol", "AnyObject"]
+- !private ["PSo16NSObjectProtocol", "NSBundle"]
+- !private ["PSo16NSObjectProtocol", "NSError"]
+- !private ["PSo16NSObjectProtocol", "NSFileManager"]
+- !private ["PSo16NSObjectProtocol", "NSLocalizedDescriptionKey"]
+- !private ["PSo16NSObjectProtocol", "NSLocalizedFailureReasonErrorKey"]
+- !private ["PSo16NSObjectProtocol", "NSLog"]
+- !private ["PSo16NSObjectProtocol", "NSManagedObjectContext"]
+- !private ["PSo16NSObjectProtocol", "NSManagedObjectModel"]
+- !private ["PSo16NSObjectProtocol", "NSPersistentStoreCoordinator"]
+- !private ["PSo16NSObjectProtocol", "NSSQLiteStoreType"]
+- !private ["PSo16NSObjectProtocol", "NSUnderlyingErrorKey"]
+- !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "URLByAppendingPathComponent"]
+- !private ["PSo16NSObjectProtocol", "URLForResource"]
+- !private ["PSo16NSObjectProtocol", "URLsForDirectory"]
+- !private ["PSo16NSObjectProtocol", "abort"]
+- !private ["PSo16NSObjectProtocol", "addPersistentStoreWithType"]
+- ["PSo16NSObjectProtocol", "application"]
+- ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
+- ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
+- ["PSo16NSObjectProtocol", "applicationDidFinishLaunching"]
+- ["PSo16NSObjectProtocol", "applicationDidReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "applicationDocumentsDirectory"]
+- ["PSo16NSObjectProtocol", "applicationDocumentsDirectory.storage"]
+- ["PSo16NSObjectProtocol", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo16NSObjectProtocol", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo16NSObjectProtocol", "applicationShouldRequestHealthAuthorization"]
+- ["PSo16NSObjectProtocol", "applicationSignificantTimeChange"]
+- ["PSo16NSObjectProtocol", "applicationWillEnterForeground"]
+- ["PSo16NSObjectProtocol", "applicationWillResignActive"]
+- ["PSo16NSObjectProtocol", "applicationWillTerminate"]
+- !private ["PSo16NSObjectProtocol", "defaultManager"]
+- !private ["PSo16NSObjectProtocol", "delegate"]
+- !private ["PSo16NSObjectProtocol", "detailItem"]
+- !private ["PSo16NSObjectProtocol", "displayModeButtonItem"]
+- !private ["PSo16NSObjectProtocol", "hasChanges"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "leftBarButtonItem"]
+- !private ["PSo16NSObjectProtocol", "mainBundle"]
+- ["PSo16NSObjectProtocol", "managedObjectContext"]
+- ["PSo16NSObjectProtocol", "managedObjectContext.storage"]
+- ["PSo16NSObjectProtocol", "managedObjectModel"]
+- ["PSo16NSObjectProtocol", "managedObjectModel.storage"]
+- !private ["PSo16NSObjectProtocol", "navigationItem"]
+- ["PSo16NSObjectProtocol", "persistentStoreCoordinator"]
+- ["PSo16NSObjectProtocol", "persistentStoreCoordinator.storage"]
+- ["PSo16NSObjectProtocol", "primaryViewControllerForCollapsingSplitViewController"]
+- ["PSo16NSObjectProtocol", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["PSo16NSObjectProtocol", "rootViewController"]
+- !private ["PSo16NSObjectProtocol", "save"]
+- ["PSo16NSObjectProtocol", "saveContext"]
+- ["PSo16NSObjectProtocol", "splitViewController"]
+- ["PSo16NSObjectProtocol", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["PSo16NSObjectProtocol", "splitViewControllerSupportedInterfaceOrientations"]
+- ["PSo16NSObjectProtocol", "targetDisplayModeForActionInSplitViewController"]
+- !private ["PSo16NSObjectProtocol", "topViewController"]
+- !private ["PSo16NSObjectProtocol", "userInfo"]
+- !private ["PSo16NSObjectProtocol", "viewControllers"]
+- ["PSo16NSObjectProtocol", "window"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["CSo28NSPersistentStoreCoordinator", "addPersistentStoreWithType"]
+- !private ["CSo28NSPersistentStoreCoordinator", "init"]
+- !private ["OSC21NSSearchPathDirectory", "DocumentDirectory"]
+- !private ["VSC22NSSearchPathDomainMask", "UserDomainMask"]
+- !private ["PSo14NSSecureCoding", "URLByAppendingPathComponent"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "userInfo"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo5NSURL", "URLByAppendingPathComponent"]
+- ["PSs21NilLiteralConvertible", "Some"]
+- !private ["PSs13OptionSetType", "UserDomainMask"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["PSs16OutputStreamType", "init"]
+- !private ["PSs21RandomAccessIndexType", "Distance"]
+- !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["PSs21RandomAccessIndexType", "Stride"]
+- !private ["VSs5Range", "deinit"]
+- !private ["PSs30RangeReplaceableCollectionType", "Generator"]
+- !private ["PSs30RangeReplaceableCollectionType", "Index"]
+- !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["PSs30RangeReplaceableCollectionType", "count"]
+- !private ["PSs30RangeReplaceableCollectionType", "subscript"]
+- !private ["PSs16RawRepresentable", "DocumentDirectory"]
+- !private ["PSs16RawRepresentable", "MainQueueConcurrencyType"]
+- !private ["PSs16RawRepresentable", "UserDomainMask"]
+- !private ["PSs12SequenceType", "Element"]
+- !private ["PSs12SequenceType", "Generator"]
+- !private ["PSs12SequenceType", "Index"]
+- !private ["PSs12SequenceType", "SubSequence"]
+- !private ["PSs12SequenceType", "_Element"]
+- !private ["PSs12SequenceType", "count"]
+- !private ["PSs12SequenceType", "init"]
+- !private ["PSs12SequenceType", "subscript"]
+- !private ["PSs14SetAlgebraType", "UserDomainMask"]
+- !private ["PSs17SignedIntegerType", "Distance"]
+- !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
+- !private ["PSs17SignedIntegerType", "Stride"]
+- !private ["PSs16SignedNumberType", "Distance"]
+- !private ["PSs16SignedNumberType", "IntegerLiteralType"]
+- !private ["PSs16SignedNumberType", "Stride"]
+- !private ["VSs5Slice", "Generator"]
+- !private ["VSs5Slice", "Index"]
+- !private ["VSs5Slice", "SubSequence"]
+- !private ["VSs5Slice", "_Element"]
+- !private ["PSs10Streamable", "init"]
+- !private ["PSs10Strideable", "Distance"]
+- !private ["PSs10Strideable", "IntegerLiteralType"]
+- !private ["PSs10Strideable", "Stride"]
+- !private ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["PSs30StringInterpolationConvertible", "init"]
+- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "rootViewController"]
+- !private ["PSo12UIAppearance", "rootViewController"]
+- !private ["PSo21UIAppearanceContainer", "delegate"]
+- !private ["PSo21UIAppearanceContainer", "detailItem"]
+- !private ["PSo21UIAppearanceContainer", "displayModeButtonItem"]
+- !private ["PSo21UIAppearanceContainer", "managedObjectContext"]
+- !private ["PSo21UIAppearanceContainer", "navigationItem"]
+- !private ["PSo21UIAppearanceContainer", "rootViewController"]
+- !private ["PSo21UIAppearanceContainer", "topViewController"]
+- !private ["PSo21UIAppearanceContainer", "viewControllers"]
+- !private ["PSo21UIApplicationDelegate", "AnyObject"]
+- !private ["PSo21UIApplicationDelegate", "NSBundle"]
+- !private ["PSo21UIApplicationDelegate", "NSError"]
+- !private ["PSo21UIApplicationDelegate", "NSFileManager"]
+- !private ["PSo21UIApplicationDelegate", "NSLocalizedDescriptionKey"]
+- !private ["PSo21UIApplicationDelegate", "NSLocalizedFailureReasonErrorKey"]
+- !private ["PSo21UIApplicationDelegate", "NSLog"]
+- !private ["PSo21UIApplicationDelegate", "NSManagedObjectContext"]
+- !private ["PSo21UIApplicationDelegate", "NSManagedObjectModel"]
+- !private ["PSo21UIApplicationDelegate", "NSPersistentStoreCoordinator"]
+- !private ["PSo21UIApplicationDelegate", "NSSQLiteStoreType"]
+- !private ["PSo21UIApplicationDelegate", "NSUnderlyingErrorKey"]
+- !private ["PSo21UIApplicationDelegate", "String"]
+- !private ["PSo21UIApplicationDelegate", "abort"]
+- ["PSo21UIApplicationDelegate", "application"]
+- ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
+- ["PSo21UIApplicationDelegate", "applicationDidEnterBackground"]
+- ["PSo21UIApplicationDelegate", "applicationDidFinishLaunching"]
+- ["PSo21UIApplicationDelegate", "applicationDidReceiveMemoryWarning"]
+- !private ["PSo21UIApplicationDelegate", "applicationDocumentsDirectory"]
+- ["PSo21UIApplicationDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo21UIApplicationDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo21UIApplicationDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["PSo21UIApplicationDelegate", "applicationSignificantTimeChange"]
+- ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
+- ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
+- ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
+- !private ["PSo21UIApplicationDelegate", "managedObjectContext"]
+- !private ["PSo21UIApplicationDelegate", "managedObjectModel"]
+- !private ["PSo21UIApplicationDelegate", "persistentStoreCoordinator"]
+- ["PSo21UIApplicationDelegate", "primaryViewControllerForCollapsingSplitViewController"]
+- ["PSo21UIApplicationDelegate", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["PSo21UIApplicationDelegate", "saveContext"]
+- ["PSo21UIApplicationDelegate", "splitViewController"]
+- ["PSo21UIApplicationDelegate", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["PSo21UIApplicationDelegate", "splitViewControllerSupportedInterfaceOrientations"]
+- ["PSo21UIApplicationDelegate", "targetDisplayModeForActionInSplitViewController"]
+- ["PSo21UIApplicationDelegate", "window"]
+- ["PSo21UIApplicationDelegate", ""]
+- !private ["PSo18UIContentContainer", "delegate"]
+- !private ["PSo18UIContentContainer", "detailItem"]
+- !private ["PSo18UIContentContainer", "displayModeButtonItem"]
+- !private ["PSo18UIContentContainer", "managedObjectContext"]
+- !private ["PSo18UIContentContainer", "navigationItem"]
+- !private ["PSo18UIContentContainer", "topViewController"]
+- !private ["PSo18UIContentContainer", "viewControllers"]
+- !private ["PSo17UICoordinateSpace", "rootViewController"]
+- !private ["PSo13UIDynamicItem", "rootViewController"]
+- !private ["PSo18UIFocusEnvironment", "delegate"]
+- !private ["PSo18UIFocusEnvironment", "detailItem"]
+- !private ["PSo18UIFocusEnvironment", "displayModeButtonItem"]
+- !private ["PSo18UIFocusEnvironment", "managedObjectContext"]
+- !private ["PSo18UIFocusEnvironment", "navigationItem"]
+- !private ["PSo18UIFocusEnvironment", "rootViewController"]
+- !private ["PSo18UIFocusEnvironment", "topViewController"]
+- !private ["PSo18UIFocusEnvironment", "viewControllers"]
+- !private ["CSo22UINavigationController", "topViewController"]
+- !private ["CSo16UINavigationItem", "leftBarButtonItem"]
+- ["CSo11UIResponder", "AnyObject"]
+- ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "DetailViewController"]
+- !private ["CSo11UIResponder", "MasterViewController"]
+- !private ["CSo11UIResponder", "NSBundle"]
+- !private ["CSo11UIResponder", "NSError"]
+- !private ["CSo11UIResponder", "NSFileManager"]
+- !private ["CSo11UIResponder", "NSLocalizedDescriptionKey"]
+- !private ["CSo11UIResponder", "NSLocalizedFailureReasonErrorKey"]
+- !private ["CSo11UIResponder", "NSLog"]
+- ["CSo11UIResponder", "NSManagedObjectContext"]
+- ["CSo11UIResponder", "NSManagedObjectModel"]
+- ["CSo11UIResponder", "NSObject"]
+- ["CSo11UIResponder", "NSPersistentStoreCoordinator"]
+- !private ["CSo11UIResponder", "NSSQLiteStoreType"]
+- ["CSo11UIResponder", "NSURL"]
+- !private ["CSo11UIResponder", "NSUnderlyingErrorKey"]
+- !private ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIApplication"]
+- !private ["CSo11UIResponder", "UINavigationController"]
+- ["CSo11UIResponder", "UISplitViewController"]
+- ["CSo11UIResponder", "UIViewController"]
+- ["CSo11UIResponder", "UIWindow"]
+- !private ["CSo11UIResponder", "abort"]
+- ["CSo11UIResponder", "application"]
+- ["CSo11UIResponder", "applicationDidBecomeActive"]
+- ["CSo11UIResponder", "applicationDidEnterBackground"]
+- ["CSo11UIResponder", "applicationDidFinishLaunching"]
+- ["CSo11UIResponder", "applicationDidReceiveMemoryWarning"]
+- ["CSo11UIResponder", "applicationDocumentsDirectory"]
+- ["CSo11UIResponder", "applicationDocumentsDirectory.storage"]
+- ["CSo11UIResponder", "applicationProtectedDataDidBecomeAvailable"]
+- ["CSo11UIResponder", "applicationProtectedDataWillBecomeUnavailable"]
+- ["CSo11UIResponder", "applicationShouldRequestHealthAuthorization"]
+- ["CSo11UIResponder", "applicationSignificantTimeChange"]
+- ["CSo11UIResponder", "applicationWillEnterForeground"]
+- ["CSo11UIResponder", "applicationWillResignActive"]
+- ["CSo11UIResponder", "applicationWillTerminate"]
+- !private ["CSo11UIResponder", "delegate"]
+- !private ["CSo11UIResponder", "detailItem"]
+- !private ["CSo11UIResponder", "displayModeButtonItem"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "managedObjectContext"]
+- ["CSo11UIResponder", "managedObjectContext.storage"]
+- ["CSo11UIResponder", "managedObjectModel"]
+- ["CSo11UIResponder", "managedObjectModel.storage"]
+- !private ["CSo11UIResponder", "navigationItem"]
+- ["CSo11UIResponder", "persistentStoreCoordinator"]
+- ["CSo11UIResponder", "persistentStoreCoordinator.storage"]
+- ["CSo11UIResponder", "primaryViewControllerForCollapsingSplitViewController"]
+- ["CSo11UIResponder", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["CSo11UIResponder", "rootViewController"]
+- ["CSo11UIResponder", "saveContext"]
+- ["CSo11UIResponder", "splitViewController"]
+- ["CSo11UIResponder", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["CSo11UIResponder", "splitViewControllerSupportedInterfaceOrientations"]
+- ["CSo11UIResponder", "targetDisplayModeForActionInSplitViewController"]
+- !private ["CSo11UIResponder", "topViewController"]
+- !private ["CSo11UIResponder", "viewControllers"]
+- ["CSo11UIResponder", "window"]
+- ["CSo11UIResponder", ""]
+- !private ["PSo20UIScrollViewDelegate", "managedObjectContext"]
+- !private ["CSo21UISplitViewController", "delegate"]
+- !private ["CSo21UISplitViewController", "displayModeButtonItem"]
+- !private ["CSo21UISplitViewController", "viewControllers"]
+- !private ["PSo29UISplitViewControllerDelegate", "AnyObject"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSBundle"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSError"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSFileManager"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSLocalizedDescriptionKey"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSLocalizedFailureReasonErrorKey"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSLog"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSManagedObjectContext"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSManagedObjectModel"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSPersistentStoreCoordinator"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSSQLiteStoreType"]
+- !private ["PSo29UISplitViewControllerDelegate", "NSUnderlyingErrorKey"]
+- !private ["PSo29UISplitViewControllerDelegate", "String"]
+- !private ["PSo29UISplitViewControllerDelegate", "abort"]
+- ["PSo29UISplitViewControllerDelegate", "application"]
+- ["PSo29UISplitViewControllerDelegate", "applicationDidBecomeActive"]
+- ["PSo29UISplitViewControllerDelegate", "applicationDidEnterBackground"]
+- ["PSo29UISplitViewControllerDelegate", "applicationDidFinishLaunching"]
+- ["PSo29UISplitViewControllerDelegate", "applicationDidReceiveMemoryWarning"]
+- !private ["PSo29UISplitViewControllerDelegate", "applicationDocumentsDirectory"]
+- ["PSo29UISplitViewControllerDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo29UISplitViewControllerDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo29UISplitViewControllerDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["PSo29UISplitViewControllerDelegate", "applicationSignificantTimeChange"]
+- ["PSo29UISplitViewControllerDelegate", "applicationWillEnterForeground"]
+- ["PSo29UISplitViewControllerDelegate", "applicationWillResignActive"]
+- ["PSo29UISplitViewControllerDelegate", "applicationWillTerminate"]
+- !private ["PSo29UISplitViewControllerDelegate", "managedObjectContext"]
+- !private ["PSo29UISplitViewControllerDelegate", "managedObjectModel"]
+- !private ["PSo29UISplitViewControllerDelegate", "persistentStoreCoordinator"]
+- ["PSo29UISplitViewControllerDelegate", "primaryViewControllerForCollapsingSplitViewController"]
+- ["PSo29UISplitViewControllerDelegate", "primaryViewControllerForExpandingSplitViewController"]
+- !private ["PSo29UISplitViewControllerDelegate", "saveContext"]
+- ["PSo29UISplitViewControllerDelegate", "splitViewController"]
+- ["PSo29UISplitViewControllerDelegate", "splitViewControllerPreferredInterfaceOrientationForPresentation"]
+- ["PSo29UISplitViewControllerDelegate", "splitViewControllerSupportedInterfaceOrientations"]
+- ["PSo29UISplitViewControllerDelegate", "targetDisplayModeForActionInSplitViewController"]
+- ["PSo29UISplitViewControllerDelegate", "window"]
+- ["PSo29UISplitViewControllerDelegate", ""]
+- !private ["PSo16UIStateRestoring", "delegate"]
+- !private ["PSo16UIStateRestoring", "detailItem"]
+- !private ["PSo16UIStateRestoring", "displayModeButtonItem"]
+- !private ["PSo16UIStateRestoring", "managedObjectContext"]
+- !private ["PSo16UIStateRestoring", "navigationItem"]
+- !private ["PSo16UIStateRestoring", "topViewController"]
+- !private ["PSo16UIStateRestoring", "viewControllers"]
+- !private ["CSo21UITableViewController", "managedObjectContext"]
+- !private ["PSo21UITableViewDataSource", "managedObjectContext"]
+- !private ["PSo19UITableViewDelegate", "managedObjectContext"]
+- !private ["PSo18UITraitEnvironment", "delegate"]
+- !private ["PSo18UITraitEnvironment", "detailItem"]
+- !private ["PSo18UITraitEnvironment", "displayModeButtonItem"]
+- !private ["PSo18UITraitEnvironment", "managedObjectContext"]
+- !private ["PSo18UITraitEnvironment", "navigationItem"]
+- !private ["PSo18UITraitEnvironment", "rootViewController"]
+- !private ["PSo18UITraitEnvironment", "topViewController"]
+- !private ["PSo18UITraitEnvironment", "viewControllers"]
+- !private ["CSo6UIView", "rootViewController"]
+- !private ["CSo16UIViewController", "deinit"]
+- !private ["CSo16UIViewController", "delegate"]
+- !private ["CSo16UIViewController", "detailItem"]
+- !private ["CSo16UIViewController", "displayModeButtonItem"]
+- !private ["CSo16UIViewController", "managedObjectContext"]
+- !private ["CSo16UIViewController", "navigationItem"]
+- !private ["CSo16UIViewController", "topViewController"]
+- !private ["CSo16UIViewController", "viewControllers"]
+- !private ["CSo8UIWindow", "rootViewController"]
+- !private ["Su", "deinit"]
+- !private ["VSs6UInt16", "deinit"]
+- !private ["VSs6UInt32", "deinit"]
+- !private ["VSs6UInt64", "deinit"]
+- !private ["VSs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs10_ArrayType", "Generator"]
+- !private ["PSs10_ArrayType", "Index"]
+- !private ["PSs10_ArrayType", "SubSequence"]
+- !private ["PSs10_ArrayType", "count"]
+- !private ["PSs10_ArrayType", "subscript"]
+- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "Stride"]
+- !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
+- !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs16_CocoaStringType", "init"]
+- !private ["PSs24_DestructorSafeContainer", "Generator"]
+- !private ["PSs24_DestructorSafeContainer", "Index"]
+- !private ["PSs24_DestructorSafeContainer", "SubSequence"]
+- !private ["PSs24_DestructorSafeContainer", "count"]
+- !private ["PSs24_DestructorSafeContainer", "subscript"]
+- !private ["PSs32_FileReferenceLiteralConvertible", "URLByAppendingPathComponent"]
+- !private ["PSs14_Incrementable", "Distance"]
+- !private ["PSs14_Incrementable", "IntegerLiteralType"]
+- !private ["PSs14_Incrementable", "Stride"]
+- !private ["PSs22_IntegerArithmeticType", "Distance"]
+- !private ["PSs22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["PSs22_IntegerArithmeticType", "Stride"]
+- !private ["PSs12_IntegerType", "Distance"]
+- !private ["PSs12_IntegerType", "IntegerLiteralType"]
+- !private ["PSs12_IntegerType", "Stride"]
+- !private ["PSs21_ObjectiveCBridgeable", "Distance"]
+- !private ["PSs21_ObjectiveCBridgeable", "Generator"]
+- !private ["PSs21_ObjectiveCBridgeable", "Index"]
+- !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["PSs21_ObjectiveCBridgeable", "Stride"]
+- !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["PSs21_ObjectiveCBridgeable", "count"]
+- !private ["PSs21_ObjectiveCBridgeable", "init"]
+- !private ["PSs21_ObjectiveCBridgeable", "subscript"]
+- !private ["PSs22_RandomAccessAmbiguity", "Distance"]
+- !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["PSs22_RandomAccessAmbiguity", "Stride"]
+- !private ["PSs12_Reflectable", "Distance"]
+- !private ["PSs12_Reflectable", "Generator"]
+- !private ["PSs12_Reflectable", "Index"]
+- !private ["PSs12_Reflectable", "IntegerLiteralType"]
+- ["PSs12_Reflectable", "Some"]
+- !private ["PSs12_Reflectable", "Stride"]
+- !private ["PSs12_Reflectable", "SubSequence"]
+- !private ["PSs12_Reflectable", "URLByAppendingPathComponent"]
+- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["PSs12_Reflectable", "count"]
+- !private ["PSs12_Reflectable", "init"]
+- !private ["PSs12_Reflectable", "rootViewController"]
+- !private ["PSs12_Reflectable", "subscript"]
+- !private ["PSs18_SignedIntegerType", "Distance"]
+- !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
+- !private ["PSs18_SignedIntegerType", "Stride"]
+- !private ["PSs11_Strideable", "Distance"]
+- !private ["PSs11_Strideable", "IntegerLiteralType"]
+- !private ["PSs11_Strideable", "Stride"]
+depends-nominal:
+- "PSs9AnyObject"
+- "C13Rivergreenway11AppDelegate"
+- !private "Sa"
+- !private "PSs23ArrayLiteralConvertible"
+- !private "VSs10ArraySlice"
+- !private "PSs22BidirectionalIndexType"
+- !private "PSs21BitwiseOperationsType"
+- !private "Sb"
+- !private "PSs25BooleanLiteralConvertible"
+- !private "PSs11BooleanType"
+- "PSs11CVarArgType"
+- !private "VSs9Character"
+- !private "PSs14CollectionType"
+- !private "PSs10Comparable"
+- "PSs28CustomDebugStringConvertible"
+- "PSs23CustomStringConvertible"
+- !private "C13Rivergreenway20DetailViewController"
+- !private "VSs10Dictionary"
+- !private "PSs28DictionaryLiteralConvertible"
+- !private "Sd"
+- "PSs9Equatable"
+- !private "PSs9ErrorType"
+- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- !private "PSs16ForwardIndexType"
+- !private "PSs13GeneratorType"
+- "PSs8Hashable"
+- !private "PSs9Indexable"
+- !private "VSs17IndexingGenerator"
+- !private "Si"
+- !private "VSs5Int16"
+- !private "VSs5Int32"
+- !private "VSs5Int64"
+- !private "VSs4Int8"
+- !private "PSs21IntegerArithmeticType"
+- !private "PSs25IntegerLiteralConvertible"
+- !private "PSs11IntegerType"
+- !private "C13Rivergreenway20MasterViewController"
+- !private "PSs14MirrorPathType"
+- !private "PSs21MutableCollectionType"
+- !private "PSs16MutableIndexable"
+- !private "PSs16MutableSliceable"
+- !private "CSo8NSBundle"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo7NSError"
+- !private "PSo26NSExtensionRequestHandling"
+- !private "PSo17NSFastEnumeration"
+- !private "PSo34NSFetchedResultsControllerDelegate"
+- !private "CSo13NSFileManager"
+- !private "PSo9NSLocking"
+- !private "CSo22NSManagedObjectContext"
+- !private "OSC37NSManagedObjectContextConcurrencyType"
+- !private "CSo20NSManagedObjectModel"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo28NSPersistentStoreCoordinator"
+- !private "OSC21NSSearchPathDirectory"
+- !private "VSC22NSSearchPathDomainMask"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo5NSURL"
+- "PSs21NilLiteralConvertible"
+- !private "PSs13OptionSetType"
+- "Sq"
+- !private "PSs16OutputStreamType"
+- !private "PSs21RandomAccessIndexType"
+- !private "VSs5Range"
+- !private "PSs30RangeReplaceableCollectionType"
+- !private "PSs16RawRepresentable"
+- !private "PSs12SequenceType"
+- !private "PSs14SetAlgebraType"
+- !private "PSs17SignedIntegerType"
+- !private "PSs16SignedNumberType"
+- !private "VSs5Slice"
+- !private "PSs10Streamable"
+- !private "PSs10Strideable"
+- !private "SS"
+- !private "PSs30StringInterpolationConvertible"
+- !private "PSs24StringLiteralConvertible"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- "PSo21UIApplicationDelegate"
+- !private "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "CSo22UINavigationController"
+- !private "CSo16UINavigationItem"
+- "CSo11UIResponder"
+- !private "PSo20UIScrollViewDelegate"
+- !private "CSo21UISplitViewController"
+- "PSo29UISplitViewControllerDelegate"
+- !private "PSo16UIStateRestoring"
+- !private "CSo21UITableViewController"
+- !private "PSo21UITableViewDataSource"
+- !private "PSo19UITableViewDelegate"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- !private "CSo16UIViewController"
+- !private "CSo8UIWindow"
+- !private "Su"
+- !private "VSs6UInt16"
+- !private "VSs6UInt32"
+- !private "VSs6UInt64"
+- !private "VSs5UInt8"
+- !private "Sc"
+- !private "PSs31UnicodeScalarLiteralConvertible"
+- !private "PSs10_ArrayType"
+- !private "PSs33_BuiltinBooleanLiteralConvertible"
+- !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "PSs33_BuiltinIntegerLiteralConvertible"
+- !private "PSs32_BuiltinStringLiteralConvertible"
+- !private "PSs37_BuiltinUTF16StringLiteralConvertible"
+- !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "PSs16_CocoaStringType"
+- !private "PSs24_DestructorSafeContainer"
+- !private "PSs32_FileReferenceLiteralConvertible"
+- !private "PSs14_Incrementable"
+- !private "PSs22_IntegerArithmeticType"
+- !private "PSs12_IntegerType"
+- !private "PSs21_ObjectiveCBridgeable"
+- !private "PSs22_RandomAccessAmbiguity"
+- "PSs12_Reflectable"
+- !private "PSs18_SignedIntegerType"
+- !private "PSs11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/Scott/Documents/GitHub/iOS/Rivergreenway/Rivergreenway-Bridging-Header.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GoogleMaps.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAddress.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapView.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCALayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSUISettings.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteFetcher.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlacesClient.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlace.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlacesMacros.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSUserAddedPlace.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteFilter.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteMatchFragment.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompletePrediction.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteResultsViewController.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCoordinateBounds.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSProjection.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteTableDataSource.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAutocompleteViewController.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCameraPosition.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCameraUpdate.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCircle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSGeocoder.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSGeometryUtils.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPath.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSGroundOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSIndoorBuilding.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSIndoorDisplay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSIndoorLevel.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapView+Animation.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMarker.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMarkerLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMutablePath.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSOrientation.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanorama.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaCamera.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaCameraUpdate.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaLink.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaService.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaView.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlaceLikelihood.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlaceLikelihoodList.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlacePicker.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlacePickerConfig.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPlaceTypes.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPolygon.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPolyline.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSServices.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSSyncTileLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSTileLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSURLTileLayer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KML.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLParser.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLConst.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLType.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLRoot.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLElement.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractObject.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractFeature.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLNetworkLink.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPlacemark.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPhotoOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLScreenOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLGroundOverlay.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractContainer.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLDocument.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLFolder.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractGeometry.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPoint.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLineString.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLinearRing.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPolygon.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLMultiGeometry.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLModel.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLink.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLIcon.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLOrientation.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLocation.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLScale.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractStyleSelector.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLStyleMap.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractTimePrimitive.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLTimeSpan.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLTimeStamp.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractView.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLCamera.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLookAt.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLRegion.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLod.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLatLonBox.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLatLonAltBox.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractSubStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLBalloonStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLListStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAbstractColorStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLineStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPolyStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLIconStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLLabelStyle.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLNetworkLinkControl.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLMetadata.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLExtendedData.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLImagePyramid.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLPair.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLItemIcon.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLResourceMap.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLAlias.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSchema.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSchemaData.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSimpleData.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLData.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLSimpleField.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLViewVolume.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLUpdate.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLCreate.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLChange.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLDelete.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLVec2.h"
+- "/Users/Scott/Documents/GitHub/iOS/Pods/iOS-KML-Framework/KML/KMLCoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "53177e678603922b7058f055c8f6f3e5"
