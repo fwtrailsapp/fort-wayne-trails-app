@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+enum Sex: String{
+    case MALE = "MALE"
+    case FEMALE = "FEMALE"
+}
