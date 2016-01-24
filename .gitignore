@@ -79,4 +79,7 @@ Carthage/Build
 fastlane/report.xml
 fastlane/screenshots
 
-#### SWIFT
+#### RIVERGREENWAY
+Debug-iphonesimulator/
+Pods.build/
+Rivergreenway.build/
