@@ -1,9 +1,0 @@
-version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
-options: "03b998d3a42f0f78cd7e1b85a45b2b33"
-build_time: [506820288, 320820000]
-inputs:
-  "/Users/Scott/Documents/GitHub/iOS/Pods/SwiftHTTP/Upload.swift": [506572944, 0]
-  "/Users/Scott/Documents/GitHub/iOS/Pods/SwiftHTTP/HTTPSecurity.swift": [506572944, 0]
-  "/Users/Scott/Documents/GitHub/iOS/Pods/SwiftHTTP/StatusCode.swift": [506572944, 0]
-  "/Users/Scott/Documents/GitHub/iOS/Pods/SwiftHTTP/Operation.swift": [506572944, 0]
-  "/Users/Scott/Documents/GitHub/iOS/Pods/SwiftHTTP/Request.swift": [506572944, 0]

@@ -1,5 +1,0 @@
-version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
-options: "264331716ab9d981218b8082a52e4814"
-build_time: [506820291, 34876000]
-inputs:
-  "/Users/Scott/Documents/GitHub/iOS/Pods/JSONJoy-Swift/JSONJoy.swift": [506572944, 0]

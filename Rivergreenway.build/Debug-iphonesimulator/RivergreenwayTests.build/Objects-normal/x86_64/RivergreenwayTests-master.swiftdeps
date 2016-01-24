@@ -1,6 +1,0 @@
-version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
-options: "f03bed036a44e62c0cf4632e60e3ff8e"
-build_time: [506820313, 421118000]
-inputs:
-  "/Users/Scott/Documents/GitHub/iOS/RivergreenwayTests/TrailActivityTests.swift": [506817719, 0]
-  "/Users/Scott/Documents/GitHub/iOS/RivergreenwayTests/AccountTests.swift": [506819552, 0]
