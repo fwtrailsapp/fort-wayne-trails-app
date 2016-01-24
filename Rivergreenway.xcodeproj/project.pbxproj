@@ -11,6 +11,7 @@
 		49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
 		7FF11D7E1C558C3D009A7D44 /* KMLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF11D7D1C558C3D009A7D44 /* KMLManager.swift */; };
 		7FF11D811C558C83009A7D44 /* KMLManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF11D801C558C83009A7D44 /* KMLManagerTests.swift */; };
+		7FF11D861C5598B7009A7D44 /* Trails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 7FF11D851C5598B7009A7D44 /* Trails.kml */; };
 		D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */; };
 		D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEE41C51C28100BDFCE8 /* Account.swift */; };
 		D232FEED1C52EC7200BDFCE8 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEEC1C52EC7200BDFCE8 /* Sex.swift */; };
@@ -55,6 +56,7 @@
 		1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7FF11D7D1C558C3D009A7D44 /* KMLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMLManager.swift; sourceTree = "<group>"; };
 		7FF11D801C558C83009A7D44 /* KMLManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMLManagerTests.swift; sourceTree = "<group>"; };
+		7FF11D851C5598B7009A7D44 /* Trails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Trails.kml; path = DataFiles/Trails.kml; sourceTree = "<group>"; };
 		9013802832BC7175DACC38D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
 		D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rivergreenway-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 			name = ToolsTests;
 			sourceTree = "<group>";
 		};
+		7FF11D821C5596E4009A7D44 /* DataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7FF11D851C5598B7009A7D44 /* Trails.kml */,
+			);
+			name = DataFiles;
+			sourceTree = "<group>";
+		};
 		B00C470C0FABE4A846973151 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		D26E6BD61C4AC22C00186A9A = {
 			isa = PBXGroup;
 			children = (
+				7FF11D821C5596E4009A7D44 /* DataFiles */,
 				D26E6BE11C4AC22C00186A9A /* Rivergreenway */,
 				D26E6BFB1C4AC22C00186A9A /* RivergreenwayTests */,
 				D26E6C061C4AC22C00186A9A /* RivergreenwayUITests */,
@@ -358,6 +369,7 @@
 				D26E6BF21C4AC22C00186A9A /* LaunchScreen.storyboard in Resources */,
 				D26E6BEF1C4AC22C00186A9A /* Assets.xcassets in Resources */,
 				D26E6BED1C4AC22C00186A9A /* Main.storyboard in Resources */,
+				7FF11D861C5598B7009A7D44 /* Trails.kml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
