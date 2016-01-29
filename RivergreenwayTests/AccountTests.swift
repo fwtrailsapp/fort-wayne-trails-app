@@ -25,8 +25,6 @@ class AccountTests: XCTestCase {
         let dob = dateFormatter.dateFromString("1994-07-15")
 
         scottAccount = Account(email: "scott@email.com",
-            firstName: "Scott",
-            lastName: "Weidenkopf",
             dob: dob,
             height: 68,
             weight: 155,
