@@ -10,6 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: - View Components
+    
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +27,20 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: - Actions
+    
+    @IBAction func loginButtonPressed(sender: UIButton) {
+        
+        if usernameField.text != nil && passwordField.text != nil {
+            if !usernameField.text!.isEmpty && !passwordField.text!.isEmpty {
+                let username = usernameField.text!
+                let password = passwordField.text!
+                
+                // log in
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
