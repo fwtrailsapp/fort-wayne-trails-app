@@ -10,18 +10,14 @@ import Foundation
 
 class Account {
     
-    let email: String
-    let firstName: String?
-    let lastName: String?
-    let dob: NSDate?
-    let height: Double?
-    let weight: Double?
-    let sex: Sex?
+    private let email: String
+    private let dob: NSDate?
+    private let height: Double?
+    private let weight: Double?
+    private let sex: Sex?
     
-    init(email: String, firstName: String? = nil, lastName: String? = nil, dob: NSDate? = nil, height: Double? = nil, weight: Double? = nil, sex:Sex? = nil) {
+    init(email: String, dob: NSDate? = nil, height: Double? = nil, weight: Double? = nil, sex:Sex? = nil) {
         self.email = email
-        self.firstName = firstName
-        self.lastName = lastName
         self.dob = dob
         self.height = height
         self.weight = weight
@@ -58,5 +54,4 @@ class Account {
             return BMR
         }
     }
-    
 }
