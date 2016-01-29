@@ -16,12 +16,12 @@
 		D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEE41C51C28100BDFCE8 /* Account.swift */; };
 		D232FEED1C52EC7200BDFCE8 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEEC1C52EC7200BDFCE8 /* Sex.swift */; };
 		D232FEF11C52F27C00BDFCE8 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEF01C52F27C00BDFCE8 /* AccountTests.swift */; };
+		D246EDC71C5BABA700A3C1C3 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246EDC51C5BABA700A3C1C3 /* LoginViewControllerTests.swift */; };
+		D246EDCA1C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246EDC81C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift */; };
 		D2612DF61C53EB94009232AC /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DF51C53EB94009232AC /* Converter.swift */; };
 		D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DF81C53EC20009232AC /* ConverterTests.swift */; };
 		D2612DFB1C53F432009232AC /* TrailActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */; };
-		D2612DFD1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */; };
 		D2647CFB1C55AF2300796D51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2647CFA1C55AF2300796D51 /* LoginViewController.swift */; };
-		D2647CFD1C55AFE900796D51 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2647CFC1C55AFE900796D51 /* LoginViewControllerTests.swift */; };
 		D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */; };
 		D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */; };
 		D26E6BED1C4AC22C00186A9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26E6BEB1C4AC22C00186A9A /* Main.storyboard */; };
@@ -31,6 +31,8 @@
 		D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C151C4AC25500186A9A /* TrailActivity.swift */; };
 		D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */; };
 		D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */; };
+		D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */; };
+		D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,12 +64,12 @@
 		D232FEE41C51C28100BDFCE8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		D232FEEC1C52EC7200BDFCE8 /* Sex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		D232FEF01C52F27C00BDFCE8 /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		D246EDC51C5BABA700A3C1C3 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewControllerTests.swift; path = ../RivergreenwayUITests/LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		D246EDC81C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrailActivityViewControllerTests.swift; path = ../RivergreenwayUITests/TrailActivityViewControllerTests.swift; sourceTree = "<group>"; };
 		D2612DF51C53EB94009232AC /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		D2612DF81C53EC20009232AC /* ConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 		D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityViewController.swift; sourceTree = "<group>"; };
-		D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityViewControllerTests.swift; sourceTree = "<group>"; };
 		D2647CFA1C55AF2300796D51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D2647CFC1C55AFE900796D51 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		D26E6BDF1C4AC22C00186A9A /* Rivergreenway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivergreenway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26E6BE51C4AC22C00186A9A /* Rivergreenway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rivergreenway.xcdatamodel; sourceTree = "<group>"; };
@@ -83,6 +85,8 @@
 		D26E6C151C4AC25500186A9A /* TrailActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivity.swift; sourceTree = "<group>"; };
 		D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityState.swift; sourceTree = "<group>"; };
 		D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityTests.swift; sourceTree = "<group>"; };
+		D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorder.swift; sourceTree = "<group>"; };
+		D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			children = (
 				D2612DF51C53EB94009232AC /* Converter.swift */,
 				7FF11D7D1C558C3D009A7D44 /* KMLManager.swift */,
+				D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			children = (
 				D2612DF81C53EC20009232AC /* ConverterTests.swift */,
 				7FF11D801C558C83009A7D44 /* KMLManagerTests.swift */,
+				D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */,
 			);
 			name = ToolsTests;
 			sourceTree = "<group>";
@@ -167,10 +173,11 @@
 		D2612DF71C53EC05009232AC /* ControllerTests */ = {
 			isa = PBXGroup;
 			children = (
-				D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */,
-				D2647CFC1C55AFE900796D51 /* LoginViewControllerTests.swift */,
+				D246EDC51C5BABA700A3C1C3 /* LoginViewControllerTests.swift */,
+				D246EDC81C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift */,
 			);
 			name = ControllerTests;
+			path = ../RivergreenwayTests;
 			sourceTree = "<group>";
 		};
 		D26E6BD61C4AC22C00186A9A = {
@@ -199,6 +206,7 @@
 		D26E6BE11C4AC22C00186A9A /* Rivergreenway */ = {
 			isa = PBXGroup;
 			children = (
+				D2D2125F1C5C20FD001AFF9C /* Appearance */,
 				7FF11D7C1C558BAD009A7D44 /* Tools */,
 				D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */,
 				D26E6BEB1C4AC22C00186A9A /* Main.storyboard */,
@@ -217,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				7FF11D7F1C558C64009A7D44 /* ToolsTests */,
-				D2612DF71C53EC05009232AC /* ControllerTests */,
 				D26E6BFE1C4AC22C00186A9A /* Info.plist */,
 				D26E6C1B1C4AC27200186A9A /* ModelTests */,
 			);
@@ -227,6 +234,7 @@
 		D26E6C061C4AC22C00186A9A /* RivergreenwayUITests */ = {
 			isa = PBXGroup;
 			children = (
+				D2612DF71C53EC05009232AC /* ControllerTests */,
 				D26E6C071C4AC22C00186A9A /* RivergreenwayUITests.swift */,
 				D26E6C091C4AC22C00186A9A /* Info.plist */,
 			);
@@ -252,6 +260,13 @@
 				D232FEEC1C52EC7200BDFCE8 /* Sex.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D2D2125F1C5C20FD001AFF9C /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Appearance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2612DFB1C53F432009232AC /* TrailActivityViewController.swift in Sources */,
+				D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */,
 				D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */,
 				D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */,
 				D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */,
@@ -504,10 +520,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2647CFD1C55AFE900796D51 /* LoginViewControllerTests.swift in Sources */,
-				D2612DFD1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */,
 				D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */,
 				D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */,
+				D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */,
 				7FF11D811C558C83009A7D44 /* KMLManagerTests.swift in Sources */,
 				D232FEF11C52F27C00BDFCE8 /* AccountTests.swift in Sources */,
 			);
@@ -517,7 +532,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D246EDC71C5BABA700A3C1C3 /* LoginViewControllerTests.swift in Sources */,
 				D26E6C081C4AC22C00186A9A /* RivergreenwayUITests.swift in Sources */,
+				D246EDCA1C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
