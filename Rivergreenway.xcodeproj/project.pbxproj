@@ -20,11 +20,10 @@
 		D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DF81C53EC20009232AC /* ConverterTests.swift */; };
 		D2612DFB1C53F432009232AC /* TrailActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */; };
 		D2612DFD1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */; };
-		D2612DFE1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */; };
+		D2647CFB1C55AF2300796D51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2647CFA1C55AF2300796D51 /* LoginViewController.swift */; };
+		D2647CFD1C55AFE900796D51 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2647CFC1C55AFE900796D51 /* LoginViewControllerTests.swift */; };
 		D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */; };
 		D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */; };
-		D26E6BE81C4AC22C00186A9A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE71C4AC22C00186A9A /* MasterViewController.swift */; };
-		D26E6BEA1C4AC22C00186A9A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE91C4AC22C00186A9A /* DetailViewController.swift */; };
 		D26E6BED1C4AC22C00186A9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26E6BEB1C4AC22C00186A9A /* Main.storyboard */; };
 		D26E6BEF1C4AC22C00186A9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26E6BEE1C4AC22C00186A9A /* Assets.xcassets */; };
 		D26E6BF21C4AC22C00186A9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26E6BF01C4AC22C00186A9A /* LaunchScreen.storyboard */; };
@@ -67,11 +66,11 @@
 		D2612DF81C53EC20009232AC /* ConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 		D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityViewController.swift; sourceTree = "<group>"; };
 		D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityViewControllerTests.swift; sourceTree = "<group>"; };
+		D2647CFA1C55AF2300796D51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2647CFC1C55AFE900796D51 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		D26E6BDF1C4AC22C00186A9A /* Rivergreenway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivergreenway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26E6BE51C4AC22C00186A9A /* Rivergreenway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rivergreenway.xcdatamodel; sourceTree = "<group>"; };
-		D26E6BE71C4AC22C00186A9A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		D26E6BE91C4AC22C00186A9A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D26E6BEC1C4AC22C00186A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D26E6BEE1C4AC22C00186A9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D26E6BF11C4AC22C00186A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -160,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */,
+				D2647CFA1C55AF2300796D51 /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				D2612DFC1C53F518009232AC /* TrailActivityViewControllerTests.swift */,
+				D2647CFC1C55AFE900796D51 /* LoginViewControllerTests.swift */,
 			);
 			name = ControllerTests;
 			sourceTree = "<group>";
@@ -200,8 +201,6 @@
 			children = (
 				7FF11D7C1C558BAD009A7D44 /* Tools */,
 				D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */,
-				D26E6BE71C4AC22C00186A9A /* MasterViewController.swift */,
-				D26E6BE91C4AC22C00186A9A /* DetailViewController.swift */,
 				D26E6BEB1C4AC22C00186A9A /* Main.storyboard */,
 				D26E6BEE1C4AC22C00186A9A /* Assets.xcassets */,
 				D26E6BF01C4AC22C00186A9A /* LaunchScreen.storyboard */,
@@ -491,13 +490,12 @@
 				D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */,
 				D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */,
 				D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */,
-				D26E6BE81C4AC22C00186A9A /* MasterViewController.swift in Sources */,
 				D2612DF61C53EB94009232AC /* Converter.swift in Sources */,
 				7FF11D7E1C558C3D009A7D44 /* KMLManager.swift in Sources */,
-				D26E6BEA1C4AC22C00186A9A /* DetailViewController.swift in Sources */,
 				D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */,
 				D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */,
 				D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */,
+				D2647CFB1C55AF2300796D51 /* LoginViewController.swift in Sources */,
 				D232FEED1C52EC7200BDFCE8 /* Sex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2647CFD1C55AFE900796D51 /* LoginViewControllerTests.swift in Sources */,
 				D2612DFD1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */,
 				D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */,
 				D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */,
@@ -518,7 +517,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2612DFE1C53F518009232AC /* TrailActivityViewControllerTests.swift in Sources */,
 				D26E6C081C4AC22C00186A9A /* RivergreenwayUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
