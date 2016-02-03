@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class Overlayer {
+    init() {
+        
+    }
+    
+    func loadKMLFromURL(url : String) {
+        
+    }
+}
