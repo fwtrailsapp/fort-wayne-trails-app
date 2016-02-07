@@ -10,7 +10,7 @@
         <!--Login-->
         <scene sceneID="lKu-ih-rmN">
             <objects>
-                <viewController id="xIz-iG-RVU" userLabel="Login" customClass="LoginViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="xIz-iG-RVU" userLabel="Login" customClass="LoginViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HJe-k5-APS"/>
                         <viewControllerLayoutGuide type="bottom" id="zjr-aw-FMu"/>
@@ -134,7 +134,7 @@
         <!--Create Account-->
         <scene sceneID="ohZ-q0-Nng">
             <objects>
-                <tableViewController id="8ar-3X-PmB" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CreateAccountView" id="8ar-3X-PmB" customClass="CreateAccountViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Rkm-8k-FMh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,7 +258,7 @@
                                                     <segments>
                                                         <segment title="Male"/>
                                                         <segment title="Female"/>
-                                                        <segment title=""/>
+                                                        <segment title="" image="NotInterested"/>
                                                     </segments>
                                                 </segmentedControl>
                                             </subviews>
@@ -269,35 +269,22 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="311" id="174-G5-NWm">
-                                        <rect key="frame" x="0.0" y="429" width="600" height="311"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Mqi-lu-Idp">
+                                        <rect key="frame" x="0.0" y="429" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="174-G5-NWm" id="ghU-wY-fw5">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="310"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mqi-lu-Idp" id="Abw-yi-1G9">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kkh-eQ-Yo8">
-                                                    <rect key="frame" x="28" y="47" width="320" height="216"/>
-                                                    <date key="date" timeIntervalSinceReferenceDate="475803811.182257">
-                                                        <!--2016-01-29 23:43:31 +0000-->
-                                                    </date>
-                                                    <variation key="heightClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="0.0" y="86" width="600" height="216"/>
-                                                    </variation>
-                                                </datePicker>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W97-dP-ejH">
-                                                    <rect key="frame" x="252" y="8" width="97" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P0K-M6-oZU">
+                                                    <rect key="frame" x="28" y="7" width="544" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="didBeginEditingDateTextField:" destination="8ar-3X-PmB" eventType="editingDidBegin" id="AyZ-kc-OYj"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="kkh-eQ-Yo8" firstAttribute="leading" secondItem="ghU-wY-fw5" secondAttribute="leadingMargin" constant="20" id="ATL-a3-ik9"/>
-                                                <constraint firstItem="W97-dP-ejH" firstAttribute="top" secondItem="ghU-wY-fw5" secondAttribute="topMargin" id="VC7-eB-Uwg"/>
-                                                <constraint firstItem="W97-dP-ejH" firstAttribute="centerX" secondItem="ghU-wY-fw5" secondAttribute="centerX" id="gFS-Tv-omj"/>
-                                                <constraint firstItem="kkh-eQ-Yo8" firstAttribute="centerY" secondItem="ghU-wY-fw5" secondAttribute="centerY" id="nTW-RL-6cU"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -312,6 +299,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="hhV-cL-hBx"/>
                         <barButtonItem key="rightBarButtonItem" title="Create" id="9Gn-Ye-y6c"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateTextField" destination="P0K-M6-oZU" id="7Eh-r1-AaW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6V-qu-r26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -336,4 +326,7 @@
             <point key="canvasLocation" x="-1014" y="458"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NotInterested" width="24" height="24"/>
+    </resources>
 </document>
