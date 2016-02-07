@@ -33,6 +33,8 @@
 		D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */; };
 		D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */; };
 		D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */; };
+		D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */; };
+		D2F4B9381C66C45A006FACED /* CreateAccountViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityTests.swift; sourceTree = "<group>"; };
 		D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorder.swift; sourceTree = "<group>"; };
 		D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorderTests.swift; sourceTree = "<group>"; };
+		D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateAccountViewControllerTests.swift; path = ../RivergreenwayUITests/CreateAccountViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 			children = (
 				D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */,
 				D2647CFA1C55AF2300796D51 /* LoginViewController.swift */,
+				D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			children = (
 				D246EDC51C5BABA700A3C1C3 /* LoginViewControllerTests.swift */,
 				D246EDC81C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift */,
+				D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */,
 			);
 			name = ControllerTests;
 			path = ../RivergreenwayTests;
@@ -506,6 +512,7 @@
 				D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */,
 				D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */,
 				D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */,
+				D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */,
 				D2612DF61C53EB94009232AC /* Converter.swift in Sources */,
 				7FF11D7E1C558C3D009A7D44 /* KMLManager.swift in Sources */,
 				D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */,
@@ -532,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F4B9381C66C45A006FACED /* CreateAccountViewControllerTests.swift in Sources */,
 				D246EDC71C5BABA700A3C1C3 /* LoginViewControllerTests.swift in Sources */,
 				D26E6C081C4AC22C00186A9A /* RivergreenwayUITests.swift in Sources */,
 				D246EDCA1C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift in Sources */,

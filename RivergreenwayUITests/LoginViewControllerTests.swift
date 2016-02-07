@@ -33,12 +33,10 @@ class LoginViewControllerTests: XCTestCase {
     func testLoginButton() {
         app!.buttons["Login"].tap()
         
-        
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCreateAccountButton() {
+        
     }
     
 }
