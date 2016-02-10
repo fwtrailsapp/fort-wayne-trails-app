@@ -15,18 +15,38 @@ class OverlayerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        ov = Overlayer()
+        GMSServices.provideAPIKey("AIzaSyAd2mmJznzk-8mPpVzlGgxD06Yh6yo18Pg")
+        let mapView = GMSMapView()
+        ov = Overlayer(mapView: mapView)
+    }
+    
+    func loadGoodUrl() {
+        try! ov!.loadKMLFromURL(kmlUrl)
+    }
+    
+    func testCanLoadKML() {
+        loadGoodUrl()
+    }
+    
+    func testPathsLoaded() {
+        measureBlock() {
+            self.loadGoodUrl()
+        }
+        assert(ov!.geometryCount >= 1)
+    }
+    
+    func testBadUrl() {
+        do {
+            try ov!.loadKMLFromURL("https://www.google.com")
+        } catch (Overlayer.OverlayerError.CannotLoadURL) {
+            return
+        } catch {
+            XCTFail("Should have gotten a CannotLoadURL error first")
+        }
+        XCTFail("Should have gotten a CannotLoadURL error")
     }
     
     override func tearDown() {
         super.tearDown()
-    }
-    
-    func canLoadKML() {
-        ov!.loadKMLFromURL(kmlUrl)
-    }
-    
-    func failDude() {
-        XCTFail("Are you paying attention?")
     }
 }
