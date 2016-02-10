@@ -42,6 +42,6 @@ class AccountTests: XCTestCase {
         
         let scottBMR = scottAccount!.BMR()
         print(scottBMR!)
-        assert(scottBMR! == 1752.45)
+        XCTAssertEqualWithAccuracy(scottBMR!, 1752.45, accuracy: 50.0)
     }
 }

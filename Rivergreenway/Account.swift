@@ -46,11 +46,11 @@ class Account {
                 c4 = 4.330
             }
             
-            let weight:Double = Converter.poundsToKilograms(self.weight!)
-            let height:Double = Converter.inchesToCentimeters(self.height!)
-            let age:Int = Int(NSDate().timeIntervalSinceDate(self.dob!))
+            let weightKg:Double = Converter.poundsToKilograms(self.weight!)
+            let heightCm:Double = Converter.inchesToCentimeters(self.height!)
+            let ageYears = NSCalendar.currentCalendar().components(NSCalendarUnit.Year, fromDate: self.dob!, toDate: NSDate(), options: NSCalendarOptions()).year
             
-            let BMR:Double = c1 + (c2 * weight) + (c3 * height) - (c4 * Double(age))
+            let BMR:Double = c1 + (c2 * weightKg) + (c3 * heightCm) - (c4 * Double(ageYears))
             return BMR
         }
     }
