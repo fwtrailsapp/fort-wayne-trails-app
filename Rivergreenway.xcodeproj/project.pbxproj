@@ -31,6 +31,11 @@
 		D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C151C4AC25500186A9A /* TrailActivity.swift */; };
 		D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */; };
 		D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */; };
+		D2BD1DEE1C6ACB7C009E4F2F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */; };
+		D2BD1DF01C6ACB90009E4F2F /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */; };
+		D2BD1DF21C6ACC0D009E4F2F /* DraweredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */; };
+		D2BD1DF41C6ACFF9009E4F2F /* ViewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DF31C6ACFF9009E4F2F /* ViewIdentifier.swift */; };
+		D2BD1DF61C6AD09C009E4F2F /* NavDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DF51C6AD09C009E4F2F /* NavDrawerViewController.swift */; };
 		D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */; };
 		D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */; };
 		D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */; };
@@ -87,6 +92,11 @@
 		D26E6C151C4AC25500186A9A /* TrailActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivity.swift; sourceTree = "<group>"; };
 		D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityState.swift; sourceTree = "<group>"; };
 		D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityTests.swift; sourceTree = "<group>"; };
+		D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraweredViewController.swift; sourceTree = "<group>"; };
+		D2BD1DF31C6ACFF9009E4F2F /* ViewIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIdentifier.swift; sourceTree = "<group>"; };
+		D2BD1DF51C6AD09C009E4F2F /* NavDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerViewController.swift; sourceTree = "<group>"; };
 		D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorder.swift; sourceTree = "<group>"; };
 		D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorderTests.swift; sourceTree = "<group>"; };
 		D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +181,10 @@
 				D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */,
 				D2647CFA1C55AF2300796D51 /* LoginViewController.swift */,
 				D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */,
+				D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */,
+				D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */,
+				D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */,
+				D2BD1DF51C6AD09C009E4F2F /* NavDrawerViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -183,7 +197,6 @@
 				D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */,
 			);
 			name = ControllerTests;
-			path = ../RivergreenwayTests;
 			sourceTree = "<group>";
 		};
 		D26E6BD61C4AC22C00186A9A = {
@@ -223,6 +236,7 @@
 				D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */,
 				D20979501C53EAFC00826CC9 /* Controllers */,
 				D26E6C1C1C4AC27A00186A9A /* Models */,
+				D2BD1DF31C6ACFF9009E4F2F /* ViewIdentifier.swift */,
 			);
 			path = Rivergreenway;
 			sourceTree = "<group>";
@@ -507,17 +521,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BD1DF21C6ACC0D009E4F2F /* DraweredViewController.swift in Sources */,
 				D2612DFB1C53F432009232AC /* TrailActivityViewController.swift in Sources */,
 				D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */,
 				D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */,
 				D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */,
 				D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */,
+				D2BD1DEE1C6ACB7C009E4F2F /* BaseViewController.swift in Sources */,
 				D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */,
+				D2BD1DF41C6ACFF9009E4F2F /* ViewIdentifier.swift in Sources */,
 				D2612DF61C53EB94009232AC /* Converter.swift in Sources */,
 				7FF11D7E1C558C3D009A7D44 /* KMLManager.swift in Sources */,
 				D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */,
 				D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */,
+				D2BD1DF61C6AD09C009E4F2F /* NavDrawerViewController.swift in Sources */,
 				D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */,
+				D2BD1DF01C6ACB90009E4F2F /* BaseTableViewController.swift in Sources */,
 				D2647CFB1C55AF2300796D51 /* LoginViewController.swift in Sources */,
 				D232FEED1C52EC7200BDFCE8 /* Sex.swift in Sources */,
 			);

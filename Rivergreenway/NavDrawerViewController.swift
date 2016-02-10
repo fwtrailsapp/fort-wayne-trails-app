@@ -1,14 +1,14 @@
 //
-//  TrailActivityViewController.swift
+//  NavDrawerViewController.swift
 //  Rivergreenway
 //
-//  Created by Scott Weidenkopf on 1/23/16.
+//  Created by Scott Weidenkopf on 2/9/16.
 //  Copyright © 2016 City of Fort Wayne Rivergreenways. All rights reserved.
 //
 
 import UIKit
 
-class TrailActivityViewController: DraweredViewController {
+class NavDrawerViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

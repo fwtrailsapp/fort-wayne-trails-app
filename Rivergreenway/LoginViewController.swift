@@ -39,16 +39,15 @@ class LoginViewController: BaseViewController {
                 // log in
             }
         }
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let centerContainer = appDelegate.centerContainer!
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
+        let leftViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.NAV_DRAWER_VIEW.rawValue) as! NavDrawerViewController
+        let navController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.MAIN_NAV_CONTROLLER.rawValue)
+        
+        centerContainer.centerViewController = navController
+        centerContainer.leftDrawerViewController = leftViewController
+        
+        presentViewController(centerContainer, animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

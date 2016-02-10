@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceN-ev-3Sf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1646" y="-330"/>
+            <point key="canvasLocation" x="-1782" y="-330"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="ohZ-q0-Nng">
@@ -307,10 +307,29 @@
             </objects>
             <point key="canvasLocation" x="-198" y="458"/>
         </scene>
+        <!--Record Activity-->
+        <scene sceneID="CrU-nY-J89">
+            <objects>
+                <viewController storyboardIdentifier="TrailActivityView" id="uwJ-ne-jA0" customClass="TrailActivityViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Re9-1t-ErB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dvq-mP-m2S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0SY-zI-xJS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Record Activity" id="5f4-EU-5vt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9D-kT-q08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198" y="-330"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pIZ-Ak-a84">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GLW-JV-Jjs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CreateAccountNavController" automaticallyAdjustsScrollViewInsets="NO" id="GLW-JV-Jjs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tGY-gt-qbO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -324,6 +343,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1C-rq-mfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1014" y="458"/>
+        </scene>
+        <!--Nav Drawer View Controller-->
+        <scene sceneID="m5M-FX-txO">
+            <objects>
+                <viewController storyboardIdentifier="NavDrawerView" id="9Dm-rr-08o" customClass="NavDrawerViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="djT-nv-X6D"/>
+                        <viewControllerLayoutGuide type="bottom" id="zHq-o8-kM0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sr1-Yw-vLw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRa-I7-ZXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1014" y="-1069"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IGe-uP-ewz">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavController" automaticallyAdjustsScrollViewInsets="NO" id="NYm-t6-e0z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vAK-Aa-KkO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uwJ-ne-jA0" kind="relationship" relationship="rootViewController" id="lrI-kE-dCm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HbB-5r-qJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1014" y="-330"/>
         </scene>
     </scenes>
     <resources>
