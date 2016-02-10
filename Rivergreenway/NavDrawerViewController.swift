@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NavDrawerViewController: BaseViewController {
+class NavDrawerViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
