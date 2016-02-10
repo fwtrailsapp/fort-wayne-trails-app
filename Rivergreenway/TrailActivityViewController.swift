@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrailActivityViewController: UIViewController {
+class TrailActivityViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

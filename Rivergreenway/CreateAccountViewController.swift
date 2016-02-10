@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateAccountViewController: UITableViewController {
+class CreateAccountViewController: BaseTableViewController {
 
     @IBOutlet weak var dateTextField: UITextField!
         
