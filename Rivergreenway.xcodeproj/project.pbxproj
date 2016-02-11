@@ -40,6 +40,7 @@
 		D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */; };
 		D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */; };
 		D2F4B9381C66C45A006FACED /* CreateAccountViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */; };
+		F90A1E942F88DD74F4A864A8 /* Pods_Rivergreenway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39784534587E2330382A3867 /* Pods_Rivergreenway.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,10 +63,13 @@
 /* Begin PBXFileReference section */
 		01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1E220FBE903EBF18A67CB968 /* Pods-Rivergreenway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rivergreenway.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rivergreenway/Pods-Rivergreenway.release.xcconfig"; sourceTree = "<group>"; };
+		39784534587E2330382A3867 /* Pods_Rivergreenway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rivergreenway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF11D7D1C558C3D009A7D44 /* Overlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overlayer.swift; sourceTree = "<group>"; };
 		7FF11D801C558C83009A7D44 /* OverlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayerTests.swift; sourceTree = "<group>"; };
 		7FF11D851C5598B7009A7D44 /* Trails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Trails.kml; path = DataFiles/Trails.kml; sourceTree = "<group>"; };
 		9013802832BC7175DACC38D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D090D180D98B9E2ECE41CD81 /* Pods-Rivergreenway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rivergreenway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rivergreenway/Pods-Rivergreenway.debug.xcconfig"; sourceTree = "<group>"; };
 		D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
 		D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rivergreenway-Bridging-Header.h"; sourceTree = "<group>"; };
 		D232FEE41C51C28100BDFCE8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */,
+				F90A1E942F88DD74F4A864A8 /* Pods_Rivergreenway.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				9013802832BC7175DACC38D2 /* Pods.framework */,
+				39784534587E2330382A3867 /* Pods_Rivergreenway.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,6 +177,8 @@
 			children = (
 				1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */,
 				01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */,
+				D090D180D98B9E2ECE41CD81 /* Pods-Rivergreenway.debug.xcconfig */,
+				1E220FBE903EBF18A67CB968 /* Pods-Rivergreenway.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -436,7 +444,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rivergreenway/Pods-Rivergreenway-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3AC556B8866E57A2D6B06016 /* Check Pods Manifest.lock */ = {
@@ -511,7 +519,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rivergreenway/Pods-Rivergreenway-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -685,7 +693,7 @@
 		};
 		D26E6C0D1C4AC22C00186A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */;
+			baseConfigurationReference = D090D180D98B9E2ECE41CD81 /* Pods-Rivergreenway.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -711,7 +719,7 @@
 		};
 		D26E6C0E1C4AC22C00186A9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 1E220FBE903EBF18A67CB968 /* Pods-Rivergreenway.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -736,7 +744,6 @@
 		};
 		D26E6C101C4AC22C00186A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				HEADER_SEARCH_PATHS = (
@@ -755,7 +762,6 @@
 		};
 		D26E6C111C4AC22C00186A9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				HEADER_SEARCH_PATHS = (
