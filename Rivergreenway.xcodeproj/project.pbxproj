@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29B3C523D37E3307F3977A18 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
-		49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
+		7F9821461C6C291200206F8B /* Pods_Rivergreenway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9821451C6C291200206F8B /* Pods_Rivergreenway.framework */; };
 		7FF11D7E1C558C3D009A7D44 /* Overlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF11D7D1C558C3D009A7D44 /* Overlayer.swift */; };
 		7FF11D811C558C83009A7D44 /* OverlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF11D801C558C83009A7D44 /* OverlayerTests.swift */; };
 		7FF11D861C5598B7009A7D44 /* Trails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 7FF11D851C5598B7009A7D44 /* Trails.kml */; };
@@ -40,7 +39,6 @@
 		D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */; };
 		D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */; };
 		D2F4B9381C66C45A006FACED /* CreateAccountViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */; };
-		F90A1E942F88DD74F4A864A8 /* Pods_Rivergreenway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39784534587E2330382A3867 /* Pods_Rivergreenway.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +63,8 @@
 		1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1E220FBE903EBF18A67CB968 /* Pods-Rivergreenway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rivergreenway.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rivergreenway/Pods-Rivergreenway.release.xcconfig"; sourceTree = "<group>"; };
 		39784534587E2330382A3867 /* Pods_Rivergreenway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rivergreenway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F9821431C6C26C900206F8B /* Pods_Rivergreenway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Rivergreenway.framework; path = "Pods/../build/Debug-iphoneos/Pods_Rivergreenway.framework"; sourceTree = "<group>"; };
+		7F9821451C6C291200206F8B /* Pods_Rivergreenway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Rivergreenway.framework; path = "Pods/../build/Debug-iphoneos/Pods_Rivergreenway.framework"; sourceTree = "<group>"; };
 		7FF11D7D1C558C3D009A7D44 /* Overlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overlayer.swift; sourceTree = "<group>"; };
 		7FF11D801C558C83009A7D44 /* OverlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayerTests.swift; sourceTree = "<group>"; };
 		7FF11D851C5598B7009A7D44 /* Trails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Trails.kml; path = DataFiles/Trails.kml; sourceTree = "<group>"; };
@@ -112,23 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */,
-				F90A1E942F88DD74F4A864A8 /* Pods_Rivergreenway.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D26E6BF51C4AC22C00186A9A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29B3C523D37E3307F3977A18 /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D26E6C001C4AC22C00186A9A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				7F9821461C6C291200206F8B /* Pods_Rivergreenway.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +122,8 @@
 		541F92E6E8AB20D2D1F1A551 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F9821451C6C291200206F8B /* Pods_Rivergreenway.framework */,
+				7F9821431C6C26C900206F8B /* Pods_Rivergreenway.framework */,
 				9013802832BC7175DACC38D2 /* Pods.framework */,
 				39784534587E2330382A3867 /* Pods_Rivergreenway.framework */,
 			);
@@ -324,12 +310,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D26E6C0F1C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "RivergreenwayTests" */;
 			buildPhases = (
-				AB007E130388B0AE4FBC4EB6 /* Check Pods Manifest.lock */,
 				D26E6BF41C4AC22C00186A9A /* Sources */,
-				D26E6BF51C4AC22C00186A9A /* Frameworks */,
 				D26E6BF61C4AC22C00186A9A /* Resources */,
-				6DF922BD6658051154C098B2 /* Embed Pods Frameworks */,
-				D5C208FD65BBC23E584FFCC0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,7 +328,6 @@
 			buildConfigurationList = D26E6C121C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "RivergreenwayUITests" */;
 			buildPhases = (
 				D26E6BFF1C4AC22C00186A9A /* Sources */,
-				D26E6C001C4AC22C00186A9A /* Frameworks */,
 				D26E6C011C4AC22C00186A9A /* Resources */,
 			);
 			buildRules = (
@@ -460,51 +441,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6DF922BD6658051154C098B2 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB007E130388B0AE4FBC4EB6 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D5C208FD65BBC23E584FFCC0 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E82D1255BA782D2FCE92B225 /* Embed Pods Frameworks */ = {
@@ -699,6 +635,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -725,6 +665,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -744,8 +688,13 @@
 		};
 		D26E6C101C4AC22C00186A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D090D180D98B9E2ECE41CD81 /* Pods-Rivergreenway.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -762,8 +711,13 @@
 		};
 		D26E6C111C4AC22C00186A9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E220FBE903EBF18A67CB968 /* Pods-Rivergreenway.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -780,6 +734,7 @@
 		};
 		D26E6C131C4AC22C00186A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D090D180D98B9E2ECE41CD81 /* Pods-Rivergreenway.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RivergreenwayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -792,6 +747,7 @@
 		};
 		D26E6C141C4AC22C00186A9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E220FBE903EBF18A67CB968 /* Pods-Rivergreenway.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RivergreenwayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
