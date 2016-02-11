@@ -6,6 +6,7 @@ target 'Rivergreenway' do
   pod 'iOS-KML-Framework'
   pod 'SwiftHTTP', '~> 1.0.0'
   pod 'JSONJoy-Swift', '~> 1.0.0'
+  !use_frameworks #needed for swift libs
 end
 target 'RivergreenwayTests' do
 end
