@@ -20,16 +20,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86M-Dw-hnm">
-                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="393" width="600" height="207"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't Have an Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ane-os-cU5">
-                                        <rect key="frame" x="209" y="85" width="183" height="30"/>
+                                        <rect key="frame" x="209" y="88" width="183" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-TZ-Lid">
-                                        <rect key="frame" x="247" y="135" width="107" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-TZ-Lid">
+                                        <rect key="frame" x="247" y="140" width="107" height="32"/>
                                         <state key="normal" title="Create Account"/>
                                         <connections>
                                             <segue destination="GLW-JV-Jjs" kind="presentation" id="Fcg-yz-8MJ"/>
@@ -47,10 +47,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtt-re-XKR">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="187"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZNd-8p-hRo">
-                                        <rect key="frame" x="180" y="0.0" width="240" height="200"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Seal" translatesAutoresizingMaskIntoConstraints="NO" id="ZNd-8p-hRo">
+                                        <rect key="frame" x="180" y="0.0" width="240" height="187"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="BI8-2G-o1x"/>
                                         </constraints>
@@ -64,10 +64,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOO-6Q-51s">
-                                <rect key="frame" x="0.0" y="200" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="207" width="600" height="186"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-4m-cto">
-                                        <rect key="frame" x="200" y="35" width="200" height="30"/>
+                                        <rect key="frame" x="200" y="33" width="200" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="zKe-pC-bCy"/>
                                         </constraints>
@@ -75,7 +75,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1DM-gw-Ijm">
-                                        <rect key="frame" x="200" y="85" width="200" height="30"/>
+                                        <rect key="frame" x="200" y="80" width="200" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="byH-IH-iS6"/>
                                         </constraints>
@@ -83,7 +83,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVr-gl-tIb">
-                                        <rect key="frame" x="281" y="125" width="38" height="30"/>
+                                        <rect key="frame" x="281" y="116" width="38" height="26"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="xIz-iG-RVU" eventType="touchUpInside" id="wAO-hD-bNo"/>
@@ -110,6 +110,7 @@
                             <constraint firstItem="GOO-6Q-51s" firstAttribute="height" secondItem="Gtt-re-XKR" secondAttribute="height" id="GQA-TM-iNp"/>
                             <constraint firstItem="GOO-6Q-51s" firstAttribute="width" secondItem="dG6-Cw-ylM" secondAttribute="width" id="ImC-ol-I8h"/>
                             <constraint firstItem="86M-Dw-hnm" firstAttribute="height" secondItem="Gtt-re-XKR" secondAttribute="height" id="Nps-HM-CJe"/>
+                            <constraint firstItem="Gtt-re-XKR" firstAttribute="top" secondItem="HJe-k5-APS" secondAttribute="bottom" id="Pdk-yL-71l"/>
                             <constraint firstItem="GOO-6Q-51s" firstAttribute="leading" secondItem="dG6-Cw-ylM" secondAttribute="leading" id="Pgo-gp-I11"/>
                             <constraint firstItem="86M-Dw-hnm" firstAttribute="bottom" secondItem="zjr-aw-FMu" secondAttribute="top" id="QFD-gq-oVj"/>
                             <constraint firstItem="Gtt-re-XKR" firstAttribute="top" secondItem="dG6-Cw-ylM" secondAttribute="top" id="RAb-xD-mes"/>
@@ -121,6 +122,12 @@
                             <constraint firstItem="Gtt-re-XKR" firstAttribute="width" secondItem="dG6-Cw-ylM" secondAttribute="width" id="unI-jq-fXx"/>
                             <constraint firstItem="86M-Dw-hnm" firstAttribute="top" secondItem="GOO-6Q-51s" secondAttribute="bottom" id="zvJ-W6-9ai"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RAb-xD-mes"/>
+                                <exclude reference="Nps-HM-CJe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="passwordField" destination="1DM-gw-Ijm" id="x4K-Bn-zda"/>
@@ -307,6 +314,254 @@
             </objects>
             <point key="canvasLocation" x="-198" y="458"/>
         </scene>
+        <!--Nav Drawer View Controller-->
+        <scene sceneID="AX3-oi-UON">
+            <objects>
+                <viewController storyboardIdentifier="NavDrawerView" id="Scd-jT-7eV" customClass="NavDrawerViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6eK-WT-uNi"/>
+                        <viewControllerLayoutGuide type="bottom" id="1bc-YL-1BF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ubZ-n4-U4g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aV4-Wg-veI">
+                                <rect key="frame" x="0.0" y="20" width="600" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-5O-ozJ">
+                                <rect key="frame" x="0.0" y="170" width="600" height="430"/>
+                                <connections>
+                                    <segue destination="L96-cV-eR0" kind="embed" identifier="NavDrawerTableSegue" id="3KN-KO-nhg"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fJI-5O-ozJ" firstAttribute="width" secondItem="ubZ-n4-U4g" secondAttribute="width" id="72g-HZ-gk6"/>
+                            <constraint firstItem="aV4-Wg-veI" firstAttribute="width" secondItem="ubZ-n4-U4g" secondAttribute="width" id="7g6-cr-gL8"/>
+                            <constraint firstItem="aV4-Wg-veI" firstAttribute="leading" secondItem="ubZ-n4-U4g" secondAttribute="leading" id="EQw-AA-a1p"/>
+                            <constraint firstItem="fJI-5O-ozJ" firstAttribute="leading" secondItem="ubZ-n4-U4g" secondAttribute="leading" id="LPP-yj-hka"/>
+                            <constraint firstAttribute="bottom" secondItem="fJI-5O-ozJ" secondAttribute="bottom" id="LsX-w3-l7R"/>
+                            <constraint firstItem="aV4-Wg-veI" firstAttribute="top" secondItem="6eK-WT-uNi" secondAttribute="bottom" id="Lsf-0g-uXc"/>
+                            <constraint firstItem="fJI-5O-ozJ" firstAttribute="top" secondItem="aV4-Wg-veI" secondAttribute="bottom" id="YEa-0O-PKK"/>
+                            <constraint firstItem="aV4-Wg-veI" firstAttribute="height" secondItem="ubZ-n4-U4g" secondAttribute="height" multiplier="1:4" id="jGV-RK-oVF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2c-7I-em5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198" y="-1081"/>
+        </scene>
+        <!--Nav Drawer Table View Controller-->
+        <scene sceneID="dO5-fb-cWQ">
+            <objects>
+                <tableViewController storyboardIdentifier="NavDrawerTableView" id="L96-cV-eR0" customClass="NavDrawerTableViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GBZ-c7-QgC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="7Vl-ym-eXt">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordActivityCell" rowHeight="50" id="CJC-Jj-UwY" customClass="NavDrawerTableViewCell" customModule="Rivergreenway" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CJC-Jj-UwY" id="fPQ-Dd-DyC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Run" translatesAutoresizingMaskIntoConstraints="NO" id="Frh-Ji-Fem">
+                                                    <rect key="frame" x="8" y="7" width="35" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUN-4w-jCR">
+                                                    <rect key="frame" x="51" y="14" width="116" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellIcon" destination="Frh-Ji-Fem" id="pZH-SN-uQb"/>
+                                            <outlet property="cellLabel" destination="nUN-4w-jCR" id="w2l-6u-dFc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityHistoryCell" rowHeight="50" id="V5k-Ak-pzF" customClass="NavDrawerTableViewCell" customModule="Rivergreenway" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V5k-Ak-pzF" id="8lL-yu-0zz">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="History" translatesAutoresizingMaskIntoConstraints="NO" id="WXT-Q5-xsj">
+                                                    <rect key="frame" x="8" y="7" width="35" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jY7-DS-1wx">
+                                                    <rect key="frame" x="51" y="14" width="116" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellIcon" destination="WXT-Q5-xsj" id="d0k-l5-BYB"/>
+                                            <outlet property="cellLabel" destination="jY7-DS-1wx" id="haC-ZC-Odj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AchievementsCell" rowHeight="50" id="yc8-92-iul" customClass="NavDrawerTableViewCell" customModule="Rivergreenway" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yc8-92-iul" id="wD4-7I-EF3">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stars" translatesAutoresizingMaskIntoConstraints="NO" id="RTL-5U-ZpB">
+                                                    <rect key="frame" x="8" y="7" width="35" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAy-Az-LxL">
+                                                    <rect key="frame" x="43" y="14" width="108" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellIcon" destination="RTL-5U-ZpB" id="Xjf-UO-1nO"/>
+                                            <outlet property="cellLabel" destination="NAy-Az-LxL" id="Cd0-zZ-RWL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrailMapCell" rowHeight="50" id="NDp-Yz-iH1" customClass="NavDrawerTableViewCell" customModule="Rivergreenway" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="150" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDp-Yz-iH1" id="InF-tk-yuh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Explore" translatesAutoresizingMaskIntoConstraints="NO" id="xId-Hq-uaD">
+                                                    <rect key="frame" x="8" y="7" width="35" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trail Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIo-l0-Zue">
+                                                    <rect key="frame" x="51" y="14" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellIcon" destination="xId-Hq-uaD" id="gtN-kL-g24"/>
+                                            <outlet property="cellLabel" destination="gIo-l0-Zue" id="foj-Bb-sZr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountStatisticsCell" rowHeight="50" id="tIH-BH-CGc" customClass="NavDrawerTableViewCell" customModule="Rivergreenway" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="200" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tIH-BH-CGc" id="U0k-ZV-N1T">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Trending" translatesAutoresizingMaskIntoConstraints="NO" id="YdN-ZE-wZ8">
+                                                    <rect key="frame" x="8" y="7" width="35" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwd-3y-QXl">
+                                                    <rect key="frame" x="51" y="14" width="139" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellIcon" destination="YdN-ZE-wZ8" id="244-hV-Q5O"/>
+                                            <outlet property="cellLabel" destination="Dwd-3y-QXl" id="MxH-zk-KDl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountDetailsCell" rowHeight="50" id="RAs-BW-NOV" customClass="NavDrawerTableViewCell" customModule="Rivergreenway" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="250" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RAs-BW-NOV" id="5U5-Fz-IWc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Account" translatesAutoresizingMaskIntoConstraints="NO" id="i6J-lg-BZL">
+                                                    <rect key="frame" x="8" y="7" width="35" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-hs-86D">
+                                                    <rect key="frame" x="51" y="14" width="120" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellIcon" destination="i6J-lg-BZL" id="7tL-S1-eCD"/>
+                                            <outlet property="cellLabel" destination="3tI-hs-86D" id="oks-8h-clf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AboutCell" rowHeight="50" id="oVa-DW-P1s" customClass="NavDrawerTableViewCell" customModule="Rivergreenway" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="300" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oVa-DW-P1s" id="jyY-gI-qXD">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Info" translatesAutoresizingMaskIntoConstraints="NO" id="LjM-E4-PtT">
+                                                    <rect key="frame" x="8" y="7" width="35" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09T-cr-AuY">
+                                                    <rect key="frame" x="51" y="14" width="47" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellIcon" destination="LjM-E4-PtT" id="wVd-Tc-KCY"/>
+                                            <outlet property="cellLabel" destination="09T-cr-AuY" id="ZRg-hM-NDt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExitCell" rowHeight="50" id="b8G-ew-Lql" customClass="NavDrawerTableViewCell" customModule="Rivergreenway" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="350" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b8G-ew-Lql" id="2gL-Oe-kJV">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotInterested" translatesAutoresizingMaskIntoConstraints="NO" id="iiA-Zf-TbW">
+                                                    <rect key="frame" x="8" y="7" width="35" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jI-ax-9g8">
+                                                    <rect key="frame" x="51" y="14" width="28" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellIcon" destination="iiA-Zf-TbW" id="SnP-xe-dgl"/>
+                                            <outlet property="cellLabel" destination="5jI-ax-9g8" id="uV8-HD-5zG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="L96-cV-eR0" id="1WR-Gj-8be"/>
+                            <outlet property="delegate" destination="L96-cV-eR0" id="4gY-fo-ZT2"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSN-aX-1GV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584" y="-996"/>
+        </scene>
         <!--Record Activity-->
         <scene sceneID="CrU-nY-J89">
             <objects>
@@ -319,12 +574,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iW6-uq-a3b" customClass="GMSMapView">
-                                <rect key="frame" x="155" y="189" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iW6-uq-a3b" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iW6-uq-a3b" firstAttribute="width" secondItem="0SY-zI-xJS" secondAttribute="width" id="2Qp-F9-CBd"/>
+                            <constraint firstItem="iW6-uq-a3b" firstAttribute="leading" secondItem="0SY-zI-xJS" secondAttribute="leading" id="A3g-ie-3W9"/>
+                            <constraint firstItem="iW6-uq-a3b" firstAttribute="height" secondItem="0SY-zI-xJS" secondAttribute="height" id="OaL-Ho-pbY"/>
+                            <constraint firstAttribute="bottom" secondItem="iW6-uq-a3b" secondAttribute="bottom" id="uof-g8-O1f"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Record Activity" id="5f4-EU-5vt"/>
                 </viewController>
@@ -350,189 +611,25 @@
             </objects>
             <point key="canvasLocation" x="-1014" y="458"/>
         </scene>
-        <!--Nav Drawer View Controller-->
-        <scene sceneID="ZE4-E3-SOg">
+        <!--Activity History View Controller-->
+        <scene sceneID="lgR-sb-CuZ">
             <objects>
-                <tableViewController storyboardIdentifier="NavDrawerView" id="b7H-LQ-cCh" customClass="NavDrawerViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JtO-N9-YNY">
+                <viewController storyboardIdentifier="ActivityHistoryView" id="XCK-VK-GP6" customClass="ActivityHistoryViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kAL-KZ-zxm"/>
+                        <viewControllerLayoutGuide type="bottom" id="H0X-4I-JXs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pai-zd-Iyk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="xoY-sO-Z7h">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zef-LD-Ryz">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zef-LD-Ryz" id="10l-tB-phV">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aY5-2K-hM9">
-                                        <rect key="frame" x="0.0" y="44" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aY5-2K-hM9" id="QdZ-CP-I7d">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Run" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-Nk-hx7">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xc-Nu-2eh">
-                                                    <rect key="frame" x="48" y="11" width="116" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="s4u-wt-XOU">
-                                        <rect key="frame" x="0.0" y="88" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s4u-wt-XOU" id="G2M-by-6os">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="History" translatesAutoresizingMaskIntoConstraints="NO" id="Ldl-U2-KSp">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxh-j2-PT1">
-                                                    <rect key="frame" x="48" y="11" width="116" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="20E-lc-lKr">
-                                        <rect key="frame" x="0.0" y="132" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="20E-lc-lKr" id="cov-6g-CGH">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stars" translatesAutoresizingMaskIntoConstraints="NO" id="dRd-O8-VZh">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx2-KP-cno">
-                                                    <rect key="frame" x="48" y="11" width="108" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="O21-Wq-Med">
-                                        <rect key="frame" x="0.0" y="176" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O21-Wq-Med" id="uLn-vG-r6e">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Explore" translatesAutoresizingMaskIntoConstraints="NO" id="mGH-vm-gjT">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trail Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCZ-gj-kFL">
-                                                    <rect key="frame" x="48" y="11" width="71" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VFW-yu-Ix7">
-                                        <rect key="frame" x="0.0" y="220" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VFW-yu-Ix7" id="7Hv-DQ-eFI">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Trending" translatesAutoresizingMaskIntoConstraints="NO" id="7L0-fM-G3g">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeW-TF-Pun">
-                                                    <rect key="frame" x="48" y="11" width="139" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2bh-f0-S2h">
-                                        <rect key="frame" x="0.0" y="264" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2bh-f0-S2h" id="p7R-vf-SUn">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Account" translatesAutoresizingMaskIntoConstraints="NO" id="mJI-fS-znA">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-oq-12z">
-                                                    <rect key="frame" x="48" y="11" width="120" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VUY-5c-Fwi">
-                                        <rect key="frame" x="0.0" y="308" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VUY-5c-Fwi" id="ZCg-dg-0Gh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Info" translatesAutoresizingMaskIntoConstraints="NO" id="EPW-vu-O8c">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxA-P6-ruv">
-                                                    <rect key="frame" x="48" y="11" width="47" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QpI-5O-dvv">
-                                        <rect key="frame" x="0.0" y="352" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QpI-5O-dvv" id="dya-ju-wby">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotInterested" translatesAutoresizingMaskIntoConstraints="NO" id="PaC-VC-aeZ">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-Mp-9Ig">
-                                                    <rect key="frame" x="48" y="11" width="28" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="b7H-LQ-cCh" id="U1G-GR-Sfg"/>
-                            <outlet property="delegate" destination="b7H-LQ-cCh" id="yKY-wo-kOX"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9eJ-f9-aSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOE-3j-B9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1014" y="-1185"/>
+            <point key="canvasLocation" x="584" y="-330"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IGe-uP-ewz">
@@ -560,6 +657,7 @@
         <image name="Info" width="24" height="24"/>
         <image name="NotInterested" width="24" height="24"/>
         <image name="Run" width="24" height="24"/>
+        <image name="Seal" width="426" height="425"/>
         <image name="Stars" width="24" height="24"/>
         <image name="Trending" width="24" height="24"/>
     </resources>
