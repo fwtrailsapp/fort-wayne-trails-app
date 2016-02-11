@@ -36,6 +36,9 @@
 		D2BD1DF21C6ACC0D009E4F2F /* DraweredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */; };
 		D2BD1DF41C6ACFF9009E4F2F /* ViewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DF31C6ACFF9009E4F2F /* ViewIdentifier.swift */; };
 		D2BD1DF61C6AD09C009E4F2F /* NavDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DF51C6AD09C009E4F2F /* NavDrawerViewController.swift */; };
+		D2BD1DF81C6BFCDD009E4F2F /* ActivityHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DF71C6BFCDD009E4F2F /* ActivityHistoryViewController.swift */; };
+		D2BD1DFB1C6C1401009E4F2F /* NavDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DFA1C6C1401009E4F2F /* NavDrawerTableViewCell.swift */; };
+		D2BD1DFE1C6C210E009E4F2F /* NavDrawerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DFD1C6C210E009E4F2F /* NavDrawerTableViewController.swift */; };
 		D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */; };
 		D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */; };
 		D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */; };
@@ -97,6 +100,9 @@
 		D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraweredViewController.swift; sourceTree = "<group>"; };
 		D2BD1DF31C6ACFF9009E4F2F /* ViewIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIdentifier.swift; sourceTree = "<group>"; };
 		D2BD1DF51C6AD09C009E4F2F /* NavDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerViewController.swift; sourceTree = "<group>"; };
+		D2BD1DF71C6BFCDD009E4F2F /* ActivityHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHistoryViewController.swift; sourceTree = "<group>"; };
+		D2BD1DFA1C6C1401009E4F2F /* NavDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableViewCell.swift; sourceTree = "<group>"; };
+		D2BD1DFD1C6C210E009E4F2F /* NavDrawerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableViewController.swift; sourceTree = "<group>"; };
 		D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorder.swift; sourceTree = "<group>"; };
 		D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorderTests.swift; sourceTree = "<group>"; };
 		D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -181,10 +187,9 @@
 				D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */,
 				D2647CFA1C55AF2300796D51 /* LoginViewController.swift */,
 				D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */,
-				D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */,
-				D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */,
-				D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */,
-				D2BD1DF51C6AD09C009E4F2F /* NavDrawerViewController.swift */,
+				D2BD1DF71C6BFCDD009E4F2F /* ActivityHistoryViewController.swift */,
+				D2BD1DFC1C6C145A009E4F2F /* NavDrawer */,
+				D2BD1DF91C6BFCFB009E4F2F /* Abstract */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +285,26 @@
 				D232FEEC1C52EC7200BDFCE8 /* Sex.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D2BD1DF91C6BFCFB009E4F2F /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */,
+				D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */,
+				D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */,
+			);
+			name = Abstract;
+			sourceTree = "<group>";
+		};
+		D2BD1DFC1C6C145A009E4F2F /* NavDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD1DFA1C6C1401009E4F2F /* NavDrawerTableViewCell.swift */,
+				D2BD1DF51C6AD09C009E4F2F /* NavDrawerViewController.swift */,
+				D2BD1DFD1C6C210E009E4F2F /* NavDrawerTableViewController.swift */,
+			);
+			name = NavDrawer;
 			sourceTree = "<group>";
 		};
 		D2D2125F1C5C20FD001AFF9C /* Appearance */ = {
@@ -521,7 +546,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BD1DFB1C6C1401009E4F2F /* NavDrawerTableViewCell.swift in Sources */,
 				D2BD1DF21C6ACC0D009E4F2F /* DraweredViewController.swift in Sources */,
+				D2BD1DFE1C6C210E009E4F2F /* NavDrawerTableViewController.swift in Sources */,
 				D2612DFB1C53F432009232AC /* TrailActivityViewController.swift in Sources */,
 				D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */,
 				D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */,
@@ -538,6 +565,7 @@
 				D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */,
 				D2BD1DF01C6ACB90009E4F2F /* BaseTableViewController.swift in Sources */,
 				D2647CFB1C55AF2300796D51 /* LoginViewController.swift in Sources */,
+				D2BD1DF81C6BFCDD009E4F2F /* ActivityHistoryViewController.swift in Sources */,
 				D232FEED1C52EC7200BDFCE8 /* Sex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
