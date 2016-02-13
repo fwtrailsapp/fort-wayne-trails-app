@@ -32,11 +32,13 @@ class LoginViewControllerTests: XCTestCase {
     
     func testLoginButton() {
         app!.buttons["Login"].tap()
-        
+        let barTitle = app!.navigationBars["Record Activity"].staticTexts["Record Activity"]
+        assert(barTitle.hittable)
     }
     
-    func testCreateAccountButton() {
-        
+    func testCreateButton() {
+        app!.buttons["Create Account"].tap()
+        let barTitle = app!.navigationBars["Create Account"].staticTexts["Create Account"]
+        assert(barTitle.hittable)
     }
-    
 }
