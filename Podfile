@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.1'
+platform :ios, '8.0'
 link_with 'Rivergreenway', 'RivergreenwayTests', 'RivergreenwayUITests'
 
 pod 'MMDrawerController', '~> 0.5.7'
