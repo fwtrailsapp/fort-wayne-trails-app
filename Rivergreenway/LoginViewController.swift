@@ -40,14 +40,14 @@ class LoginViewController: BaseViewController {
             }
         }
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let centerContainer = appDelegate.centerContainer!
+        let drawerController = appDelegate.drawerController!
         let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
         let leftViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.NAV_DRAWER_VIEW.rawValue) as! NavDrawerViewController
         let navController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.MAIN_NAV_CONTROLLER.rawValue)
         
-        centerContainer.centerViewController = navController
-        centerContainer.leftDrawerViewController = leftViewController
+        drawerController.centerViewController = navController
+        drawerController.leftDrawerViewController = leftViewController
         
-        presentViewController(centerContainer, animated: true, completion: nil)
+        presentViewController(drawerController, animated: true, completion: nil)
     }
 }

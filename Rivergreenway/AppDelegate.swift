@@ -12,12 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var centerContainer: MMDrawerController?
+    var drawerController: MMDrawerController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         GMSServices.provideAPIKey("AIzaSyD-7_3phl6WUmiDE_KEwwNDPkpWA7RgYHY")
-        centerContainer = MMDrawerController()
+        drawerController = MMDrawerController()
 
         
         return true

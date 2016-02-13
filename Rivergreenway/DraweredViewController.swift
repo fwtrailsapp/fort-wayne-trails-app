@@ -19,6 +19,6 @@ class DraweredViewController: BaseViewController {
     
     func drawerBarButtonPressed() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.centerContainer?.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+        appDelegate.drawerController!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
     }
 }
