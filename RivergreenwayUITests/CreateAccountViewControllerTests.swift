@@ -32,9 +32,33 @@ class CreateAccountViewControllerTests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUsernameFieldHittable() {
+        app!.buttons["Create Account"].tap()
+        assert(tablesQuery!.textFields["username"].hittable)
     }
-
+    
+    func testPasswordFieldHittable() {
+        app!.buttons["Create Account"].tap()
+        assert(tablesQuery!.textFields["password"].hittable)
+    }
+    
+    func testPasswordConfirmFieldHittable() {
+        app!.buttons["Create Account"].tap()
+        assert(tablesQuery!.textFields["confirm password"].hittable)
+    }
+    
+    func testHeightFieldHittable() {
+        app!.buttons["Create Account"].tap()
+        assert(tablesQuery!.textFields["height (inches)"].hittable)
+    }
+    
+    func testWeightFieldHittable() {
+        app!.buttons["Create Account"].tap()
+        assert(tablesQuery!.textFields["weight (pounds)"].hittable)
+    }
+    
+    func testDOBFieldHittable() {
+        app!.buttons["Create Account"].tap()
+        assert(tablesQuery!.textFields["date of birth"].hittable)
+    }
 }
