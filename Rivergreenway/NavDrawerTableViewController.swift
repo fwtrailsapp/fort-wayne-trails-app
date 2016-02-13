@@ -9,43 +9,51 @@
 import UIKit
 
 class NavDrawerTableViewController: UITableViewController {
-
     
+    private var selectedCell: CellIdentifier = CellIdentifier.RECORD_ACTIVITY_CELL
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("table view loaded")
         // Do any additional setup after loading the view.
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("button clicked")
         
         let identifier = (tableView.cellForRowAtIndexPath(indexPath)?.reuseIdentifier)!
+        let cellID = CellIdentifier(rawValue: identifier)!
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        if cellID == selectedCell {
+            appDelegate.drawerController!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            return
+        }
+        var newViewController: UIViewController?
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
         
-        switch(CellIdentifier(rawValue: identifier)) {
-        case .RECORD_ACTIVITY_CELL?:
-            print("record activity clicked")
+        
+        switch(cellID) {
+        case .RECORD_ACTIVITY_CELL:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.TRAIL_ACTIVITY_NAV_CONTROLLER.rawValue)
             break
-        case .ACTIVITY_HISTORY_CELL?:
-            print("activity history clicked")
+        case .ACTIVITY_HISTORY_CELL:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACTIVITY_HISTORY_NAV_CONTROLLER.rawValue)
             break
-        case .ACHIEVEMENTS_CELL?:
+        case .ACHIEVEMENTS_CELL:
             break
-        case .TRAIL_MAP_CELL?:
+        case .TRAIL_MAP_CELL:
             break
-        case .ACCOUNT_STATISTICS_CELL?:
+        case .ACCOUNT_STATISTICS_CELL:
             break
-        case .ACCOUNT_DETAILS_CELL?:
+        case .ACCOUNT_DETAILS_CELL:
             break
-        case .ABOUT_CELL?:
+        case .ABOUT_CELL:
             break
-        case .EXIT_CELL?:
-            break
-        default:
-            print("default option")
+        case .EXIT_CELL:
             break
         }
+        
+        appDelegate.drawerController!.centerViewController = newViewController!
+        appDelegate.drawerController!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+        selectedCell = cellID
     }
 }
 

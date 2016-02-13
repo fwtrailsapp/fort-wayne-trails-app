@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActivityHistoryViewController: DraweredViewController {
+class ActivityHistoryViewController: DraweredTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

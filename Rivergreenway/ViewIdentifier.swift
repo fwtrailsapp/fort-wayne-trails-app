@@ -15,7 +15,9 @@ enum ViewIdentifier: String {
     case CREATE_ACCOUNT_VIEW = "CreateAccountView"
     case TRAIL_ACTIVITY_VIEW = "TrailActivityView"
     case NAV_DRAWER_VIEW = "NavDrawerView"
+    case ACTIVITY_HISTORY_VIEW = "ActivityHistoryView"
     
-    case MAIN_NAV_CONTROLLER = "MainNavController"
+    case TRAIL_ACTIVITY_NAV_CONTROLLER = "TrailActivityNavController"
     case CREATE_ACCOUNT_NAV_CONTROLLER = "CreateAccountNavController"
+    case ACTIVITY_HISTORY_NAV_CONTROLLER = "ActivityHistoryNavController"
 }

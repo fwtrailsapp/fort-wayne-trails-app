@@ -43,8 +43,7 @@ class LoginViewController: BaseViewController {
         let drawerController = appDelegate.drawerController!
         let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
         let leftViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.NAV_DRAWER_VIEW.rawValue) as! NavDrawerViewController
-        let navController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.MAIN_NAV_CONTROLLER.rawValue)
-        
+        let navController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.TRAIL_ACTIVITY_NAV_CONTROLLER.rawValue)
         drawerController.centerViewController = navController
         drawerController.leftDrawerViewController = leftViewController
         

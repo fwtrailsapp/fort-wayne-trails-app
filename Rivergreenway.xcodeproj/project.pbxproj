@@ -40,6 +40,8 @@
 		D2BD1DF81C6BFCDD009E4F2F /* ActivityHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DF71C6BFCDD009E4F2F /* ActivityHistoryViewController.swift */; };
 		D2BD1DFB1C6C1401009E4F2F /* NavDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DFA1C6C1401009E4F2F /* NavDrawerTableViewCell.swift */; };
 		D2BD1DFE1C6C210E009E4F2F /* NavDrawerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DFD1C6C210E009E4F2F /* NavDrawerTableViewController.swift */; };
+		D2C52F9F1C6FE39600DA78A7 /* DraweredTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52F9E1C6FE39600DA78A7 /* DraweredTableViewController.swift */; };
+		D2C52FA11C6FE9EA00DA78A7 /* ActivityHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FA01C6FE9EA00DA78A7 /* ActivityHistoryTableViewCell.swift */; };
 		D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */; };
 		D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */; };
 		D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */; };
@@ -104,6 +106,8 @@
 		D2BD1DF71C6BFCDD009E4F2F /* ActivityHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHistoryViewController.swift; sourceTree = "<group>"; };
 		D2BD1DFA1C6C1401009E4F2F /* NavDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableViewCell.swift; sourceTree = "<group>"; };
 		D2BD1DFD1C6C210E009E4F2F /* NavDrawerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableViewController.swift; sourceTree = "<group>"; };
+		D2C52F9E1C6FE39600DA78A7 /* DraweredTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraweredTableViewController.swift; sourceTree = "<group>"; };
+		D2C52FA01C6FE9EA00DA78A7 /* ActivityHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorder.swift; sourceTree = "<group>"; };
 		D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorderTests.swift; sourceTree = "<group>"; };
 		D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -186,10 +190,11 @@
 		D20979501C53EAFC00826CC9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2BD1DF71C6BFCDD009E4F2F /* ActivityHistoryViewController.swift */,
+				D2C52FA01C6FE9EA00DA78A7 /* ActivityHistoryTableViewCell.swift */,
 				D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */,
 				D2647CFA1C55AF2300796D51 /* LoginViewController.swift */,
 				D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */,
-				D2BD1DF71C6BFCDD009E4F2F /* ActivityHistoryViewController.swift */,
 				D2BD1DFC1C6C145A009E4F2F /* NavDrawer */,
 				D2BD1DF91C6BFCFB009E4F2F /* Abstract */,
 			);
@@ -295,6 +300,7 @@
 				D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */,
 				D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */,
 				D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */,
+				D2C52F9E1C6FE39600DA78A7 /* DraweredTableViewController.swift */,
 			);
 			name = Abstract;
 			sourceTree = "<group>";
@@ -589,9 +595,11 @@
 				D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */,
 				D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */,
 				D2BD1DEE1C6ACB7C009E4F2F /* BaseViewController.swift in Sources */,
+				D2C52F9F1C6FE39600DA78A7 /* DraweredTableViewController.swift in Sources */,
 				D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */,
 				D2BD1DF41C6ACFF9009E4F2F /* ViewIdentifier.swift in Sources */,
 				D2612DF61C53EB94009232AC /* Converter.swift in Sources */,
+				D2C52FA11C6FE9EA00DA78A7 /* ActivityHistoryTableViewCell.swift in Sources */,
 				7FF11D7E1C558C3D009A7D44 /* Overlayer.swift in Sources */,
 				D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */,
 				D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */,
