@@ -38,8 +38,10 @@ class NavDrawerTableViewController: UITableViewController {
             newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACTIVITY_HISTORY_NAV_CONTROLLER.rawValue)
             break
         case .ACHIEVEMENTS_CELL:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACHIEVEMENT_NAV_CONTROLLER.rawValue)
             break
         case .TRAIL_MAP_CELL:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.TRAIL_MAP_NAV_CONTROLLER.rawValue)
             break
         case .ACCOUNT_STATISTICS_CELL:
             break

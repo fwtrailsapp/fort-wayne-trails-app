@@ -679,6 +679,44 @@
             </objects>
             <point key="canvasLocation" x="584" y="-330"/>
         </scene>
+        <!--Trail Map-->
+        <scene sceneID="kZG-6M-LeF">
+            <objects>
+                <viewController storyboardIdentifier="TrailMapView" id="Qaj-d6-MTw" customClass="TrailMapViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aYg-5a-eAN"/>
+                        <viewControllerLayoutGuide type="bottom" id="cp3-uY-sDr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gjy-UG-5bY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="leu-nC-vRO" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="leu-nC-vRO" secondAttribute="bottom" id="SpT-9o-net"/>
+                            <constraint firstItem="leu-nC-vRO" firstAttribute="top" secondItem="aYg-5a-eAN" secondAttribute="bottom" id="YAs-ei-JQx"/>
+                            <constraint firstItem="leu-nC-vRO" firstAttribute="centerX" secondItem="Gjy-UG-5bY" secondAttribute="centerX" id="aOm-XH-9Vb"/>
+                            <constraint firstItem="leu-nC-vRO" firstAttribute="leading" secondItem="Gjy-UG-5bY" secondAttribute="leading" id="c82-yQ-eFJ"/>
+                            <constraint firstItem="leu-nC-vRO" firstAttribute="width" secondItem="Gjy-UG-5bY" secondAttribute="width" id="jjk-gg-HcG"/>
+                            <constraint firstItem="leu-nC-vRO" firstAttribute="height" secondItem="Gjy-UG-5bY" secondAttribute="height" id="l8d-WL-JXZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="l8d-WL-JXZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trail Map" id="7U0-Zw-8wB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DuE-E2-xH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="458"/>
+        </scene>
         <!--Activity History-->
         <scene sceneID="x0b-y8-Oxc">
             <objects>
@@ -807,6 +845,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCt-jA-sAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2062" y="-330"/>
+        </scene>
+        <!--Trail Map Navigation Controller-->
+        <scene sceneID="6pp-d9-lD0">
+            <objects>
+                <navigationController storyboardIdentifier="TrailMapNavController" automaticallyAdjustsScrollViewInsets="NO" id="27G-fZ-ch1" userLabel="Trail Map Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QLU-9y-Jv7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qaj-d6-MTw" kind="relationship" relationship="rootViewController" id="BWQ-Pn-97I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dno-0n-zjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584" y="458"/>
         </scene>
     </scenes>
     <resources>
