@@ -607,7 +607,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iW6-uq-a3b" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -615,9 +615,15 @@
                         <constraints>
                             <constraint firstItem="iW6-uq-a3b" firstAttribute="width" secondItem="0SY-zI-xJS" secondAttribute="width" id="2Qp-F9-CBd"/>
                             <constraint firstItem="iW6-uq-a3b" firstAttribute="leading" secondItem="0SY-zI-xJS" secondAttribute="leading" id="A3g-ie-3W9"/>
+                            <constraint firstItem="iW6-uq-a3b" firstAttribute="top" secondItem="Re9-1t-ErB" secondAttribute="bottom" id="NPi-A0-0hk"/>
                             <constraint firstItem="iW6-uq-a3b" firstAttribute="height" secondItem="0SY-zI-xJS" secondAttribute="height" id="OaL-Ho-pbY"/>
                             <constraint firstAttribute="bottom" secondItem="iW6-uq-a3b" secondAttribute="bottom" id="uof-g8-O1f"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OaL-Ho-pbY"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Record Activity" id="5f4-EU-5vt"/>
                 </viewController>
@@ -625,10 +631,10 @@
             </objects>
             <point key="canvasLocation" x="-198" y="-330"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Create Account Navigation Controller-->
         <scene sceneID="pIZ-Ak-a84">
             <objects>
-                <navigationController storyboardIdentifier="CreateAccountNavController" automaticallyAdjustsScrollViewInsets="NO" id="GLW-JV-Jjs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CreateAccountNavController" automaticallyAdjustsScrollViewInsets="NO" id="GLW-JV-Jjs" userLabel="Create Account Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tGY-gt-qbO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -643,10 +649,10 @@
             </objects>
             <point key="canvasLocation" x="-1014" y="458"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Record Activity Navigation Controller-->
         <scene sceneID="IGe-uP-ewz">
             <objects>
-                <navigationController storyboardIdentifier="TrailActivityNavController" automaticallyAdjustsScrollViewInsets="NO" id="NYm-t6-e0z" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TrailActivityNavController" automaticallyAdjustsScrollViewInsets="NO" id="NYm-t6-e0z" userLabel="Record Activity Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vAK-Aa-KkO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -661,10 +667,10 @@
             </objects>
             <point key="canvasLocation" x="-1014" y="-330"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Activity History Navigation Controller-->
         <scene sceneID="yj6-i4-cQs">
             <objects>
-                <navigationController storyboardIdentifier="ActivityHistoryNavController" automaticallyAdjustsScrollViewInsets="NO" id="nc0-vR-7UP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ActivityHistoryNavController" automaticallyAdjustsScrollViewInsets="NO" id="nc0-vR-7UP" userLabel="Activity History Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mZW-UR-MsJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -828,10 +834,10 @@
             </objects>
             <point key="canvasLocation" x="2834" y="-330"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Achievements Navigation Controller-->
         <scene sceneID="yuu-Er-Od1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T5V-En-thW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AchievementNavController" automaticallyAdjustsScrollViewInsets="NO" id="T5V-En-thW" userLabel="Achievements Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DI0-ST-9P5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
