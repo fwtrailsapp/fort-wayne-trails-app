@@ -10,9 +10,21 @@ import UIKit
 
 class ActivityHistoryViewController: DraweredTableViewController {
 
+    private let cellID = "ActivityHistoryCell"
+    private var activities: [TrailActivity]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
+    
+    /*override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+    }*/
+
 }

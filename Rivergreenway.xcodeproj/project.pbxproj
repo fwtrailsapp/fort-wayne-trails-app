@@ -110,6 +110,8 @@
 		D2BD1DFD1C6C210E009E4F2F /* NavDrawerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableViewController.swift; sourceTree = "<group>"; };
 		D2C52F9E1C6FE39600DA78A7 /* DraweredTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraweredTableViewController.swift; sourceTree = "<group>"; };
 		D2C52FA01C6FE9EA00DA78A7 /* ActivityHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		D2C52FA21C70002800DA78A7 /* AchievementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
+		D2C52FA41C70006700DA78A7 /* AchievementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementTableViewCell.swift; sourceTree = "<group>"; };
 		D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorder.swift; sourceTree = "<group>"; };
 		D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorderTests.swift; sourceTree = "<group>"; };
 		D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
