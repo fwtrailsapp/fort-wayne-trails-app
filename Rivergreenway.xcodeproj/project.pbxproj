@@ -21,7 +21,7 @@
 		D246EDCA1C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246EDC81C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift */; };
 		D2612DF61C53EB94009232AC /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DF51C53EB94009232AC /* Converter.swift */; };
 		D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DF81C53EC20009232AC /* ConverterTests.swift */; };
-		D2612DFB1C53F432009232AC /* TrailActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */; };
+		D2612DFB1C53F432009232AC /* RecordActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFA1C53F432009232AC /* RecordActivityViewController.swift */; };
 		D2647CFB1C55AF2300796D51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2647CFA1C55AF2300796D51 /* LoginViewController.swift */; };
 		D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */; };
 		D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26E6BE41C4AC22C00186A9A /* Rivergreenway.xcdatamodeld */; };
@@ -84,7 +84,7 @@
 		D246EDC81C5BABCB00A3C1C3 /* TrailActivityViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrailActivityViewControllerTests.swift; path = ../RivergreenwayUITests/TrailActivityViewControllerTests.swift; sourceTree = "<group>"; };
 		D2612DF51C53EB94009232AC /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		D2612DF81C53EC20009232AC /* ConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
-		D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityViewController.swift; sourceTree = "<group>"; };
+		D2612DFA1C53F432009232AC /* RecordActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityViewController.swift; sourceTree = "<group>"; };
 		D2647CFA1C55AF2300796D51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D26E6BDF1C4AC22C00186A9A /* Rivergreenway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivergreenway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26E6BE21C4AC22C00186A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 				D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */,
 				D2647CFA1C55AF2300796D51 /* LoginViewController.swift */,
 				D2BD1DFC1C6C145A009E4F2F /* NavDrawer */,
-				D2612DFA1C53F432009232AC /* TrailActivityViewController.swift */,
+				D2612DFA1C53F432009232AC /* RecordActivityViewController.swift */,
 				D2C52FA61C700AF700DA78A7 /* TrailMapViewController.swift */,
 			);
 			name = Controllers;
@@ -598,7 +598,7 @@
 				D2BD1DFB1C6C1401009E4F2F /* NavDrawerTableViewCell.swift in Sources */,
 				D2BD1DF21C6ACC0D009E4F2F /* DraweredViewController.swift in Sources */,
 				D2BD1DFE1C6C210E009E4F2F /* NavDrawerTableViewController.swift in Sources */,
-				D2612DFB1C53F432009232AC /* TrailActivityViewController.swift in Sources */,
+				D2612DFB1C53F432009232AC /* RecordActivityViewController.swift in Sources */,
 				D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */,
 				D26E6BE61C4AC22C00186A9A /* Rivergreenway.xcdatamodeld in Sources */,
 				D2C52FA51C70006700DA78A7 /* AchievementTableViewCell.swift in Sources */,

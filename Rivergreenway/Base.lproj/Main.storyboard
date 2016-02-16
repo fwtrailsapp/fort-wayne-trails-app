@@ -597,7 +597,7 @@
         <!--Record Activity-->
         <scene sceneID="CrU-nY-J89">
             <objects>
-                <viewController storyboardIdentifier="TrailActivityView" id="uwJ-ne-jA0" customClass="TrailActivityViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordActivityView" id="uwJ-ne-jA0" customClass="RecordActivityViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Re9-1t-ErB"/>
                         <viewControllerLayoutGuide type="bottom" id="dvq-mP-m2S"/>
@@ -652,7 +652,7 @@
         <!--Record Activity Navigation Controller-->
         <scene sceneID="IGe-uP-ewz">
             <objects>
-                <navigationController storyboardIdentifier="TrailActivityNavController" automaticallyAdjustsScrollViewInsets="NO" id="NYm-t6-e0z" userLabel="Record Activity Navigation Controller" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RecordActivityNavController" automaticallyAdjustsScrollViewInsets="NO" id="NYm-t6-e0z" userLabel="Record Activity Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vAK-Aa-KkO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -32,7 +32,7 @@ class NavDrawerTableViewController: UITableViewController {
         
         switch(cellID) {
         case .RECORD_ACTIVITY_CELL:
-            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.TRAIL_ACTIVITY_NAV_CONTROLLER.rawValue)
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.RECORD_ACTIVITY_NAV_CONTROLLER.rawValue)
             break
         case .ACTIVITY_HISTORY_CELL:
             newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACTIVITY_HISTORY_NAV_CONTROLLER.rawValue)

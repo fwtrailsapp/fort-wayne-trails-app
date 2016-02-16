@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrailActivityViewController: DraweredViewController {
+class RecordActivityViewController: DraweredViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
