@@ -44,10 +44,13 @@ class NavDrawerTableViewController: UITableViewController {
             newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.TRAIL_MAP_NAV_CONTROLLER.rawValue)
             break
         case .ACCOUNT_STATISTICS_CELL:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACCOUNT_STATISTICS_NAV_CONTROLLER.rawValue)
             break
         case .ACCOUNT_DETAILS_CELL:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACCOUNT_DETAILS_NAV_CONTROLLER.rawValue)
             break
         case .ABOUT_CELL:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ABOUT_NAV_CONTROLLER.rawValue)
             break
         case .EXIT_CELL:
             break
