@@ -34,7 +34,6 @@ class NavDrawerTableViewControllerTests: XCTestCase {
     func testSealDisplayed() {
         app!.navigationBars["Record Activity"].buttons["Menu"].tap()
         assert(app!.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.hittable)
-        
     }
     
     func testRecordActivityNavigation() {
@@ -52,7 +51,7 @@ class NavDrawerTableViewControllerTests: XCTestCase {
     
     func testAchievementNavigation() {
         app!.navigationBars["Record Activity"].buttons["Menu"].tap()
-        app!.tables.staticTexts["Achievements"].tap()
+        app!.tables.cells.containingType(.StaticText, identifier:"Achievements").childrenMatchingType(.StaticText).matchingIdentifier("Achievements").elementBoundByIndex(0).tap()
         assert(app!.navigationBars["Achievements"].staticTexts["Achievements"].hittable)
     }
     
@@ -64,7 +63,20 @@ class NavDrawerTableViewControllerTests: XCTestCase {
     
     func testAccountStatisticsNavigation() {
         app!.navigationBars["Record Activity"].buttons["Menu"].tap()
-        XCUIApplication().tables.cells.containingType(.StaticText, identifier:"Account Statistics").childrenMatchingType(.StaticText).matchingIdentifier("Account Statistics").elementBoundByIndex(0).tap()
+        app!.tables.cells.containingType(.StaticText, identifier:"Account Statistics").childrenMatchingType(.StaticText).matchingIdentifier("Account Statistics").elementBoundByIndex(0).tap()
+        assert(app!.navigationBars["Account Statistics"].staticTexts["Account Statistics"].hittable)
+    }
+    
+    func testAccountDetailsNavigation() {
+        app!.navigationBars["Record Activity"].buttons["Menu"].tap()
+        app!.tables.cells.containingType(.StaticText, identifier:"Account Details").childrenMatchingType(.StaticText).matchingIdentifier("Account Details").elementBoundByIndex(0).tap()
+        assert(app!.navigationBars["Account Details"].staticTexts["Account Details"].hittable)
+    }
+    
+    func testAboutNavigation() {
+        app!.navigationBars["Record Activity"].buttons["Menu"].tap()
+        app!.tables.cells.containingType(.StaticText, identifier:"About").childrenMatchingType(.StaticText).matchingIdentifier("About").elementBoundByIndex(0).tap()
+        assert(app!.navigationBars["About"].staticTexts["About"].hittable)
         
     }
 }
