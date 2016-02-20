@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutViewController: BaseViewController {
+class AboutViewController: DraweredViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
