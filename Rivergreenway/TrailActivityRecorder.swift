@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class TrailActivityRecorder {
+    
+    private var state: TrailActivityState = .CREATED
+    
+    func getState() -> TrailActivityState {
+        return state
+    }
+    
+    func setState(newState: TrailActivityState) {
+        state = newState
+    }
+}

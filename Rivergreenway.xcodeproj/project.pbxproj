@@ -49,6 +49,9 @@
 		D2C52FAB1C70FCDC00DA78A7 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FAA1C70FCDC00DA78A7 /* AccountDetailsViewController.swift */; };
 		D2C52FAD1C7100B500DA78A7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FAC1C7100B500DA78A7 /* AboutViewController.swift */; };
 		D2C52FAF1C729CEE00DA78A7 /* NavDrawerTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FAE1C729CEE00DA78A7 /* NavDrawerTableViewControllerTests.swift */; };
+		D2C52FB21C7540D000DA78A7 /* StartPauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FB11C7540D000DA78A7 /* StartPauseViewController.swift */; };
+		D2C52FB41C7540E900DA78A7 /* ResumeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FB31C7540E900DA78A7 /* ResumeFinishViewController.swift */; };
+		D2C52FB61C76904200DA78A7 /* RecordActivityStatLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FB51C76904200DA78A7 /* RecordActivityStatLabel.swift */; };
 		D2D2125C1C5C1FB3001AFF9C /* TrailActivityRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */; };
 		D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */; };
 		D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */; };
@@ -122,6 +125,9 @@
 		D2C52FAA1C70FCDC00DA78A7 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		D2C52FAC1C7100B500DA78A7 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D2C52FAE1C729CEE00DA78A7 /* NavDrawerTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableViewControllerTests.swift; sourceTree = "<group>"; };
+		D2C52FB11C7540D000DA78A7 /* StartPauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseViewController.swift; sourceTree = "<group>"; };
+		D2C52FB31C7540E900DA78A7 /* ResumeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeFinishViewController.swift; sourceTree = "<group>"; };
+		D2C52FB51C76904200DA78A7 /* RecordActivityStatLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityStatLabel.swift; sourceTree = "<group>"; };
 		D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorder.swift; sourceTree = "<group>"; };
 		D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorderTests.swift; sourceTree = "<group>"; };
 		D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 		D20979501C53EAFC00826CC9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2C52FB01C7540B100DA78A7 /* RecordActivity */,
 				D2BD1DF91C6BFCFB009E4F2F /* Abstract */,
 				D2C52FA41C70006700DA78A7 /* AchievementTableViewCell.swift */,
 				D2C52FA21C70002800DA78A7 /* AchievementViewController.swift */,
@@ -212,7 +219,6 @@
 				D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */,
 				D2647CFA1C55AF2300796D51 /* LoginViewController.swift */,
 				D2BD1DFC1C6C145A009E4F2F /* NavDrawer */,
-				D2612DFA1C53F432009232AC /* RecordActivityViewController.swift */,
 				D2C52FA61C700AF700DA78A7 /* TrailMapViewController.swift */,
 				D2C52FA81C70159D00DA78A7 /* AccountStatisticsViewController.swift */,
 				D2C52FAA1C70FCDC00DA78A7 /* AccountDetailsViewController.swift */,
@@ -336,9 +342,20 @@
 			name = NavDrawer;
 			sourceTree = "<group>";
 		};
+		D2C52FB01C7540B100DA78A7 /* RecordActivity */ = {
+			isa = PBXGroup;
+			children = (
+				D2612DFA1C53F432009232AC /* RecordActivityViewController.swift */,
+				D2C52FB11C7540D000DA78A7 /* StartPauseViewController.swift */,
+				D2C52FB31C7540E900DA78A7 /* ResumeFinishViewController.swift */,
+			);
+			name = RecordActivity;
+			sourceTree = "<group>";
+		};
 		D2D2125F1C5C20FD001AFF9C /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
+				D2C52FB51C76904200DA78A7 /* RecordActivityStatLabel.swift */,
 			);
 			name = Appearance;
 			sourceTree = "<group>";
@@ -607,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C52FB61C76904200DA78A7 /* RecordActivityStatLabel.swift in Sources */,
 				D2BD1DFB1C6C1401009E4F2F /* NavDrawerTableViewCell.swift in Sources */,
 				D2BD1DF21C6ACC0D009E4F2F /* DraweredViewController.swift in Sources */,
 				D2BD1DFE1C6C210E009E4F2F /* NavDrawerTableViewController.swift in Sources */,
@@ -621,7 +639,9 @@
 				D2C52F9F1C6FE39600DA78A7 /* DraweredTableViewController.swift in Sources */,
 				D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */,
 				D2BD1DF41C6ACFF9009E4F2F /* ViewIdentifier.swift in Sources */,
+				D2C52FB21C7540D000DA78A7 /* StartPauseViewController.swift in Sources */,
 				D2612DF61C53EB94009232AC /* Converter.swift in Sources */,
+				D2C52FB41C7540E900DA78A7 /* ResumeFinishViewController.swift in Sources */,
 				D2C52FAB1C70FCDC00DA78A7 /* AccountDetailsViewController.swift in Sources */,
 				D2C52FA11C6FE9EA00DA78A7 /* ActivityHistoryTableViewCell.swift in Sources */,
 				7FF11D7E1C558C3D009A7D44 /* Overlayer.swift in Sources */,

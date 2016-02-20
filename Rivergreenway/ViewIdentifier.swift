@@ -30,4 +30,7 @@ enum ViewIdentifier: String {
     case ACCOUNT_DETAILS_NAV_CONTROLLER = "AccountDetailsNavController"
     case ACCOUNT_STATISTICS_NAV_CONTROLLER = "AccountStatisticsNavController"
     case ABOUT_NAV_CONTROLLER = "AboutNavController"
+    
+    case START_PAUSE_SEGUE = "StartPauseSegue"
+    case RESUME_FINISH_SEGUE = "ResumeFinishSegue"
 }
