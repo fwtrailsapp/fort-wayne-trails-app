@@ -10,9 +10,19 @@ import UIKit
 
 class AccountDetailsViewController: DraweredTableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var dateTextField: UITextField!
+    
+    @IBAction func didBeginEditingDateTextField(sender: UITextField) {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
 
-        // Do any additional setup after loading the view.
+    func datePickerValueChanged(sender:UIDatePicker) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+        dateTextField.text = dateFormatter.stringFromDate(sender.date)
     }
 }
