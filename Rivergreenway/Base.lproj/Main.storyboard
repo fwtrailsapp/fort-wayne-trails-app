@@ -619,7 +619,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYU-8v-0kx">
                                         <rect key="frame" x="0.0" y="357" width="600" height="179"/>
                                         <subviews>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlN-4z-fXV">
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlN-4z-fXV" userLabel="Play Pause Container View">
                                                 <rect key="frame" x="0.0" y="143" width="600" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="CPs-10-Xav"/>
@@ -633,10 +633,10 @@
                                                     <segue destination="RLF-dO-bZe" kind="embed" identifier="StartPauseSegue" id="0g6-8f-9Xr"/>
                                                 </connections>
                                             </containerView>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lah-fp-p6Q">
+                                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lah-fp-p6Q" userLabel="Resume Pause Container View">
                                                 <rect key="frame" x="0.0" y="143" width="600" height="36"/>
                                                 <connections>
-                                                    <segue destination="q43-px-STL" kind="embed" id="FrD-Gb-TxH"/>
+                                                    <segue destination="q43-px-STL" kind="embed" identifier="ResumeFinishSegue" id="FrD-Gb-TxH"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -684,6 +684,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Record Activity" id="5f4-EU-5vt"/>
+                    <connections>
+                        <outlet property="doubleButtonContainerView" destination="lah-fp-p6Q" id="gLy-L1-fEP"/>
+                        <outlet property="mapView" destination="iW6-uq-a3b" id="97H-oY-Qa9"/>
+                        <outlet property="singleButtonContainerView" destination="TlN-4z-fXV" id="B8G-ed-Ipk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9D-kT-q08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
