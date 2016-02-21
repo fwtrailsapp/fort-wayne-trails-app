@@ -460,7 +460,7 @@
                                                     <rect key="frame" x="8" y="7" width="35" height="35"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAy-Az-LxL">
-                                                    <rect key="frame" x="43" y="14" width="108" height="21"/>
+                                                    <rect key="frame" x="51" y="14" width="108" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -769,8 +769,8 @@
                                             <mask key="constraints">
                                                 <exclude reference="04z-I7-hu0"/>
                                                 <exclude reference="bZ3-bN-Fbj"/>
-                                                <exclude reference="eDa-vu-lzh"/>
                                                 <exclude reference="doh-0S-6fc"/>
+                                                <exclude reference="eDa-vu-lzh"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -1193,6 +1193,10 @@
         <scene sceneID="gEf-fw-bht">
             <objects>
                 <viewController storyboardIdentifier="StartPauseVIew" id="RLF-dO-bZe" customClass="StartPauseViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bKj-hJ-MGP"/>
+                        <viewControllerLayoutGuide type="bottom" id="WAK-3Y-DJR"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2M7-nm-JRc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1223,6 +1227,10 @@
         <scene sceneID="MG7-IO-4Rm">
             <objects>
                 <viewController storyboardIdentifier="ResumeFinishView" id="q43-px-STL" customClass="ResumeFinishViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nh0-nr-hP9"/>
+                        <viewControllerLayoutGuide type="bottom" id="xqp-Fc-xhH"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yfX-Kn-ciC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
