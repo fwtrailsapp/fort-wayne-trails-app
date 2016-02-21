@@ -8,13 +8,19 @@
 
 import UIKit
 
-class RecordActivityViewController: DraweredViewController, CLLocationManagerDelegate, StartPauseDelegate, ResumeFinishDelegate {
+class RecordActivityViewController: DraweredViewController, CLLocationManagerDelegate, GMSMapViewDelegate, StartPauseDelegate, ResumeFinishDelegate {
 
     // MARK : - Properties
     
     @IBOutlet weak var singleButtonContainerView: UIView!
     @IBOutlet weak var doubleButtonContainerView: UIView!
     @IBOutlet weak var mapView: GMSMapView!
+    
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var speedLabel: UILabel!
+    @IBOutlet weak var caloriesLabel: UILabel!
+    
     
     private let recorder = TrailActivityRecorder()
     let locationManager = CLLocationManager()
@@ -34,7 +40,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         let myLocation: CLLocation = change![NSKeyValueChangeNewKey] as! CLLocation
         
-        mapView.camera = GMSCameraPosition.cameraWithTarget(myLocation.coordinate, zoom: 17)
+        mapView.camera = GMSCameraPosition.cameraWithTarget(myLocation.coordinate, zoom: mapView.camera.zoom)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
