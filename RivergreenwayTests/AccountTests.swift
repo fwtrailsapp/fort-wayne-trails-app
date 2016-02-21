@@ -19,13 +19,10 @@ class AccountTests: XCTestCase {
         
         let email = "test@email.com"
         emptyAccount = Account(email: email)
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dob = dateFormatter.dateFromString("1994-07-15")
+        let birthYear = 1994
 
         scottAccount = Account(email: "scott@email.com",
-            dob: dob,
+            birthYear: birthYear,
             height: 68,
             weight: 155,
             sex: Sex.MALE)
@@ -42,6 +39,7 @@ class AccountTests: XCTestCase {
         
         let scottBMR = scottAccount!.BMR()
         print(scottBMR!)
+        print(scottAccount!.getAge()!)
         XCTAssertEqualWithAccuracy(scottBMR!, 1752.45, accuracy: 50.0)
     }
 }

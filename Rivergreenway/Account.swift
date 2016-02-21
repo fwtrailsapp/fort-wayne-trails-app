@@ -11,21 +11,21 @@ import Foundation
 class Account {
     
     private let email: String
-    private let dob: NSDate?
+    private let birthYear: Int?
     private let height: Double?
     private let weight: Double?
     private let sex: Sex?
     
-    init(email: String, dob: NSDate? = nil, height: Double? = nil, weight: Double? = nil, sex:Sex? = nil) {
+    init(email: String, birthYear: Int? = nil, height: Double? = nil, weight: Double? = nil, sex:Sex? = nil) {
         self.email = email
-        self.dob = dob
+        self.birthYear = birthYear
         self.height = height
         self.weight = weight
         self.sex = sex
     }
     
     func BMR() -> Double? {
-        if dob == nil || height == nil || weight == nil || sex == nil {
+        if birthYear == nil || height == nil || weight == nil || sex == nil {
             return nil
         } else {
             var c1: Double
@@ -48,10 +48,21 @@ class Account {
             
             let weightKg:Double = Converter.poundsToKilograms(self.weight!)
             let heightCm:Double = Converter.inchesToCentimeters(self.height!)
-            let ageYears = NSCalendar.currentCalendar().components(NSCalendarUnit.Year, fromDate: self.dob!, toDate: NSDate(), options: NSCalendarOptions()).year
-            
+            let ageYears = getAge()!
             let BMR:Double = c1 + (c2 * weightKg) + (c3 * heightCm) - (c4 * Double(ageYears))
+            
             return BMR
         }
+    }
+    
+    func getAge() -> Int? {
+        if birthYear == nil {
+            return nil
+        }
+        let currDate = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Year], fromDate: currDate)
+        
+        return components.year - birthYear!
     }
 }
