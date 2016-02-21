@@ -35,18 +35,17 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
         
-        overlayer = Overlayer(mapView: mapView)
-        do {
-            try self.overlayer!.loadKMLFromURL("https://gist.githubusercontent.com/libjared/4b703481eccad557807c/raw/78ebe13d134c8fdb4c14c62c37cad5b2a02af133/dude.kml")
-        } catch {
-            // notify user that attempt to display trails failed
-        }
+        overlayKML()
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         let myLocation: CLLocation = change![NSKeyValueChangeNewKey] as! CLLocation
         
         mapView.camera = GMSCameraPosition.cameraWithTarget(myLocation.coordinate, zoom: mapView.camera.zoom)
+        
+        if recorder.isRecording() {
+            
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -70,20 +69,29 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     }
     
     func start() {
-        recorder.setState(TrailActivityState.STARTED)
+        recorder.start()
     }
     
     func pause() {
-        recorder.setState(TrailActivityState.PAUSED)
+        recorder.pause()
         swapContainerViews()
     }
     
     func resume() {
-        recorder.setState(TrailActivityState.RESUMED)
+        recorder.resume()
         swapContainerViews()
     }
     
     func finish() {
-        recorder.setState(TrailActivityState.STOPPED)
+        recorder.stop()
+    }
+    
+    func overlayKML() {
+        overlayer = Overlayer(mapView: mapView)
+        do {
+            try self.overlayer!.loadKMLFromURL("https://gist.githubusercontent.com/libjared/4b703481eccad557807c/raw/78ebe13d134c8fdb4c14c62c37cad5b2a02af133/dude.kml")
+        } catch {
+            // notify user that attempt to display trails failed
+        }
     }
 }
