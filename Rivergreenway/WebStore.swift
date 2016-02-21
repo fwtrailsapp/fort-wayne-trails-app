@@ -8,3 +8,11 @@
 
 import Foundation
 
+class WebStore {
+    func login(username: String, password: String) throws {
+    }
+    
+    enum WebStoreError: ErrorType {
+        case BadCredentials
+    }
+}
