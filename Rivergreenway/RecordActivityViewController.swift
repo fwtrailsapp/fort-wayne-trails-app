@@ -21,9 +21,9 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var caloriesLabel: UILabel!
     
-    
+    private var overlayer: Overlayer?
     private let recorder = TrailActivityRecorder()
-    let locationManager = CLLocationManager()
+    private let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,12 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
         
+        overlayer = Overlayer(mapView: mapView)
+        do {
+            try self.overlayer!.loadKMLFromURL("https://gist.githubusercontent.com/libjared/4b703481eccad557807c/raw/78ebe13d134c8fdb4c14c62c37cad5b2a02af133/dude.kml")
+        } catch {
+            // notify user that attempt to display trails failed
+        }
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
