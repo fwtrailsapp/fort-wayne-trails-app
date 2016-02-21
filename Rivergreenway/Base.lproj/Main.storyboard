@@ -35,6 +35,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-TZ-Lid">
                                         <rect key="frame" x="247" y="140" width="107" height="31"/>
                                         <state key="normal" title="Create Account"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="147" y="140" width="107" height="32"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="GLW-JV-Jjs" kind="presentation" id="Fcg-yz-8MJ"/>
                                         </connections>
@@ -639,19 +642,63 @@
                                                     <segue destination="q43-px-STL" kind="embed" identifier="ResumeFinishSegue" id="FrD-Gb-TxH"/>
                                                 </connections>
                                             </containerView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2j-pD-vuq" userLabel="Duration View">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="72"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mh5-OZ-TxG" userLabel="Distance View">
+                                                <rect key="frame" x="300" y="0.0" width="300" height="72"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-Us-V7n" userLabel="Calories View">
+                                                <rect key="frame" x="300" y="72" width="300" height="72"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDm-eU-E4R" userLabel="Speed View">
+                                                <rect key="frame" x="0.0" y="72" width="300" height="72"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="RDm-eU-E4R" secondAttribute="bottom" id="04z-I7-hu0"/>
                                             <constraint firstItem="lah-fp-p6Q" firstAttribute="leading" secondItem="eYU-8v-0kx" secondAttribute="leading" id="6eM-D4-uNm"/>
                                             <constraint firstAttribute="bottom" secondItem="TlN-4z-fXV" secondAttribute="bottom" id="8Ie-Ua-CtO"/>
+                                            <constraint firstItem="5JU-Us-V7n" firstAttribute="width" secondItem="eYU-8v-0kx" secondAttribute="width" multiplier="1:2" id="8iA-6l-t6O"/>
+                                            <constraint firstItem="RDm-eU-E4R" firstAttribute="width" secondItem="eYU-8v-0kx" secondAttribute="width" multiplier="1:2" id="Chm-F9-lxm"/>
+                                            <constraint firstItem="G2j-pD-vuq" firstAttribute="width" secondItem="eYU-8v-0kx" secondAttribute="width" multiplier="1:2" id="EM8-Si-fHM"/>
+                                            <constraint firstItem="5JU-Us-V7n" firstAttribute="top" secondItem="Mh5-OZ-TxG" secondAttribute="bottom" id="HV3-Py-lDi"/>
                                             <constraint firstItem="lah-fp-p6Q" firstAttribute="width" secondItem="eYU-8v-0kx" secondAttribute="width" id="Mb9-fx-CVl"/>
+                                            <constraint firstItem="5JU-Us-V7n" firstAttribute="height" secondItem="eYU-8v-0kx" secondAttribute="height" multiplier="2:5" id="Tue-4e-7Vx"/>
                                             <constraint firstItem="TlN-4z-fXV" firstAttribute="height" secondItem="eYU-8v-0kx" secondAttribute="height" multiplier="1:5" id="Wt7-KD-T0q"/>
+                                            <constraint firstItem="Mh5-OZ-TxG" firstAttribute="height" secondItem="eYU-8v-0kx" secondAttribute="height" multiplier="2:5" id="YXM-ea-kGz"/>
+                                            <constraint firstItem="RDm-eU-E4R" firstAttribute="top" secondItem="G2j-pD-vuq" secondAttribute="bottom" id="Z2c-9H-ebn"/>
                                             <constraint firstAttribute="bottom" secondItem="lah-fp-p6Q" secondAttribute="bottom" id="a6L-Wn-IWd"/>
+                                            <constraint firstItem="Mh5-OZ-TxG" firstAttribute="width" secondItem="eYU-8v-0kx" secondAttribute="width" multiplier="1:2" id="aEw-ci-IL7"/>
+                                            <constraint firstItem="RDm-eU-E4R" firstAttribute="top" secondItem="eYU-8v-0kx" secondAttribute="top" id="bZ3-bN-Fbj"/>
+                                            <constraint firstAttribute="trailing" secondItem="5JU-Us-V7n" secondAttribute="trailing" id="bkl-Si-Vga"/>
                                             <constraint firstItem="TlN-4z-fXV" firstAttribute="leading" secondItem="eYU-8v-0kx" secondAttribute="leading" id="cWd-vF-ZJw"/>
+                                            <constraint firstItem="G2j-pD-vuq" firstAttribute="height" secondItem="eYU-8v-0kx" secondAttribute="height" multiplier="2:5" id="dN8-bG-K2z"/>
+                                            <constraint firstItem="Mh5-OZ-TxG" firstAttribute="leading" secondItem="eYU-8v-0kx" secondAttribute="leading" id="doh-0S-6fc"/>
+                                            <constraint firstItem="5JU-Us-V7n" firstAttribute="top" secondItem="eYU-8v-0kx" secondAttribute="top" id="eDa-vu-lzh"/>
                                             <constraint firstItem="lah-fp-p6Q" firstAttribute="height" secondItem="eYU-8v-0kx" secondAttribute="height" multiplier="1:5" id="eHf-Ld-h9a"/>
+                                            <constraint firstItem="RDm-eU-E4R" firstAttribute="leading" secondItem="eYU-8v-0kx" secondAttribute="leading" id="fnL-63-UWM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mh5-OZ-TxG" secondAttribute="trailing" id="h4g-qx-dgv"/>
                                             <constraint firstAttribute="height" constant="179" id="oOP-Yf-IfR"/>
+                                            <constraint firstItem="G2j-pD-vuq" firstAttribute="leading" secondItem="eYU-8v-0kx" secondAttribute="leading" id="qdQ-FR-k3Q"/>
+                                            <constraint firstItem="RDm-eU-E4R" firstAttribute="height" secondItem="eYU-8v-0kx" secondAttribute="height" multiplier="2:5" id="sly-Lc-KB4"/>
+                                            <constraint firstItem="Mh5-OZ-TxG" firstAttribute="top" secondItem="eYU-8v-0kx" secondAttribute="top" id="tae-d1-q79"/>
                                             <constraint firstItem="TlN-4z-fXV" firstAttribute="width" secondItem="eYU-8v-0kx" secondAttribute="width" id="vJ2-zL-28p"/>
+                                            <constraint firstItem="G2j-pD-vuq" firstAttribute="top" secondItem="eYU-8v-0kx" secondAttribute="top" id="zQn-TU-IKU"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="04z-I7-hu0"/>
+                                                <exclude reference="bZ3-bN-Fbj"/>
+                                                <exclude reference="eDa-vu-lzh"/>
+                                                <exclude reference="doh-0S-6fc"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1130,6 +1177,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vG-Au-W0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-473" y="-557"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ym0-Ak-nPf">
+            <objects>
+                <viewController id="OVa-ZV-9fW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dpc-G7-YBN"/>
+                        <viewControllerLayoutGuide type="bottom" id="gjW-MV-W2D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fAa-PA-2dr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WV0-3n-5zO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
