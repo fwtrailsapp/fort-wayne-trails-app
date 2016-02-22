@@ -22,7 +22,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     @IBOutlet weak var caloriesLabel: UILabel!
     
     private var overlayer: Overlayer?
-    private let recorder = TrailActivityRecorder()
+    private var recorder = TrailActivityRecorder()
     private let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -69,21 +69,37 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     }
     
     func start() {
-        recorder.start()
+        do {
+            try recorder.start(NSDate(), exerciseType: ExerciseType.RUNNING)
+        } catch {
+            print("error starting")
+        }
     }
     
     func pause() {
-        recorder.pause()
+        do {
+            try recorder.pause()
+        } catch {
+            print("error pausing")
+        }
         swapContainerViews()
     }
     
     func resume() {
-        recorder.resume()
+        do {
+            try recorder.resume()
+        } catch {
+            print("error resuming")
+        }
         swapContainerViews()
     }
     
     func finish() {
-        recorder.stop()
+        do {
+            try recorder.stop()
+        } catch {
+            print("error stopping")
+        }
     }
     
     func overlayKML() {

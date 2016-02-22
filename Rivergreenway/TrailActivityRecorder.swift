@@ -10,23 +10,28 @@ import Foundation
 
 class TrailActivityRecorder {
     
-    private let AVERAGE_BMR: Double = 0;
+    private let AVERAGE_BMR: Double = 1577.5
     
     private var state: TrailActivityState = .CREATED
+    private var exerciseType: ExerciseType?
     private var BMR: Double
     
     private var startTime: NSDate?
-    private var endTime: NSDate?
     private var path: [GMSMutablePath]
-    private var segment: GMSMutablePath?
+    private var segment: GMSMutablePath
     
     private var lastTime: NSDate?
     private var lastLocation: CLLocation?
-    private var speed: Double?
-    private var lastDistance: Double?
+    private var lastDistance: CLLocationDistance = 0
+    private var lastDuration: NSTimeInterval = 0
+    private var speed: Double = 0
+    private var distance: CLLocationDistance = 0
+    private var duration: NSTimeInterval = 0
+    private var calories: Double = 0
     
-    init(BMR: Double?) {
+    init(BMR: Double? = nil) {
         path = [GMSMutablePath]()
+        segment = GMSMutablePath()
         if BMR == nil {
             self.BMR = AVERAGE_BMR
         } else {
@@ -38,62 +43,107 @@ class TrailActivityRecorder {
         return state
     }
     
-    func setState(newState: TrailActivityState) {
-        state = newState
-    }
-    
     func isRecording() -> Bool {
         return state == .STARTED || state == .RESUMED
     }
     
-    func update(newLocation: CLLocation) {
-        if segment != nil {
-            segment!.addCoordinate(newLocation.coordinate)
+    func update(newLocation: CLLocation, newTime: NSDate) throws {
+        if state != .STARTED || state != .RESUMED {
+            throw RecorderError.INCORRECT_STATE
         }
+        segment.addCoordinate(newLocation.coordinate)
+
+        // update the change in distance and change in location
+        // since the last update
+        updateLastDistance(newLocation)
+        updateLastDuration(newTime)
+        
+        // update the aggregate distance and duration and calories
+        distance += lastDistance
+        duration += lastDuration
+        updateCalories()
+        
+        lastTime = newTime
+        lastLocation = newLocation
     }
     
     func getDistance() -> CLLocationDistance {
-        if segment != nil {
-            return segment!.lengthOfKind(kGMSLengthGeodesic)
-        }
-        return 0
+        return distance
     }
     
     func getDuration() -> NSTimeInterval {
-        let currTime = NSDate()
-        if startTime != nil {
-            return Converter.millisecondsToHours(currTime.timeIntervalSinceDate(startTime!) * 1000)
-        }
-        return 0
+        return duration
     }
     
-    func getCalories(MET: Double) -> Double {
-        return (BMR / 24) * MET * (getDuration() / 60)
+    func getCalories() -> Double {
+        return calories
     }
     
     func getSpeed() -> Double {
-        return 0
+        if lastDistance == 0 || lastDuration == 0 {
+            return 0
+        }
+        return lastDistance / lastDuration
     }
     
-    func start() {
-        startTime = NSDate()
+    private func updateCalories() {
+        if exerciseType != nil {
+            calories +=  (BMR / 24) * exerciseType!.rawValue * (lastDuration / 60)
+        }
+    }
+    
+    private func updateLastDistance(newLocation: CLLocation) {
+        if lastLocation != nil {
+            lastDistance = lastLocation!.distanceFromLocation(newLocation)
+        }
+    }
+    
+    private func updateLastDuration(newTime: NSDate) {
+        if lastTime != nil {
+            lastDuration = lastTime!.timeIntervalSinceDate(newTime)
+        } else {
+            lastDuration = startTime!.timeIntervalSinceDate(newTime)
+        }
+    }
+    
+    func start(startTime: NSDate = NSDate(), exerciseType: ExerciseType) throws {
+        if state != .CREATED {
+            throw RecorderError.INCORRECT_TRANSITION
+        }
+        self.startTime = startTime
         segment = GMSMutablePath()
         state = .STARTED
     }
     
-    func pause() {
-        path.append(segment!)
-        segment = nil
+    func pause() throws {
+        if state != .STARTED && state != .RESUMED {
+            throw RecorderError.INCORRECT_TRANSITION
+        }
+        path.append(segment)
+        segment.removeAllCoordinates()
         state = .PAUSED
     }
     
-    func resume() {
+    func resume() throws {
+        if state != .PAUSED {
+            throw RecorderError.INCORRECT_TRANSITION
+        }
         segment = GMSMutablePath()
         state = .RESUMED
     }
     
-    func stop() {
-        endTime = NSDate()
+    func stop() throws {
+        if state == .CREATED {
+            throw RecorderError.INCORRECT_TRANSITION
+        }
+        if state == .RESUMED || state == .STARTED {
+            path.append(segment)
+        }
         state = .STOPPED
+    }
+    
+    enum RecorderError: ErrorType {
+        case INCORRECT_STATE
+        case INCORRECT_TRANSITION
     }
 }
