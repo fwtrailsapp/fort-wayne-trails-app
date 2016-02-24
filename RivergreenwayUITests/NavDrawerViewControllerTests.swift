@@ -8,7 +8,7 @@
 
 import XCTest
 
-class NavDrawerTableViewControllerTests: XCTestCase {
+class NavDrawerViewControllerTests: XCTestCase {
     
     var app: XCUIApplication?
     

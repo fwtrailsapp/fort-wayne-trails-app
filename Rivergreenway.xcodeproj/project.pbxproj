@@ -48,7 +48,7 @@
 		D2C52FA91C70159D00DA78A7 /* AccountStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FA81C70159D00DA78A7 /* AccountStatisticsViewController.swift */; };
 		D2C52FAB1C70FCDC00DA78A7 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FAA1C70FCDC00DA78A7 /* AccountDetailsViewController.swift */; };
 		D2C52FAD1C7100B500DA78A7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FAC1C7100B500DA78A7 /* AboutViewController.swift */; };
-		D2C52FAF1C729CEE00DA78A7 /* NavDrawerTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FAE1C729CEE00DA78A7 /* NavDrawerTableViewControllerTests.swift */; };
+		D2C52FAF1C729CEE00DA78A7 /* NavDrawerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FAE1C729CEE00DA78A7 /* NavDrawerViewControllerTests.swift */; };
 		D2C52FB21C7540D000DA78A7 /* StartPauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FB11C7540D000DA78A7 /* StartPauseViewController.swift */; };
 		D2C52FB41C7540E900DA78A7 /* ResumeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FB31C7540E900DA78A7 /* ResumeFinishViewController.swift */; };
 		D2C52FB61C76904200DA78A7 /* RecordActivityStatLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C52FB51C76904200DA78A7 /* RecordActivityStatLabel.swift */; };
@@ -124,7 +124,7 @@
 		D2C52FA81C70159D00DA78A7 /* AccountStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStatisticsViewController.swift; sourceTree = "<group>"; };
 		D2C52FAA1C70FCDC00DA78A7 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		D2C52FAC1C7100B500DA78A7 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		D2C52FAE1C729CEE00DA78A7 /* NavDrawerTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableViewControllerTests.swift; sourceTree = "<group>"; };
+		D2C52FAE1C729CEE00DA78A7 /* NavDrawerViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerViewControllerTests.swift; sourceTree = "<group>"; };
 		D2C52FB11C7540D000DA78A7 /* StartPauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPauseViewController.swift; sourceTree = "<group>"; };
 		D2C52FB31C7540E900DA78A7 /* ResumeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeFinishViewController.swift; sourceTree = "<group>"; };
 		D2C52FB51C76904200DA78A7 /* RecordActivityStatLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityStatLabel.swift; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 				D246EDC51C5BABA700A3C1C3 /* LoginViewControllerTests.swift */,
 				D246EDC81C5BABCB00A3C1C3 /* RecordActivityViewControllerTests.swift */,
 				D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */,
-				D2C52FAE1C729CEE00DA78A7 /* NavDrawerTableViewControllerTests.swift */,
+				D2C52FAE1C729CEE00DA78A7 /* NavDrawerViewControllerTests.swift */,
 			);
 			name = ControllerTests;
 			sourceTree = "<group>";
@@ -677,7 +677,7 @@
 			files = (
 				D2F4B9381C66C45A006FACED /* CreateAccountViewControllerTests.swift in Sources */,
 				D246EDC71C5BABA700A3C1C3 /* LoginViewControllerTests.swift in Sources */,
-				D2C52FAF1C729CEE00DA78A7 /* NavDrawerTableViewControllerTests.swift in Sources */,
+				D2C52FAF1C729CEE00DA78A7 /* NavDrawerViewControllerTests.swift in Sources */,
 				D26E6C081C4AC22C00186A9A /* RivergreenwayUITests.swift in Sources */,
 				D246EDCA1C5BABCB00A3C1C3 /* RecordActivityViewControllerTests.swift in Sources */,
 			);
