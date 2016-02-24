@@ -35,7 +35,7 @@ class TrailActivityRecorderTests: XCTestCase {
     
     func testStart() {
         do {
-            try recorder!.start(exerciseType: .RUNNING)
+            try recorder!.start(.RUNNING)
         } catch {
             assert(false)
         }
@@ -51,7 +51,7 @@ class TrailActivityRecorderTests: XCTestCase {
         }
         
         do {
-            try recorder!.start(exerciseType: .RUNNING)
+            try recorder!.start(.RUNNING)
         } catch {
             assert(false)
         }
@@ -73,7 +73,7 @@ class TrailActivityRecorderTests: XCTestCase {
         }
         
         do {
-            try recorder!.start(exerciseType: .RUNNING)
+            try recorder!.start(.RUNNING)
         } catch {
             assert(false)
         }
@@ -108,7 +108,7 @@ class TrailActivityRecorderTests: XCTestCase {
         }
         
         do {
-            try recorder!.start(exerciseType: .RUNNING)
+            try recorder!.start(.RUNNING)
         } catch {
             assert(false)
         }
@@ -119,5 +119,85 @@ class TrailActivityRecorderTests: XCTestCase {
             assert(false)
         }
         assert(recorder!.getState() == .STOPPED)
+    }
+
+    func testGetSpeed() {
+        do {
+            try recorder!.start(ExerciseType.BIKING)
+        } catch {
+            assert(false)
+        }
+        
+        let locs = initializeLocations()
+        
+        for loc in locs {
+            do {
+                try recorder!.update(loc)
+                assert(recorder!.getSpeed() == 5)
+            } catch {
+                assert(false)
+            }
+        }
+    }
+    
+    func testGetDistance() {
+        do {
+            try recorder!.start(ExerciseType.BIKING)
+        } catch {
+            assert(false)
+        }
+        
+        let locs = initializeLocations()
+        for loc in locs {
+            do {
+                try recorder!.update(loc)
+            } catch {
+                assert(false)
+            }
+        }
+        XCTAssertEqualWithAccuracy(recorder!.getDistance(), 1264, accuracy: 100.0)
+    }
+    
+    func testGetDuration() {
+        do {
+            try recorder!.start(ExerciseType.BIKING)
+        } catch {
+            assert(false)
+        }
+        
+        let locs = initializeLocations()
+        for loc in locs {
+            do {
+                try recorder!.update(loc)
+            } catch {
+                assert(false)
+            }
+        }
+        assert(recorder!.getDuration() == 600)
+    }
+    
+    /*
+        -85.189383,40.9806756,0.0 -85.1909924,40.9795255,0.0 -85.1926017,40.9782133,0.0
+    */
+    func initializeLocations() -> [CLLocation] {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "hh:mm"
+        let date1 = dateFormatter.dateFromString("10:30")
+        let date2 = dateFormatter.dateFromString("10:35")
+        let date3 = dateFormatter.dateFromString("10:40")
+        
+        var locs = [CLLocation]()
+        let coord1 = CLLocationCoordinate2D(latitude: -85.189383,longitude: 40.9806756)
+        let coord2 = CLLocationCoordinate2D(latitude: -85.1909924,longitude: 40.9795255)
+        let coord3 = CLLocationCoordinate2D(latitude: -85.1926017,longitude: 40.9782133)
+        let loc1 = CLLocation(coordinate: coord1, altitude: 0, horizontalAccuracy: 0.5, verticalAccuracy: 0.5, course: 0, speed: 5, timestamp: date1!)
+        let loc2 = CLLocation(coordinate: coord2, altitude: 0, horizontalAccuracy: 0.5, verticalAccuracy: 0.5, course: 0, speed: 5, timestamp: date2!)
+        let loc3 = CLLocation(coordinate: coord3, altitude: 0, horizontalAccuracy: 0.5, verticalAccuracy: 0.5, course: 0, speed: 5, timestamp: date3!)
+        
+        locs.append(loc1)
+        locs.append(loc2)
+        locs.append(loc3)
+        
+        return locs
     }
 }

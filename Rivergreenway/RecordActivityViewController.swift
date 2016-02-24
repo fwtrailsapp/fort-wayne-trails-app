@@ -44,7 +44,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         mapView.camera = GMSCameraPosition.cameraWithTarget(myLocation.coordinate, zoom: mapView.camera.zoom)
         
         if recorder.isRecording() {
-            
+            myLocation.speed
         }
     }
     
@@ -70,7 +70,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func start() {
         do {
-            try recorder.start(NSDate(), exerciseType: ExerciseType.RUNNING)
+            try recorder.start(ExerciseType.RUNNING)
         } catch {
             print("error starting")
         }

@@ -16,15 +16,11 @@ class TrailActivityRecorder {
     private var exerciseType: ExerciseType?
     private var BMR: Double
     
-    private var startTime: NSDate?
     private var path: [GMSMutablePath]
     private var segment: GMSMutablePath
     
-    private var lastTime: NSDate?
+    private var currLocation: CLLocation?
     private var lastLocation: CLLocation?
-    private var lastDistance: CLLocationDistance = 0
-    private var lastDuration: NSTimeInterval = 0
-    private var speed: Double = 0
     private var distance: CLLocationDistance = 0
     private var duration: NSTimeInterval = 0
     private var calories: Double = 0
@@ -47,24 +43,19 @@ class TrailActivityRecorder {
         return state == .STARTED || state == .RESUMED
     }
     
-    func update(newLocation: CLLocation, newTime: NSDate) throws {
-        if state != .STARTED || state != .RESUMED {
+    func update(newLocation: CLLocation) throws {
+        if (state != .STARTED && state != .RESUMED) || exerciseType == nil {
             throw RecorderError.INCORRECT_STATE
         }
         segment.addCoordinate(newLocation.coordinate)
-
-        // update the change in distance and change in location
-        // since the last update
-        updateLastDistance(newLocation)
-        updateLastDuration(newTime)
+        lastLocation = currLocation
+        currLocation = newLocation
         
         // update the aggregate distance and duration and calories
-        distance += lastDistance
-        duration += lastDuration
-        updateCalories()
-        
-        lastTime = newTime
-        lastLocation = newLocation
+        let tempDistance = lastLocation != nil ? Converter.metersToFeet(currLocation!.distanceFromLocation(lastLocation!)) : 0
+        distance += tempDistance
+        duration += lastLocation != nil ? currLocation!.timestamp.timeIntervalSinceDate(lastLocation!.timestamp) : 0
+        calories =  (BMR / 24) * exerciseType!.rawValue * (duration / 3600)
     }
     
     func getDistance() -> CLLocationDistance {
@@ -80,37 +71,14 @@ class TrailActivityRecorder {
     }
     
     func getSpeed() -> Double {
-        if lastDistance == 0 || lastDuration == 0 {
-            return 0
-        }
-        return lastDistance / lastDuration
+        return currLocation != nil ? currLocation!.speed : 0
     }
     
-    private func updateCalories() {
-        if exerciseType != nil {
-            calories +=  (BMR / 24) * exerciseType!.rawValue * (lastDuration / 60)
-        }
-    }
-    
-    private func updateLastDistance(newLocation: CLLocation) {
-        if lastLocation != nil {
-            lastDistance = lastLocation!.distanceFromLocation(newLocation)
-        }
-    }
-    
-    private func updateLastDuration(newTime: NSDate) {
-        if lastTime != nil {
-            lastDuration = lastTime!.timeIntervalSinceDate(newTime)
-        } else {
-            lastDuration = startTime!.timeIntervalSinceDate(newTime)
-        }
-    }
-    
-    func start(startTime: NSDate = NSDate(), exerciseType: ExerciseType) throws {
+    func start(exerciseType: ExerciseType) throws {
         if state != .CREATED {
             throw RecorderError.INCORRECT_TRANSITION
         }
-        self.startTime = startTime
+        self.exerciseType = exerciseType
         segment = GMSMutablePath()
         state = .STARTED
     }
