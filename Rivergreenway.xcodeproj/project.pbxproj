@@ -13,6 +13,7 @@
 		7FF11D811C558C83009A7D44 /* OverlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF11D801C558C83009A7D44 /* OverlayerTests.swift */; };
 		7FF11D861C5598B7009A7D44 /* Trails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 7FF11D851C5598B7009A7D44 /* Trails.kml */; };
 		BE3C88ED84B1EB7C5EC0124A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
+		D2271F541C7E99FD00FE4E4B /* BaseViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2271F531C7E99FD00FE4E4B /* BaseViewControllerTests.swift */; };
 		D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */; };
 		D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEE41C51C28100BDFCE8 /* Account.swift */; };
 		D232FEED1C52EC7200BDFCE8 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEEC1C52EC7200BDFCE8 /* Sex.swift */; };
@@ -82,6 +83,7 @@
 		7FF11D801C558C83009A7D44 /* OverlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayerTests.swift; sourceTree = "<group>"; };
 		7FF11D851C5598B7009A7D44 /* Trails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Trails.kml; path = DataFiles/Trails.kml; sourceTree = "<group>"; };
 		9013802832BC7175DACC38D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2271F531C7E99FD00FE4E4B /* BaseViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerTests.swift; sourceTree = "<group>"; };
 		D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
 		D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rivergreenway-Bridging-Header.h"; sourceTree = "<group>"; };
 		D232FEE41C51C28100BDFCE8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -227,6 +229,14 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		D2271F521C7E99DB00FE4E4B /* ControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2271F531C7E99FD00FE4E4B /* BaseViewControllerTests.swift */,
+			);
+			name = ControllerTests;
+			sourceTree = "<group>";
+		};
 		D2612DF71C53EC05009232AC /* ControllerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +293,7 @@
 		D26E6BFB1C4AC22C00186A9A /* RivergreenwayTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2271F521C7E99DB00FE4E4B /* ControllerTests */,
 				7FF11D7F1C558C64009A7D44 /* ToolsTests */,
 				D26E6BFE1C4AC22C00186A9A /* Info.plist */,
 				D26E6C1B1C4AC27200186A9A /* ModelTests */,
@@ -664,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */,
+				D2271F541C7E99FD00FE4E4B /* BaseViewControllerTests.swift in Sources */,
 				D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */,
 				D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */,
 				7FF11D811C558C83009A7D44 /* OverlayerTests.swift in Sources */,
