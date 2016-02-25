@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyD-7_3phl6WUmiDE_KEwwNDPkpWA7RgYHY")
         drawerController = MMDrawerController()
-
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
+        let leftViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.NAV_DRAWER_VIEW.rawValue) as! NavDrawerViewController
+        drawerController!.leftDrawerViewController = leftViewController
         
         return true
     }

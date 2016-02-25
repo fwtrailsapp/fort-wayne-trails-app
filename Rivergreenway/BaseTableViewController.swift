@@ -23,4 +23,12 @@ class BaseTableViewController: UITableViewController {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
+    
+    func transition(destination: UIViewController) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let drawerController = appDelegate.drawerController!
+        drawerController.centerViewController = destination
+        
+        presentViewController(drawerController, animated: true, completion: nil)
+    }
 }
