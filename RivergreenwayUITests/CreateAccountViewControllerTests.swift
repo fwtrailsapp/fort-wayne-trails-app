@@ -61,4 +61,9 @@ class CreateAccountViewControllerTests: XCTestCase {
         app!.buttons["Create Account"].tap()
         assert(tablesQuery!.textFields["date of birth"].hittable)
     }
+    
+    func testGenderFieldHittable() {
+        app!.buttons["Create Account"].tap()
+        assert(app!.tables.buttons["NotInterested"].hittable)
+    }
 }
