@@ -18,10 +18,18 @@ class BaseViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    func transition(destination: UIViewController) {
+    func transition(destination: ViewIdentifier) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
+        let viewController = mainStoryboard.instantiateViewControllerWithIdentifier(destination.rawValue)
+        presentViewController(viewController, animated: true, completion: nil)
+    }
+    
+    func transitionDrawered(destination: ViewIdentifier) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
+        let viewController = mainStoryboard.instantiateViewControllerWithIdentifier(destination.rawValue)
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let drawerController = appDelegate.drawerController!
-        drawerController.centerViewController = destination
+        drawerController.centerViewController = viewController
         
         presentViewController(drawerController, animated: true, completion: nil)
     }

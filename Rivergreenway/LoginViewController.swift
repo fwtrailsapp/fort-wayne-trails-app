@@ -39,8 +39,7 @@ class LoginViewController: BaseViewController {
                 // log in
             }
         }
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
-        let navController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.RECORD_ACTIVITY_NAV_CONTROLLER.rawValue)
-        transition(navController)
+        
+        transition(ViewIdentifier.RECORD_ACTIVITY_NAV_CONTROLLER)
     }
 }

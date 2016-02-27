@@ -310,8 +310,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Create Account" id="ecE-Er-OYc">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="hhV-cL-hBx"/>
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="9Gn-Ye-y6c"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="hhV-cL-hBx">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="8ar-3X-PmB" id="5f2-4a-bnP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="9Gn-Ye-y6c">
+                            <connections>
+                                <action selector="createButtonPressed:" destination="8ar-3X-PmB" id="ROk-fY-1sh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dateTextField" destination="P0K-M6-oZU" id="7Eh-r1-AaW"/>

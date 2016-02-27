@@ -10,7 +10,19 @@ import UIKit
 
 class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBAction func createButtonPressed(sender: UIBarButtonItem) {
+        
+    }
+    @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Discard Changes",
+            message: "Are you sure you wish to discard these changes?",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: discardHandler))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     @IBOutlet weak var dateTextField: UITextField!
+    
     private var years: [String] = []
     
     override func viewDidLoad() {
@@ -49,5 +61,9 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         dateTextField.text = years[row]
+    }
+    
+    func discardHandler(action: UIAlertAction) {
+        transition(ViewIdentifier.LOGIN_VIEW)
     }
 }
