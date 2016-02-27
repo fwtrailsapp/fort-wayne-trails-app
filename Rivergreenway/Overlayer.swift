@@ -63,9 +63,9 @@ class Overlayer {
     internal var geometryCount : Int {
         return addedPaths.count;
     }
-    
-    enum OverlayerError: ErrorType {
-        case CannotLoadURL
-        case BadCoords
-    }
+}
+
+enum OverlayerError: ErrorType {
+    case CannotLoadURL
+    case BadCoords
 }

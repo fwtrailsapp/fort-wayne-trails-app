@@ -38,7 +38,7 @@ class OverlayerTests: XCTestCase {
     func testBadUrl() {
         do {
             try ov!.loadKMLFromURL("https://www.google.com")
-        } catch (Overlayer.OverlayerError.CannotLoadURL) {
+        } catch (OverlayerError.CannotLoadURL) {
             return
         } catch {
             XCTFail("Should have gotten a CannotLoadURL error first")
