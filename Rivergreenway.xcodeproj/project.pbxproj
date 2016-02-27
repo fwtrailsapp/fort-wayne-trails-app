@@ -15,6 +15,7 @@
 		7FF11D811C558C83009A7D44 /* OverlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF11D801C558C83009A7D44 /* OverlayerTests.swift */; };
 		7FF11D861C5598B7009A7D44 /* Trails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 7FF11D851C5598B7009A7D44 /* Trails.kml */; };
 		BE3C88ED84B1EB7C5EC0124A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
+		D2271F561C81392A00FE4E4B /* RecordActivityStatUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2271F551C81392A00FE4E4B /* RecordActivityStatUnit.swift */; };
 		D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */; };
 		D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEE41C51C28100BDFCE8 /* Account.swift */; };
 		D232FEED1C52EC7200BDFCE8 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEEC1C52EC7200BDFCE8 /* Sex.swift */; };
@@ -86,6 +87,7 @@
 		7FF11D801C558C83009A7D44 /* OverlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayerTests.swift; sourceTree = "<group>"; };
 		7FF11D851C5598B7009A7D44 /* Trails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Trails.kml; path = DataFiles/Trails.kml; sourceTree = "<group>"; };
 		9013802832BC7175DACC38D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2271F551C81392A00FE4E4B /* RecordActivityStatUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityStatUnit.swift; sourceTree = "<group>"; };
 		D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
 		D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rivergreenway-Bridging-Header.h"; sourceTree = "<group>"; };
 		D232FEE41C51C28100BDFCE8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				D2C52FB51C76904200DA78A7 /* RecordActivityStatLabel.swift */,
+				D2271F551C81392A00FE4E4B /* RecordActivityStatUnit.swift */,
 			);
 			name = Appearance;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C52FB61C76904200DA78A7 /* RecordActivityStatLabel.swift in Sources */,
+				D2271F561C81392A00FE4E4B /* RecordActivityStatUnit.swift in Sources */,
 				D2BD1DFB1C6C1401009E4F2F /* NavDrawerTableViewCell.swift in Sources */,
 				D2BD1DF21C6ACC0D009E4F2F /* DraweredViewController.swift in Sources */,
 				D2BD1DFE1C6C210E009E4F2F /* NavDrawerTableViewController.swift in Sources */,

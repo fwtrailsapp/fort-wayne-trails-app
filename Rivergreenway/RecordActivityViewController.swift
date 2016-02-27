@@ -35,6 +35,8 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
         
+        let timer = NSTimer(timeInterval: 1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
+        
         overlayKML()
     }
     
@@ -68,7 +70,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func updateStatistics() {
         distanceLabel.text = formatNumber(recorder.getDistance())
-        durationLabel.text = formatNumber(recorder.getDuration())
+        durationLabel.text = recorder.getDurationAsString()
         caloriesLabel.text = formatNumber(recorder.getCalories())
         speedLabel.text = formatNumber(recorder.getSpeed())
     }

@@ -689,7 +689,7 @@
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-6b-au7">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-6b-au7" customClass="RecordActivityStatUnit" customModule="Rivergreenway" customModuleProvider="target">
                                                         <rect key="frame" x="176" y="26" width="19" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -699,12 +699,18 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="bVJ-qs-k84" firstAttribute="centerY" secondItem="Mh5-OZ-TxG" secondAttribute="centerY" id="Cz3-hF-dNc"/>
+                                                    <constraint firstItem="jDJ-6b-au7" firstAttribute="bottom" secondItem="bVJ-qs-k84" secondAttribute="bottom" id="HZN-s3-bZ3"/>
                                                     <constraint firstItem="IEA-EG-QzG" firstAttribute="centerX" secondItem="Mh5-OZ-TxG" secondAttribute="centerX" id="VTe-Hm-BWb"/>
                                                     <constraint firstItem="jDJ-6b-au7" firstAttribute="leading" secondItem="bVJ-qs-k84" secondAttribute="trailing" constant="8" id="c97-fa-Lk9"/>
                                                     <constraint firstItem="IEA-EG-QzG" firstAttribute="top" secondItem="Mh5-OZ-TxG" secondAttribute="top" id="gKe-WV-Nyi"/>
                                                     <constraint firstItem="bVJ-qs-k84" firstAttribute="centerX" secondItem="Mh5-OZ-TxG" secondAttribute="centerX" id="kZS-pv-qfN"/>
                                                     <constraint firstItem="jDJ-6b-au7" firstAttribute="centerY" secondItem="Mh5-OZ-TxG" secondAttribute="centerY" id="xDY-Uj-5B0"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="xDY-Uj-5B0"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-Us-V7n" userLabel="Calories View">
                                                 <rect key="frame" x="300" y="72" width="300" height="72"/>
@@ -721,7 +727,7 @@
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kCal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4e-d7-RWv">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kCal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4e-d7-RWv" customClass="RecordActivityStatUnit" customModule="Rivergreenway" customModuleProvider="target">
                                                         <rect key="frame" x="176" y="25" width="34" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -733,10 +739,16 @@
                                                     <constraint firstItem="Wa3-8y-VPL" firstAttribute="centerX" secondItem="5JU-Us-V7n" secondAttribute="centerX" id="0zK-DE-J5a"/>
                                                     <constraint firstItem="7zc-uo-YbV" firstAttribute="centerX" secondItem="5JU-Us-V7n" secondAttribute="centerX" id="1FJ-w1-an1"/>
                                                     <constraint firstItem="P4e-d7-RWv" firstAttribute="centerY" secondItem="5JU-Us-V7n" secondAttribute="centerY" id="6lE-Z8-T6H"/>
+                                                    <constraint firstItem="P4e-d7-RWv" firstAttribute="bottom" secondItem="7zc-uo-YbV" secondAttribute="bottom" id="Fdj-zm-6YN"/>
                                                     <constraint firstItem="P4e-d7-RWv" firstAttribute="leading" secondItem="7zc-uo-YbV" secondAttribute="trailing" constant="8" id="QsC-Mm-G9w"/>
                                                     <constraint firstItem="7zc-uo-YbV" firstAttribute="centerY" secondItem="5JU-Us-V7n" secondAttribute="centerY" id="qCk-vK-gwD"/>
                                                     <constraint firstItem="Wa3-8y-VPL" firstAttribute="top" secondItem="5JU-Us-V7n" secondAttribute="top" id="qLS-qR-rF4"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="6lE-Z8-T6H"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDm-eU-E4R" userLabel="Speed View">
                                                 <rect key="frame" x="0.0" y="72" width="300" height="72"/>
@@ -753,7 +765,7 @@
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb0-Ev-n5P">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="mph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb0-Ev-n5P" customClass="RecordActivityStatUnit" customModule="Rivergreenway" customModuleProvider="target">
                                                         <rect key="frame" x="175" y="26" width="35" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -769,6 +781,11 @@
                                                     <constraint firstItem="92M-WH-BO2" firstAttribute="centerX" secondItem="RDm-eU-E4R" secondAttribute="centerX" id="xdW-27-gee"/>
                                                     <constraint firstItem="eb0-Ev-n5P" firstAttribute="centerY" secondItem="RDm-eU-E4R" secondAttribute="centerY" id="yJW-4G-Olr"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="yJW-4G-Olr"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
