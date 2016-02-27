@@ -57,9 +57,10 @@ class CreateAccountViewControllerTests: XCTestCase {
         assert(tablesQuery!.textFields["weight (pounds)"].hittable)
     }
     
-    func testDOBFieldHittable() {
+    func testBirthYearFieldHittable() {
         app!.buttons["Create Account"].tap()
-        assert(tablesQuery!.textFields["date of birth"].hittable)
+        assert(app!.tables.textFields["birth year"].hittable)
+        
     }
     
     func testGenderFieldHittable() {
