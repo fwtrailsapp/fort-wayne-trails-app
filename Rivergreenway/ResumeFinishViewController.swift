@@ -23,11 +23,12 @@ class ResumeFinishViewController: BaseViewController {
         delegate!.resume()
     }
     
+    @IBAction func finishButtonPressed(sender: UIButton) {
+        delegate!.finish()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     func setDelegate(delegate: ResumeFinishDelegate) {
