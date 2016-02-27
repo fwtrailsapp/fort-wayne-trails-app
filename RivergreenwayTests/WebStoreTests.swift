@@ -17,13 +17,44 @@ class WebStoreTests: XCTestCase {
         ws = WebStore()
     }
 
-    func testLogin() {
-        do {
-            try ws!.login("good", password: "yes")
-        } catch (WebStore.WebStoreError.BadCredentials) {
-            XCTFail("Should have logged in")
-        } catch {
-            XCTFail("Wrong type of exception")
-        }
+    func testGoodLogin() {
+        let exp = expectationWithDescription("testGoodLogin")
+        
+        ws!.login("jared", password: "correctpass", errorCallback: { error in
+            XCTFail()
+        }, successCallback: {
+            if let auth = self.ws!.authToken {
+                print("authtoken is \(auth)")
+                exp.fulfill()
+            } else {
+                XCTFail()
+            }
+        })
+        
+        waitForExpectationsWithTimeout(5, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
+    }
+    
+    func testBadLogin() {
+        let exp = expectationWithDescription("testBadLogin")
+        
+        ws!.login("jared", password: "wr0ngpass", errorCallback: { error in
+            switch error {
+            case .BadCredentials:
+                exp.fulfill()
+                return
+            default:
+                print(error.description)
+                XCTFail()
+                return
+            }
+        }, successCallback: {
+            XCTFail()
+        })
+        
+        waitForExpectationsWithTimeout(5, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
     }
 }
