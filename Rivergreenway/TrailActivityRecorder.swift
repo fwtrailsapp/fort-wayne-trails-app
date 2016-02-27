@@ -39,6 +39,10 @@ class TrailActivityRecorder {
         return state
     }
     
+    func getSegment() -> GMSMutablePath {
+        return segment
+    }
+    
     func isRecording() -> Bool {
         return state == .STARTED || state == .RESUMED
     }
@@ -53,7 +57,7 @@ class TrailActivityRecorder {
         
         // update the aggregate distance and duration and calories
         let tempDistance = lastLocation != nil ? Converter.metersToFeet(currLocation!.distanceFromLocation(lastLocation!)) : 0
-        distance += tempDistance
+        distance += tempDistance / 5280
         duration += lastLocation != nil ? currLocation!.timestamp.timeIntervalSinceDate(lastLocation!.timestamp) : 0
         calories =  (BMR / 24) * exerciseType!.rawValue * (duration / 3600)
     }
@@ -97,6 +101,8 @@ class TrailActivityRecorder {
             throw RecorderError.INCORRECT_TRANSITION
         }
         segment = GMSMutablePath()
+        lastLocation = nil
+        currLocation = nil
         state = .RESUMED
     }
     

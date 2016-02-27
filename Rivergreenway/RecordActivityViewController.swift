@@ -44,7 +44,15 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         mapView.camera = GMSCameraPosition.cameraWithTarget(myLocation.coordinate, zoom: mapView.camera.zoom)
         
         if recorder.isRecording() {
-            myLocation.speed
+            do {
+                try recorder.update(myLocation)
+            }
+            catch {
+                
+            }
+            let polyline = GMSPolyline(path: recorder.getSegment())
+            polyline.map = mapView
+            updateStatistics()
         }
     }
     
@@ -56,6 +64,13 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             let resumeFinishController = segue.destinationViewController as! ResumeFinishViewController
             resumeFinishController.setDelegate(self)
         }
+    }
+    
+    func updateStatistics() {
+        distanceLabel.text = formatNumber(recorder.getDistance())
+        durationLabel.text = formatNumber(recorder.getDuration())
+        caloriesLabel.text = formatNumber(recorder.getCalories())
+        speedLabel.text = formatNumber(recorder.getSpeed())
     }
     
     func swapContainerViews() {
@@ -71,6 +86,9 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     func start() {
         do {
             try recorder.start(ExerciseType.RUNNING)
+            let polyline = GMSPolyline(path: recorder.getSegment())
+            polyline.map = mapView
+            
         } catch {
             print("error starting")
         }
@@ -96,7 +114,12 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func finish() {
         do {
+            print("stopping")
             try recorder.stop()
+            let alert = UIAlertController(title: "Finish Activity",
+                message: "Would you like to save or discard this activity?",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alert, animated: true, completion: nil)
         } catch {
             print("error stopping")
         }
@@ -109,5 +132,10 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         } catch {
             // notify user that attempt to display trails failed
         }
+    }
+    
+    // Helper method to format numbers
+    func formatNumber(number: Double) -> String {
+        return String(format: "%.2f", number)
     }
 }

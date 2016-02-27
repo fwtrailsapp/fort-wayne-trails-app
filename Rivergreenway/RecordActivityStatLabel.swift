@@ -21,7 +21,7 @@ class RecordActivityStatLabel: UILabel {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        font = font.fontWithSize(16)
+        font = font.fontWithSize(32)
     }
 
 }
