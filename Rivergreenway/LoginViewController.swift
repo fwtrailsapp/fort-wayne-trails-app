@@ -40,6 +40,6 @@ class LoginViewController: BaseViewController {
             }
         }
         
-        transition(ViewIdentifier.RECORD_ACTIVITY_NAV_CONTROLLER)
+        transitionDrawered(ViewIdentifier.RECORD_ACTIVITY_NAV_CONTROLLER)
     }
 }
