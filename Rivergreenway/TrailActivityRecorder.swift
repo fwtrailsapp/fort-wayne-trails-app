@@ -70,14 +70,6 @@ class TrailActivityRecorder {
         return duration
     }
     
-    func getDurationAsString() -> String {
-        let ti = Int(duration)
-        let sec = ti % 60
-        let min = (ti / 60) % 60
-        let hour = ti / 3600
-        return String(format: "%0.2d:%0.2d:%0.2d",hour,min,sec)
-    }
-    
     func getCalories() -> Double {
         return calories
     }

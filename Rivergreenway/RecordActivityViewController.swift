@@ -15,6 +15,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     @IBOutlet weak var singleButtonContainerView: UIView!
     @IBOutlet weak var doubleButtonContainerView: UIView!
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var controlPanelView: UIView!
     
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -24,9 +25,18 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     private var overlayer: Overlayer?
     private var recorder = TrailActivityRecorder()
     private let locationManager = CLLocationManager()
+    private var displayTime:NSTimeInterval = 0
+    
+    private var startPauseController: StartPauseViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        controlPanelView.layer.shadowColor = UIColor.blackColor().CGColor
+        controlPanelView.layer.shadowOpacity = 1
+        controlPanelView.layer.shadowOffset = CGSizeZero
+        controlPanelView.layer.shadowRadius = 10
+        controlPanelView.layer.shouldRasterize = true
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -35,7 +45,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
         
-        let timer = NSTimer(timeInterval: 1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
+        let timer = NSTimer.scheduledTimerWithTimeInterval( 1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
         
         overlayKML()
     }
@@ -60,8 +70,8 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier! == ViewIdentifier.START_PAUSE_SEGUE.rawValue {
-            let startPauseController = segue.destinationViewController as! StartPauseViewController
-            startPauseController.setDelegate(self)
+            startPauseController = segue.destinationViewController as? StartPauseViewController
+            startPauseController!.setDelegate(self)
         } else if segue.identifier! == ViewIdentifier.RESUME_FINISH_SEGUE.rawValue {
             let resumeFinishController = segue.destinationViewController as! ResumeFinishViewController
             resumeFinishController.setDelegate(self)
@@ -70,16 +80,22 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func updateStatistics() {
         distanceLabel.text = formatNumber(recorder.getDistance())
-        durationLabel.text = recorder.getDurationAsString()
         caloriesLabel.text = formatNumber(recorder.getCalories())
         speedLabel.text = formatNumber(recorder.getSpeed())
+    }
+    
+    func updateTime() {
+        if recorder.getState() == .RESUMED || recorder.getState() == .STARTED {
+            displayTime++;
+            durationLabel.text = Converter.getDurationAsString(displayTime)
+        }
     }
     
     func swapContainerViews() {
         if recorder.getState() == TrailActivityState.PAUSED {
             singleButtonContainerView.alpha = 0
             doubleButtonContainerView.alpha = 1
-        } else if recorder.getState() == TrailActivityState.RESUMED {
+        } else {
             singleButtonContainerView.alpha = 1
             doubleButtonContainerView.alpha = 0
         }
@@ -115,16 +131,8 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     }
     
     func finish() {
-        do {
             print("stopping")
-            try recorder.stop()
-            let alert = UIAlertController(title: "Finish Activity",
-                message: "Would you like to save or discard this activity?",
-                preferredStyle: UIAlertControllerStyle.Alert)
-            self.presentViewController(alert, animated: true, completion: nil)
-        } catch {
-            print("error stopping")
-        }
+            displayFinishPrompt()
     }
     
     func overlayKML() {
@@ -132,12 +140,42 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         do {
             try self.overlayer!.loadKMLFromURL("https://gist.githubusercontent.com/libjared/4b703481eccad557807c/raw/78ebe13d134c8fdb4c14c62c37cad5b2a02af133/dude.kml")
         } catch {
-            // notify user that attempt to display trails failed
+            print("caught dis shit")
         }
     }
     
     // Helper method to format numbers
     func formatNumber(number: Double) -> String {
         return String(format: "%.2f", number)
+    }
+    
+    func displayFinishPrompt() {
+        let alert = UIAlertController(title: "Finish Activity", message: "Do you wish to save or discard the activity?", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.Default, handler: saveHandler))
+        alert.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: discardHandler))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: false, completion: nil)
+    }
+    
+    func saveHandler(action: UIAlertAction) {
+        discardHandler(action)
+    }
+    
+    func discardHandler(action: UIAlertAction) {
+        resetRecorder()
+        updateStatistics()
+        durationLabel.text = Converter.getDurationAsString(displayTime)
+    }
+    
+    func resetRecorder() {
+        do {
+            try recorder.stop()
+            recorder = TrailActivityRecorder()
+            displayTime = 0
+            startPauseController!.resetView()
+            swapContainerViews()
+        } catch {
+            print("error stopping")
+        }
     }
 }

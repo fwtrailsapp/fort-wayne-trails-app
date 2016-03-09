@@ -35,6 +35,7 @@
 		D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C151C4AC25500186A9A /* TrailActivity.swift */; };
 		D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */; };
 		D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */; };
+		D2AFFEB01C8FBEA600687A7B /* RecordActivityStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFFEAF1C8FBEA600687A7B /* RecordActivityStatCell.swift */; };
 		D2BD1DEE1C6ACB7C009E4F2F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */; };
 		D2BD1DF01C6ACB90009E4F2F /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */; };
 		D2BD1DF21C6ACC0D009E4F2F /* DraweredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */; };
@@ -114,6 +115,7 @@
 		D26E6C151C4AC25500186A9A /* TrailActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivity.swift; sourceTree = "<group>"; };
 		D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityState.swift; sourceTree = "<group>"; };
 		D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityTests.swift; sourceTree = "<group>"; };
+		D2AFFEAF1C8FBEA600687A7B /* RecordActivityStatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityStatCell.swift; sourceTree = "<group>"; };
 		D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		D2BD1DF11C6ACC0D009E4F2F /* DraweredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraweredViewController.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 			children = (
 				D2C52FB51C76904200DA78A7 /* RecordActivityStatLabel.swift */,
 				D2271F551C81392A00FE4E4B /* RecordActivityStatUnit.swift */,
+				D2AFFEAF1C8FBEA600687A7B /* RecordActivityStatCell.swift */,
 			);
 			name = Appearance;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				D2C52FA51C70006700DA78A7 /* AchievementTableViewCell.swift in Sources */,
 				D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */,
 				D2C52FA91C70159D00DA78A7 /* AccountStatisticsViewController.swift in Sources */,
+				D2AFFEB01C8FBEA600687A7B /* RecordActivityStatCell.swift in Sources */,
 				D26E6BE31C4AC22C00186A9A /* AppDelegate.swift in Sources */,
 				D2BD1DEE1C6ACB7C009E4F2F /* BaseViewController.swift in Sources */,
 				D2C52F9F1C6FE39600DA78A7 /* DraweredTableViewController.swift in Sources */,
@@ -845,6 +849,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/GoogleMaps/Frameworks\"",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -871,6 +879,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/GoogleMaps/Frameworks\"",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",

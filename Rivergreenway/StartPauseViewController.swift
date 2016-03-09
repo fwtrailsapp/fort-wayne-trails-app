@@ -38,6 +38,10 @@ class StartPauseViewController: BaseViewController {
     func setDelegate(delegate: StartPauseDelegate) {
         self.delegate = delegate
     }
+    
+    func resetView() {
+        startPauseButton.setTitle("Start", forState: .Normal)
+    }
 }
 
 protocol StartPauseDelegate {

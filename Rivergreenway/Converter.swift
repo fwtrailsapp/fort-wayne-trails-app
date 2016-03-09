@@ -33,4 +33,12 @@ class Converter {
     class func metersToFeet(meters: Double) -> Double {
         return meters * 3.28084
     }
+    
+    class func getDurationAsString(duration: NSTimeInterval) -> String {
+        let ti = Int(duration)
+        let sec = ti % 60
+        let min = (ti / 60) % 60
+        let hour = ti / 3600
+        return String(format: "%0.2d:%0.2d:%0.2d",hour,min,sec)
+    }
 }
