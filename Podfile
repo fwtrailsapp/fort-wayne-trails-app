@@ -9,3 +9,4 @@ pod 'SwiftHTTP', '~> 1.0.0'
 pod 'JSONJoy-Swift', '~> 1.0.0'
 
 use_frameworks!
+inhibit_all_warnings!
