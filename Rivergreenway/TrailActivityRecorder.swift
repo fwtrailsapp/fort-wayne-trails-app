@@ -13,26 +13,35 @@ class TrailActivityRecorder {
     private let AVERAGE_BMR: Double = 1577.5
     
     private var state: TrailActivityState = .CREATED
-    private var exerciseType: ExerciseType?
+    private var exerciseType: ExerciseType
     private var BMR: Double
     
     private var path: [GMSMutablePath]
     private var segment: GMSMutablePath
     
+    private var startTime: NSTimeInterval
     private var currLocation: CLLocation?
     private var lastLocation: CLLocation?
     private var distance: CLLocationDistance = 0
     private var duration: NSTimeInterval = 0
     private var calories: Double = 0
     
-    init(BMR: Double? = nil) {
+    init(startTime: NSTimeInterval, exerciseType: ExerciseType, BMR: Double? = nil) {
         path = [GMSMutablePath]()
         segment = GMSMutablePath()
+        self.exerciseType = exerciseType
+        self.startTime = startTime
+        
         if BMR == nil {
             self.BMR = AVERAGE_BMR
         } else {
             self.BMR = BMR!
         }
+    }
+    
+    
+    func getActivity() -> TrailActivity {
+        return TrailActivity(startTime: startTime, duration: duration, path: path, exerciseType: exerciseType, caloriesBurned: calories)
     }
     
     func getState() -> TrailActivityState {
@@ -48,7 +57,7 @@ class TrailActivityRecorder {
     }
     
     func update(newLocation: CLLocation) throws {
-        if (state != .STARTED && state != .RESUMED) || exerciseType == nil {
+        if state != .STARTED && state != .RESUMED {
             throw RecorderError.INCORRECT_STATE
         }
         segment.addCoordinate(newLocation.coordinate)
@@ -59,7 +68,7 @@ class TrailActivityRecorder {
         let tempDistance = lastLocation != nil ? Converter.metersToFeet(currLocation!.distanceFromLocation(lastLocation!)) : 0
         distance += tempDistance / 5280
         duration += lastLocation != nil ? currLocation!.timestamp.timeIntervalSinceDate(lastLocation!.timestamp) : 0
-        calories =  (BMR / 24) * exerciseType!.rawValue * (duration / 3600)
+        calories =  (BMR / 24) * exerciseType.rawValue * (duration / 3600)
     }
     
     func getDistance() -> CLLocationDistance {
@@ -78,11 +87,10 @@ class TrailActivityRecorder {
         return currLocation != nil ? currLocation!.speed : 0
     }
     
-    func start(exerciseType: ExerciseType) throws {
+    func start() throws {
         if state != .CREATED {
             throw RecorderError.INCORRECT_TRANSITION
         }
-        self.exerciseType = exerciseType
         segment = GMSMutablePath()
         state = .STARTED
     }

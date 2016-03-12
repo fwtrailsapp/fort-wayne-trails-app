@@ -9,9 +9,4 @@
 import UIKit
 
 class RecordActivityStatCell: UIView {
-
-    override func drawRect(rect: CGRect) {
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.blackColor().CGColor
-    }
 }

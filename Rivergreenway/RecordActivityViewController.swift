@@ -23,9 +23,11 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     @IBOutlet weak var caloriesLabel: UILabel!
     
     private var overlayer: Overlayer?
-    private var recorder = TrailActivityRecorder()
+    private var recorder: TrailActivityRecorder?
     private let locationManager = CLLocationManager()
     private var displayTime:NSTimeInterval = 0
+    
+    private var polylines: [GMSPolyline] = [GMSPolyline]()
     
     private var startPauseController: StartPauseViewController?
     
@@ -55,15 +57,16 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         
         mapView.camera = GMSCameraPosition.cameraWithTarget(myLocation.coordinate, zoom: mapView.camera.zoom)
         
-        if recorder.isRecording() {
+        if recorder != nil && recorder!.isRecording() {
             do {
-                try recorder.update(myLocation)
+                try recorder!.update(myLocation)
             }
             catch {
                 
             }
-            let polyline = GMSPolyline(path: recorder.getSegment())
-            polyline.map = mapView
+            if var polyline = polylines.last {
+                polyline.path = recorder!.getSegment()
+            }
             updateStatistics()
         }
     }
@@ -79,20 +82,26 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     }
     
     func updateStatistics() {
-        distanceLabel.text = formatNumber(recorder.getDistance())
-        caloriesLabel.text = formatNumber(recorder.getCalories())
-        speedLabel.text = formatNumber(recorder.getSpeed())
+        if recorder != nil {
+            distanceLabel.text = formatNumber(recorder!.getDistance())
+            caloriesLabel.text = formatNumber(recorder!.getCalories())
+            speedLabel.text = formatNumber(recorder!.getSpeed())
+        } else {
+            distanceLabel.text = formatNumber(0)
+            caloriesLabel.text = formatNumber(0)
+            speedLabel.text = formatNumber(0)
+        }
     }
     
     func updateTime() {
-        if recorder.getState() == .RESUMED || recorder.getState() == .STARTED {
+        if recorder != nil && (recorder!.getState() == .RESUMED || recorder!.getState() == .STARTED) {
             displayTime++;
             durationLabel.text = Converter.getDurationAsString(displayTime)
         }
     }
     
     func swapContainerViews() {
-        if recorder.getState() == TrailActivityState.PAUSED {
+        if recorder != nil && recorder!.getState() == TrailActivityState.PAUSED {
             singleButtonContainerView.alpha = 0
             doubleButtonContainerView.alpha = 1
         } else {
@@ -103,10 +112,9 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func start() {
         do {
-            try recorder.start(ExerciseType.RUNNING)
-            let polyline = GMSPolyline(path: recorder.getSegment())
-            polyline.map = mapView
-            
+            recorder = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: ExerciseType.BIKING)
+            try recorder!.start()
+            startNewPolyline()
         } catch {
             print("error starting")
         }
@@ -114,7 +122,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func pause() {
         do {
-            try recorder.pause()
+            try recorder!.pause()
         } catch {
             print("error pausing")
         }
@@ -123,15 +131,15 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func resume() {
         do {
-            try recorder.resume()
+            try recorder!.resume()
+            swapContainerViews()
+            startNewPolyline()
         } catch {
             print("error resuming")
         }
-        swapContainerViews()
     }
     
     func finish() {
-            print("stopping")
             displayFinishPrompt()
     }
     
@@ -158,24 +166,61 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     }
     
     func saveHandler(action: UIAlertAction) {
+        let trailActivity = recorder!.getActivity()
+        let alert = UIAlertController(title: "Activity Summary", message: getFormattedSummary(trailActivity), preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: summaryOkHandler))
+        self.presentViewController(alert, animated: false, completion: nil)
         discardHandler(action)
     }
     
     func discardHandler(action: UIAlertAction) {
         resetRecorder()
+        clearPath()
         updateStatistics()
         durationLabel.text = Converter.getDurationAsString(displayTime)
     }
     
+    func summaryOkHandler(action: UIAlertAction) {
+        // send activity to server
+    }
+    
+    func startNewPolyline() {
+        if recorder != nil {
+            let polyline = GMSPolyline(path: recorder!.getSegment())
+            polyline.map = mapView
+            polylines.append(polyline)
+        }
+    }
+    
+    func clearPath() {
+        for polyline in polylines {
+            polyline.path = nil
+        }
+        polylines.removeAll()
+    }
+    
     func resetRecorder() {
         do {
-            try recorder.stop()
-            recorder = TrailActivityRecorder()
+            try recorder!.stop()
+            recorder = nil
             displayTime = 0
             startPauseController!.resetView()
             swapContainerViews()
         } catch {
             print("error stopping")
         }
+    }
+    
+    func getFormattedSummary(activity: TrailActivity) -> String {
+        var summary = ""
+        let startDate = NSDate(timeIntervalSince1970: activity.getStartTime())
+        summary += "Exercise Type: \(activity.getExerciseType().rawValue)"
+        summary += "\nStart: \(startDate)"
+        summary += "\nDuration: \(activity.getDuration())"
+        summary += "\nDistance: \(activity.getDistance())"
+        summary += "\nCalories: \(activity.getCaloriesBurned())"
+        summary += "\nAverage Speed: \(activity.getAverageSpeed())"
+        
+        return summary
     }
 }

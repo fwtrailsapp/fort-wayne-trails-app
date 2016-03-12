@@ -11,19 +11,17 @@ import Foundation
 class TrailActivity {
     
     private var startTime: NSTimeInterval
-    private var endTime: NSTimeInterval
+    private var duration: NSTimeInterval
     private var path: [GMSMutablePath]
-    private var topSpeed: Double?
     private var exerciseType: ExerciseType
     private var caloriesBurned: Double
     
-    init(startTime: NSTimeInterval, endTime: NSTimeInterval, topSpeed: Double, path: [GMSMutablePath], exerciseType: ExerciseType, caloriesBurned: Double) {
+    init(startTime: NSTimeInterval, duration: NSTimeInterval, path: [GMSMutablePath], exerciseType: ExerciseType, caloriesBurned: Double) {
         self.startTime = startTime
-        self.endTime = endTime
+        self.duration = duration
         self.exerciseType = exerciseType
         self.caloriesBurned = caloriesBurned
         self.path = path
-        self.topSpeed = topSpeed
     }
     
     func getDistance() -> Double {
@@ -36,8 +34,23 @@ class TrailActivity {
     }
     
     func getDuration() -> NSTimeInterval{
-        return Converter.millisecondsToHours(endTime - startTime)
-        
+        return duration
+    }
+    
+    func getCaloriesBurned() -> Double {
+        return caloriesBurned
+    }
+    
+    func getStartTime() -> NSTimeInterval {
+        return startTime
+    }
+    
+    func getExerciseType() -> ExerciseType {
+        return exerciseType
+    }
+    
+    func getPath() -> [GMSMutablePath] {
+        return path
     }
     
     func getAverageSpeed() -> Double {
