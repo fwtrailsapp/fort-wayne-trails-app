@@ -10,14 +10,14 @@ import Foundation
 
 class Account {
     
-    let email: String
+    let username: String
     let birthYear: Int?
     let height: Double?
     let weight: Double?
     let sex: Sex?
     
-    init(email: String, birthYear: Int? = nil, height: Double? = nil, weight: Double? = nil, sex:Sex? = nil) {
-        self.email = email
+    init(username: String, birthYear: Int? = nil, height: Double? = nil, weight: Double? = nil, sex:Sex? = nil) {
+        self.username = username
         self.birthYear = birthYear
         self.height = height
         self.weight = weight

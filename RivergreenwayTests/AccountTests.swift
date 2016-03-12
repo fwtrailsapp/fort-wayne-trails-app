@@ -17,11 +17,11 @@ class AccountTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        let email = "test@email.com"
-        emptyAccount = Account(email: email)
+        let username = "test"
+        emptyAccount = Account(username: username)
         let birthYear = 1994
 
-        scottAccount = Account(email: "scott@email.com",
+        scottAccount = Account(username: "scott",
             birthYear: birthYear,
             height: 68,
             weight: 155,
