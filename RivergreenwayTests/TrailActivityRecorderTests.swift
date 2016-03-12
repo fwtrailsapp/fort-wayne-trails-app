@@ -16,7 +16,7 @@ class TrailActivityRecorderTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        recorder = TrailActivityRecorder()
+        recorder = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: ExerciseType.BIKING)
     }
     
     override func tearDown() {
@@ -25,7 +25,7 @@ class TrailActivityRecorderTests: XCTestCase {
     }
     
     func testConstructor() {
-        let recorderNil = TrailActivityRecorder()
+        let recorderNil = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: ExerciseType.BIKING)
         assert(recorderNil.getState() == .CREATED)
         assert(recorderNil.getCalories() == 0)
         assert(recorderNil.getSpeed() == 0)
@@ -35,7 +35,7 @@ class TrailActivityRecorderTests: XCTestCase {
     
     func testStart() {
         do {
-            try recorder!.start(.RUNNING)
+            try recorder!.start()
         } catch {
             assert(false)
         }
@@ -51,7 +51,7 @@ class TrailActivityRecorderTests: XCTestCase {
         }
         
         do {
-            try recorder!.start(.RUNNING)
+            try recorder!.start()
         } catch {
             assert(false)
         }
@@ -73,7 +73,7 @@ class TrailActivityRecorderTests: XCTestCase {
         }
         
         do {
-            try recorder!.start(.RUNNING)
+            try recorder!.start()
         } catch {
             assert(false)
         }
@@ -108,7 +108,7 @@ class TrailActivityRecorderTests: XCTestCase {
         }
         
         do {
-            try recorder!.start(.RUNNING)
+            try recorder!.start()
         } catch {
             assert(false)
         }
@@ -123,7 +123,7 @@ class TrailActivityRecorderTests: XCTestCase {
 
     func testGetSpeed() {
         do {
-            try recorder!.start(ExerciseType.BIKING)
+            try recorder!.start()
         } catch {
             assert(false)
         }
@@ -142,7 +142,7 @@ class TrailActivityRecorderTests: XCTestCase {
     
     func testGetDistance() {
         do {
-            try recorder!.start(ExerciseType.BIKING)
+            try recorder!.start()
         } catch {
             assert(false)
         }
@@ -155,12 +155,12 @@ class TrailActivityRecorderTests: XCTestCase {
                 assert(false)
             }
         }
-        XCTAssertEqualWithAccuracy(recorder!.getDistance(), 1264, accuracy: 100.0)
+        XCTAssertEqualWithAccuracy(recorder!.getDistance(), 1264 / 5280, accuracy: 0.05)
     }
     
     func testGetDuration() {
         do {
-            try recorder!.start(ExerciseType.BIKING)
+            try recorder!.start()
         } catch {
             assert(false)
         }
