@@ -56,11 +56,25 @@ class NavDrawerViewController: UIViewController, NavTableDelegate {
             newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ABOUT_NAV_CONTROLLER.rawValue)
             break
         case .EXIT_CELL:
+            confirmLogOut()
             break
         }
-        
-        appDelegate.drawerController!.centerViewController = newViewController!
+        if newViewController != nil {
+            appDelegate.drawerController!.centerViewController = newViewController!
+            selectedCell = cellID
+        }
         appDelegate.drawerController!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
-        selectedCell = cellID
+    }
+    
+    func confirmLogOut() {
+        let alert = UIAlertController(title: "Log Out", message: "Are you sure you wish to log out?", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: logOutHandler))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: false, completion: nil)
+    }
+    
+    func logOutHandler(action: UIAlertAction) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.logout()
     }
 }
