@@ -95,15 +95,17 @@ class WebStore {
     }
 }
 
-
 enum WebStoreError: CustomStringConvertible {
     case BadCredentials
+    case InvalidResponse
     case Unknown(msg: String)
     
     var description: String {
         switch (self) {
         case .BadCredentials:
             return "Cannot login with that username or password."
+        case .InvalidResponse:
+            return "Server returned less data than expected."
         case let .Unknown(msg):
             return msg
         }
