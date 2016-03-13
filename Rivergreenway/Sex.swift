@@ -9,6 +9,6 @@
 import Foundation
 
 enum Sex: String{
-    case MALE = "MALE"
-    case FEMALE = "FEMALE"
+    case MALE = "male"
+    case FEMALE = "female"
 }
