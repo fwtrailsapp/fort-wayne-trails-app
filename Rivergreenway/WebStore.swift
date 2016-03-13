@@ -45,16 +45,10 @@ class WebStore {
         params["height"] = acct.height ?? NSNull()
         params["weight"] = acct.weight ?? NSNull()
         
-        switch acct.sex {
-        case .MALE?:
-            params["sex"] = "male"
-            break
-        case .FEMALE?:
-            params["sex"] = "female"
-            break
-        case nil:
+        if let sex = acct.sex {
+            params["sex"] = sex.rawValue
+        } else {
             params["sex"] = NSNull()
-            break
         }
         
         genericPOST(url, params: params,
