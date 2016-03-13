@@ -19,32 +19,16 @@ class WebStore {
         successCallback: () -> Void)
     {
         let url = baseUrl + "login"
-        let serializer = JSONParameterSerializer()
-        let headers = ["Content-Type": "application/json"]
         let params = ["username": username, "password": password]
         
-        do {
-            let opt = try HTTP.POST(url, requestSerializer: serializer,
-                headers: headers, parameters: params)
-            opt.start { response in
-                //handle the generic errors
-                if let err = response.error {
-                    var errSentToCallback : WebStoreError = WebStoreError.Unknown(msg: err.localizedDescription)
-                    if err.domain == "HTTP" && err.code == 401 {
-                        errSentToCallback = WebStoreError.BadCredentials
-                    } else {
-                        print("unknown WebStore error: \(err.localizedDescription)")
-                    }
-                    errorCallback(error: errSentToCallback)
-                } else { //response is ok
-                    let resp = JSONDecoder(response.data)
-                    self.authToken = resp["authtoken"].string
-                    successCallback()
-                }
+        genericPOST(url, params: params,
+            errorCallback: errorCallback,
+            successCallback: { response in
+                let resp = JSONDecoder(response.data)
+                self.authToken = resp["authtoken"].string
+                successCallback()
             }
-        } catch let errorEx {
-            errorCallback(error: WebStoreError.Unknown(msg: "Exception: \(errorEx)"))
-        }
+        )
     }
 
     func register(acct: Account, password: String,
@@ -52,8 +36,6 @@ class WebStore {
         successCallback: () -> Void)
     {
         let url = baseUrl + "account/create"
-        let serializer = JSONParameterSerializer()
-        let headers = ["Content-Type": "application/json"]
         
         var params = [String: NSObject]()
         
@@ -75,25 +57,46 @@ class WebStore {
             break
         }
         
-        do {
-            let opt = try HTTP.POST(url, requestSerializer: serializer,
-                headers: headers, parameters: params)
-            opt.start { response in
-                //handle the generic errors
-                if let err = response.error {
-                    var errSentToCallback : WebStoreError = WebStoreError.Unknown(msg: err.localizedDescription)
-                    if err.domain == "HTTP" && err.code == 401 {
-                        errSentToCallback = WebStoreError.BadCredentials
-                    } else {
-                        print("unknown WebStore error: \(err.localizedDescription)")
-                    }
-                    errorCallback(error: errSentToCallback)
-                } else { //response is ok
-                    successCallback()
-                }
+        genericPOST(url, params: params,
+            errorCallback: errorCallback,
+            successCallback: { response in
+                successCallback()
             }
+        )
+    }
+    
+    func genericPOST(url: String, params: [String: NSObject],
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: (Response) -> Void)
+    {
+        let serializer = JSONParameterSerializer()
+        let headers = ["Content-Type": "application/json"]
+        let opt: HTTP
+        
+        do {
+            opt = try HTTP.POST(url, requestSerializer: serializer,
+                headers: headers, parameters: params)
         } catch let errorEx {
             errorCallback(error: WebStoreError.Unknown(msg: "Exception: \(errorEx)"))
+            return
+        }
+        
+        opt.start { response in
+            //handle the generic errors
+            if let err = response.error {
+                var errSentToCallback : WebStoreError
+                
+                //TODO: add more error codes
+                if err.domain == "HTTP" && err.code == 401 {
+                    errSentToCallback = WebStoreError.BadCredentials
+                } else {
+                    print("unknown WebStore error: \(err.localizedDescription)")
+                    errSentToCallback = WebStoreError.Unknown(msg: err.localizedDescription)
+                }
+                errorCallback(error: errSentToCallback)
+            } else { //response is ok
+                successCallback(response)
+            }
         }
     }
 }
