@@ -1,8 +1,8 @@
 PODS:
-  - GoogleMaps (1.11.1)
+  - GoogleMaps (1.12.3)
   - iOS-KML-Framework (0.0.2):
     - TBXML (~> 1.5)
-  - JSONJoy-Swift (1.0.0)
+  - JSONJoy-Swift (2.0.0)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
@@ -15,22 +15,22 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.5.7):
     - MMDrawerController/Core
-  - SwiftHTTP (1.0.3)
+  - SwiftHTTP (1.0.4)
   - TBXML (1.5)
 
 DEPENDENCIES:
   - GoogleMaps
   - iOS-KML-Framework
-  - JSONJoy-Swift (~> 1.0.0)
+  - JSONJoy-Swift
   - MMDrawerController (~> 0.5.7)
-  - SwiftHTTP (~> 1.0.0)
+  - SwiftHTTP
 
 SPEC CHECKSUMS:
-  GoogleMaps: c947160008f414c66707a5ea60f35e92055c7670
+  GoogleMaps: a4ac67918d0b5ba5f6b9893ac80487e357779e6c
   iOS-KML-Framework: a3428baabee9bba6fa8d8246223619277f1bc430
-  JSONJoy-Swift: 3e8129c282470614da69759208e9c923732f6cb4
+  JSONJoy-Swift: 9dc31dfb9e551c3ae7781513a86e369598102653
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
-  SwiftHTTP: fface018ab365bfb49fa3dca9fdfe77cafccde8b
+  SwiftHTTP: 7e084af3bf628b17589c7b61a9df8750947a9813
   TBXML: 9f9dadb239f2f2af1dadb87fe43a0ce6e479379a
 
 COCOAPODS: 0.39.0

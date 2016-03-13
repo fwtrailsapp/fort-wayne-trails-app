@@ -5,8 +5,8 @@ link_with 'Rivergreenway', 'RivergreenwayTests', 'RivergreenwayUITests'
 pod 'MMDrawerController', '~> 0.5.7'
 pod 'GoogleMaps'
 pod 'iOS-KML-Framework'
-pod 'SwiftHTTP', '~> 1.0.0'
-pod 'JSONJoy-Swift', '~> 1.0.0'
+pod 'SwiftHTTP'
+pod 'JSONJoy-Swift'
 
 use_frameworks!
 inhibit_all_warnings!
