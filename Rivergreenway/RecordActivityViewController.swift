@@ -47,7 +47,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
         
-        let timer = NSTimer.scheduledTimerWithTimeInterval( 1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
+        let _ = NSTimer.scheduledTimerWithTimeInterval( 1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
         
         overlayKML()
     }
@@ -64,7 +64,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             catch {
                 
             }
-            if var polyline = polylines.last {
+            if let polyline = polylines.last {
                 polyline.path = recorder!.getSegment()
             }
             updateStatistics()
@@ -112,7 +112,8 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func start() {
         do {
-            recorder = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: ExerciseType.BIKING)
+            let exerciseType = promptExerciseType()
+            recorder = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: exerciseType)
             try recorder!.start()
             startNewPolyline()
         } catch {
@@ -152,6 +153,27 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         }
     }
     
+    func promptExerciseType() -> ExerciseType {
+        let prompt = UIAlertController(title: "Select Exercise Type", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        var images = [UIImage]()
+        
+        for exerciseType in ExerciseType.all {
+            images.append(UIImage(named: exerciseType.imageName)!)
+        }
+        
+        let typeControl = ExerciseTypeView.instanceFromNib()
+        /*
+        let horizontalConstraint = NSLayoutConstraint(item: typeControl, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
+        prompt.view.addConstraint(horizontalConstraint)
+        
+        let verticalConstraint = NSLayoutConstraint(item: typeControl, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
+        prompt.view.addConstraint(verticalConstraint)*/
+        prompt.view.addSubview(typeControl)
+        prompt.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(prompt, animated: false, completion: nil)
+        return ExerciseType.BIKING
+    }
+    
     // Helper method to format numbers
     func formatNumber(number: Double) -> String {
         return String(format: "%.2f", number)
@@ -166,10 +188,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     }
     
     func saveHandler(action: UIAlertAction) {
-        let trailActivity = recorder!.getActivity()
-        let alert = UIAlertController(title: "Activity Summary", message: getFormattedSummary(trailActivity), preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: summaryOkHandler))
-        self.presentViewController(alert, animated: false, completion: nil)
+        displaySummary()
         discardHandler(action)
     }
     
@@ -178,6 +197,13 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         clearPath()
         updateStatistics()
         durationLabel.text = Converter.getDurationAsString(displayTime)
+    }
+    
+    func displaySummary() {
+        let trailActivity = recorder!.getActivity()
+        let alert = UIAlertController(title: "Activity Summary", message: getFormattedSummary(trailActivity), preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: summaryOkHandler))
+        self.presentViewController(alert, animated: false, completion: nil)
     }
     
     func summaryOkHandler(action: UIAlertAction) {

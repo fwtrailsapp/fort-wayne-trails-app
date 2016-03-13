@@ -12,6 +12,19 @@ enum ExerciseType: Double {
     case BIKING = 8.00
     case WALKING = 3.80
     case RUNNING = 7.50
-    case SKATEBOARDING = 6.50
+    
+    static let all = [BIKING, WALKING, RUNNING]
+    
+    var imageName: String {
+        switch self {
+        case BIKING:
+            return "Bike"
+        case WALKING:
+            return "Walk"
+        case RUNNING:
+            return "Run"
+        }
+    }
+    
     
 }
