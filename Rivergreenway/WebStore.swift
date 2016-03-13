@@ -59,6 +59,87 @@ class WebStore {
         )
     }
     
+    func getAccount(
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: (AccountDetailsResponse) -> Void)
+    {
+        let url = baseUrl + "account"
+        
+        genericGET(url,
+            errorCallback: errorCallback,
+            successCallback: { response in
+                let acctDeets = AccountDetailsResponse(JSONDecoder(response.data))
+                
+                if !acctDeets.isValid() {
+                    errorCallback(error: WebStoreError.InvalidResponse)
+                    return
+                }
+                
+                successCallback(acctDeets)
+            }
+        )
+    }
+    
+    struct AccountDetailsResponse: JSONJoy {
+        let dob: Int?
+        var weight: Float?
+        let sex: Sex?
+        let height: Float?
+        
+        init(_ decoder: JSONDecoder) {
+            dob = decoder["dob"].integer
+            weight = decoder["weight"].float
+            if let theSex = decoder["sex"].string {
+                self.sex = Sex(rawValue: theSex)
+            } else {
+                self.sex = nil
+            }
+            height = decoder["height"].float
+        }
+        
+        func isValid() -> Bool {
+            return
+                dob != nil &&
+                weight != nil &&
+                sex != nil &&
+                height != nil
+        }
+    }
+    
+    func genericGET(url: String,
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: (Response) -> Void)
+    {
+        let serializer = JSONParameterSerializer()
+        let headers = ["Content-Type": "application/json"]
+        let opt: HTTP
+        
+        do {
+            opt = try HTTP.GET(url, parameters: nil, headers: headers, requestSerializer: serializer)
+        } catch let errorEx {
+            errorCallback(error: WebStoreError.Unknown(msg: "Exception: \(errorEx)"))
+            return
+        }
+        
+        opt.start { response in
+            //handle the generic errors
+            if let err = response.error {
+                var errSentToCallback : WebStoreError
+                
+                //TODO: add more error codes
+                if err.domain == "HTTP" && err.code == 401 {
+                    errSentToCallback = WebStoreError.BadCredentials
+                } else {
+                    print("unknown WebStore error: \(err.localizedDescription)")
+                    errSentToCallback = WebStoreError.Unknown(msg: err.localizedDescription)
+                }
+                errorCallback(error: errSentToCallback)
+            } else { //response is ok
+                successCallback(response)
+            }
+        }
+    }
+    
     func genericPOST(url: String, params: [String: NSObject],
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (Response) -> Void)
