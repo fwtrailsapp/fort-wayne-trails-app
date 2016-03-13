@@ -31,7 +31,7 @@ class WebStore {
         )
     }
 
-    func register(acct: Account, password: String,
+    func accountCreate(acct: Account, password: String,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: () -> Void)
     {
