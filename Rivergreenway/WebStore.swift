@@ -16,7 +16,8 @@ class WebStore {
     
     func login(username: String, password: String,
         errorCallback: (error: WebStoreError) -> Void,
-        successCallback: () -> Void) {
+        successCallback: () -> Void)
+    {
         let url = baseUrl + "login"
         let serializer = JSONParameterSerializer()
         let headers = ["Content-Type": "application/json"]
@@ -45,7 +46,58 @@ class WebStore {
             errorCallback(error: WebStoreError.Unknown(msg: "Exception: \(errorEx)"))
         }
     }
+
+    func register(acct: Account, password: String,
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: () -> Void)
+    {
+        let url = baseUrl + "account/create"
+        let serializer = JSONParameterSerializer()
+        let headers = ["Content-Type": "application/json"]
+        
+        var params = [String: NSObject]()
+        
+        params["username"] = acct.username
+        params["password"] = password
+        params["dob"] = acct.birthYear ?? NSNull()
+        params["height"] = acct.height ?? NSNull()
+        params["weight"] = acct.weight ?? NSNull()
+        
+        switch acct.sex {
+        case .MALE?:
+            params["sex"] = "male"
+            break
+        case .FEMALE?:
+            params["sex"] = "female"
+            break
+        case nil:
+            params["sex"] = NSNull()
+            break
+        }
+        
+        do {
+            let opt = try HTTP.POST(url, requestSerializer: serializer,
+                headers: headers, parameters: params)
+            opt.start { response in
+                //handle the generic errors
+                if let err = response.error {
+                    var errSentToCallback : WebStoreError = WebStoreError.Unknown(msg: err.localizedDescription)
+                    if err.domain == "HTTP" && err.code == 401 {
+                        errSentToCallback = WebStoreError.BadCredentials
+                    } else {
+                        print("unknown WebStore error: \(err.localizedDescription)")
+                    }
+                    errorCallback(error: errSentToCallback)
+                } else { //response is ok
+                    successCallback()
+                }
+            }
+        } catch let errorEx {
+            errorCallback(error: WebStoreError.Unknown(msg: "Exception: \(errorEx)"))
+        }
+    }
 }
+
 
 enum WebStoreError: CustomStringConvertible {
     case BadCredentials

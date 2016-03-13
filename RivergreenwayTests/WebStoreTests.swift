@@ -16,6 +16,38 @@ class WebStoreTests: XCTestCase {
         super.setUp()
         ws = WebStore()
     }
+    
+    func testRegister() {
+        let exp = expectationWithDescription("testRegister")
+        
+        let acct = Account(username: "xcodeisbad", birthYear: 1994, height: 256, weight: 256, sex: Sex.MALE)
+        ws!.register(acct, password: "forreal", errorCallback: { error in
+                XCTFail()
+            },
+            successCallback: {
+                exp.fulfill()
+            })
+        
+        waitForExpectationsWithTimeout(5, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
+    }
+    
+    func testRegisterWithOptionals() {
+        let exp = expectationWithDescription("testRegisterWithOptionals")
+        
+        let acct = Account(username: "ifyouchoosenottodecide")
+        ws!.register(acct, password: "youstillhavemadeachoice", errorCallback: { error in
+            XCTFail()
+        },
+        successCallback: {
+            exp.fulfill()
+        })
+        
+        waitForExpectationsWithTimeout(5, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
+    }
 
     func testGoodLogin() {
         let exp = expectationWithDescription("testGoodLogin")
