@@ -48,18 +48,4 @@ class WebStoreTests: XCTestCase {
             XCTAssertNil(error, "Error")
         })
     }
-    
-    func testGetAccount() {
-        let exp = expectationWithDescription("testGetAccount")
-        
-        ws.getAccount({ error in
-            XCTFail(error.description)
-        }, successCallback: { acctDeets in
-            exp.fulfill() //TODO: check values
-        })
-        
-        waitForExpectationsWithTimeout(5, handler: { error in
-            XCTAssertNil(error, "Error")
-        })
-    }
 }
