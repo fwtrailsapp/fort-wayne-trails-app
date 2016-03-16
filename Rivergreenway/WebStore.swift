@@ -58,22 +58,30 @@ class WebStore {
         }
         
         opt.start { response in
-            //handle the generic errors
             if let err = response.error {
-                var errSentToCallback : WebStoreError
-                
-                //TODO: add more error codes
-                if err.domain == "HTTP" && err.code == 401 {
-                    errSentToCallback = WebStoreError.BadCredentials
-                } else {
-                    print("unknown WebStore error: \(err.localizedDescription)")
-                    errSentToCallback = WebStoreError.Unknown(msg: err.localizedDescription)
-                }
+                let errSentToCallback = self.getErrorFromRequest(err)
                 errorCallback(error: errSentToCallback)
-            } else { //response is ok
+            } else {
+                //response is ok
                 successCallback(response)
             }
         }
+    }
+    
+    private func getErrorFromRequest(err: NSError) -> WebStoreError {
+        if err.domain == "HTTP" {
+            switch (err.code) {
+            case 400:
+                return WebStoreError.InvalidCommunication
+            case 401:
+                return WebStoreError.BadCredentials
+            case 404:
+                return WebStoreError.InvalidCommunication
+            default: break
+            }
+        }
+        //domain is not http or the http response code isn't listed
+        return WebStoreError.Unknown(msg: "Unknown error in WebStore: \(err.localizedDescription)")
     }
 }
 
