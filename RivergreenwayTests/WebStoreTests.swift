@@ -33,8 +33,8 @@ class WebStoreTests: XCTestCase {
         })
     }
     
-    func testRegisterWithOptionals() {
-        let exp = expectationWithDescription("testRegisterWithOptionals")
+    func testAccountCreateMinimal() {
+        let exp = expectationWithDescription("testAccountCreateMinimal")
         
         let acct = Account(username: "ifyouchoosenottodecide")
         ws.accountCreate(acct, password: "youstillhavemadeachoice", errorCallback: { error in
