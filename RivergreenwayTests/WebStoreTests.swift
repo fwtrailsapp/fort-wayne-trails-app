@@ -17,8 +17,8 @@ class WebStoreTests: XCTestCase {
         ws = WebStore()
     }
     
-    func testRegister() {
-        let exp = expectationWithDescription("testRegister")
+    func testAccountCreate() {
+        let exp = expectationWithDescription("testAccountCreate")
         
         let acct = Account(username: "xcodeisbad", birthYear: 1994, height: 256, weight: 256, sex: Sex.MALE)
         ws.accountCreate(acct, password: "forreal", errorCallback: { error in
@@ -42,46 +42,6 @@ class WebStoreTests: XCTestCase {
         },
         successCallback: {
             exp.fulfill()
-        })
-        
-        waitForExpectationsWithTimeout(5, handler: { error in
-            XCTAssertNil(error, "Error")
-        })
-    }
-
-    func testGoodLogin() {
-        let exp = expectationWithDescription("testGoodLogin")
-        
-        ws.login("jared", password: "correctpass", errorCallback: { error in
-            XCTFail(error.description)
-        }, successCallback: {
-            if let auth = self.ws.authToken {
-                print("authtoken is \(auth)")
-                exp.fulfill()
-            } else {
-                XCTFail("No auth token")
-            }
-        })
-        
-        waitForExpectationsWithTimeout(5, handler: { error in
-            XCTAssertNil(error, "Error")
-        })
-    }
-    
-    func testBadLogin() {
-        let exp = expectationWithDescription("testBadLogin")
-        
-        ws.login("jared", password: "wr0ngpass", errorCallback: { error in
-            switch error {
-            case .BadCredentials:
-                exp.fulfill()
-                return
-            default:
-                XCTFail(error.description)
-                return
-            }
-        }, successCallback: {
-            XCTFail("Should not have logged in with a bad password")
         })
         
         waitForExpectationsWithTimeout(5, handler: { error in
