@@ -10,6 +10,7 @@
 		29B3C523D37E3307F3977A18 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
 		49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
 		7F77C9441C99305200FB0BB8 /* AccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77C9431C99305100FB0BB8 /* AccountResponse.swift */; };
+		7F77C9461C9A284F00FB0BB8 /* WebStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77C9451C9A284F00FB0BB8 /* WebStoreError.swift */; };
 		7FAFA3E11C794A1B0009A06D /* WebStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAFA3E01C794A1B0009A06D /* WebStore.swift */; };
 		7FAFA3E41C794EB30009A06D /* WebStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAFA3E31C794EB30009A06D /* WebStoreTests.swift */; };
 		7FF11D7E1C558C3D009A7D44 /* Overlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF11D7D1C558C3D009A7D44 /* Overlayer.swift */; };
@@ -86,6 +87,7 @@
 		01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7F77C9431C99305100FB0BB8 /* AccountResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountResponse.swift; sourceTree = "<group>"; };
+		7F77C9451C9A284F00FB0BB8 /* WebStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebStoreError.swift; sourceTree = "<group>"; };
 		7FAFA3E01C794A1B0009A06D /* WebStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebStore.swift; sourceTree = "<group>"; };
 		7FAFA3E31C794EB30009A06D /* WebStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebStoreTests.swift; sourceTree = "<group>"; };
 		7FF11D7D1C558C3D009A7D44 /* Overlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overlayer.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		D26E6C1C1C4AC27A00186A9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7F77C9451C9A284F00FB0BB8 /* WebStoreError.swift */,
 				D26E6C151C4AC25500186A9A /* TrailActivity.swift */,
 				D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */,
 				D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */,
@@ -701,6 +704,7 @@
 				D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */,
 				D2BD1DF61C6AD09C009E4F2F /* NavDrawerViewController.swift in Sources */,
 				D2C52FA71C700AF700DA78A7 /* TrailMapViewController.swift in Sources */,
+				7F77C9461C9A284F00FB0BB8 /* WebStoreError.swift in Sources */,
 				D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */,
 				D2BD1DF01C6ACB90009E4F2F /* BaseTableViewController.swift in Sources */,
 				D2647CFB1C55AF2300796D51 /* LoginViewController.swift in Sources */,
