@@ -61,17 +61,21 @@ class WebStore {
     
     func getAccount(
         errorCallback: (error: WebStoreError) -> Void,
-        successCallback: (AccountDetailsResponse) -> Void)
+        successCallback: (AccountResponse) -> Void)
     {
         let url = baseUrl + "account"
         
         genericGET(url,
             errorCallback: errorCallback,
             successCallback: { response in
-                let acctDeets = AccountDetailsResponse(JSONDecoder(response.data))
-                
-                if !acctDeets.isValid() {
+                let acctDeets : AccountResponse
+                do {
+                    acctDeets = try AccountResponse(JSONDecoder(response.data))
+                } catch JSONError.WrongType {
                     errorCallback(error: WebStoreError.InvalidResponse)
+                    return
+                } catch let errorEx {
+                    errorCallback(error: WebStoreError.Unknown(msg: "Exception: \(errorEx)"))
                     return
                 }
                 
@@ -100,7 +104,7 @@ class WebStore {
             if let err = response.error {
                 var errSentToCallback : WebStoreError
                 
-                //TODO: add more error codes
+                //TODO: add more error codes, like 404, remove/research domain
                 if err.domain == "HTTP" && err.code == 401 {
                     errSentToCallback = WebStoreError.BadCredentials
                 } else {
@@ -153,6 +157,7 @@ class WebStore {
 enum WebStoreError: CustomStringConvertible {
     case BadCredentials
     case InvalidResponse
+    case NotFound
     case Unknown(msg: String)
     
     var description: String {
@@ -161,6 +166,8 @@ enum WebStoreError: CustomStringConvertible {
             return "Cannot login with that username or password."
         case .InvalidResponse:
             return "Server returned less data than expected."
+        case .NotFound:
+            return "Error 404: Not Found."
         case let .Unknown(msg):
             return msg
         }
