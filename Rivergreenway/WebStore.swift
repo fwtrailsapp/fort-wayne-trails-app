@@ -80,32 +80,6 @@ class WebStore {
         )
     }
     
-    struct AccountDetailsResponse: JSONJoy {
-        let dob: Int?
-        var weight: Float?
-        let sex: Sex?
-        let height: Float?
-        
-        init(_ decoder: JSONDecoder) {
-            dob = decoder["dob"].integer
-            weight = decoder["weight"].float
-            if let theSex = decoder["sex"].string {
-                self.sex = Sex(rawValue: theSex)
-            } else {
-                self.sex = nil
-            }
-            height = decoder["height"].float
-        }
-        
-        func isValid() -> Bool {
-            return
-                dob != nil &&
-                weight != nil &&
-                sex != nil &&
-                height != nil
-        }
-    }
-    
     func genericGET(url: String,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (Response) -> Void)
