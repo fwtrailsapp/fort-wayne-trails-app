@@ -79,18 +79,15 @@ class WebStore {
 
 enum WebStoreError: CustomStringConvertible {
     case BadCredentials
-    case InvalidResponse
-    case NotFound
+    case InvalidCommunication
     case Unknown(msg: String)
     
     var description: String {
         switch (self) {
         case .BadCredentials:
             return "Cannot login with that username or password."
-        case .InvalidResponse:
-            return "Server returned less data than expected."
-        case .NotFound:
-            return "Error 404: Not Found."
+        case .InvalidCommunication:
+            return "Either the server did not understand us, or we did not understand the server."
         case let .Unknown(msg):
             return msg
         }
