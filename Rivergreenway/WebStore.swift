@@ -11,25 +11,7 @@ import SwiftHTTP
 import JSONJoy
 
 class WebStore {
-    let baseUrl = "http://localhost:8080/trails/api/1/"
-    var authToken : String?
-    
-    func login(username: String, password: String,
-        errorCallback: (error: WebStoreError) -> Void,
-        successCallback: () -> Void)
-    {
-        let url = baseUrl + "login"
-        let params = ["username": username, "password": password]
-        
-        genericPOST(url, params: params,
-            errorCallback: errorCallback,
-            successCallback: { response in
-                let resp = JSONDecoder(response.data)
-                self.authToken = resp["authtoken"].string
-                successCallback()
-            }
-        )
-    }
+    let baseUrl = "http://68.39.46.187:50000/GreenwayCap/DataRelay.svc/"
 
     func accountCreate(acct: Account, password: String,
         errorCallback: (error: WebStoreError) -> Void,
