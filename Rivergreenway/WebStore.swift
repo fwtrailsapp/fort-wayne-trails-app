@@ -91,6 +91,6 @@ class WebStore {
             }
         }
         //domain is not http or the http response code isn't listed
-        return WebStoreError.Unknown(msg: "Unknown error in WebStore: \(err.localizedDescription)")
+        return WebStoreError.Unknown(msg: "Unknown error in WebStore: \(err.localizedDescription) (code: \(err.code))")
     }
 }
