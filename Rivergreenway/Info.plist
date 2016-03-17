@@ -4,14 +4,8 @@
 <dict>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>localhost</key>
-			<dict>
-				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-		</dict>
+	    <key>NSAllowsArbitraryLoads</key>
+	    <true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow app to display GPS position on trail?</string>
