@@ -24,11 +24,21 @@ class WebStore {
         params["username"] = acct.username
         params["password"] = password
         params["dob"] = acct.birthYear ?? NSNull()
-        params["height"] = acct.height ?? NSNull()
-        params["weight"] = acct.weight ?? NSNull()
         
-        if let sex = acct.sex {
-            params["sex"] = sex.rawValue
+        if let uHeight = acct.height {
+            params["height"] = Int(uHeight)
+        } else {
+            params["height"] = NSNull()
+        }
+        
+        if let uWeight = acct.weight {
+            params["weight"] = Int(uWeight)
+        } else {
+            params["weight"] = NSNull()
+        }
+        
+        if let uSex = acct.sex {
+            params["sex"] = uSex.rawValue
         } else {
             params["sex"] = NSNull()
         }
