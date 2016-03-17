@@ -56,12 +56,11 @@ class WebStore {
         successCallback: (Response) -> Void)
     {
         let serializer = JSONParameterSerializer()
-        let headers = ["Content-Type": "application/json"]
         let opt: HTTP
         
         do {
             opt = try HTTP.New(url, method: verb, requestSerializer: serializer,
-                headers: headers, parameters: params)
+                parameters: params)
         } catch let errorEx {
             errorCallback(error: WebStoreError.Unknown(msg: "Exception: \(errorEx)"))
             return
