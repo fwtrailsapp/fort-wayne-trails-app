@@ -51,6 +51,62 @@ class WebStore {
         )
     }
     
+    func createNewActivity(username: String, act: TrailActivity,
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: () -> Void)
+    {
+        let uUsername = username
+        let uTimeStarted = unixDateToString(act.getStartTime(), format: "yyyy-MM-dd'T'HH:mm:ss")
+        let uDuration = unixDateToString(act.getDuration(), format: "HH:mm:ss")
+        let uMileage = act.getDistance()
+        let uCaloriesBurned = Int(act.getCaloriesBurned())
+        let uExerciseType = act.getExerciseType().imageName
+        let uPath = pathsToString(act.getPath())
+        
+        /*
+        int CreateNewActivity(string username, string time_started, string duration, float mileage, int calories_burned, string exercise_type, string path)
+        */
+        
+        let url = baseUrl + "activity"
+        var params = [String: NSObject]()
+        params["username"] = uUsername
+        params["time_started"] = uTimeStarted
+        params["duration"] = uDuration
+        params["mileage"] = uMileage
+        params["calories_burned"] = uCaloriesBurned
+        params["exercise_type"] = uExerciseType
+        params["path"] = uPath
+        
+        genericRequest(HTTPVerb.POST, url: url, params: params, errorCallback: errorCallback, successCallback: { response in
+            successCallback()
+        })
+    }
+    
+    private func pathsToString(paths: [GMSMutablePath]) -> String {
+        //send all of the paths hooked together... god help us
+        var coords = [String]()
+        
+        for path in paths {
+            for index in 0...path.count() {
+                let thisCoord = path.coordinateAtIndex(index)
+                let lat = thisCoord.latitude
+                let long = thisCoord.longitude
+                coords.append("\(lat) \(long)")
+            }
+        }
+        
+        let joined = coords.joinWithSeparator(",")
+        
+        return joined
+    }
+    
+    private func unixDateToString(interval: NSTimeInterval, format: String) -> String {
+        let date = NSDate(timeIntervalSince1970: interval)
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = format
+        return formatter.stringFromDate(date)
+    }
+    
     private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject],
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (Response) -> Void)
