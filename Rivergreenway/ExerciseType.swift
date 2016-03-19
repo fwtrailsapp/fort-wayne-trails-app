@@ -8,23 +8,21 @@
 
 import Foundation
 
-enum ExerciseType: Double {
-    case BIKING = 8.00
-    case WALKING = 3.80
-    case RUNNING = 7.50
+enum ExerciseType: String {
+    case Bike = "Bike"
+    case Walk = "Walk"
+    case Run = "Run"
     
-    static let all = [BIKING, WALKING, RUNNING]
+    static let all = [Walk, Run, Bike]
     
-    var imageName: String {
+    var MET: Double {
         switch self {
-        case BIKING:
-            return "Bike"
-        case WALKING:
-            return "Walk"
-        case RUNNING:
-            return "Run"
+        case Bike:
+            return 8.00
+        case Walk:
+            return 3.80
+        case Run:
+            return 7.50
         }
     }
-    
-    
 }

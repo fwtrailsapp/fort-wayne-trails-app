@@ -68,7 +68,7 @@ class TrailActivityRecorder {
         let tempDistance = lastLocation != nil ? Converter.metersToFeet(currLocation!.distanceFromLocation(lastLocation!)) : 0
         distance += tempDistance / 5280
         duration += lastLocation != nil ? currLocation!.timestamp.timeIntervalSinceDate(lastLocation!.timestamp) : 0
-        calories =  (BMR / 24) * exerciseType.rawValue * (duration / 3600)
+        calories =  (BMR / 24) * exerciseType.MET * (duration / 3600)
     }
     
     func getDistance() -> CLLocationDistance {
