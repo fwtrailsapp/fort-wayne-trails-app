@@ -40,6 +40,7 @@ class StartPauseViewController: BaseViewController, UIPopoverPresentationControl
             let popoverController = exerciseTypeViewController.popoverPresentationController
             exerciseTypeViewController.preferredContentSize = CGSize(width: 200, height: 150)
             if popoverController != nil {
+                popoverController!.sourceRect = startPauseButton.bounds
                 exerciseTypeViewController.setDelegate(self)
                 popoverController!.delegate = self
             }
