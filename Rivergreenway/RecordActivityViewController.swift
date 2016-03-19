@@ -110,9 +110,8 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         }
     }
     
-    func start() {
+    func start(exerciseType: ExerciseType) {
         do {
-            let exerciseType = promptExerciseType()
             recorder = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: exerciseType)
             try recorder!.start()
             startNewPolyline()
@@ -151,27 +150,6 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         } catch {
             print("caught dis shit")
         }
-    }
-    
-    func promptExerciseType() -> ExerciseType {
-        let prompt = UIAlertController(title: "Select Exercise Type", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
-        var images = [UIImage]()
-        
-        for exerciseType in ExerciseType.all {
-            images.append(UIImage(named: exerciseType.imageName)!)
-        }
-        
-        let typeControl = ExerciseTypeView.instanceFromNib()
-        /*
-        let horizontalConstraint = NSLayoutConstraint(item: typeControl, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
-        prompt.view.addConstraint(horizontalConstraint)
-        
-        let verticalConstraint = NSLayoutConstraint(item: typeControl, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
-        prompt.view.addConstraint(verticalConstraint)*/
-        prompt.view.addSubview(typeControl)
-        prompt.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
-        self.presentViewController(prompt, animated: false, completion: nil)
-        return ExerciseType.BIKING
     }
     
     // Helper method to format numbers
@@ -240,7 +218,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     func getFormattedSummary(activity: TrailActivity) -> String {
         var summary = ""
         let startDate = NSDate(timeIntervalSince1970: activity.getStartTime())
-        summary += "Exercise Type: \(activity.getExerciseType().rawValue)"
+        summary += "Exercise Type: \(activity.getExerciseType())"
         summary += "\nStart: \(startDate)"
         summary += "\nDuration: \(activity.getDuration())"
         summary += "\nDistance: \(activity.getDistance())"

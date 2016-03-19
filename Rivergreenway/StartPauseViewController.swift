@@ -8,11 +8,12 @@
 
 import UIKit
 
-class StartPauseViewController: BaseViewController {
+class StartPauseViewController: BaseViewController, UIPopoverPresentationControllerDelegate, ExerciseTypeViewControllerDelegate {
 
     // MARK : - Properties
     
     private var delegate: StartPauseDelegate?
+    private let exerciseTypeSegueID = "PromptExerciseType"
     
     @IBOutlet weak var startPauseButton: UIButton!
     
@@ -21,9 +22,7 @@ class StartPauseViewController: BaseViewController {
     @IBAction func startButtonPressed(sender: UIButton) {
         if let title = startPauseButton.titleLabel!.text {
             if title == "Start" {
-                delegate!.start()
-                startPauseButton.setTitle("Pause", forState: .Normal)
-                
+                self.performSegueWithIdentifier(exerciseTypeSegueID, sender: self)
             }
             else {
                 delegate!.pause()
@@ -33,6 +32,32 @@ class StartPauseViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == exerciseTypeSegueID {
+            let exerciseTypeViewController = segue.destinationViewController as! ExerciseTypeViewController
+            let popoverController = exerciseTypeViewController.popoverPresentationController
+            
+            if popoverController != nil {
+                exerciseTypeViewController.setDelegate(self)
+                popoverController!.delegate = self
+            }
+        }
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        // Return no adaptive presentation style, use default presentation behaviour
+        return .None
+    }
+    
+    func start(exerciseType: ExerciseType) {
+        if delegate != nil {
+            // manually dismiss the popover view
+            self.presentedViewController!.dismissViewControllerAnimated(true, completion: nil)
+            startPauseButton.setTitle("Pause", forState: .Normal)
+            delegate!.start(exerciseType)
+        }
     }
     
     func setDelegate(delegate: StartPauseDelegate) {
@@ -45,6 +70,6 @@ class StartPauseViewController: BaseViewController {
 }
 
 protocol StartPauseDelegate {
-    func start()
+    func start(exerciseType: ExerciseType)
     func pause()
 }

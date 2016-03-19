@@ -328,7 +328,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6V-qu-r26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-198" y="458"/>
+            <point key="canvasLocation" x="-294" y="658"/>
         </scene>
         <!--Nav Drawer View Controller-->
         <scene sceneID="AX3-oi-UON">
@@ -893,7 +893,59 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1C-rq-mfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1014" y="458"/>
+            <point key="canvasLocation" x="-1110" y="658"/>
+        </scene>
+        <!--Exercise Type View Controller-->
+        <scene sceneID="aCJ-Sd-ofy">
+            <objects>
+                <viewController id="3XS-3y-KXX" customClass="ExerciseTypeViewController" customModule="Rivergreenway" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ld-dg-sW2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ljf-VZ-3eM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fz4-QF-isS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRR-6f-Vtv">
+                                <rect key="frame" x="221" y="249" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wrc-eM-Dt4">
+                                <rect key="frame" x="242" y="286" width="116" height="29"/>
+                                <segments>
+                                    <segment title="" image="Walk"/>
+                                    <segment title="" image="Run"/>
+                                    <segment title="" image="Bike"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncy-Al-st7">
+                                <rect key="frame" x="283" y="330" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="3XS-3y-KXX" eventType="touchUpInside" id="V0U-Rb-Tem"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TRR-6f-Vtv" firstAttribute="centerX" secondItem="fz4-QF-isS" secondAttribute="centerX" id="0Rk-EY-zPp"/>
+                            <constraint firstItem="Ncy-Al-st7" firstAttribute="top" secondItem="Wrc-eM-Dt4" secondAttribute="bottom" constant="16" id="CZb-kR-iF9"/>
+                            <constraint firstItem="Ncy-Al-st7" firstAttribute="centerX" secondItem="fz4-QF-isS" secondAttribute="centerX" id="MEN-V2-HqJ"/>
+                            <constraint firstItem="Wrc-eM-Dt4" firstAttribute="centerY" secondItem="fz4-QF-isS" secondAttribute="centerY" id="kId-L5-Msv"/>
+                            <constraint firstItem="Wrc-eM-Dt4" firstAttribute="top" secondItem="TRR-6f-Vtv" secondAttribute="bottom" constant="16" id="wuL-4O-4Nj"/>
+                            <constraint firstItem="Wrc-eM-Dt4" firstAttribute="centerX" secondItem="fz4-QF-isS" secondAttribute="centerX" id="zli-5Z-tWU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exerciseTypeControl" destination="Wrc-eM-Dt4" id="HcJ-Ef-GFd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSt-xt-Fhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674" y="-96"/>
         </scene>
         <!--Record Activity Navigation Controller-->
         <scene sceneID="IGe-uP-ewz">
@@ -967,7 +1019,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuE-E2-xH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="458"/>
+            <point key="canvasLocation" x="1247" y="658"/>
         </scene>
         <!--Activity History-->
         <scene sceneID="x0b-y8-Oxc">
@@ -1125,7 +1177,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dt-EU-n8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2834" y="458"/>
+            <point key="canvasLocation" x="2738" y="658"/>
         </scene>
         <!--Trail Map Navigation Controller-->
         <scene sceneID="6pp-d9-lD0">
@@ -1143,7 +1195,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dno-0n-zjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="458"/>
+            <point key="canvasLocation" x="488" y="658"/>
         </scene>
         <!--Account Details-->
         <scene sceneID="YBH-iN-nkS">
@@ -1298,7 +1350,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSw-bA-b8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="1184"/>
+            <point key="canvasLocation" x="1247" y="1384"/>
         </scene>
         <!--Account Statistics Navigation Controller-->
         <scene sceneID="beW-Zs-Fux">
@@ -1316,7 +1368,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1m-0J-3ec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="458"/>
+            <point key="canvasLocation" x="1966" y="658"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hTk-8t-gYz">
@@ -1334,7 +1386,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8q-YG-k7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="1184"/>
+            <point key="canvasLocation" x="488" y="1384"/>
         </scene>
         <!--About-->
         <scene sceneID="58L-1j-drg">
@@ -1353,7 +1405,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cH9-Dm-da7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="1916"/>
+            <point key="canvasLocation" x="1247" y="2116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bDl-5E-QWL">
@@ -1371,7 +1423,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuo-F5-UGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="1916"/>
+            <point key="canvasLocation" x="488" y="2116"/>
         </scene>
         <!--Start Pause View Controller-->
         <scene sceneID="gEf-fw-bht">
@@ -1401,6 +1453,9 @@
                     </view>
                     <connections>
                         <outlet property="startPauseButton" destination="EZB-AB-qc2" id="1VX-6q-qyk"/>
+                        <segue destination="3XS-3y-KXX" kind="popoverPresentation" identifier="PromptExerciseType" popoverAnchorView="EZB-AB-qc2" id="rlX-5e-Ra5">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hm-sH-xbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1454,6 +1509,7 @@
     </scenes>
     <resources>
         <image name="Account" width="24" height="24"/>
+        <image name="Bike" width="24" height="24"/>
         <image name="Explore" width="24" height="24"/>
         <image name="History" width="24" height="24"/>
         <image name="Info" width="24" height="24"/>
@@ -1462,5 +1518,6 @@
         <image name="Seal" width="426" height="425"/>
         <image name="Stars" width="24" height="24"/>
         <image name="Trending" width="24" height="24"/>
+        <image name="Walk" width="24" height="24"/>
     </resources>
 </document>

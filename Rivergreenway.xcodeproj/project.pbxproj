@@ -23,6 +23,7 @@
 		D232FEF11C52F27C00BDFCE8 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEF01C52F27C00BDFCE8 /* AccountTests.swift */; };
 		D246EDC71C5BABA700A3C1C3 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246EDC51C5BABA700A3C1C3 /* LoginViewControllerTests.swift */; };
 		D246EDCA1C5BABCB00A3C1C3 /* RecordActivityViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246EDC81C5BABCB00A3C1C3 /* RecordActivityViewControllerTests.swift */; };
+		D25F098C1C9DAE9100F09757 /* ExerciseTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F098B1C9DAE9100F09757 /* ExerciseTypeViewController.swift */; };
 		D2612DF61C53EB94009232AC /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DF51C53EB94009232AC /* Converter.swift */; };
 		D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DF81C53EC20009232AC /* ConverterTests.swift */; };
 		D2612DFB1C53F432009232AC /* RecordActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2612DFA1C53F432009232AC /* RecordActivityViewController.swift */; };
@@ -36,8 +37,6 @@
 		D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C151C4AC25500186A9A /* TrailActivity.swift */; };
 		D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */; };
 		D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */; };
-		D28CC9B01C95EA0000973ABB /* ExerciseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CC9AE1C95EA0000973ABB /* ExerciseTypeView.swift */; };
-		D28CC9B11C95EA0000973ABB /* ExerciseTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28CC9AF1C95EA0000973ABB /* ExerciseTypeView.xib */; };
 		D2AFFEB01C8FBEA600687A7B /* RecordActivityStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFFEAF1C8FBEA600687A7B /* RecordActivityStatCell.swift */; };
 		D2BD1DEE1C6ACB7C009E4F2F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */; };
 		D2BD1DF01C6ACB90009E4F2F /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */; };
@@ -100,6 +99,7 @@
 		D232FEF01C52F27C00BDFCE8 /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		D246EDC51C5BABA700A3C1C3 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewControllerTests.swift; path = ../RivergreenwayUITests/LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		D246EDC81C5BABCB00A3C1C3 /* RecordActivityViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityViewControllerTests.swift; sourceTree = "<group>"; };
+		D25F098B1C9DAE9100F09757 /* ExerciseTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTypeViewController.swift; sourceTree = "<group>"; };
 		D2612DF51C53EB94009232AC /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		D2612DF81C53EC20009232AC /* ConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 		D2612DFA1C53F432009232AC /* RecordActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityViewController.swift; sourceTree = "<group>"; };
@@ -119,8 +119,6 @@
 		D26E6C151C4AC25500186A9A /* TrailActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivity.swift; sourceTree = "<group>"; };
 		D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityState.swift; sourceTree = "<group>"; };
 		D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityTests.swift; sourceTree = "<group>"; };
-		D28CC9AE1C95EA0000973ABB /* ExerciseTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTypeView.swift; sourceTree = "<group>"; };
-		D28CC9AF1C95EA0000973ABB /* ExerciseTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseTypeView.xib; sourceTree = "<group>"; };
 		D2AFFEAF1C8FBEA600687A7B /* RecordActivityStatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityStatCell.swift; sourceTree = "<group>"; };
 		D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -386,11 +384,10 @@
 		D2C52FB01C7540B100DA78A7 /* RecordActivity */ = {
 			isa = PBXGroup;
 			children = (
-				D28CC9AE1C95EA0000973ABB /* ExerciseTypeView.swift */,
-				D28CC9AF1C95EA0000973ABB /* ExerciseTypeView.xib */,
 				D2612DFA1C53F432009232AC /* RecordActivityViewController.swift */,
 				D2C52FB11C7540D000DA78A7 /* StartPauseViewController.swift */,
 				D2C52FB31C7540E900DA78A7 /* ResumeFinishViewController.swift */,
+				D25F098B1C9DAE9100F09757 /* ExerciseTypeViewController.swift */,
 			);
 			name = RecordActivity;
 			sourceTree = "<group>";
@@ -522,7 +519,6 @@
 				D26E6BEF1C4AC22C00186A9A /* Assets.xcassets in Resources */,
 				D26E6BED1C4AC22C00186A9A /* Main.storyboard in Resources */,
 				7FF11D861C5598B7009A7D44 /* Trails.kml in Resources */,
-				D28CC9B11C95EA0000973ABB /* ExerciseTypeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,7 +668,6 @@
 			files = (
 				D2C52FB61C76904200DA78A7 /* RecordActivityStatLabel.swift in Sources */,
 				D2271F561C81392A00FE4E4B /* RecordActivityStatUnit.swift in Sources */,
-				D28CC9B01C95EA0000973ABB /* ExerciseTypeView.swift in Sources */,
 				D2BD1DFB1C6C1401009E4F2F /* NavDrawerTableViewCell.swift in Sources */,
 				D2BD1DF21C6ACC0D009E4F2F /* DraweredViewController.swift in Sources */,
 				D2BD1DFE1C6C210E009E4F2F /* NavDrawerTableViewController.swift in Sources */,
@@ -696,6 +691,7 @@
 				D2C52FAB1C70FCDC00DA78A7 /* AccountDetailsViewController.swift in Sources */,
 				D2C52FA11C6FE9EA00DA78A7 /* ActivityHistoryTableViewCell.swift in Sources */,
 				7FF11D7E1C558C3D009A7D44 /* Overlayer.swift in Sources */,
+				D25F098C1C9DAE9100F09757 /* ExerciseTypeViewController.swift in Sources */,
 				D2C52FA31C70002800DA78A7 /* AchievementViewController.swift in Sources */,
 				D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */,
 				D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */,
