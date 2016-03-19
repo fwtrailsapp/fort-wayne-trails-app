@@ -25,13 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-
-    func logout() {
-        account = nil
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
-        let loginViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.LOGIN_VIEW.rawValue)
-        drawerController!.centerViewController = loginViewController
-    }
     
     func getAccount() -> Account? {
         return account

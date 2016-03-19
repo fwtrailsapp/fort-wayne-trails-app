@@ -74,7 +74,6 @@ class NavDrawerViewController: UIViewController, NavTableDelegate {
     }
     
     func logOutHandler(action: UIAlertAction) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.logout()
+        exit(0)
     }
 }
