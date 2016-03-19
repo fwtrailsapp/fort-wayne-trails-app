@@ -46,7 +46,7 @@ class TrailActivityTests : XCTestCase {
     func initializeEmptyActivity() {
         let startTime = NSDate().timeIntervalSince1970 * 1000
         let duration: Double = 0
-        let exerciseType = ExerciseType.RUNNING
+        let exerciseType = ExerciseType.Run
         let caloriesBurned: Double = 0
         let path = [GMSMutablePath]()
         self.emptyActivity = TrailActivity(startTime: startTime, duration: duration, path: path, exerciseType: exerciseType, caloriesBurned: caloriesBurned)
@@ -55,7 +55,7 @@ class TrailActivityTests : XCTestCase {
     func initializeBasicActivity() {
         let startTime = NSDate().timeIntervalSince1970 * 1000
         let duration: Double = 60000 // add a minute
-        let exerciseType = ExerciseType.RUNNING
+        let exerciseType = ExerciseType.Run
         let caloriesBurned: Double = 1000
         let path = [GMSMutablePath]()
         self.basicActivity = TrailActivity(startTime: startTime, duration: duration, path: path, exerciseType: exerciseType, caloriesBurned: caloriesBurned)

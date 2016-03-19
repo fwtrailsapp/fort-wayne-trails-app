@@ -16,7 +16,7 @@ class TrailActivityRecorderTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        recorder = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: ExerciseType.BIKING)
+        recorder = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: ExerciseType.Bike)
     }
     
     override func tearDown() {
@@ -25,7 +25,7 @@ class TrailActivityRecorderTests: XCTestCase {
     }
     
     func testConstructor() {
-        let recorderNil = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: ExerciseType.BIKING)
+        let recorderNil = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: ExerciseType.Bike)
         assert(recorderNil.getState() == .CREATED)
         assert(recorderNil.getCalories() == 0)
         assert(recorderNil.getSpeed() == 0)
