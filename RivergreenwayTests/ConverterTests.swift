@@ -32,16 +32,6 @@ class ConverterTests: XCTestCase {
         assert(centimeters == 2.54)
     }
     
-    func testMillisecondsToHours() {
-        let hours = Converter.millisecondsToHours(1)
-        assert(hours == 1 / 3600000)
-    }
-    
-    func testHoursToMilliseconds() {
-        let milliseconds = Converter.hoursToMilliseconds(1)
-        assert(milliseconds == 3600000)
-    }
-    
     func testFeetToMeters() {
         let meters = Converter.feetToMeters(1)
         assert(meters == 0.3048)
