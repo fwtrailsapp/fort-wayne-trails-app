@@ -38,7 +38,7 @@ class StartPauseViewController: BaseViewController, UIPopoverPresentationControl
         if segue.identifier == exerciseTypeSegueID {
             let exerciseTypeViewController = segue.destinationViewController as! ExerciseTypeViewController
             let popoverController = exerciseTypeViewController.popoverPresentationController
-            
+            exerciseTypeViewController.preferredContentSize = CGSize(width: 200, height: 150)
             if popoverController != nil {
                 exerciseTypeViewController.setDelegate(self)
                 popoverController!.delegate = self
