@@ -112,7 +112,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func start(exerciseType: ExerciseType) {
         do {
-            recorder = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: exerciseType)
+            recorder = TrailActivityRecorder(startTime: NSDate(), exerciseType: exerciseType)
             try recorder!.start()
             startNewPolyline()
         } catch {
@@ -230,7 +230,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func getFormattedSummary(activity: TrailActivity) -> String {
         var summary = ""
-        let startDate = NSDate(timeIntervalSince1970: activity.getStartTime())
+        let startDate = activity.getStartTime()
         summary += "Exercise Type: \(activity.getExerciseType())"
         summary += "\nStart: \(startDate)"
         summary += "\nDuration: \(Converter.getDurationAsString(activity.getDuration() * 3600))"

@@ -19,14 +19,14 @@ class TrailActivityRecorder {
     private var path: [GMSMutablePath]
     private var segment: GMSMutablePath
     
-    private var startTime: NSTimeInterval
+    private var startTime: NSDate
     private var currLocation: CLLocation?
     private var lastLocation: CLLocation?
     private var distance: CLLocationDistance = 0
     private var duration: NSTimeInterval = 0
     private var calories: Double = 0
     
-    init(startTime: NSTimeInterval, exerciseType: ExerciseType, BMR: Double? = nil) {
+    init(startTime: NSDate, exerciseType: ExerciseType, BMR: Double? = nil) {
         path = [GMSMutablePath]()
         segment = GMSMutablePath()
         self.exerciseType = exerciseType

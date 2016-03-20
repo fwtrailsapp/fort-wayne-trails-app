@@ -10,13 +10,13 @@ import Foundation
 
 class TrailActivity {
     
-    private var startTime: NSTimeInterval
+    private var startTime: NSDate
     private var duration: NSTimeInterval
     private var path: [GMSMutablePath]
     private var exerciseType: ExerciseType
     private var caloriesBurned: Double
     
-    init(startTime: NSTimeInterval, duration: NSTimeInterval, path: [GMSMutablePath], exerciseType: ExerciseType, caloriesBurned: Double) {
+    init(startTime: NSDate, duration: NSTimeInterval, path: [GMSMutablePath], exerciseType: ExerciseType, caloriesBurned: Double) {
         self.startTime = startTime
         self.duration = duration
         self.exerciseType = exerciseType
@@ -41,7 +41,7 @@ class TrailActivity {
         return caloriesBurned
     }
     
-    func getStartTime() -> NSTimeInterval {
+    func getStartTime() -> NSDate {
         return startTime
     }
     
