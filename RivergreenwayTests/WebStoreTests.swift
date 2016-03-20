@@ -67,12 +67,13 @@ class WebStoreTests: XCTestCase {
     }
     
     private func createTrailActivity() -> TrailActivity {
-        let startTime = 1458502343.0 //unix time
+        let startTime = NSDate(timeIntervalSince1970: 1458502343.0)
         let duration = 20.0
+        let distance = 1337.0
         let path = createMutablePaths()
         let exerciseType = ExerciseType.Bike
         let caloriesBurned = 10.0
-        return TrailActivity(startTime: startTime, duration: duration, path: path, exerciseType: exerciseType, caloriesBurned: caloriesBurned)
+        return TrailActivity(startTime: startTime, duration: duration, distance: distance, path: path, exerciseType: exerciseType, caloriesBurned: caloriesBurned)
     }
     
     private func createMutablePaths() -> [GMSMutablePath] {
