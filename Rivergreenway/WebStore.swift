@@ -60,7 +60,7 @@ class WebStore {
         let uDuration = unixDateToString(act.getDuration(), format: "HH:mm:ss")
         let uMileage = act.getDistance()
         let uCaloriesBurned = Int(act.getCaloriesBurned())
-        let uExerciseType = act.getExerciseType().imageName
+        let uExerciseType = act.getExerciseType().rawValue
         let uPath = pathsToString(act.getPath())
         
         /*
