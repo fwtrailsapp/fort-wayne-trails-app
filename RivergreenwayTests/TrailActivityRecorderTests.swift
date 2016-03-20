@@ -26,7 +26,7 @@ class TrailActivityRecorderTests: XCTestCase {
     
     func testConstructor() {
         let recorderNil = TrailActivityRecorder(startTime: NSDate().timeIntervalSince1970, exerciseType: ExerciseType.Bike)
-        assert(recorderNil.getState() == .CREATED)
+        assert(recorderNil.getState() == .Created)
         assert(recorderNil.getCalories() == 0)
         assert(recorderNil.getSpeed() == 0)
         assert(recorderNil.getDistance() == 0)
@@ -39,7 +39,7 @@ class TrailActivityRecorderTests: XCTestCase {
         } catch {
             assert(false)
         }
-        assert(recorder!.getState() == .STARTED)
+        assert(recorder!.getState() == .Started)
     }
     
     func testPause() {
@@ -61,7 +61,7 @@ class TrailActivityRecorderTests: XCTestCase {
         } catch {
             assert(false)
         }
-        assert(recorder!.getState() == .PAUSED)
+        assert(recorder!.getState() == .Paused)
     }
     
     func testResume() {
@@ -96,7 +96,7 @@ class TrailActivityRecorderTests: XCTestCase {
         } catch {
             assert(false)
         }
-        assert(recorder!.getState() == .RESUMED)
+        assert(recorder!.getState() == .Resumed)
     }
     
     func testStop() {
@@ -118,7 +118,7 @@ class TrailActivityRecorderTests: XCTestCase {
         } catch {
             assert(false)
         }
-        assert(recorder!.getState() == .STOPPED)
+        assert(recorder!.getState() == .Stopped)
     }
 
     func testGetSpeed() {

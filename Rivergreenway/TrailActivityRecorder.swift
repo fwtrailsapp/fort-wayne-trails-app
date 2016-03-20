@@ -12,7 +12,7 @@ class TrailActivityRecorder {
     
     private let AVERAGE_BMR: Double = 1577.5
     
-    private var state: TrailActivityState = .CREATED
+    private var state: TrailActivityState = .Created
     private var exerciseType: ExerciseType
     private var BMR: Double
     
@@ -53,11 +53,11 @@ class TrailActivityRecorder {
     }
     
     func isRecording() -> Bool {
-        return state == .STARTED || state == .RESUMED
+        return state == .Started || state == .Resumed
     }
     
     func update(newLocation: CLLocation) throws {
-        if state != .STARTED && state != .RESUMED {
+        if !isRecording() {
             throw RecorderError.INCORRECT_STATE
         }
         segment.addCoordinate(newLocation.coordinate)
@@ -88,40 +88,40 @@ class TrailActivityRecorder {
     }
     
     func start() throws {
-        if state != .CREATED {
+        if state != .Created {
             throw RecorderError.INCORRECT_TRANSITION
         }
         segment = GMSMutablePath()
-        state = .STARTED
+        state = .Started
     }
     
     func pause() throws {
-        if state != .STARTED && state != .RESUMED {
+        if !isRecording() {
             throw RecorderError.INCORRECT_TRANSITION
         }
         path.append(segment)
         segment.removeAllCoordinates()
-        state = .PAUSED
+        state = .Paused
     }
     
     func resume() throws {
-        if state != .PAUSED {
+        if state != .Paused {
             throw RecorderError.INCORRECT_TRANSITION
         }
         segment = GMSMutablePath()
         lastLocation = nil
         currLocation = nil
-        state = .RESUMED
+        state = .Resumed
     }
     
     func stop() throws {
-        if state == .CREATED {
+        if state == .Created {
             throw RecorderError.INCORRECT_TRANSITION
         }
-        if state == .RESUMED || state == .STARTED {
+        if isRecording() {
             path.append(segment)
         }
-        state = .STOPPED
+        state = .Stopped
     }
     
     enum RecorderError: ErrorType {

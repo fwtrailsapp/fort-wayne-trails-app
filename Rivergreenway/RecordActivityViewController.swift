@@ -94,14 +94,14 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     }
     
     func updateTime() {
-        if recorder != nil && (recorder!.getState() == .RESUMED || recorder!.getState() == .STARTED) {
+        if recorder != nil && (recorder!.isRecording()) {
             displayTime++;
             durationLabel.text = Converter.getDurationAsString(displayTime)
         }
     }
     
     func swapContainerViews() {
-        if recorder != nil && recorder!.getState() == TrailActivityState.PAUSED {
+        if recorder != nil && recorder!.getState() == TrailActivityState.Paused {
             singleButtonContainerView.alpha = 0
             doubleButtonContainerView.alpha = 1
         } else {

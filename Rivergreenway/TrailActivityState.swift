@@ -9,10 +9,10 @@
 import Foundation
 
 enum TrailActivityState: String {
-    case CREATED = "CREATED"
-    case STARTED = "STARTED"
-    case RESUMED = "RESUMED"
-    case PAUSED = "PAUSED"
-    case STOPPED = "STOPPED"
-    case DESTROYED = "DESTROYED"
+    case Created = "Created"
+    case Started = "Started"
+    case Resumed = "Resumed"
+    case Paused = "Paused"
+    case Stopped = "Stopped"
+    case Destroyed = "Destroyed"
 }
