@@ -233,10 +233,9 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         let startDate = activity.getStartTime()
         summary += "Exercise Type: \(activity.getExerciseType())"
         summary += "\nStart: \(startDate)"
-        summary += "\nDuration: \(Converter.getDurationAsString(activity.getDuration() * 3600))"
+        summary += "\nDuration: \(Converter.getDurationAsString(activity.getDuration()))"
         summary += "\nDistance: \(formatNumber(activity.getDistance()))"
         summary += "\nCalories: \(formatNumber(activity.getCaloriesBurned()))"
-        summary += "\nAverage Speed: \(formatNumber(activity.getAverageSpeed()))"
         
         return summary
     }

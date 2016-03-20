@@ -41,7 +41,7 @@ class TrailActivityRecorder {
     
     
     func getActivity() -> TrailActivity {
-        return TrailActivity(startTime: startTime, duration: duration, path: path, exerciseType: exerciseType, caloriesBurned: calories)
+        return TrailActivity(startTime: startTime, duration: duration, distance: distance, path: path, exerciseType: exerciseType, caloriesBurned: calories)
     }
     
     func getState() -> TrailActivityState {
