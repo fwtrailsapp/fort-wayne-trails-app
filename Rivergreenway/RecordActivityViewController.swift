@@ -179,8 +179,21 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func displaySummary() {
         let trailActivity = recorder!.getActivity()
-        let alert = UIAlertController(title: "Activity Summary", message: getFormattedSummary(trailActivity), preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Activity Summary", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: summaryOkHandler))
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.Left
+        
+        let messageText = NSMutableAttributedString(
+            string: getFormattedSummary(trailActivity),
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName : UIFont.preferredFontForTextStyle(UIFontTextStyleBody),
+                NSForegroundColorAttributeName : UIColor.blackColor()
+            ]
+        )
+        
+        alert.setValue(messageText, forKey: "attributedMessage")
         self.presentViewController(alert, animated: false, completion: nil)
     }
     
@@ -220,10 +233,10 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         let startDate = NSDate(timeIntervalSince1970: activity.getStartTime())
         summary += "Exercise Type: \(activity.getExerciseType())"
         summary += "\nStart: \(startDate)"
-        summary += "\nDuration: \(activity.getDuration())"
-        summary += "\nDistance: \(activity.getDistance())"
-        summary += "\nCalories: \(activity.getCaloriesBurned())"
-        summary += "\nAverage Speed: \(activity.getAverageSpeed())"
+        summary += "\nDuration: \(Converter.getDurationAsString(activity.getDuration() * 3600))"
+        summary += "\nDistance: \(formatNumber(activity.getDistance()))"
+        summary += "\nCalories: \(formatNumber(activity.getCaloriesBurned()))"
+        summary += "\nAverage Speed: \(formatNumber(activity.getAverageSpeed()))"
         
         return summary
     }
