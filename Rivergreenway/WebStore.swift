@@ -11,9 +11,9 @@ import SwiftHTTP
 import JSONJoy
 
 class WebStore {
-    let baseUrl = "http://68.39.46.187:50000/GreenwayCap/DataRelay.svc/"
+    private let baseUrl = "http://68.39.46.187:50000/GreenwayCap/DataRelay.svc/"
 
-    func accountCreate(acct: Account, password: String,
+    func createAccount(acct: Account, password: String,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: () -> Void)
     {
