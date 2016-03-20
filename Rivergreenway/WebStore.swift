@@ -55,13 +55,13 @@ class WebStore {
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: () -> Void)
     {
-        let uUsername = username
-        let uTimeStarted = unixDateToString(act.getStartTime(), format: "yyyy-MM-dd'T'HH:mm:ss")
-        let uDuration = unixDateToString(act.getDuration(), format: "HH:mm:ss")
-        let uMileage = act.getDistance()
-        let uCaloriesBurned = Int(act.getCaloriesBurned())
-        let uExerciseType = act.getExerciseType().rawValue
-        let uPath = pathsToString(act.getPath())
+        let uUsername: String = username
+        let uTimeStarted: String = nsDateToString(act.getStartTime(), format: "yyyy-MM-dd'T'HH:mm:ss")
+        let uDuration: String = unixDateToString(act.getDuration(), format: "HH:mm:ss")
+        let uMileage: Double = act.getDistance()
+        let uCaloriesBurned: Int = Int(act.getCaloriesBurned())
+        let uExerciseType: String = act.getExerciseType().rawValue
+        let uPath: String = pathsToString(act.getPath())
         
         /*
         int CreateNewActivity(string username, string time_started, string duration, float mileage, int calories_burned, string exercise_type, string path)
@@ -100,11 +100,15 @@ class WebStore {
         return joined
     }
     
-    private func unixDateToString(interval: NSTimeInterval, format: String) -> String {
-        let date = NSDate(timeIntervalSince1970: interval)
+    private func nsDateToString(date: NSDate, format: String) -> String {
         let formatter = NSDateFormatter()
         formatter.dateFormat = format
         return formatter.stringFromDate(date)
+    }
+    
+    private func unixDateToString(interval: NSTimeInterval, format: String) -> String {
+        let date = NSDate(timeIntervalSince1970: interval)
+        return nsDateToString(date, format: format)
     }
     
     private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject],
