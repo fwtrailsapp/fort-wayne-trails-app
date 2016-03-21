@@ -67,7 +67,7 @@ class WebStoreTests: XCTestCase {
     }
     
     private func createTrailActivity() -> TrailActivity {
-        let startTime = NSDate(timeIntervalSince1970: 1458502343.0)
+        let startTime = NSDate()
         let duration = 20.0
         let distance = 1337.0
         let path = createMutablePaths()
