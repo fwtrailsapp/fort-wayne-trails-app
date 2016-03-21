@@ -7,6 +7,7 @@ pod 'GoogleMaps'
 pod 'iOS-KML-Framework'
 pod 'SwiftHTTP'
 pod 'JSONJoy-Swift'
+pod 'SVProgressHUD'
 
 use_frameworks!
 inhibit_all_warnings!
