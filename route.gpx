@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="labs.coruscantconsulting.co.uk" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+  <metadata>
+    <link href="http://www.coruscantconsulting.co.uk">
+      <text>Coruscant Consulting Ltd. Labs</text>
+    </link>
+    <!--desc>Map data copyright 2015 Google</desc-->
+    <!--copyright author="Google Inc">
+    	<year>2015</year>
+    	<license>https://developers.google.com/maps/terms</license>
+    </copyright-->
+    <!--url>https://www.google.co.uk/maps/dir/41.113986,-85.1025971/Camp+Canine/41.1140114,-85.1026119/@41.114658,-85.1144029,16z/data=!4m10!4m9!1m0!1m5!1m1!1s0x0:0x997820eb2a7e5e3a!2m2!1d-85.1175267!2d41.1128333!1m0!3e1?hl=en</url-->
+    <time>2016-03-21T17:16:50Z</time>
+  </metadata>
+  <wpt lat="41.113986" lon="-85.1025971">
+    <name>4010 W Housing Dr</name>
+    <speed>4.23</speed>
+    <desc>4010 W Housing Dr, Fort Wayne, IN 46815, USA</desc>
+    <time>2016-03-21T17:16:50Z</time>
+  </wpt>
+  
+  <wpt lat="41.1139871" lon="-85.1025774">
+    <name>WP001</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:17:19Z</time>
+  </wpt>
+  <wpt lat="41.1147215" lon="-85.1025375">
+    <name>WP002</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:17:48Z</time>
+  </wpt>
+  <wpt lat="41.1147386" lon="-85.1025881">
+    <name>WP003</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:18:17Z</time>
+  </wpt>
+  <wpt lat="41.1148595" lon="-85.1025397">
+    <name>WP004</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:18:46Z</time>
+  </wpt>
+  <wpt lat="41.1155942" lon="-85.1027693">
+    <name>WP005</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:19:15Z</time>
+  </wpt>
+  <wpt lat="41.1163253" lon="-85.1083151">
+    <name>WP006</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:19:44Z</time>
+  </wpt>
+  <wpt lat="41.1160946" lon="-85.1098999">
+    <name>WP007</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:20:13Z</time>
+  </wpt>
+  <wpt lat="41.1159282" lon="-85.1100227">
+    <name>WP008</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:20:42Z</time>
+  </wpt>
+  <wpt lat="41.1157355" lon="-85.1103563">
+    <name>WP009</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:21:11Z</time>
+  </wpt>
+  <wpt lat="41.1164829" lon="-85.1126056">
+    <name>WP010</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:21:40Z</time>
+  </wpt>
+  <wpt lat="41.1150038" lon="-85.1136836">
+    <name>WP011</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:22:09Z</time>
+  </wpt>
+  <wpt lat="41.1153604" lon="-85.1146517">
+    <name>WP012</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:22:38Z</time>
+  </wpt>
+  <wpt lat="41.1133907" lon="-85.1152919">
+    <name>WP013</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:23:07Z</time>
+  </wpt>
+  <wpt lat="41.1144621" lon="-85.1171528">
+    <name>WP014</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:23:36Z</time>
+  </wpt>
+  <wpt lat="41.1130772" lon="-85.1181808">
+    <name>WP015</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:24:05Z</time>
+  </wpt>
+  <wpt lat="41.1144621" lon="-85.1171528">
+    <name>WP016</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:24:34Z</time>
+  </wpt>
+  <wpt lat="41.1133907" lon="-85.1152919">
+    <name>WP017</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:25:03Z</time>
+  </wpt>
+  <wpt lat="41.1160906" lon="-85.1141863">
+    <name>WP018</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:25:32Z</time>
+  </wpt>
+  <wpt lat="41.1156961" lon="-85.113219">
+    <name>WP019</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:26:01Z</time>
+  </wpt>
+  <wpt lat="41.1164829" lon="-85.1126056">
+    <name>WP020</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:26:30Z</time>
+  </wpt>
+  <wpt lat="41.1158658" lon="-85.1108102">
+    <name>WP021</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:26:59Z</time>
+  </wpt>
+  <wpt lat="41.1156777" lon="-85.1108598">
+    <name>WP022</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:27:28Z</time>
+  </wpt>
+  <wpt lat="41.1160946" lon="-85.1098999">
+    <name>WP023</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:27:57Z</time>
+  </wpt>
+  <wpt lat="41.1158279" lon="-85.1089264">
+    <name>WP024</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:28:26Z</time>
+  </wpt>
+  <wpt lat="41.1163253" lon="-85.1083151">
+    <name>WP025</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:28:55Z</time>
+  </wpt>
+  <wpt lat="41.1155942" lon="-85.1027693">
+    <name>WP026</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:29:24Z</time>
+  </wpt>
+  <wpt lat="41.1150698" lon="-85.1027021">
+    <name>WP027</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:29:53Z</time>
+  </wpt>
+  <wpt lat="41.1148595" lon="-85.1025397">
+    <name>WP028</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:30:22Z</time>
+  </wpt>
+  <wpt lat="41.1147386" lon="-85.1025881">
+    <name>WP029</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:30:51Z</time>
+  </wpt>
+  <wpt lat="41.1147215" lon="-85.1025375">
+    <name>WP030</name>
+    <speed>4.23</speed>
+    <time>2016-03-21T17:31:20Z</time>
+  </wpt>
+  <wpt lat="41.1140114" lon="-85.1026119">
+    <name>4010 W Housing Dr</name>
+    <speed>4.23</speed>
+    <desc>4010 W Housing Dr, Fort Wayne, IN 46815, USA</desc>
+    <time>2016-03-21T17:31:49Z</time>
+  </wpt>
+</gpx>
