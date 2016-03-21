@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecordActivityViewController: DraweredViewController, CLLocationManagerDelegate, GMSMapViewDelegate, StartPauseDelegate, ResumeFinishDelegate {
+class RecordActivityViewController: DraweredViewController, CLLocationManagerDelegate,UIPopoverPresentationControllerDelegate, GMSMapViewDelegate, StartPauseDelegate, ResumeFinishDelegate {
 
     // MARK : - Properties
     
@@ -79,6 +79,11 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             let resumeFinishController = segue.destinationViewController as! ResumeFinishViewController
             resumeFinishController.setDelegate(self)
         }
+    }
+    
+    // for popovers
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
     }
     
     func updateStatistics() {
@@ -167,7 +172,6 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func saveHandler(action: UIAlertAction) {
         displaySummary()
-        discardHandler(action)
     }
     
     func discardHandler(action: UIAlertAction) {
@@ -198,7 +202,23 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     }
     
     func summaryOkHandler(action: UIAlertAction) {
-        // send activity to server
+        if recorder != nil {
+            let webStore = WebStore()
+            SVProgressHUD.show()
+            webStore.createNewActivity("ggrimm", act: recorder!.getActivity(),
+                errorCallback: {error in
+                    dispatch_async(dispatch_get_main_queue(),{
+                        self.discardHandler(action)
+                        SVProgressHUD.dismiss()
+                        self.displayServerConnectionErrorAlert("Failed to send activity data to server.")
+                    })
+                }, successCallback: {
+                    dispatch_async(dispatch_get_main_queue(),{
+                        self.discardHandler(action)
+                        SVProgressHUD.dismiss()
+                    })
+            })
+        }
     }
     
     func startNewPolyline() {

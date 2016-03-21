@@ -34,6 +34,12 @@ class BaseTableViewController: UITableViewController {
         presentViewController(drawerController, animated: true, completion: nil)
     }
     
+    func displayServerConnectionErrorAlert(message: String) {
+        let alert = UIAlertController(title: "Connection Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: false, completion: nil)
+    }
+    
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
