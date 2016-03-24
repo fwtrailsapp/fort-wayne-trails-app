@@ -11,8 +11,9 @@ import UIKit
 class AccountDetailsViewController: DraweredTableViewController {
 
     @IBOutlet weak var dateTextField: UITextField!
-    
+
     @IBAction func didBeginEditingDateTextField(sender: UITextField) {
+        print("penis")
         let datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Date
         sender.inputView = datePickerView
