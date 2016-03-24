@@ -87,6 +87,23 @@ class WebStore {
         })
     }
     
+    func getActivityHistory(username: String,
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: (TrailActivityHistoryResponse) -> Void)
+    {
+        let url = baseUrl + "activity/" + username
+        
+        genericRequest(HTTPVerb.GET, url: url, params: nil,
+            errorCallback: errorCallback, successCallback: { response in
+                let oActHist = try? TrailActivityHistoryResponse(JSONDecoder(response.data))
+                guard let actHist = oActHist else {
+                    errorCallback(error: WebStoreError.InvalidCommunication)
+                    return
+                }
+                successCallback(actHist)
+            })
+    }
+    
     private func pathsToString(paths: [GMSMutablePath]) -> String {
         //send all of the paths hooked together... god help us
         var coords = [String]()
