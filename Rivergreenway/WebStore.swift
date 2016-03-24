@@ -55,13 +55,18 @@ class WebStore {
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: () -> Void)
     {
+        guard let realPath = act.getPath() else {
+            errorCallback(error: WebStoreError.Unknown(msg: "This activity has no path associated with it."))
+            return
+        }
+        
         let uUsername: String = username
         let uTimeStarted: String = nsDateToString(act.getStartTime(), format: "yyyy-MM-dd'T'HH:mm:ss")
         let uDuration: String = Converter.getDurationAsString(act.getDuration())
         let uMileage: Double = act.getDistance()
         let uCaloriesBurned: Int = Int(act.getCaloriesBurned())
         let uExerciseType: String = act.getExerciseType().rawValue
-        let uPath: String = pathsToString(act.getPath())
+        let uPath: String = pathsToString(realPath)
         
         /*
         int CreateNewActivity(string username, string time_started, string duration, float mileage, int calories_burned, string exercise_type, string path)
