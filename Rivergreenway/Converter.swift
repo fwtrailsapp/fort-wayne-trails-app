@@ -34,4 +34,33 @@ class Converter {
         let hour = ti / 3600
         return String(format: "%0.2d:%0.2d:%0.2d",hour,min,sec)
     }
+    
+    class func stringToDate(dateStr: String) -> NSDate? {
+        let format = NSDateFormatter()
+        format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        return format.dateFromString(dateStr)
+    }
+    
+    class func stringToTimeInterval(intervalStr: String) -> NSTimeInterval? {
+        let split = intervalStr.componentsSeparatedByString(":")
+        if split.count != 3 {
+            return nil
+        }
+        let oHour = Int(split[0])
+        let oMin = Int(split[1])
+        let oSec = Double(split[2])
+        
+        guard let hour = oHour else {
+            return nil
+        }
+        guard let min = oMin else {
+            return nil
+        }
+        guard let sec = oSec else {
+            return nil
+        }
+        
+        let finalSec = Double(hour*60*60) + Double(min*60) + sec
+        return NSTimeInterval(finalSec)
+    }
 }
