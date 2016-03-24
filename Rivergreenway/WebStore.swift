@@ -111,7 +111,7 @@ class WebStore {
         return formatter.stringFromDate(date)
     }
     
-    private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject],
+    private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (Response) -> Void)
     {
