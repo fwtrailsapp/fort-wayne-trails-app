@@ -13,6 +13,15 @@ enum ExerciseType: String {
     case Walk = "Walk"
     case Run = "Run"
     
+    static func fromStringIgnoreCase(s: String) -> ExerciseType? {
+        for t in all {
+            if s.caseInsensitiveCompare(t.rawValue) == .OrderedSame {
+                return t
+            }
+        }
+        return nil
+    }
+    
     static let all = [Walk, Run, Bike]
     
     var MET: Double {
