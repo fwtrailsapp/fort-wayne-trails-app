@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExerciseTypeViewController: UIViewController {
+class ExerciseTypeViewController: BaseViewController {
 
     @IBAction func startButtonPressed(sender: UIButton) {
         if delegate != nil {
@@ -21,9 +21,7 @@ class ExerciseTypeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for index in 0...ExerciseType.all.count - 1 {
-            exerciseTypeControl.setImage(UIImage(named:  ExerciseType.all[index].rawValue), forSegmentAtIndex: index)
-        }
+        populateExerciseTypeSegmentedControl(exerciseTypeControl)
     }
     
     func setDelegate(delegate: ExerciseTypeViewControllerDelegate) {

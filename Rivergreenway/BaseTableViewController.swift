@@ -53,4 +53,14 @@ class BaseTableViewController: UITableViewController {
         
         presentViewController(drawerController, animated: true, completion: nil)
     }
+    
+    func populateExerciseTypeSegmentedControl(exerciseTypeControl: UISegmentedControl) {
+        for index in 0...ExerciseType.all.count - 1 {
+            if index >= exerciseTypeControl.numberOfSegments {
+                exerciseTypeControl.insertSegmentWithImage(UIImage(named: ExerciseType.all[index].rawValue), atIndex: index, animated: false)
+            } else {
+                exerciseTypeControl.setImage(UIImage(named:  ExerciseType.all[index].rawValue), forSegmentAtIndex: index)
+            }
+        }
+    }
 }
