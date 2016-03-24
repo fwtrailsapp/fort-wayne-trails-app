@@ -12,22 +12,7 @@ class ExerciseTypeViewController: UIViewController {
 
     @IBAction func startButtonPressed(sender: UIButton) {
         if delegate != nil {
-            var exerciseType: ExerciseType?
-            switch(exerciseTypeControl.selectedSegmentIndex) {
-            case 0:
-                exerciseType = .Walk
-                break
-            case 1:
-                exerciseType = .Run
-                break
-            case 2:
-                exerciseType = .Bike
-                break
-            default:
-                exerciseType = .Walk
-                break
-            }
-            delegate!.start(exerciseType!)
+            delegate!.start(ExerciseType.all[exerciseTypeControl.selectedSegmentIndex])
         }
     }
     
@@ -36,8 +21,9 @@ class ExerciseTypeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        for index in 0...ExerciseType.all.count - 1 {
+            exerciseTypeControl.setImage(UIImage(named:  ExerciseType.all[index].rawValue), forSegmentAtIndex: index)
+        }
     }
     
     func setDelegate(delegate: ExerciseTypeViewControllerDelegate) {
