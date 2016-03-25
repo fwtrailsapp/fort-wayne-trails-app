@@ -45,7 +45,7 @@ class Converter {
         return String(format: "%.2f", number)
     }
     
-    class func dateToString(date: NSDate, format: String) -> String {
+    class func dateToString(date: NSDate, format: String = "yyyy-MM-dd'T'HH:mm:ss") -> String {
         let formatter = NSDateFormatter()
         formatter.dateFormat = format
         return formatter.stringFromDate(date)

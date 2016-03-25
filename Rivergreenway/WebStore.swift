@@ -61,7 +61,7 @@ class WebStore {
         }
         
         let uUsername: String = username
-        let uTimeStarted: String = Converter.dateToString(act.getStartTime(), format: "yyyy-MM-dd'T'HH:mm:ss")
+        let uTimeStarted: String = Converter.dateToString(act.getStartTime())
         let uDuration: String = Converter.timeIntervalToString(act.getDuration())
         let uMileage: Double = act.getDistance()
         let uCaloriesBurned: Int = Int(act.getCaloriesBurned())
