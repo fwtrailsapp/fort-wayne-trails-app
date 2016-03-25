@@ -27,7 +27,7 @@ class Converter {
         return meters * 3.28084
     }
     
-    class func getDurationAsString(duration: NSTimeInterval) -> String {
+    class func timeIntervalToString(duration: NSTimeInterval) -> String {
         let ti = Int(duration)
         let sec = ti % 60
         let min = (ti / 60) % 60
@@ -39,6 +39,16 @@ class Converter {
         let format = NSDateFormatter()
         format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         return format.dateFromString(dateStr)
+    }
+    
+    class func doubleToString(number: Double) -> String {
+        return String(format: "%.2f", number)
+    }
+    
+    class func dateToString(date: NSDate, format: String) -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = format
+        return formatter.stringFromDate(date)
     }
     
     class func stringToTimeInterval(intervalStr: String) -> NSTimeInterval? {
