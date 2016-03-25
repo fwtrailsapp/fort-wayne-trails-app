@@ -88,20 +88,20 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     func updateStatistics() {
         if recorder != nil {
-            distanceLabel.text = formatNumber(recorder!.getDistance())
-            caloriesLabel.text = formatNumber(recorder!.getCalories())
-            speedLabel.text = formatNumber(recorder!.getSpeed())
+            distanceLabel.text = Converter.doubleToString(recorder!.getDistance())
+            caloriesLabel.text = Converter.doubleToString(recorder!.getCalories())
+            speedLabel.text = Converter.doubleToString(recorder!.getSpeed())
         } else {
-            distanceLabel.text = formatNumber(0)
-            caloriesLabel.text = formatNumber(0)
-            speedLabel.text = formatNumber(0)
+            distanceLabel.text = Converter.doubleToString(0)
+            caloriesLabel.text = Converter.doubleToString(0)
+            speedLabel.text = Converter.doubleToString(0)
         }
     }
     
     func updateTime() {
         if recorder != nil && (recorder!.isRecording()) {
-            displayTime++;
-            durationLabel.text = Converter.getDurationAsString(displayTime)
+            displayTime += 1;
+            durationLabel.text = Converter.timeIntervalToString(displayTime)
         }
     }
     
@@ -128,10 +128,10 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     func pause() {
         do {
             try recorder!.pause()
+            swapContainerViews()
         } catch {
             print("error pausing")
         }
-        swapContainerViews()
     }
     
     func resume() {
@@ -145,7 +145,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     }
     
     func finish() {
-            displayFinishPrompt()
+        displayFinishPrompt()
     }
     
     func overlayKML() {
@@ -155,11 +155,6 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         } catch {
             print("caught dis shit")
         }
-    }
-    
-    // Helper method to format numbers
-    func formatNumber(number: Double) -> String {
-        return String(format: "%.2f", number)
     }
     
     func displayFinishPrompt() {
@@ -178,7 +173,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         resetRecorder()
         clearPath()
         updateStatistics()
-        durationLabel.text = Converter.getDurationAsString(displayTime)
+        durationLabel.text = Converter.timeIntervalToString(displayTime)
     }
     
     func displaySummary() {
@@ -208,17 +203,25 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             webStore.createNewActivity("ggrimm", act: recorder!.getActivity(),
                 errorCallback: {error in
                     dispatch_async(dispatch_get_main_queue(),{
-                        self.discardHandler(action)
-                        SVProgressHUD.dismiss()
-                        self.displayServerConnectionErrorAlert("Failed to send activity data to server.")
+                        self.onActivityPostError(action)
                     })
                 }, successCallback: {
                     dispatch_async(dispatch_get_main_queue(),{
-                        self.discardHandler(action)
-                        SVProgressHUD.dismiss()
+                        self.onActivityPostSuccess(action)
                     })
             })
         }
+    }
+    
+    func onActivityPostSuccess(action: UIAlertAction) {
+        self.discardHandler(action)
+        SVProgressHUD.dismiss()
+    }
+    
+    func onActivityPostError(action: UIAlertAction) {
+        self.discardHandler(action)
+        SVProgressHUD.dismiss()
+        self.displayServerConnectionErrorAlert(WebStoreError.InvalidCommunication.description)
     }
     
     func startNewPolyline() {
@@ -253,9 +256,9 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         let startDate = activity.getStartTime()
         summary += "Exercise Type: \(activity.getExerciseType())"
         summary += "\nStart: \(startDate)"
-        summary += "\nDuration: \(Converter.getDurationAsString(activity.getDuration()))"
-        summary += "\nDistance: \(formatNumber(activity.getDistance()))"
-        summary += "\nCalories: \(formatNumber(activity.getCaloriesBurned()))"
+        summary += "\nDuration: \(Converter.timeIntervalToString(activity.getDuration()))"
+        summary += "\nDistance: \(Converter.doubleToString(activity.getDistance()))"
+        summary += "\nCalories: \(Converter.doubleToString(activity.getCaloriesBurned()))"
         
         return summary
     }
