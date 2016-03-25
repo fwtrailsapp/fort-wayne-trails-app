@@ -45,7 +45,7 @@ struct SingleStatistic : JSONJoy {
         let oDuration: NSTimeInterval? = Converter.stringToTimeInterval(uDuration)
         let oType: String? = uType
         
-        if oCalories == nil && oDistance == nil && oDuration == nil && oType == nil {
+        if oCalories == nil || oDistance == nil || oDuration == nil || oType == nil {
             throw JSONError.WrongType
         }
         
