@@ -41,4 +41,32 @@ class ConverterTests: XCTestCase {
         let feet = Converter.metersToFeet(1)
         assert(feet == 3.28084)
     }
+    
+    func testStringToTimeIntervalA() {
+        let str = "00:00:03"
+        let interval = Converter.stringToTimeInterval(str)
+        XCTAssertNotNil(interval)
+        XCTAssert(interval! == 3.0)
+    }
+    
+    func testStringToTimeIntervalB() {
+        let str = "00:00:03.1"
+        let interval = Converter.stringToTimeInterval(str)
+        XCTAssertNotNil(interval)
+        XCTAssert(interval! == 3.1)
+    }
+    
+    func testStringToTimeIntervalC() {
+        let str = "1.02:03:04"
+        let interval = Converter.stringToTimeInterval(str)
+        XCTAssertNotNil(interval)
+        XCTAssert(interval! == 93784.0)
+    }
+    
+    func testStringToTimeIntervalD() {
+        let str = "1.02:03:04.123"
+        let interval = Converter.stringToTimeInterval(str)
+        XCTAssertNotNil(interval)
+        XCTAssert(interval! == 93784.123)
+    }
 }
