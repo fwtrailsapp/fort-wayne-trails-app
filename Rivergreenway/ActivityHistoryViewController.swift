@@ -15,16 +15,58 @@ class ActivityHistoryViewController: DraweredTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        let webStore = WebStore()
+        SVProgressHUD.show()
+        webStore.getActivityHistory("ggrimm",
+            errorCallback: {error in
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.onActivityHistoryGetError()
+                })
+            },
+            successCallback: {trails in
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.onActivityHistoryGetSuccess(trails)
+                })
+        })
     }
     
-    /*override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    func onActivityHistoryGetSuccess(response: TrailActivityHistoryResponse) {        activities = response.activities
+        self.tableView.reloadData()
+        SVProgressHUD.dismiss()
+    }
+    
+    func onActivityHistoryGetError() {
+        self.displayServerConnectionErrorAlert(WebStoreError.InvalidCommunication.description)
+        SVProgressHUD.dismiss()
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return activities == nil ? 1 : activities!.count + 1
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-    }*/
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as!ActivityHistoryTableViewCell
+        
+        if indexPath.row == 0 {
+            cell.durationLabel.text = "Duration"
+            cell.distanceLabel.text = "Distance"
+            cell.calorieLabel.text = "Calories"
+            cell.dateLabel.text = "Date"
+            cell.exerciseType.image = nil
+            return cell
+        }
+        
+        if let activity = activities?[indexPath.row - 1] {
+            cell.exerciseType.image = UIImage(named: activity.getExerciseType().rawValue)
+            cell.durationLabel.text = Converter.timeIntervalToString(activity.getDuration())
+            cell.distanceLabel.text = Converter.doubleToString(activity.getDistance())
+            cell.calorieLabel.text = Converter.doubleToString(activity.getCaloriesBurned())
+            cell.dateLabel.text = Converter.dateToString(activity.getStartTime(), format: "yyyy-MM-dd")
+        }
+        
+        return cell
+    }
 
 }
