@@ -52,14 +52,33 @@ class Converter {
     }
     
     class func stringToTimeInterval(intervalStr: String) -> NSTimeInterval? {
+        //a time interval string can be
+        //[d.]hh:mm:ss[.fffffff]
+        //where d is days and f are fractional seconds
+        
+        //we'll parse this by splitting by colon -> [d.hh, mm, ss.fffffff]
+        //then splitting by period in the first index of the above -> [d, hh] or maybe [hh]
+        
         let split = intervalStr.componentsSeparatedByString(":")
         if split.count != 3 {
             return nil
         }
-        let oHour = Int(split[0])
+        
+        let dayHour = split[0] //d.hh or hh
+        let dayHourArray = dayHour.componentsSeparatedByString(".")
+        
+        var oDay: Int? = 0
+        if dayHourArray.count == 2 { //we have a day
+            oDay = Int(dayHourArray.first!)
+        }
+        
+        let oHour: Int? = Int(dayHourArray.last!)
         let oMin = Int(split[1])
         let oSec = Double(split[2])
         
+        guard let day = oDay else {
+            return nil
+        }
         guard let hour = oHour else {
             return nil
         }
@@ -70,7 +89,7 @@ class Converter {
             return nil
         }
         
-        let finalSec = Double(hour*60*60) + Double(min*60) + sec
+        let finalSec = Double(day*24*60*60) + Double(hour*60*60) + Double(min*60) + sec
         return NSTimeInterval(finalSec)
     }
 }
