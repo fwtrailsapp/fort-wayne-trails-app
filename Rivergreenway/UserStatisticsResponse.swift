@@ -32,7 +32,7 @@ struct SingleStatistic : JSONJoy {
     let calories: Int
     let distance: Double
     let duration: NSTimeInterval
-    let type: ExerciseType
+    let type: String
     
     init(_ decoder: JSONDecoder) throws {
         let uCalories = try decoder["total_calories"].getInt()
@@ -43,7 +43,7 @@ struct SingleStatistic : JSONJoy {
         let oCalories: Int? = uCalories
         let oDistance: Double? = uDistance
         let oDuration: NSTimeInterval? = Converter.stringToTimeInterval(uDuration)
-        let oType: ExerciseType? = ExerciseType.fromStringIgnoreCase(uType)
+        let oType: String? = uType
         
         if oCalories == nil && oDistance == nil && oDuration == nil && oType == nil {
             throw JSONError.WrongType
