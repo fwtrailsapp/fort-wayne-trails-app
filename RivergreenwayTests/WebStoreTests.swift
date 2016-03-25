@@ -91,4 +91,20 @@ class WebStoreTests: XCTestCase {
         
         return manyPaths
     }
+    
+    func testGetActivityHistory() {
+        let exp = expectationWithDescription("testGetActivityHistory")
+        let username = "ggrimm"
+        
+        ws.getActivityHistory(username, errorCallback: { error in
+                XCTFail()
+            }, successCallback: { tahr in
+                print("We got \(tahr.activities.count) activities back from the server.")
+                exp.fulfill()
+            })
+        
+        waitForExpectationsWithTimeout(5, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
+    }
 }
