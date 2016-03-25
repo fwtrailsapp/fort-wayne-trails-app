@@ -61,8 +61,8 @@ class WebStore {
         }
         
         let uUsername: String = username
-        let uTimeStarted: String = nsDateToString(act.getStartTime(), format: "yyyy-MM-dd'T'HH:mm:ss")
-        let uDuration: String = Converter.getDurationAsString(act.getDuration())
+        let uTimeStarted: String = Converter.dateToString(act.getStartTime(), format: "yyyy-MM-dd'T'HH:mm:ss")
+        let uDuration: String = Converter.timeIntervalToString(act.getDuration())
         let uMileage: Double = act.getDistance()
         let uCaloriesBurned: Int = Int(act.getCaloriesBurned())
         let uExerciseType: String = act.getExerciseType().rawValue
@@ -120,12 +120,6 @@ class WebStore {
         let joined = coords.joinWithSeparator(",")
         
         return joined
-    }
-    
-    private func nsDateToString(date: NSDate, format: String) -> String {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = format
-        return formatter.stringFromDate(date)
     }
     
     private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
