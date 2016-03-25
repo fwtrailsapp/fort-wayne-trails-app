@@ -104,6 +104,23 @@ class WebStore {
             })
     }
     
+    func getUserStatistics(username: String,
+                           errorCallback: (error: WebStoreError) -> Void,
+                           successCallback: (UserStatisticsResponse) -> Void)
+    {
+        let url = baseUrl + "statistics/" + username
+        
+        genericRequest(HTTPVerb.GET, url: url, params: nil,
+            errorCallback: errorCallback, successCallback: { response in
+                let oUserStats = try? UserStatisticsResponse(JSONDecoder(response.data))
+                guard let userStats = oUserStats else {
+                    errorCallback(error: WebStoreError.InvalidCommunication)
+                    return
+                }
+                successCallback(userStats)
+            })
+    }
+    
     private func pathsToString(paths: [GMSMutablePath]) -> String {
         //send all of the paths hooked together... god help us
         var coords = [String]()
