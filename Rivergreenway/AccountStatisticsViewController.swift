@@ -10,26 +10,77 @@ import UIKit
 
 class AccountStatisticsViewController: DraweredTableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    @IBOutlet weak var overallDurationLabel: UILabel!
+    @IBOutlet weak var overallDistanceLabel: UILabel!
+    @IBOutlet weak var overallCaloriesLabel: UILabel!
+    
+    @IBOutlet weak var typeDurationLabel: UILabel!
+    @IBOutlet weak var typeDistanceLabel: UILabel!
+    @IBOutlet weak var typeCaloriesLabel: UILabel!
+    
+    @IBOutlet weak var exerciseTypeControl: UISegmentedControl!
+    
+    var userStatisticsResponse: UserStatisticsResponse?
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func exerciseTypeControlChanged(sender: UISegmentedControl) {
+        populateFieldsFromExerciseTypeControl()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        populateExerciseTypeSegmentedControl(exerciseTypeControl)
+        
+        let webStore = WebStore()
+        SVProgressHUD.show()
+        
+        webStore.getUserStatistics("ggrimm",
+            errorCallback: {error in
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.onGetUserStatisticsError()
+                })
+            },
+            successCallback: {response in
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.onGetUserStatisticsSuccess(response)
+                })
+            }
+        )
     }
-    */
+    
+    func onGetUserStatisticsSuccess(response: UserStatisticsResponse) {
+        self.userStatisticsResponse = response
+        if let overallIndex = userStatisticsResponse!.stats.indexOf({$0.type == "Overall"}) {
+            populateFieldsForSingleStatistic(userStatisticsResponse!.stats[overallIndex])
+        }
+        populateFieldsFromExerciseTypeControl()
+        
+        SVProgressHUD.dismiss()
+    }
+    
+    func populateFieldsFromExerciseTypeControl() {
+        let exerciseType = ExerciseType.all[exerciseTypeControl.selectedSegmentIndex]
+        if let statIndex = userStatisticsResponse!.stats.indexOf({$0.type == exerciseType.rawValue}) {
+            populateFieldsForSingleStatistic(userStatisticsResponse!.stats[statIndex])
+        }
+    }
+    
+    func onGetUserStatisticsError() {
+        self.displayServerConnectionErrorAlert(WebStoreError.InvalidCommunication.description)
+        SVProgressHUD.dismiss()
+    }
+    
+    func populateFieldsForSingleStatistic(statistic: SingleStatistic) {
+        if statistic.type == "Overall" {
+            overallDurationLabel.text = Converter.timeIntervalToString(statistic.duration)
+            overallDistanceLabel.text = Converter.doubleToString(statistic.distance)
+            overallCaloriesLabel.text = "\(statistic.calories)"
+        } else {
+            typeDurationLabel.text = Converter.timeIntervalToString(statistic.duration)
+            typeDistanceLabel.text = Converter.doubleToString(statistic.distance)
+            typeCaloriesLabel.text = "\(statistic.calories)"
+        }
+    }
 
 }
