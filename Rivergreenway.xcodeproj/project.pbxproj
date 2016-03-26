@@ -40,6 +40,7 @@
 		D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C151C4AC25500186A9A /* TrailActivity.swift */; };
 		D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */; };
 		D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */; };
+		D298FA021CA0994900292747 /* archive.txt in Resources */ = {isa = PBXBuildFile; fileRef = D298FA011CA0994900292747 /* archive.txt */; };
 		D2AFFEB01C8FBEA600687A7B /* RecordActivityStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFFEAF1C8FBEA600687A7B /* RecordActivityStatCell.swift */; };
 		D2BD1DEE1C6ACB7C009E4F2F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */; };
 		D2BD1DF01C6ACB90009E4F2F /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */; };
@@ -125,6 +126,7 @@
 		D26E6C151C4AC25500186A9A /* TrailActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivity.swift; sourceTree = "<group>"; };
 		D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityState.swift; sourceTree = "<group>"; };
 		D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityTests.swift; sourceTree = "<group>"; };
+		D298FA011CA0994900292747 /* archive.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = archive.txt; sourceTree = "<group>"; };
 		D2AFFEAF1C8FBEA600687A7B /* RecordActivityStatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityStatCell.swift; sourceTree = "<group>"; };
 		D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D2BD1DEF1C6ACB90009E4F2F /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				7FF11D851C5598B7009A7D44 /* Trails.kml */,
+				D298FA011CA0994900292747 /* archive.txt */,
 			);
 			name = DataFiles;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				D26E6BEF1C4AC22C00186A9A /* Assets.xcassets in Resources */,
 				D26E6BED1C4AC22C00186A9A /* Main.storyboard in Resources */,
 				7FF11D861C5598B7009A7D44 /* Trails.kml in Resources */,
+				D298FA021CA0994900292747 /* archive.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
