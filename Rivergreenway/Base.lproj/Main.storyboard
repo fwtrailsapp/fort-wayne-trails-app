@@ -1864,9 +1864,26 @@
                     <view key="view" contentMode="scaleToFill" id="jhO-3r-E3X">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="28" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rv-qv-PSJ">
+                                <rect key="frame" x="28" y="72" width="544" height="520"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7rv-qv-PSJ" secondAttribute="trailing" constant="8" id="6AO-LR-1EF"/>
+                            <constraint firstItem="7rv-qv-PSJ" firstAttribute="leading" secondItem="jhO-3r-E3X" secondAttribute="leadingMargin" constant="8" id="BBd-6F-hGc"/>
+                            <constraint firstItem="l8H-yO-5qF" firstAttribute="top" secondItem="7rv-qv-PSJ" secondAttribute="bottom" constant="8" id="WAp-Jb-UX7"/>
+                            <constraint firstItem="7rv-qv-PSJ" firstAttribute="top" secondItem="7E7-ls-67b" secondAttribute="bottom" constant="8" id="l0c-f1-DRS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="n9k-XT-7ZK"/>
+                    <connections>
+                        <outlet property="licenseLabel" destination="7rv-qv-PSJ" id="STg-vW-EkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cH9-Dm-da7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
