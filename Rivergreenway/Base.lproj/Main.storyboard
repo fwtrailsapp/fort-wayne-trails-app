@@ -342,11 +342,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-5O-ozJ">
+                                <rect key="frame" x="0.0" y="170" width="600" height="430"/>
+                                <connections>
+                                    <segue destination="L96-cV-eR0" kind="embed" identifier="NavDrawerTableSegue" id="3KN-KO-nhg"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aV4-Wg-veI">
                                 <rect key="frame" x="0.0" y="20" width="600" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Seal" translatesAutoresizingMaskIntoConstraints="NO" id="sfS-A9-XZf">
-                                        <rect key="frame" x="226" y="0.0" width="149" height="149"/>
+                                        <rect key="frame" x="258" y="32" width="85" height="85"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sfS-A9-XZf" secondAttribute="height" multiplier="1:1" id="dsf-hA-TVl"/>
                                             <constraint firstAttribute="width" constant="240" id="kyS-0s-D9n"/>
@@ -357,12 +363,25 @@
                                             </mask>
                                         </variation>
                                     </imageView>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report a Problem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqF-5T-xic">
+                                        <rect key="frame" x="217" y="121" width="134" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call" translatesAutoresizingMaskIntoConstraints="NO" id="ceb-A3-Hkf">
+                                        <rect key="frame" x="359" y="120" width="24" height="24"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="sfS-A9-XZf" firstAttribute="top" secondItem="aV4-Wg-veI" secondAttribute="top" id="CmF-gx-AXj"/>
+                                    <constraint firstItem="sfS-A9-XZf" firstAttribute="top" secondItem="aV4-Wg-veI" secondAttribute="top" constant="32" id="CmF-gx-AXj"/>
                                     <constraint firstItem="sfS-A9-XZf" firstAttribute="centerY" secondItem="aV4-Wg-veI" secondAttribute="centerY" id="J7C-iq-qd5"/>
+                                    <constraint firstAttribute="bottom" secondItem="qqF-5T-xic" secondAttribute="bottom" constant="8" id="Q56-ed-EFF"/>
                                     <constraint firstItem="sfS-A9-XZf" firstAttribute="centerX" secondItem="aV4-Wg-veI" secondAttribute="centerX" id="Wed-sI-vgE"/>
+                                    <constraint firstItem="ceb-A3-Hkf" firstAttribute="centerY" secondItem="qqF-5T-xic" secondAttribute="centerY" id="Z4K-Oa-GrG"/>
+                                    <constraint firstItem="ceb-A3-Hkf" firstAttribute="leading" secondItem="qqF-5T-xic" secondAttribute="trailing" constant="8" id="n4U-HI-tpf"/>
+                                    <constraint firstItem="qqF-5T-xic" firstAttribute="centerX" secondItem="aV4-Wg-veI" secondAttribute="centerX" constant="-16" id="sgW-sx-bsp"/>
                                     <constraint firstItem="sfS-A9-XZf" firstAttribute="height" secondItem="aV4-Wg-veI" secondAttribute="height" id="srq-Pr-YCJ"/>
                                 </constraints>
                                 <variation key="default">
@@ -371,12 +390,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-5O-ozJ">
-                                <rect key="frame" x="0.0" y="170" width="600" height="430"/>
-                                <connections>
-                                    <segue destination="L96-cV-eR0" kind="embed" identifier="NavDrawerTableSegue" id="3KN-KO-nhg"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -396,6 +409,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="reportProblemImage" destination="ceb-A3-Hkf" id="N4F-ii-RiW"/>
+                        <outlet property="reportProblemLabel" destination="qqF-5T-xic" id="Gub-oI-ywB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2c-7I-em5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1991,6 +2008,7 @@
     </scenes>
     <resources>
         <image name="Account" width="24" height="24"/>
+        <image name="Call" width="24" height="24"/>
         <image name="Explore" width="24" height="24"/>
         <image name="History" width="24" height="24"/>
         <image name="Info" width="24" height="24"/>

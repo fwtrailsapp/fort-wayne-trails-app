@@ -8,12 +8,35 @@
 
 import UIKit
 
-class NavDrawerViewController: UIViewController, NavTableDelegate {
+class NavDrawerViewController: UIViewController, UIGestureRecognizerDelegate, NavTableDelegate {
     
     private var selectedCell: CellIdentifier = CellIdentifier.RECORD_ACTIVITY_CELL
     
+    @IBOutlet weak var reportProblemLabel: UILabel!
+    @IBOutlet weak var reportProblemImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addProblemReportingGestureRecognizers()
+    }
+    
+    func addProblemReportingGestureRecognizers() {
+        let labelTap = UITapGestureRecognizer(target: self, action: Selector("openDialer"))
+        let imageTap = UITapGestureRecognizer(target: self, action: Selector("openDialer"))
+        labelTap.delegate = self
+        reportProblemImage.userInteractionEnabled = true
+        reportProblemLabel.userInteractionEnabled = true
+        
+        reportProblemImage.addGestureRecognizer(imageTap)
+        reportProblemLabel.addGestureRecognizer(labelTap)
+    }
+    
+    func openDialer() {
+        print("penis")
+        if let url = NSURL(string: "tel://311") {
+            UIApplication.sharedApplication().openURL(url)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
