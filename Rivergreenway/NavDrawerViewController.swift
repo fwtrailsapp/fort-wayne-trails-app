@@ -33,7 +33,6 @@ class NavDrawerViewController: UIViewController, UIGestureRecognizerDelegate, Na
     }
     
     func openDialer() {
-        print("penis")
         if let url = NSURL(string: "tel://311") {
             UIApplication.sharedApplication().openURL(url)
         }
