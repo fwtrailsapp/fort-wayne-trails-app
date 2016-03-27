@@ -33,22 +33,6 @@ class WebStoreTests: XCTestCase {
         })
     }
     
-    func testAccountCreateMinimal() {
-        let exp = expectationWithDescription("testAccountCreateMinimal")
-        let uuid = NSUUID().UUIDString
-        let acct = Account(username: "ifyouchoosenottodecide\(uuid)")
-        ws.createAccount(acct, password: "youstillhavemadeachoice", errorCallback: { error in
-            XCTFail(error.description)
-        },
-        successCallback: {
-            exp.fulfill()
-        })
-        
-        waitForExpectationsWithTimeout(5, handler: { error in
-            XCTAssertNil(error, "Error")
-        })
-    }
-    
     func testCreateNewActivity() {
         let exp = expectationWithDescription("testCreateNewActivity")
         
