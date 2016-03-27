@@ -3,7 +3,7 @@
 //  Rivergreenway
 //
 //  Created by Jared P on 3/16/16.
-//  Copyright © 2016 City of Fort Wayne Rivergreenways. All rights reserved.
+//  Copyright © 2016 City of Fort Wayne Rivergreenways and Trails Department. All rights reserved.
 //
 
 import Foundation

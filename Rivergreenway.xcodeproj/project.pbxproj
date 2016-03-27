@@ -486,7 +486,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "City of Fort Wayne Rivergreenways";
+				ORGANIZATIONNAME = "City of Fort Wayne Greenways and Trails Department";
 				TargetAttributes = {
 					D26E6BDE1C4AC22C00186A9A = {
 						CreatedOnToolsVersion = 7.1.1;
