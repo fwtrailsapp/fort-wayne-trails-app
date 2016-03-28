@@ -1012,31 +1012,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="leu-nC-vRO" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullMap" translatesAutoresizingMaskIntoConstraints="NO" id="yie-LG-W5N">
+                                <rect key="frame" x="0.0" y="129" width="600" height="342"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eB2-ZD-pre">
+                                <rect key="frame" x="0.0" y="72" width="254" height="29"/>
+                                <segments>
+                                    <segment title="Full"/>
+                                    <segment title="North"/>
+                                    <segment title="South"/>
+                                    <segment title="East"/>
+                                    <segment title="West"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapSectionSegmentedControlPressed:" destination="Qaj-d6-MTw" eventType="valueChanged" id="ETO-3b-2dK"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="leu-nC-vRO" secondAttribute="bottom" id="SpT-9o-net"/>
-                            <constraint firstItem="leu-nC-vRO" firstAttribute="top" secondItem="aYg-5a-eAN" secondAttribute="bottom" id="YAs-ei-JQx"/>
-                            <constraint firstItem="leu-nC-vRO" firstAttribute="centerX" secondItem="Gjy-UG-5bY" secondAttribute="centerX" id="aOm-XH-9Vb"/>
-                            <constraint firstItem="leu-nC-vRO" firstAttribute="leading" secondItem="Gjy-UG-5bY" secondAttribute="leading" id="c82-yQ-eFJ"/>
-                            <constraint firstItem="leu-nC-vRO" firstAttribute="width" secondItem="Gjy-UG-5bY" secondAttribute="width" id="jjk-gg-HcG"/>
-                            <constraint firstItem="leu-nC-vRO" firstAttribute="height" secondItem="Gjy-UG-5bY" secondAttribute="height" id="l8d-WL-JXZ"/>
+                            <constraint firstItem="yie-LG-W5N" firstAttribute="centerX" secondItem="Gjy-UG-5bY" secondAttribute="centerX" id="4HO-iS-bNX"/>
+                            <constraint firstItem="eB2-ZD-pre" firstAttribute="top" secondItem="aYg-5a-eAN" secondAttribute="bottom" id="4YL-8X-HJW"/>
+                            <constraint firstItem="eB2-ZD-pre" firstAttribute="top" secondItem="aYg-5a-eAN" secondAttribute="bottom" constant="8" id="6fT-jB-WZh"/>
+                            <constraint firstItem="yie-LG-W5N" firstAttribute="leading" secondItem="Gjy-UG-5bY" secondAttribute="leading" constant="146" id="Ctm-mP-B8z"/>
+                            <constraint firstItem="yie-LG-W5N" firstAttribute="centerY" secondItem="Gjy-UG-5bY" secondAttribute="centerY" id="F2k-rI-7SN"/>
+                            <constraint firstAttribute="bottom" secondItem="yie-LG-W5N" secondAttribute="bottom" id="IrA-CW-kue"/>
+                            <constraint firstItem="yie-LG-W5N" firstAttribute="top" secondItem="eB2-ZD-pre" secondAttribute="bottom" constant="8" id="Lf9-JH-oDn"/>
+                            <constraint firstItem="eB2-ZD-pre" firstAttribute="leading" secondItem="Gjy-UG-5bY" secondAttribute="leading" id="d0i-A6-bfT"/>
+                            <constraint firstItem="yie-LG-W5N" firstAttribute="top" secondItem="aYg-5a-eAN" secondAttribute="bottom" constant="281" id="nFZ-Uy-gYg"/>
+                            <constraint firstItem="yie-LG-W5N" firstAttribute="width" secondItem="Gjy-UG-5bY" secondAttribute="width" id="xz6-eG-zXL"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="l8d-WL-JXZ"/>
+                                <exclude reference="4YL-8X-HJW"/>
+                                <exclude reference="Ctm-mP-B8z"/>
+                                <exclude reference="IrA-CW-kue"/>
+                                <exclude reference="Lf9-JH-oDn"/>
+                                <exclude reference="nFZ-Uy-gYg"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Trail Map" id="7U0-Zw-8wB"/>
+                    <connections>
+                        <outlet property="mapImageView" destination="yie-LG-W5N" id="hRh-Em-s82"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuE-E2-xH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="658"/>
+            <point key="canvasLocation" x="1247" y="712"/>
         </scene>
         <!--Activity History-->
         <scene sceneID="x0b-y8-Oxc">
@@ -2010,6 +2033,7 @@
         <image name="Account" width="24" height="24"/>
         <image name="Call" width="24" height="24"/>
         <image name="Explore" width="24" height="24"/>
+        <image name="FullMap" width="394" height="342"/>
         <image name="History" width="24" height="24"/>
         <image name="Info" width="24" height="24"/>
         <image name="NotInterested" width="24" height="24"/>
