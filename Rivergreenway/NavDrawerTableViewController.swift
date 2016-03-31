@@ -8,6 +8,16 @@
 
 import UIKit
 
+/**
+ A view controller for the nav drawer table. Each cell in the table links to on of the
+ views in this application.
+ 
+ The table is implemented as a separate view controller, rather than being simply a child view
+ in the nav drawer view controller, because, as of March 2016, static cells can only be
+ implemented in UITableViewController classes. Since the nav drawer table is static in nature,
+ meaning that we know exactly what its contents will be prior to runtime, it made more
+ sense to make the table static, even if it meant making it its own view controller.
+ */
 class NavDrawerTableViewController: UITableViewController {
     
     
