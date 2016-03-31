@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Class for unit conversions ;)
+ */
 class Converter {
     
     

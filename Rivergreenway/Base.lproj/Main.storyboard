@@ -662,7 +662,7 @@
                                                     <segue destination="RLF-dO-bZe" kind="embed" identifier="StartPauseSegue" id="0g6-8f-9Xr"/>
                                                 </connections>
                                             </containerView>
-                                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lah-fp-p6Q" userLabel="Resume Finish Container View">
+                                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lah-fp-p6Q" userLabel="Resume Pause Container View">
                                                 <rect key="frame" x="0.0" y="143" width="600" height="36"/>
                                                 <connections>
                                                     <segue destination="q43-px-STL" kind="embed" identifier="ResumeFinishSegue" id="FrD-Gb-TxH"/>
@@ -883,11 +883,11 @@
                         <outlet property="caloriesLabel" destination="7zc-uo-YbV" id="Jtg-Oh-6gk"/>
                         <outlet property="controlPanelView" destination="eYU-8v-0kx" id="7DB-Vp-rl6"/>
                         <outlet property="distanceLabel" destination="bVJ-qs-k84" id="rSG-Rh-8BJ"/>
+                        <outlet property="doubleButtonContainerView" destination="lah-fp-p6Q" id="gLy-L1-fEP"/>
                         <outlet property="durationLabel" destination="mN4-xb-dK8" id="CkZ-Ee-tOf"/>
                         <outlet property="mapView" destination="iW6-uq-a3b" id="97H-oY-Qa9"/>
-                        <outlet property="resumeFinishButtonContainerView" destination="lah-fp-p6Q" id="KVr-Tv-UYG"/>
+                        <outlet property="singleButtonContainerView" destination="TlN-4z-fXV" id="B8G-ed-Ipk"/>
                         <outlet property="speedLabel" destination="7rt-RA-y82" id="lqu-vR-Vob"/>
-                        <outlet property="startPauseButtonContainerView" destination="TlN-4z-fXV" id="UiK-g6-vXw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9D-kT-q08" userLabel="First Responder" sceneMemberID="firstResponder"/>
