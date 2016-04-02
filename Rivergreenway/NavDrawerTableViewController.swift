@@ -43,14 +43,3 @@ class NavDrawerTableViewController: UITableViewController {
 protocol NavTableDelegate {
     func cellPressed(cellID: CellIdentifier)
 }
-
-enum CellIdentifier: String {
-    case RecordActivityCell = "RecordActivityCell"
-    case ActivityHistoryCell = "ActivityHistoryCell"
-    case AchievementsCell = "AchievementsCell"
-    case TrailMapCell = "TrailMapCell"
-    case AccountStatisticsCell = "AccountStatisticsCell"
-    case AccountDetailsCell = "AccountDetailsCell"
-    case AboutCell = "AboutCell"
-    case ExitCell = "ExitCell"
-}

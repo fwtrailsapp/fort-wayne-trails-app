@@ -8,9 +8,11 @@
 
 import Foundation
 
+// MARK: - View Identifiers
 enum ViewIdentifier: String {
     case MAIN_STORYBOARD = "Main"
     
+    // MARK: - Views
     case LoginView = "LoginView"
     case CreateAccountView = "CreateAccountView"
     case RecordActivityView = "RecordActivityView"
@@ -22,6 +24,7 @@ enum ViewIdentifier: String {
     case AccountStatisticsView = "AccountStatisticsView"
     case AboutView = "AboutView"
     
+    // MARK: - Nav Controllers
     case RecordActivityNavController = "RecordActivityNavController"
     case CreateAccountNavController = "CreateAccountNavController"
     case ActivityHistoryNavController = "ActivityHistoryNavController"
@@ -31,6 +34,19 @@ enum ViewIdentifier: String {
     case AccountStatisticsNavController = "AccountStatisticsNavController"
     case AboutNavController = "AboutNavController"
     
+    // MARK: - Segues
     case StartPauseSegue = "StartPauseSegue"
     case ResumeFinishSegue = "ResumeFinishSegue"
+}
+
+// MARK: - Nav Drawer Cell Identifiers
+enum CellIdentifier: String {
+    case RecordActivityCell = "RecordActivityCell"
+    case ActivityHistoryCell = "ActivityHistoryCell"
+    case AchievementsCell = "AchievementsCell"
+    case TrailMapCell = "TrailMapCell"
+    case AccountStatisticsCell = "AccountStatisticsCell"
+    case AccountDetailsCell = "AccountDetailsCell"
+    case AboutCell = "AboutCell"
+    case ExitCell = "ExitCell"
 }
