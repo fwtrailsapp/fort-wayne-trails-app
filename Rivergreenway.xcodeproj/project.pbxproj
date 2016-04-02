@@ -66,6 +66,7 @@
 		D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */; };
 		D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */; };
 		D2F4B9381C66C45A006FACED /* CreateAccountViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */; };
+		D2F846EC1CB0597000141BE8 /* ViewControllerUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F846EB1CB0597000141BE8 /* ViewControllerUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,7 @@
 		D2D2125D1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityRecorderTests.swift; sourceTree = "<group>"; };
 		D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateAccountViewControllerTests.swift; path = ../RivergreenwayUITests/CreateAccountViewControllerTests.swift; sourceTree = "<group>"; };
+		D2F846EB1CB0597000141BE8 /* ViewControllerUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				D2612DF51C53EB94009232AC /* Converter.swift */,
 				7FF11D7D1C558C3D009A7D44 /* Overlayer.swift */,
 				D2D2125B1C5C1FB3001AFF9C /* TrailActivityRecorder.swift */,
+				D2F846EB1CB0597000141BE8 /* ViewControllerUtilities.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */,
 				D2BD1DF61C6AD09C009E4F2F /* NavDrawerViewController.swift in Sources */,
 				D2C52FA71C700AF700DA78A7 /* TrailMapViewController.swift in Sources */,
+				D2F846EC1CB0597000141BE8 /* ViewControllerUtilities.swift in Sources */,
 				7F77C9461C9A284F00FB0BB8 /* WebStoreError.swift in Sources */,
 				D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */,
 				D2BD1DF01C6ACB90009E4F2F /* BaseTableViewController.swift in Sources */,

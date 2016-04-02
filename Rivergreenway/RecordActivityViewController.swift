@@ -144,10 +144,10 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
      the ResumeFinishViewController.
      */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier! == ViewIdentifier.START_PAUSE_SEGUE.rawValue {
+        if segue.identifier! == ViewIdentifier.StartPauseSegue.rawValue {
             startPauseController = segue.destinationViewController as? StartPauseViewController
             startPauseController!.setDelegate(self)
-        } else if segue.identifier! == ViewIdentifier.RESUME_FINISH_SEGUE.rawValue {
+        } else if segue.identifier! == ViewIdentifier.ResumeFinishSegue.rawValue {
             let resumeFinishController = segue.destinationViewController as! ResumeFinishViewController
             resumeFinishController.setDelegate(self)
         }
@@ -374,7 +374,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     func onActivityPostError(action: UIAlertAction) {
         self.discardHandler(action)
         SVProgressHUD.dismiss()
-        self.displayServerConnectionErrorAlert(WebStoreError.InvalidCommunication.description)
+        ViewControllerUtilities.displayServerConnectionErrorAlert(self, message: WebStoreError.InvalidCommunication.description)
     }
     
     /**

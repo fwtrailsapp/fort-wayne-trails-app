@@ -37,7 +37,7 @@ class ActivityHistoryViewController: DraweredTableViewController {
     }
     
     func onActivityHistoryGetError() {
-        self.displayServerConnectionErrorAlert(WebStoreError.InvalidCommunication.description)
+        ViewControllerUtilities.displayServerConnectionErrorAlert(self, message: WebStoreError.InvalidCommunication.description)
         SVProgressHUD.dismiss()
     }
     
@@ -49,6 +49,7 @@ class ActivityHistoryViewController: DraweredTableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as!ActivityHistoryTableViewCell
         
+        // the first row should be the header row
         if indexPath.row == 0 {
             cell.durationLabel.text = "Duration"
             cell.distanceLabel.text = "Distance"

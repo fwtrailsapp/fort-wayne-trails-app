@@ -34,12 +34,12 @@ class Account {
             var c4: Double
             
             switch sex! {
-            case Sex.MALE:
+            case Sex.Male:
                 c1 = 88.362
                 c2 = 13.397
                 c3 = 4.799
                 c4 = 5.677
-            case Sex.FEMALE:
+            case Sex.Female:
                 c1 = 447.593
                 c2 = 9.247
                 c3 = 3.098

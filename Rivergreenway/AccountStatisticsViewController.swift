@@ -30,7 +30,7 @@ class AccountStatisticsViewController: DraweredTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateExerciseTypeSegmentedControl(exerciseTypeControl)
+        ViewControllerUtilities.populateExerciseTypeSegmentedControl(exerciseTypeControl)
         
         let webStore = WebStore()
         SVProgressHUD.show()
@@ -67,7 +67,7 @@ class AccountStatisticsViewController: DraweredTableViewController {
     }
     
     func onGetUserStatisticsError() {
-        self.displayServerConnectionErrorAlert(WebStoreError.InvalidCommunication.description)
+        ViewControllerUtilities.displayServerConnectionErrorAlert(self, message: WebStoreError.InvalidCommunication.description)
         SVProgressHUD.dismiss()
     }
     

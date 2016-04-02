@@ -21,7 +21,7 @@ class ExerciseTypeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateExerciseTypeSegmentedControl(exerciseTypeControl)
+        ViewControllerUtilities.populateExerciseTypeSegmentedControl(exerciseTypeControl)
     }
     
     func setDelegate(delegate: ExerciseTypeViewControllerDelegate) {

@@ -45,12 +45,12 @@ protocol NavTableDelegate {
 }
 
 enum CellIdentifier: String {
-    case RECORD_ACTIVITY_CELL = "RecordActivityCell"
-    case ACTIVITY_HISTORY_CELL = "ActivityHistoryCell"
-    case ACHIEVEMENTS_CELL = "AchievementsCell"
-    case TRAIL_MAP_CELL = "TrailMapCell"
-    case ACCOUNT_STATISTICS_CELL = "AccountStatisticsCell"
-    case ACCOUNT_DETAILS_CELL = "AccountDetailsCell"
-    case ABOUT_CELL = "AboutCell"
-    case EXIT_CELL = "ExitCell"
+    case RecordActivityCell = "RecordActivityCell"
+    case ActivityHistoryCell = "ActivityHistoryCell"
+    case AchievementsCell = "AchievementsCell"
+    case TrailMapCell = "TrailMapCell"
+    case AccountStatisticsCell = "AccountStatisticsCell"
+    case AccountDetailsCell = "AccountDetailsCell"
+    case AboutCell = "AboutCell"
+    case ExitCell = "ExitCell"
 }

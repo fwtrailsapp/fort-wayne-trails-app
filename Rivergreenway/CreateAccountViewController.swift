@@ -64,6 +64,6 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
     }
     
     func discardHandler(action: UIAlertAction) {
-        transition(ViewIdentifier.LOGIN_VIEW)
+        ViewControllerUtilities.transition(self, destination: ViewIdentifier.LoginView)
     }
 }

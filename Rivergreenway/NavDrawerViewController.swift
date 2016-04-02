@@ -18,7 +18,7 @@ import UIKit
  */
 class NavDrawerViewController: UIViewController, UIGestureRecognizerDelegate, NavTableDelegate {
     
-    private var selectedCell: CellIdentifier = CellIdentifier.RECORD_ACTIVITY_CELL
+    private var selectedCell: CellIdentifier = CellIdentifier.RecordActivityCell
     
     @IBOutlet weak var reportProblemLabel: UILabel!
     @IBOutlet weak var reportProblemImage: UIImageView!
@@ -83,28 +83,28 @@ class NavDrawerViewController: UIViewController, UIGestureRecognizerDelegate, Na
         
         
         switch(cellID) {
-        case .RECORD_ACTIVITY_CELL:
-            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.RECORD_ACTIVITY_NAV_CONTROLLER.rawValue)
+        case .RecordActivityCell:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.RecordActivityNavController.rawValue)
             break
-        case .ACTIVITY_HISTORY_CELL:
-            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACTIVITY_HISTORY_NAV_CONTROLLER.rawValue)
+        case .ActivityHistoryCell:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ActivityHistoryNavController.rawValue)
             break
-        case .ACHIEVEMENTS_CELL:
-            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACHIEVEMENT_NAV_CONTROLLER.rawValue)
+        case .AchievementsCell:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.AchievementNavController.rawValue)
             break
-        case .TRAIL_MAP_CELL:
-            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.TRAIL_MAP_NAV_CONTROLLER.rawValue)
+        case .TrailMapCell:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.TrailMapNavController.rawValue)
             break
-        case .ACCOUNT_STATISTICS_CELL:
-            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACCOUNT_STATISTICS_NAV_CONTROLLER.rawValue)
+        case .AccountStatisticsCell:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.AccountStatisticsNavController.rawValue)
             break
-        case .ACCOUNT_DETAILS_CELL:
-            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ACCOUNT_DETAILS_NAV_CONTROLLER.rawValue)
+        case .AccountDetailsCell:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.AccountDetailsNavController.rawValue)
             break
-        case .ABOUT_CELL:
-            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ABOUT_NAV_CONTROLLER.rawValue)
+        case .AboutCell:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.AboutNavController.rawValue)
             break
-        case .EXIT_CELL:
+        case .ExitCell:
             confirmLogOut()
             break
         }
