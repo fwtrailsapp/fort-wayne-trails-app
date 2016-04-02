@@ -28,29 +28,26 @@ class Account {
         if birthYear == nil || height == nil || weight == nil || sex == nil {
             return nil
         } else {
-            var c1: Double
-            var c2: Double
-            var c3: Double
-            var c4: Double
+            var sexConstant = 0
             
             switch sex! {
             case Sex.Male:
-                c1 = 88.362
-                c2 = 13.397
-                c3 = 4.799
-                c4 = 5.677
+                sexConstant = 5
+                break
             case Sex.Female:
-                c1 = 447.593
-                c2 = 9.247
-                c3 = 3.098
-                c4 = 4.330
+                sexConstant = -161
+                break
             }
             
             let weightKg:Double = Converter.poundsToKilograms(self.weight!)
             let heightCm:Double = Converter.inchesToCentimeters(self.height!)
             let ageYears = getAge()!
-            let BMR:Double = c1 + (c2 * weightKg) + (c3 * heightCm) - (c4 * Double(ageYears))
             
+            let adjustedWeight = 10 * weightKg
+            let adjustedHeight = 6.25 * heightCm
+            let adjustedAge = 5.0 * Double(ageYears)
+            
+            let BMR:Double = adjustedWeight + adjustedHeight - adjustedAge + Double(sexConstant)
             return BMR
         }
     }

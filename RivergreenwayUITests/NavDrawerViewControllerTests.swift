@@ -46,7 +46,6 @@ class NavDrawerViewControllerTests: XCTestCase {
         app!.navigationBars["Record Activity"].buttons["Menu"].tap()
         app!.tables.cells.containingType(.StaticText, identifier:"Activity History").childrenMatchingType(.StaticText).matchingIdentifier("Activity History").elementBoundByIndex(0).tap()
         assert(app!.navigationBars["Activity History"].staticTexts["Activity History"].hittable)
-        
     }
     
     func testAchievementNavigation() {

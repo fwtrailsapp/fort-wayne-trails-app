@@ -25,7 +25,7 @@ class AccountTests: XCTestCase {
             birthYear: birthYear,
             height: 68,
             weight: 155,
-            sex: Sex.MALE)
+            sex: Sex.Male)
     }
     
     override func tearDown() {
@@ -40,6 +40,6 @@ class AccountTests: XCTestCase {
         let scottBMR = scottAccount!.BMR()
         print(scottBMR!)
         print(scottAccount!.getAge()!)
-        XCTAssertEqualWithAccuracy(scottBMR!, 1752.45, accuracy: 50.0)
+        XCTAssertEqualWithAccuracy(scottBMR!, 1683, accuracy: 50.0)
     }
 }

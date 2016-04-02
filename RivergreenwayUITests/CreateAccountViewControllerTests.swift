@@ -34,27 +34,28 @@ class CreateAccountViewControllerTests: XCTestCase {
 
     func testUsernameFieldHittable() {
         app!.buttons["Create Account"].tap()
-        assert(tablesQuery!.textFields["username"].hittable)
+        assert(app!.tables.textFields["username"].hittable)
     }
     
     func testPasswordFieldHittable() {
         app!.buttons["Create Account"].tap()
-        assert(tablesQuery!.textFields["password"].hittable)
+        assert(app!.tables.textFields["password"].hittable)
     }
     
     func testPasswordConfirmFieldHittable() {
         app!.buttons["Create Account"].tap()
-        assert(tablesQuery!.textFields["confirm password"].hittable)
+        assert(app!.tables.textFields["confirm password"].hittable)        
     }
     
     func testHeightFieldHittable() {
         app!.buttons["Create Account"].tap()
-        assert(tablesQuery!.textFields["height (inches)"].hittable)
+        assert(app!.tables.textFields["height (inches)"].hittable)
+        
     }
     
     func testWeightFieldHittable() {
         app!.buttons["Create Account"].tap()
-        assert(tablesQuery!.textFields["weight (pounds)"].hittable)
+        assert(app!.tables.textFields["weight (pounds)"].hittable)
     }
     
     func testBirthYearFieldHittable() {
