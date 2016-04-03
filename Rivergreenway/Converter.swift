@@ -51,7 +51,7 @@ class Converter {
     /**
      Converts array of GMSMutablePaths to a String
      */
-    class private func pathsToString(paths: [GMSMutablePath]) -> String {
+    class func pathsToString(paths: [GMSMutablePath]) -> String {
         //send all of the paths hooked together... god help us
         var coords = [String]()
         
