@@ -9,7 +9,7 @@
 import Foundation
 import JSONJoy
 
-class TrailActivity {
+class TrailActivity : DictionarySerializable {
     
     private var startTime: NSDate
     private var duration: NSTimeInterval // seconds
@@ -49,6 +49,20 @@ class TrailActivity {
         self.exerciseType = oExType!
         self.caloriesBurned = oCalories!
         self.distance = oMileage!
+    }
+    
+    /**
+     DictionarySerializable function to represent this object as a dictionary of key:value pairs.
+     */
+    func toDictionary() -> [String : AnyObject?] {
+        
+        var dictionary = ["time_started": Converter.dateToString(self.startTime), "duration": Converter.timeIntervalToString(self.duration), "mileage": distance, "calories_burned": self.caloriesBurned, "exercise_type": self.exerciseType.rawValue] as [String : AnyObject]
+        
+        if path != nil {
+            dictionary["path"] = Converter.pathsToString(self.path!)
+        }
+        
+        return dictionary
     }
     
     // returns distance in miles

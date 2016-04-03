@@ -19,29 +19,8 @@ class WebStore {
     {
         let url = baseUrl + "account/create"
         
-        var params = [String: NSObject]()
-        
-        params["username"] = acct.username
+        var params = acct.toDictionary()
         params["password"] = password
-        params["dob"] = acct.birthYear ?? NSNull()
-        
-        if let uHeight = acct.height {
-            params["height"] = Int(uHeight)
-        } else {
-            params["height"] = NSNull()
-        }
-        
-        if let uWeight = acct.weight {
-            params["weight"] = Int(uWeight)
-        } else {
-            params["weight"] = NSNull()
-        }
-        
-        if let uSex = acct.sex {
-            params["sex"] = uSex.rawValue
-        } else {
-            params["sex"] = NSNull()
-        }
         
         genericRequest(HTTPVerb.POST, url: url, params: params,
             errorCallback: errorCallback,
@@ -60,28 +39,8 @@ class WebStore {
             return
         }
         
-        let uUsername: String = username
-        let uTimeStarted: String = Converter.dateToString(act.getStartTime())
-        let uDuration: String = Converter.timeIntervalToString(act.getDuration())
-        let uMileage: Double = act.getDistance()
-        let uCaloriesBurned: Int = Int(act.getCaloriesBurned())
-        let uExerciseType: String = act.getExerciseType().rawValue
-        let uPath: String = Converter.pathsToString(realPath)
-        
-        /*
-        int CreateNewActivity(string username, string time_started, string duration, float mileage, int calories_burned, string exercise_type, string path)
-        */
-        
         let url = baseUrl + "activity"
-        var params = [String: NSObject]()
-        params["username"] = uUsername
-        params["time_started"] = uTimeStarted
-        params["duration"] = uDuration
-        params["mileage"] = uMileage
-        params["calories_burned"] = uCaloriesBurned
-        params["exercise_type"] = uExerciseType
-        params["path"] = uPath
-        
+        let params = act.toDictionary()
         genericRequest(HTTPVerb.POST, url: url, params: params, errorCallback: errorCallback, successCallback: { response in
             successCallback()
         })
@@ -125,7 +84,7 @@ class WebStore {
         //mainly for testing. remove auth token if any
     }
     
-    class private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
+    class private func genericRequest(verb: HTTPVerb, url: String, params: [String: AnyObject?]?,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (Response) -> Void)
     {

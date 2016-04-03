@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Account {
+class Account : DictionarySerializable {
     
     let username: String
     let birthYear: Int?
@@ -61,5 +61,13 @@ class Account {
         let components = calendar.components([.Year], fromDate: currDate)
         
         return components.year - birthYear!
+    }
+    
+    /**
+     Implements DictionarySerializable protocol's toDictionary function. This returns
+     this Account object as a dictionary.  
+     */
+    func toDictionary() -> [String : AnyObject?] {
+        return ["username":username, "birthYear": birthYear, "height": height, "weight": weight, "sex": sex?.rawValue]
     }
 }
