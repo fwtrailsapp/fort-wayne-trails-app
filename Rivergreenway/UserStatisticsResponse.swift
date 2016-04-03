@@ -9,6 +9,12 @@
 import Foundation
 import JSONJoy
 
+/**
+ Represents the JSON response for AccountStatistics. The JSON is
+ divided into a sub-section for the overall statistics and sub-sections
+ for each exercise type. The sub-sections are represented in the
+ SingleStatistic objects.
+ */
 struct UserStatisticsResponse : JSONJoy {
     let stats: [SingleStatistic]
     
@@ -28,6 +34,9 @@ struct UserStatisticsResponse : JSONJoy {
     }
 }
 
+/**
+ Statistic for a single exercise type (or overall)
+ */
 struct SingleStatistic : JSONJoy {
     let calories: Int
     let distance: Double

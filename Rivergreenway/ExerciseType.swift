@@ -13,10 +13,10 @@ enum ExerciseType: String {
     case Walk = "Walk"
     case Run = "Run"
     
-    static func fromStringIgnoreCase(s: String) -> ExerciseType? {
-        for t in all {
-            if s.caseInsensitiveCompare(t.rawValue) == .OrderedSame {
-                return t
+    static func fromStringIgnoreCase(string: String) -> ExerciseType? {
+        for type in all {
+            if string.caseInsensitiveCompare(type.rawValue) == .OrderedSame {
+                return type
             }
         }
         return nil

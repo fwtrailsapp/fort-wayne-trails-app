@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Displays the necessary MIT licensing information.
+ */
 class AboutViewController: DraweredViewController {
     @IBOutlet weak var licenseLabel: UILabel!
 

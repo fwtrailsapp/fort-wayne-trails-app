@@ -121,13 +121,16 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         
         mapView.camera = GMSCameraPosition.cameraWithTarget(myLocation.coordinate, zoom: mapView.camera.zoom)
         
+        // update the recorder with the new location if it is currently recording
         if recorder != nil && recorder!.isRecording() {
             do {
                 try recorder!.update(myLocation)
             }
             catch {
-                
+                // wait till next update
             }
+            
+            // the polyline path needs to be refreshed
             if let polyline = polylines.last {
                 polyline.path = recorder!.getSegment()
             }

@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Displays a static version of the trail map (as opposed to a dynamically generated
+ GMSMapView). This is useful for the users to be able to view a map of the trails without needing
+ much mobile data.
+ */
 class TrailMapViewController: DraweredViewController {
     
     @IBOutlet weak var mapImageView: UIImageView!

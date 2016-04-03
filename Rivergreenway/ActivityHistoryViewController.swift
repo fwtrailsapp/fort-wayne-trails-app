@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ Tabulates the user's Acitivity History by querying the server. Each activity's exercise type, duration,
+ distance, calories, and date are displayed.
+ */
 class ActivityHistoryViewController: DraweredTableViewController {
 
     private let cellID = "ActivityHistoryCell"
@@ -41,11 +45,14 @@ class ActivityHistoryViewController: DraweredTableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // if the array of activities is nil, then there should only be one row: the header.
+        // otherwise, there is the header row AND all of the activities (hence the count + 1)
         return activities == nil ? 1 : activities!.count + 1
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        // retrieve the respective cell from the table view
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as!ActivityHistoryTableViewCell
         
         // the first row should be the header row

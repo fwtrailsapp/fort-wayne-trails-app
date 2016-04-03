@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Represents an account - password is not stored here for security reasons.
+ */
 class Account : DictionarySerializable {
     
     let username: String

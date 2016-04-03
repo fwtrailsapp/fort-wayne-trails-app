@@ -9,13 +9,16 @@
 import Foundation
 import JSONJoy
 
+/**
+ Represents a single activity on the trails.
+ */
 class TrailActivity : DictionarySerializable {
     
-    private var startTime: NSDate
+    private var startTime: NSDate // yyyy-MM-dd'T'HH:mm:ss
     private var duration: NSTimeInterval // seconds
     private var path: [GMSMutablePath]?
     private var exerciseType: ExerciseType
-    private var caloriesBurned: Double
+    private var caloriesBurned: Double // kCal
     private var distance: Double // miles
     
     init(startTime: NSDate, duration: NSTimeInterval, distance: Double, path: [GMSMutablePath]? = nil, exerciseType: ExerciseType, caloriesBurned: Double) {

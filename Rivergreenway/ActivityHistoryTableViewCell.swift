@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ A cell in the Activity History table. Each cell displays an activity's
+ data: exercise type, duration, distance, calories, and date.
+ */
 class ActivityHistoryTableViewCell: UITableViewCell {
 
     // MARK: - View Components
