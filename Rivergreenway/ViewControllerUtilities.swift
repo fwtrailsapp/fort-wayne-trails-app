@@ -9,11 +9,6 @@
 import Foundation
 
 class ViewControllerUtilities {
- 
-    class func getAccount() -> Account {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        return appDelegate.getAccount()!
-    }
     
     class func populateExerciseTypeSegmentedControl(exerciseTypeControl: UISegmentedControl) {
         for index in 0...ExerciseType.all.count - 1 {

@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var drawerController: MMDrawerController?
-    var account: Account?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -24,10 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         drawerController!.leftDrawerViewController = leftViewController
         
         return true
-    }
-    
-    func getAccount() -> Account? {
-        return account
     }
     
     func applicationWillResignActive(application: UIApplication) {
