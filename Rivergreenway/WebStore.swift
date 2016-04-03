@@ -11,9 +11,9 @@ import SwiftHTTP
 import JSONJoy
 
 class WebStore {
-    private let baseUrl = "http://68.39.46.187:50000/GreenwayCap/DataRelay.svc/trails/api/1/"
+    private static let baseUrl = "http://68.39.46.187:50000/GreenwayCap/DataRelay.svc/trails/api/1/"
 
-    func createAccount(acct: Account, password: String,
+    class func createAccount(acct: Account, password: String,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: () -> Void)
     {
@@ -51,7 +51,7 @@ class WebStore {
         )
     }
     
-    func createNewActivity(username: String, act: TrailActivity,
+    class func createNewActivity(username: String, act: TrailActivity,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: () -> Void)
     {
@@ -87,7 +87,7 @@ class WebStore {
         })
     }
     
-    func getActivityHistory(username: String,
+    class func getActivityHistory(username: String,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (TrailActivityHistoryResponse) -> Void)
     {
@@ -104,7 +104,7 @@ class WebStore {
             })
     }
     
-    func getUserStatistics(username: String,
+    class func getUserStatistics(username: String,
                            errorCallback: (error: WebStoreError) -> Void,
                            successCallback: (UserStatisticsResponse) -> Void)
     {
@@ -121,7 +121,7 @@ class WebStore {
             })
     }
     
-    private func pathsToString(paths: [GMSMutablePath]) -> String {
+    class private func pathsToString(paths: [GMSMutablePath]) -> String {
         //send all of the paths hooked together... god help us
         var coords = [String]()
         
@@ -139,7 +139,7 @@ class WebStore {
         return joined
     }
     
-    private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
+    class private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (Response) -> Void)
     {
@@ -165,7 +165,7 @@ class WebStore {
         }
     }
     
-    private func getErrorFromRequest(err: NSError) -> WebStoreError {
+    private class func getErrorFromRequest(err: NSError) -> WebStoreError {
         if err.domain == "HTTP" {
             switch (err.code) {
             case 400:

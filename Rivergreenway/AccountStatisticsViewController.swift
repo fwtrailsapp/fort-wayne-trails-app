@@ -32,10 +32,9 @@ class AccountStatisticsViewController: DraweredTableViewController {
         super.viewDidLoad()
         ViewControllerUtilities.populateExerciseTypeSegmentedControl(exerciseTypeControl)
         
-        let webStore = WebStore()
         SVProgressHUD.show()
         
-        webStore.getUserStatistics("ggrimm",
+        WebStore.getUserStatistics("ggrimm",
             errorCallback: {error in
                 dispatch_async(dispatch_get_main_queue(),{
                     self.onGetUserStatisticsError()

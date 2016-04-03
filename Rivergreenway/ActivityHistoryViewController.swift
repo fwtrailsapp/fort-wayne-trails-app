@@ -16,9 +16,8 @@ class ActivityHistoryViewController: DraweredTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let webStore = WebStore()
         SVProgressHUD.show()
-        webStore.getActivityHistory("ggrimm",
+        WebStore.getActivityHistory("ggrimm",
             errorCallback: {error in
                 dispatch_async(dispatch_get_main_queue(),{
                     self.onActivityHistoryGetError()

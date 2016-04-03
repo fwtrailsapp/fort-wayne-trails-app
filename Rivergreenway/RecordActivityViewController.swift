@@ -340,12 +340,10 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
      */
     func summaryOkHandler(action: UIAlertAction) {
         if recorder != nil {
-            let webStore = WebStore()
-            
             // SVProgressHUD is a 3rd party library for a simple spinner - indicates
             // activity.
             SVProgressHUD.show()
-            webStore.createNewActivity("ggrimm", act: recorder!.getActivity(),
+            WebStore.createNewActivity("ggrimm", act: recorder!.getActivity(),
                 errorCallback: {error in
                     dispatch_async(dispatch_get_main_queue(),{
                         self.onActivityPostError(action)
