@@ -10,18 +10,17 @@ import XCTest
 @testable import Rivergreenway
 
 class WebStoreTests: XCTestCase {
-    var ws : WebStore!
-
+    
     override func setUp() {
         super.setUp()
-        ws = WebStore()
+        WebStore.clearState()
     }
     
     func testAccountCreate() {
         let exp = expectationWithDescription("testAccountCreate")
         let uuid = NSUUID().UUIDString
         let acct = Account(username: "xcodeisbad\(uuid)", birthYear: 1994, height: 256, weight: 256, sex: Sex.Male)
-        ws.createAccount(acct, password: "forreal", errorCallback: { error in
+        WebStore.createAccount(acct, password: "forreal", errorCallback: { error in
                 XCTFail(error.description)
             },
             successCallback: {
@@ -38,7 +37,7 @@ class WebStoreTests: XCTestCase {
         
         let username = "ggrimm"
         let activity = createTrailActivity()
-        ws.createNewActivity(username, act: activity, errorCallback: { error in
+        WebStore.createNewActivity(username, act: activity, errorCallback: { error in
             XCTFail(error.description)
         },
         successCallback: {
@@ -80,7 +79,7 @@ class WebStoreTests: XCTestCase {
         let exp = expectationWithDescription("testGetActivityHistory")
         let username = "ggrimm"
         
-        ws.getActivityHistory(username, errorCallback: { error in
+        WebStore.getActivityHistory(username, errorCallback: { error in
                 XCTFail()
             }, successCallback: { tahr in
                 print("We got \(tahr.activities.count) activities back from the server.")
@@ -96,7 +95,7 @@ class WebStoreTests: XCTestCase {
         let exp = expectationWithDescription("testGetUserStatistics")
         let username = "ggrimm"
         
-        ws.getUserStatistics(username, errorCallback: { (error) in
+        WebStore.getUserStatistics(username, errorCallback: { (error) in
                 XCTFail()
             }, successCallback: { stats in
                 if stats.stats.count != 4 { //bike, walk, run, overall

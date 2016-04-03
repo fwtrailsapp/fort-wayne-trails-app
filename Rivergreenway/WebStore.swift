@@ -121,6 +121,10 @@ class WebStore {
             })
     }
     
+    class func clearState() {
+        //mainly for testing. remove auth token if any
+    }
+    
     class private func pathsToString(paths: [GMSMutablePath]) -> String {
         //send all of the paths hooked together... god help us
         var coords = [String]()
