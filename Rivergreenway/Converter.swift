@@ -48,6 +48,30 @@ class Converter {
         return String(format: "%.2f", number)
     }
     
+    /**
+     Converts array of GMSMutablePaths to a String
+     */
+    class private func pathsToString(paths: [GMSMutablePath]) -> String {
+        //send all of the paths hooked together... god help us
+        var coords = [String]()
+        
+        for path in paths {
+            for index in 0...path.count() {
+                let thisCoord = path.coordinateAtIndex(index)
+                let lat = thisCoord.latitude
+                let long = thisCoord.longitude
+                coords.append("\(lat) \(long)")
+            }
+        }
+        
+        let joined = coords.joinWithSeparator(",")
+        
+        return joined
+    }
+    
+    /**
+     Converts an NSDate into a string using the provided format. 
+     */
     class func dateToString(date: NSDate, format: String = "yyyy-MM-dd'T'HH:mm:ss") -> String {
         let formatter = NSDateFormatter()
         formatter.dateFormat = format

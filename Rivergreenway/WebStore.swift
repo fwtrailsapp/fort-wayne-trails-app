@@ -66,7 +66,7 @@ class WebStore {
         let uMileage: Double = act.getDistance()
         let uCaloriesBurned: Int = Int(act.getCaloriesBurned())
         let uExerciseType: String = act.getExerciseType().rawValue
-        let uPath: String = pathsToString(realPath)
+        let uPath: String = Converter.pathsToString(realPath)
         
         /*
         int CreateNewActivity(string username, string time_started, string duration, float mileage, int calories_burned, string exercise_type, string path)
@@ -123,24 +123,6 @@ class WebStore {
     
     class func clearState() {
         //mainly for testing. remove auth token if any
-    }
-    
-    class private func pathsToString(paths: [GMSMutablePath]) -> String {
-        //send all of the paths hooked together... god help us
-        var coords = [String]()
-        
-        for path in paths {
-            for index in 0...path.count() {
-                let thisCoord = path.coordinateAtIndex(index)
-                let lat = thisCoord.latitude
-                let long = thisCoord.longitude
-                coords.append("\(lat) \(long)")
-            }
-        }
-        
-        let joined = coords.joinWithSeparator(",")
-        
-        return joined
     }
     
     class private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
