@@ -70,7 +70,11 @@ class Account : DictionarySerializable {
      Implements DictionarySerializable protocol's toDictionary function. This returns
      this Account object as a dictionary.  
      */
-    func toDictionary() -> [String : AnyObject?] {
-        return ["username":username, "birthYear": birthYear, "height": height, "weight": weight, "sex": sex?.rawValue]
+    func toDictionary() -> [String: NSObject] {
+        return ["username": username,
+                "birthYear": birthYear ?? NSNull(),
+                "height": height ?? NSNull(),
+                "weight": weight ?? NSNull(),
+                "sex": sex?.rawValue ?? NSNull()]
     }
 }
