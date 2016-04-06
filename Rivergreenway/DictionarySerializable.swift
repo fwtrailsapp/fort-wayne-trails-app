@@ -13,5 +13,5 @@ import Foundation
  that implement this protocol thus can be serialized into JSON automatically.
  */
 protocol DictionarySerializable {
-    func toDictionary() -> [String: AnyObject?]
+    func toDictionary() -> [String: NSObject]
 }
