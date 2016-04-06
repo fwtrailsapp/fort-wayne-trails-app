@@ -14,6 +14,31 @@ class WebStore {
     private static let baseUrl = "http://68.39.46.187:50000/GreenwayCap/DataRelay.svc/trails/api/1/"
     private static var authToken : String? = nil
 
+    class func login(username: String, password: String,
+                     errorCallback: (error: WebStoreError) -> Void,
+                     successCallback: () -> Void)
+    {
+        let url = baseUrl + "login"
+        
+        var params = [String: NSObject]()
+        params["username"] = username
+        params["password"] = password
+        
+        genericRequest(HTTPVerb.POST, url: url, params: params,
+            errorCallback: errorCallback,
+            successCallback: { response in
+                let json = JSONDecoder(response.data)
+                let token = try? json["token"].getString()
+                guard let realToken = token else {
+                    errorCallback(error: WebStoreError.InvalidCommunication)
+                    return
+                }
+                authToken = realToken
+                successCallback()
+            }
+        )
+    }
+    
     class func createAccount(acct: Account, password: String,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: () -> Void)
