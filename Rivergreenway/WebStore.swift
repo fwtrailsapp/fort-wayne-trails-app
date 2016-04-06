@@ -118,9 +118,14 @@ class WebStore {
         let serializer = JSONParameterSerializer()
         let opt: HTTP
         
+        var headers = [String: String]()
+        if let realAuthToken = authToken {
+            headers["Trails-Api-Key"] = realAuthToken
+        }
+        
         do {
             opt = try HTTP.New(url, method: verb, requestSerializer: serializer,
-                parameters: params)
+                parameters: params, headers: headers)
         } catch let errorEx {
             errorCallback(error: WebStoreError.Unknown(msg: "Exception: \(errorEx)"))
             return
