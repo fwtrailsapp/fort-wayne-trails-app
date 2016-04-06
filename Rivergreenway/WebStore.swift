@@ -39,6 +39,8 @@ class WebStore {
         )
     }
     
+    class var hasAuthToken: Bool { get { return authToken != nil } }
+    
     class func createAccount(acct: Account, password: String,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: () -> Void)
