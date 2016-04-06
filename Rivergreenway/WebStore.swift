@@ -12,6 +12,7 @@ import JSONJoy
 
 class WebStore {
     private static let baseUrl = "http://68.39.46.187:50000/GreenwayCap/DataRelay.svc/trails/api/1/"
+    private static var authToken : String? = nil
 
     class func createAccount(acct: Account, password: String,
         errorCallback: (error: WebStoreError) -> Void,
@@ -82,6 +83,7 @@ class WebStore {
     
     class func clearState() {
         //mainly for testing. remove auth token if any
+        authToken = nil
     }
     
     class private func genericRequest(verb: HTTPVerb, url: String, params: [String: AnyObject?]?,
