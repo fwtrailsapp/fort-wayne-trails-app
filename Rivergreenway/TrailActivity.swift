@@ -57,12 +57,19 @@ class TrailActivity : DictionarySerializable {
     /**
      DictionarySerializable function to represent this object as a dictionary of key:value pairs.
      */
-    func toDictionary() -> [String : AnyObject?] {
+    func toDictionary() -> [String: NSObject] {
         
-        var dictionary = ["time_started": Converter.dateToString(self.startTime), "duration": Converter.timeIntervalToString(self.duration), "mileage": distance, "calories_burned": self.caloriesBurned, "exercise_type": self.exerciseType.rawValue] as [String : AnyObject]
+        var dictionary: [String: NSObject] = [
+            "time_started": Converter.dateToString(self.startTime),
+            "duration": Converter.timeIntervalToString(self.duration),
+            "mileage": self.distance,
+            "calories_burned": self.caloriesBurned,
+            "exercise_type": self.exerciseType.rawValue]
         
-        if path != nil {
-            dictionary["path"] = Converter.pathsToString(self.path!)
+        if let realPath = self.path {
+            dictionary["path"] = Converter.pathsToString(realPath)
+        } else {
+            dictionary["path"] = NSNull()
         }
         
         return dictionary
