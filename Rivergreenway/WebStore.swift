@@ -56,11 +56,11 @@ class WebStore {
         )
     }
     
-    class func createNewActivity(username: String, act: TrailActivity,
+    class func createNewActivity(act: TrailActivity,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: () -> Void)
     {
-        guard let realPath = act.getPath() else {
+        guard act.getPath() != nil else {
             errorCallback(error: WebStoreError.Unknown(msg: "This activity has no path associated with it."))
             return
         }
