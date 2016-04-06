@@ -20,7 +20,8 @@ class WebStoreTests: XCTestCase {
         let exp = expectationWithDescription("testAccountCreate")
         let uuid = NSUUID().UUIDString
         let acct = Account(username: "xcodeisbad\(uuid)", birthYear: 1994, height: 256, weight: 256, sex: Sex.Male)
-        WebStore.createAccount(acct, password: "forreal", errorCallback: { error in
+        WebStore.createAccount(acct, password: "forreal",
+            errorCallback: { error in
                 XCTFail(error.description)
             },
             successCallback: {
