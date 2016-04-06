@@ -111,7 +111,7 @@ class WebStore {
         authToken = nil
     }
     
-    class private func genericRequest(verb: HTTPVerb, url: String, params: [String: AnyObject?]?,
+    class private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (Response) -> Void)
     {
