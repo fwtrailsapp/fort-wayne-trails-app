@@ -72,7 +72,7 @@ class Account : DictionarySerializable {
      */
     func toDictionary() -> [String: NSObject] {
         return ["username": username,
-                "birthYear": birthYear ?? NSNull(),
+                "birthyear": birthYear ?? NSNull(),
                 "height": height ?? NSNull(),
                 "weight": weight ?? NSNull(),
                 "sex": sex?.rawValue ?? NSNull()]
