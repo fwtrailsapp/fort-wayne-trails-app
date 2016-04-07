@@ -124,18 +124,21 @@ class WebStoreTests: XCTestCase {
     
     func testGetUserStatistics() {
         let exp = expectationWithDescription("testGetUserStatistics")
-        let username = "ggrimm"
         
-        WebStore.getUserStatistics(username, errorCallback: { (error) in
-                XCTFail()
-            }, successCallback: { stats in
-                if stats.stats.count != 4 { //bike, walk, run, overall
-                    print("\(stats.stats.count) out of 4 stat types gotten.")
+        login({
+            WebStore.getUserStatistics(
+                errorCallback: { error in
                     XCTFail()
-                } else {
-                    exp.fulfill()
+                }, successCallback: { stats in
+                    if stats.stats.count != 4 { //bike, walk, run, overall
+                        print("\(stats.stats.count) out of 4 stat types gotten.")
+                        XCTFail()
+                    } else {
+                        exp.fulfill()
+                    }
                 }
-            })
+            )
+        })
         
         waitForExpectationsWithTimeout(5, handler: { error in
             XCTAssertNil(error, "Error")

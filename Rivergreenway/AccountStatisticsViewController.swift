@@ -34,7 +34,7 @@ class AccountStatisticsViewController: DraweredTableViewController {
         
         SVProgressHUD.show()
         
-        WebStore.getUserStatistics("ggrimm",
+        WebStore.getUserStatistics(
             errorCallback: {error in
                 dispatch_async(dispatch_get_main_queue(),{
                     self.onGetUserStatisticsError()

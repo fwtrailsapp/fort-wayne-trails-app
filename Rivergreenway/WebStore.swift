@@ -89,11 +89,11 @@ class WebStore {
             })
     }
     
-    class func getUserStatistics(username: String,
-                           errorCallback: (error: WebStoreError) -> Void,
-                           successCallback: (UserStatisticsResponse) -> Void)
+    class func getUserStatistics(errorCallback
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: (UserStatisticsResponse) -> Void)
     {
-        let url = baseUrl + "statistics/" + username
+        let url = baseUrl + "statistics"
         
         genericRequest(HTTPVerb.GET, url: url, params: nil,
             errorCallback: errorCallback, successCallback: { response in

@@ -19,7 +19,7 @@ struct UserStatisticsResponse : JSONJoy {
     let stats: [SingleStatistic]
     
     init(_ decoder: JSONDecoder) throws {
-        guard let ra = decoder["GetTotalStatsForUserResult"].array else {
+        guard let ra = decoder.array else {
             throw JSONError.WrongType
         }
         
