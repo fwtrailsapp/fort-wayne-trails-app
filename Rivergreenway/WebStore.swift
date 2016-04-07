@@ -72,11 +72,11 @@ class WebStore {
         })
     }
     
-    class func getActivityHistory(username: String,
+    class func getActivityHistory(
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (TrailActivityHistoryResponse) -> Void)
     {
-        let url = baseUrl + "activity/" + username
+        let url = baseUrl + "activity"
         
         genericRequest(HTTPVerb.GET, url: url, params: nil,
             errorCallback: errorCallback, successCallback: { response in
