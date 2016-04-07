@@ -59,13 +59,16 @@ class WebStoreTests: XCTestCase {
     func testCreateNewActivity() {
         let exp = expectationWithDescription("testCreateNewActivity")
         
-        let username = "ggrimm"
         let activity = createTrailActivity()
-        WebStore.createNewActivity(username, act: activity, errorCallback: { error in
-            XCTFail(error.description)
-        },
-        successCallback: {
-            exp.fulfill()
+        
+        login({
+            WebStore.createNewActivity(activity,
+                errorCallback: { error in
+                    XCTFail(error.description)
+                },
+                successCallback: {
+                    exp.fulfill()
+            })
         })
         
         waitForExpectationsWithTimeout(5, handler: { error in
