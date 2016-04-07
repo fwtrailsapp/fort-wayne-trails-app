@@ -20,9 +20,7 @@ class WebStore {
     {
         let url = baseUrl + "login"
         
-        var params = [String: NSObject]()
-        params["username"] = username
-        params["password"] = password
+        let params = ["username": username, "password": password]
         
         genericRequest(HTTPVerb.POST, url: url, params: params,
             errorCallback: errorCallback,
