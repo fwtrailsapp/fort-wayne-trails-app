@@ -68,7 +68,8 @@ class WebStoreTests: XCTestCase {
                 },
                 successCallback: {
                     exp.fulfill()
-            })
+                }
+            )
         })
         
         waitForExpectationsWithTimeout(5, handler: { error in
@@ -104,17 +105,18 @@ class WebStoreTests: XCTestCase {
     
     func testGetActivityHistory() {
         let exp = expectationWithDescription("testGetActivityHistory")
-        let username = "ggrimm"
         
-        WebStore.getActivityHistory(username, errorCallback: { error in
-                XCTFail()
-            }, successCallback: { tahr in
-                print("We got \(tahr.activities.count) activities back from the server.")
-                exp.fulfill()
+        login({
+            WebStore.getActivityHistory(username, errorCallback: { error in
+                    XCTFail()
+                }, successCallback: { tahr in
+                    print("We got \(tahr.activities.count) activities back from the server.")
+                    exp.fulfill()
+                })
+            
+            waitForExpectationsWithTimeout(5, handler: { error in
+                XCTAssertNil(error, "Error")
             })
-        
-        waitForExpectationsWithTimeout(5, handler: { error in
-            XCTAssertNil(error, "Error")
         })
     }
     
