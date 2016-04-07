@@ -13,7 +13,7 @@ struct TrailActivityHistoryResponse : JSONJoy {
     let activities: [TrailActivity]
     
     init(_ decoder: JSONDecoder) throws {
-        guard let ra = decoder["GetActivitiesForUserResult"].array else {
+        guard let ra = decoder.array else {
             throw JSONError.WrongType
         }
         
