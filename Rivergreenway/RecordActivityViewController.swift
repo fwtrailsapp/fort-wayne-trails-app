@@ -346,7 +346,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             // SVProgressHUD is a 3rd party library for a simple spinner - indicates
             // activity.
             SVProgressHUD.show()
-            WebStore.createNewActivity("ggrimm", act: recorder!.getActivity(),
+            WebStore.createNewActivity(recorder!.getActivity(),
                 errorCallback: {error in
                     dispatch_async(dispatch_get_main_queue(),{
                         self.onActivityPostError(action)
