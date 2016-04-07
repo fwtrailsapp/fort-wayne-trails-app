@@ -34,8 +34,8 @@ class NavDrawerViewController: UIViewController, UIGestureRecognizerDelegate, Na
      the 'Call' icon such that they open the iPhone's dialer.
      */
     func addProblemReportingGestureRecognizers() {
-        let labelTap = UITapGestureRecognizer(target: self, action: Selector("openDialer"))
-        let imageTap = UITapGestureRecognizer(target: self, action: Selector("openDialer"))
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(NavDrawerViewController.openDialer))
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(NavDrawerViewController.openDialer))
         labelTap.delegate = self
         reportProblemImage.userInteractionEnabled = true
         reportProblemLabel.userInteractionEnabled = true

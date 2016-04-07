@@ -16,7 +16,7 @@ class AccountDetailsViewController: DraweredTableViewController {
         let datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Date
         sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        datePickerView.addTarget(self, action: #selector(AccountDetailsViewController.datePickerValueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
     }
 
     func datePickerValueChanged(sender:UIDatePicker) {

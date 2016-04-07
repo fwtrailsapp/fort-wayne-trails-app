@@ -17,7 +17,7 @@ class BaseViewController: UIViewController {
         // This causes keyboards to be dismissed when a user taps on the screen outside of the
         // keyboard. One would think that would be default behavior; we had to do
         // that manually.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BaseViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     

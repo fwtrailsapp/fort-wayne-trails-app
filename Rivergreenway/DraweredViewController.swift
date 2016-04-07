@@ -13,7 +13,7 @@ class DraweredViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let menuButton = UIBarButtonItem(image: UIImage(named: "Menu"), style: UIBarButtonItemStyle.Plain, target: self, action: "drawerBarButtonPressed")
+        let menuButton = UIBarButtonItem(image: UIImage(named: "Menu"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(DraweredViewController.drawerBarButtonPressed))
         navigationItem.leftBarButtonItem = menuButton
     }
     

@@ -14,7 +14,7 @@ class BaseTableViewController: UITableViewController {
         super.viewDidLoad()
         
         //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BaseTableViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
