@@ -137,6 +137,7 @@ class WebStore {
                 errorCallback(error: errSentToCallback)
             } else {
                 //response is ok
+                print(response.text)
                 successCallback(response)
             }
         }
