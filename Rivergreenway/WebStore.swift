@@ -72,7 +72,7 @@ class WebStore {
         })
     }
     
-    class func getActivityHistory(
+    class func getActivityHistory(errorCallback
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (TrailActivityHistoryResponse) -> Void)
     {
