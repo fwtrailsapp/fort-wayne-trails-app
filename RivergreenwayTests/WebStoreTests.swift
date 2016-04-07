@@ -16,6 +16,29 @@ class WebStoreTests: XCTestCase {
         WebStore.clearState()
     }
     
+    func login(callback: () -> Void) {
+        WebStore.login("iostest", password: "iostest",
+            errorCallback: { error in
+                XCTFail(error.description)
+            },
+            successCallback: {
+                callback()
+            }
+        )
+    }
+    
+    func testLogin() {
+        let exp = expectationWithDescription("testLogin")
+        login({
+            XCTAssert(WebStore.hasAuthToken)
+            exp.fulfill()
+        })
+        
+        waitForExpectationsWithTimeout(5, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
+    }
+    
     func testAccountCreate() {
         let exp = expectationWithDescription("testAccountCreate")
         let uuid = NSUUID().UUIDString
