@@ -21,7 +21,7 @@ class ActivityHistoryViewController: DraweredTableViewController {
         super.viewDidLoad()
         
         SVProgressHUD.show()
-        WebStore.getActivityHistory("ggrimm",
+        WebStore.getActivityHistory(
             errorCallback: {error in
                 dispatch_async(dispatch_get_main_queue(),{
                     self.onActivityHistoryGetError()
