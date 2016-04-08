@@ -27,7 +27,7 @@ class WebStore {
         
         let params = ["username": username, "password": password]
         
-        genericRequest(HTTPVerb.POST, url: url, params: params,
+        genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: false,
             errorCallback: errorCallback,
             successCallback: { response in
                 let json = JSONDecoder(response.data)
@@ -53,7 +53,7 @@ class WebStore {
         var params = acct.toDictionary()
         params["password"] = password
         
-        genericRequest(HTTPVerb.POST, url: url, params: params,
+        genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true,
             errorCallback: errorCallback,
             successCallback: { response in
                 successCallback()
@@ -72,7 +72,7 @@ class WebStore {
         
         let url = baseUrl + "activity"
         let params = act.toDictionary()
-        genericRequest(HTTPVerb.POST, url: url, params: params, errorCallback: errorCallback, successCallback: { response in
+        genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true, errorCallback: errorCallback, successCallback: { response in
             successCallback()
         })
     }
@@ -83,7 +83,7 @@ class WebStore {
     {
         let url = baseUrl + "activity"
         
-        genericRequest(HTTPVerb.GET, url: url, params: nil,
+        genericRequest(HTTPVerb.GET, url: url, params: nil, tryAutoLogin: true,
             errorCallback: errorCallback, successCallback: { response in
                 let oActHist = try? TrailActivityHistoryResponse(JSONDecoder(response.data))
                 guard let actHist = oActHist else {
@@ -100,7 +100,7 @@ class WebStore {
     {
         let url = baseUrl + "statistics"
         
-        genericRequest(HTTPVerb.GET, url: url, params: nil,
+        genericRequest(HTTPVerb.GET, url: url, params: nil, tryAutoLogin: true,
             errorCallback: errorCallback, successCallback: { response in
                 let oUserStats = try? UserStatisticsResponse(JSONDecoder(response.data))
                 guard let userStats = oUserStats else {
@@ -119,6 +119,45 @@ class WebStore {
     }
     
     class private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
+                                      tryAutoLogin: Bool,
+                                      errorCallback: (error: WebStoreError) -> Void,
+                                      successCallback: (Response) -> Void)
+    {
+        genericRequestInternal(verb, url: url, params: params,
+            errorCallback:
+            { error in
+                if (isBadCredentials(error) && tryAutoLogin && lastUsername != nil && lastPassword != nil) {
+                    login(lastUsername!, password: lastPassword!,
+                        errorCallback:
+                        { errorLogin in
+                            errorCallback(error: WebStoreError.BadCredentials)
+                        }, successCallback:
+                        { response in
+                            genericRequest(verb, url: url, params: params, tryAutoLogin: false,
+                                errorCallback: errorCallback,
+                                successCallback: successCallback)
+                        }
+                    )
+                } else {
+                    errorCallback(error: error)
+                }
+            }, successCallback:
+            { response in
+                successCallback(response)
+            }
+        )
+    }
+    
+    class private func isBadCredentials(asdf: WebStoreError) -> Bool {
+        switch asdf {
+        case .BadCredentials:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    class private func genericRequestInternal(verb: HTTPVerb, url: String, params: [String: NSObject]?,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (Response) -> Void)
     {
