@@ -13,11 +13,16 @@ import JSONJoy
 class WebStore {
     private static let baseUrl = "http://68.39.46.187:50000/GreenwayCap/DataRelay.svc/trails/api/1/"
     private static var authToken : String? = nil
+    private static var lastUsername : String? = nil
+    private static var lastPassword : String? = nil
 
     class func login(username: String, password: String,
                      errorCallback: (error: WebStoreError) -> Void,
                      successCallback: () -> Void)
     {
+        lastUsername = username
+        lastPassword = password
+        
         let url = baseUrl + "login"
         
         let params = ["username": username, "password": password]
@@ -107,8 +112,10 @@ class WebStore {
     }
     
     class func clearState() {
-        //mainly for testing. remove auth token if any
+        //mainly for testing. remove auth token and credentials if any
         authToken = nil
+        lastUsername = nil
+        lastPassword = nil
     }
     
     class private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
