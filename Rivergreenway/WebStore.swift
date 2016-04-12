@@ -169,8 +169,8 @@ class WebStore {
         )
     }
     
-    class private func isBadCredentials(asdf: WebStoreError) -> Bool {
-        switch asdf {
+    class private func isBadCredentials(error: WebStoreError) -> Bool {
+        switch error {
         case .BadCredentials:
             return true
         default:
