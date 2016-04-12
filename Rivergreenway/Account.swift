@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import JSONJoy
 
 /**
  Represents an account - password is not stored here for security reasons.
@@ -25,6 +26,30 @@ class Account : DictionarySerializable {
         self.height = height
         self.weight = weight
         self.sex = sex
+    }
+    
+    init(_ decoder: JSONDecoder) throws {
+        let uUsername: String = "FIXME!" //try decoder["username"].getString()
+        let uBirthYear: Int = try decoder["birthyear"].getInt()
+        let uHeight: Double = try decoder["height"].getDouble()
+        let uWeight: Double = try decoder["weight"].getDouble()
+        let uSex: String = try decoder["sex"].getString()
+        
+        let oUsername: String? = uUsername
+        let oBirthYear: Int? = uBirthYear
+        let oHeight: Double? = uHeight
+        let oWeight: Double? = uWeight
+        let oSex: Sex? = Sex.fromStringIgnoreCase(uSex)
+        
+        if oUsername == nil || oBirthYear == nil || oHeight == nil || oWeight == nil || oSex == nil {
+            throw JSONError.WrongType
+        }
+        
+        self.username = oUsername!
+        self.birthYear = oBirthYear!
+        self.height = oHeight!
+        self.weight = oWeight!
+        self.sex = oSex!
     }
     
     func BMR() -> Double? {
