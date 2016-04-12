@@ -57,6 +57,26 @@ class WebStoreTests: XCTestCase {
         })
     }
     
+    func testAccountGet() {
+        let exp = expectationWithDescription("testAccountGet")
+        
+        login({
+            WebStore.getAccount(
+                errorCallback: { error in
+                    XCTFail(error.description)
+                }, successCallback: { acct in
+                    print("Got acct: \(acct)")
+                    exp.fulfill()
+                }
+            )
+        })
+        
+        waitForExpectationsWithTimeout(5, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
+
+    }
+    
     func testCreateNewActivity() {
         let exp = expectationWithDescription("testCreateNewActivity")
         
