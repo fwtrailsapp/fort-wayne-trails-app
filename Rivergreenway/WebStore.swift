@@ -15,27 +15,6 @@ class WebStore {
     private static var authToken : String? = nil
     private static var lastUsername : String? = nil
     private static var lastPassword : String? = nil
-    
-    class func editAccount(account: Account, password: String? = nil,
-                           errorCallback: (error: WebStoreError) -> Void,
-                           successCallback: () -> Void) {
-        
-        let url = baseUrl + "account/edit"
-        var params = account.toDictionary()
-        if password == nil {
-            params["password"] = lastPassword
-        } else {
-            params["password"] = password
-        }
-        
-        
-        genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true, errorCallback: errorCallback,
-            successCallback: { response in
-                successCallback()
-            }
-        )
-        
-    }
 
     class func login(username: String, password: String,
                      errorCallback: (error: WebStoreError) -> Void,
@@ -98,6 +77,25 @@ class WebStore {
         })
     }
     
+    class func editAccount(account: Account, password: String? = nil,
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: () -> Void)
+    {
+        let url = baseUrl + "account/edit"
+        var params = account.toDictionary()
+        if password == nil {
+            params["password"] = lastPassword
+        } else {
+            params["password"] = password
+        }
+        
+        genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true, errorCallback: errorCallback,
+                       successCallback: { response in
+                        successCallback()
+            }
+        )
+    }
+    
     class func getActivityHistory(errorCallback
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (TrailActivityHistoryResponse) -> Void)
@@ -112,7 +110,8 @@ class WebStore {
                     return
                 }
                 successCallback(actHist)
-            })
+            }
+        )
     }
     
     class func getUserStatistics(errorCallback
@@ -129,7 +128,8 @@ class WebStore {
                     return
                 }
                 successCallback(userStats)
-            })
+            }
+        )
     }
     
     class func clearState() {
