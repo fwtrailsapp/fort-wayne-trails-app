@@ -11,4 +11,6 @@ import Foundation
 enum Sex: String{
     case Male = "male"
     case Female = "female"
+    
+    static let all = [Male, Female]
 }

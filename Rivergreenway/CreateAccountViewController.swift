@@ -12,7 +12,45 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
 
     @IBAction func createButtonPressed(sender: UIBarButtonItem) {
         
+        if (usernameField.text != nil && passwordField.text != nil && confirmPasswordField.text != nil) && (!usernameField.text!.isEmpty && !passwordField.text!.isEmpty && !confirmPasswordField.text!.isEmpty) {
+            
+            // ensure the the password and confirm password fields match
+            if passwordField.text != confirmPasswordField.text {
+                let alert = UIAlertController(title: "Cannot Create Account", message: "Please enter a matching confirmation password.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
+                self.presentViewController(alert, animated: false, completion: nil)
+                return
+            }
+            
+            SVProgressHUD.show()
+            
+            let password = passwordField.text!
+            let birthYear = (birthYearField.text == nil) ? nil : Int(birthYearField.text!)
+            let height = (heightField.text == nil) ? nil : Double(heightField.text!)
+            let weight = (weightField.text == nil) ? nil : Double(weightField.text!)
+            let sex: Sex? = (sexSegmentedControl.selectedSegmentIndex == 0) ? nil : Sex.all[sexSegmentedControl.selectedSegmentIndex - 1]
+            
+            let newAccount = Account(username: usernameField.text!, birthYear: birthYear, height: height, weight: weight, sex: sex)
+            
+            WebStore.createAccount(newAccount, password: password,
+                errorCallback: {error in
+                    dispatch_async(dispatch_get_main_queue(),{
+                        self.onAccountCreateError(error)
+                    })
+                }, successCallback: {
+                    dispatch_async(dispatch_get_main_queue(),{
+                        self.onAccountCreateSuccess()
+                    })
+                }
+            )
+        } else {
+            let alert = UIAlertController(title: "Cannot Create Account", message: "Please enter a username and password.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alert, animated: false, completion: nil)
+        }
+        
     }
+    
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Discard Changes",
             message: "Are you sure you wish to discard these changes?",
@@ -21,7 +59,21 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    @IBOutlet weak var dateTextField: UITextField!
+        
+    @IBAction func didBeginEditingDateTextField(sender: UITextField) {
+        let yearPickerView:UIPickerView = UIPickerView()
+        yearPickerView.dataSource = self
+        yearPickerView.delegate = self
+        sender.inputView = yearPickerView
+    }
+    
+    @IBOutlet weak var birthYearField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var heightField: UITextField!
+    @IBOutlet weak var weightField: UITextField!
+    @IBOutlet weak var sexSegmentedControl: UISegmentedControl!
     
     private var years: [String] = []
     
@@ -38,12 +90,15 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
             years.append(String(year))
         }
     }
-        
-    @IBAction func didBeginEditingDateTextField(sender: UITextField) {
-        let yearPickerView:UIPickerView = UIPickerView()
-        yearPickerView.dataSource = self
-        yearPickerView.delegate = self
-        sender.inputView = yearPickerView
+    
+    func onAccountCreateSuccess() {
+        SVProgressHUD.dismiss()
+        ViewControllerUtilities.transitionDrawered(self, destination: ViewIdentifier.RecordActivityNavController)
+    }
+    
+    func onAccountCreateError(error: WebStoreError) {
+        SVProgressHUD.dismiss()
+        ViewControllerUtilities.displayServerConnectionErrorAlert(self, message: error.description)
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -60,7 +115,7 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        dateTextField.text = years[row]
+        birthYearField.text = years[row]
     }
     
     func discardHandler(action: UIAlertAction) {

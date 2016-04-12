@@ -34,7 +34,7 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-TZ-Lid">
-                                        <rect key="frame" x="247" y="140" width="107" height="31"/>
+                                        <rect key="frame" x="247" y="140" width="107" height="32"/>
                                         <state key="normal" title="Create Account"/>
                                         <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="147" y="140" width="107" height="32"/>
@@ -268,12 +268,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="5Ze-rd-iiw">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Ze-rd-iiw">
                                                     <rect key="frame" x="28" y="7" width="544" height="29"/>
                                                     <segments>
+                                                        <segment title="" image="NotInterested"/>
                                                         <segment title="Male"/>
                                                         <segment title="Female"/>
-                                                        <segment title="" image="NotInterested"/>
                                                     </segments>
                                                 </segmentedControl>
                                             </subviews>
@@ -323,7 +323,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dateTextField" destination="P0K-M6-oZU" id="7Eh-r1-AaW"/>
+                        <outlet property="birthYearField" destination="P0K-M6-oZU" id="bWq-6A-qg2"/>
+                        <outlet property="confirmPasswordField" destination="rUW-3u-p5b" id="Cos-oU-8jM"/>
+                        <outlet property="heightField" destination="vBV-MB-35J" id="dB1-4f-sxW"/>
+                        <outlet property="passwordField" destination="zas-MV-jVJ" id="f2z-VL-tHQ"/>
+                        <outlet property="sexSegmentedControl" destination="5Ze-rd-iiw" id="JI3-Vf-79d"/>
+                        <outlet property="usernameField" destination="qGm-aA-DGB" id="oMc-wX-ga8"/>
+                        <outlet property="weightField" destination="xij-DF-luW" id="Exf-pf-0Pn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6V-qu-r26" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -931,14 +937,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncy-Al-st7">
-                                <rect key="frame" x="283" y="330" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
+                                <rect key="frame" x="285" y="330" width="30" height="30"/>
+                                <state key="normal" title="Ok"/>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="3XS-3y-KXX" eventType="touchUpInside" id="V0U-Rb-Tem"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wrc-eM-Dt4">
-                                <rect key="frame" x="242" y="286" width="116" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wrc-eM-Dt4">
+                                <rect key="frame" x="278" y="286" width="44" height="29"/>
                                 <segments>
                                     <segment title=""/>
                                     <segment title=""/>
@@ -1487,8 +1493,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pc4-5C-uKU">
-                                                    <rect key="frame" x="16" y="8" width="121" height="29"/>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pc4-5C-uKU">
+                                                    <rect key="frame" x="16" y="8" width="29" height="29"/>
                                                     <segments>
                                                         <segment title=""/>
                                                         <segment title=""/>
@@ -1711,6 +1717,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrs-cz-SWj">
                                                     <rect key="frame" x="461" y="7" width="123" height="30"/>
                                                     <state key="normal" title="Change Password"/>
+                                                    <connections>
+                                                        <action selector="changePasswordPressed:" destination="Bek-MS-PqV" eventType="touchUpInside" id="yt8-X3-BFf"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAl-2f-6on">
                                                     <rect key="frame" x="16" y="11" width="74" height="21"/>
@@ -1828,9 +1837,9 @@
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GtE-Vd-yNy">
                                                     <rect key="frame" x="212" y="8" width="176" height="29"/>
                                                     <segments>
+                                                        <segment title="" image="NotInterested"/>
                                                         <segment title="Male"/>
                                                         <segment title="Female"/>
-                                                        <segment title="" image="NotInterested"/>
                                                     </segments>
                                                 </segmentedControl>
                                             </subviews>
@@ -1848,9 +1857,19 @@
                             <outlet property="delegate" destination="Bek-MS-PqV" id="fmB-Pg-Fa8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Account Details" id="uhl-wa-0bm"/>
+                    <navigationItem key="navigationItem" title="Account Details" id="uhl-wa-0bm">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Ml2-hN-9fL">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Bek-MS-PqV" id="D1K-Eb-qEs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="dateTextField" destination="a6b-fo-3XA" id="5qt-8p-ttb"/>
+                        <outlet property="birthYearField" destination="a6b-fo-3XA" id="V3H-WA-ecc"/>
+                        <outlet property="heightField" destination="ewR-Y5-GJm" id="rcp-8d-Kxo"/>
+                        <outlet property="sexSegmentedControl" destination="GtE-Vd-yNy" id="lbX-O2-AsJ"/>
+                        <outlet property="usernameField" destination="yy8-ec-WDL" id="y97-r1-EyG"/>
+                        <outlet property="weightField" destination="eN3-ba-8Cl" id="xWY-J5-x68"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSw-bA-b8x" userLabel="First Responder" sceneMemberID="firstResponder"/>

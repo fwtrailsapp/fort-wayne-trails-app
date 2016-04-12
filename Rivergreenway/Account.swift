@@ -13,11 +13,11 @@ import Foundation
  */
 class Account : DictionarySerializable {
     
-    let username: String
-    let birthYear: Int?
-    let height: Double?
-    let weight: Double?
-    let sex: Sex?
+    var username: String
+    var birthYear: Int?
+    var height: Double?
+    var weight: Double?
+    var sex: Sex?
     
     init(username: String, birthYear: Int? = nil, height: Double? = nil, weight: Double? = nil, sex:Sex? = nil) {
         self.username = username
