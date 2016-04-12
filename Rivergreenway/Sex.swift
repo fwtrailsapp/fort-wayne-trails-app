@@ -13,4 +13,13 @@ enum Sex: String{
     case Female = "female"
     
     static let all = [Male, Female]
+    
+    static func fromStringIgnoreCase(string: String) -> Sex? {
+        for type in all {
+            if string.caseInsensitiveCompare(type.rawValue) == .OrderedSame {
+                return type
+            }
+        }
+        return nil
+    }
 }
