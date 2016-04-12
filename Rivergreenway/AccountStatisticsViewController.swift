@@ -8,6 +8,16 @@
 
 import UIKit
 
+/**
+ Displays the account statistics for the user. The statistics are displayed in
+ two categories: overall statistics and per-exercise-type statistics. Each category
+ has its own section in a static table view controller (see the main storyboard for the
+ exact look). 
+ 
+ The per-exercise-type section has a segmented control for selecting an exercise type;
+ once selected, the per-exercise-type section is populated with the data for that
+ exercise type.
+ */
 class AccountStatisticsViewController: DraweredTableViewController {
 
     
@@ -50,18 +60,29 @@ class AccountStatisticsViewController: DraweredTableViewController {
     
     func onGetUserStatisticsSuccess(response: UserStatisticsResponse) {
         self.userStatisticsResponse = response
+        
+        // populates the 'Overall' stats section
         if let overallIndex = userStatisticsResponse!.stats.indexOf({$0.type == "Overall"}) {
             populateFieldsForSingleStatistic(userStatisticsResponse!.stats[overallIndex])
         }
+        
+        // populates the per-exercise-type section
         populateFieldsFromExerciseTypeControl()
         
         SVProgressHUD.dismiss()
     }
     
+    /**
+     Gets the selected value from the segmented control for the exercise type
+     and populates the per-exercise-section with the statistics for that
+     exercise type.
+     */
     func populateFieldsFromExerciseTypeControl() {
         let exerciseType = ExerciseType.all[exerciseTypeControl.selectedSegmentIndex]
-        if let statIndex = userStatisticsResponse!.stats.indexOf({$0.type == exerciseType.rawValue}) {
-            populateFieldsForSingleStatistic(userStatisticsResponse!.stats[statIndex])
+        if userStatisticsResponse != nil {
+            if let statIndex = userStatisticsResponse!.stats.indexOf({$0.type == exerciseType.rawValue}) {
+                populateFieldsForSingleStatistic(userStatisticsResponse!.stats[statIndex])
+            }
         }
     }
     
