@@ -61,25 +61,9 @@ class WebStore {
         )
     }
     
-    class func createNewActivity(act: TrailActivity,
-        errorCallback: (error: WebStoreError) -> Void,
-        successCallback: () -> Void)
-    {
-        guard act.getPath() != nil else {
-            errorCallback(error: WebStoreError.Unknown(msg: "This activity has no path associated with it."))
-            return
-        }
-        
-        let url = baseUrl + "activity"
-        let params = act.toDictionary()
-        genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true, errorCallback: errorCallback, successCallback: { response in
-            successCallback()
-        })
-    }
-    
     class func editAccount(account: Account, password: String? = nil,
-        errorCallback: (error: WebStoreError) -> Void,
-        successCallback: () -> Void)
+                           errorCallback: (error: WebStoreError) -> Void,
+                           successCallback: () -> Void)
     {
         let url = baseUrl + "account/edit"
         var params = account.toDictionary()
@@ -94,6 +78,22 @@ class WebStore {
                         successCallback()
             }
         )
+    }
+    
+    class func createNewActivity(act: TrailActivity,
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: () -> Void)
+    {
+        guard act.getPath() != nil else {
+            errorCallback(error: WebStoreError.Unknown(msg: "This activity has no path associated with it."))
+            return
+        }
+        
+        let url = baseUrl + "activity"
+        let params = act.toDictionary()
+        genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true, errorCallback: errorCallback, successCallback: { response in
+            successCallback()
+        })
     }
     
     class func getActivityHistory(errorCallback
