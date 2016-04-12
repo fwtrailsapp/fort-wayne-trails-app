@@ -61,6 +61,25 @@ class WebStore {
         )
     }
     
+    class func getAccount(errorCallback
+        errorCallback: (error: WebStoreError) -> Void,
+        successCallback: (Account) -> Void)
+    {
+        let url = baseUrl + "account"
+        
+        genericRequest(HTTPVerb.GET, url: url, params: nil, tryAutoLogin: true,
+            errorCallback: errorCallback,
+            successCallback: { response in
+                let oAcct = try? Account(JSONDecoder(response.data))
+                guard let acct = oAcct else {
+                    errorCallback(error: WebStoreError.InvalidCommunication)
+                    return
+                }
+                successCallback(acct)
+            }
+        )
+    }
+    
     class func editAccount(account: Account, password: String? = nil,
                            errorCallback: (error: WebStoreError) -> Void,
                            successCallback: () -> Void)
