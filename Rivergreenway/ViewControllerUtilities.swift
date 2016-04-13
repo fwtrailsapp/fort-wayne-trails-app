@@ -42,4 +42,14 @@ class ViewControllerUtilities {
         controller.presentViewController(alert, animated: false, completion: nil)
     }
     
+    class func genericErrorHandler(viewController: UIViewController, error: WebStoreError) {
+        SVProgressHUD.dismiss()
+        ViewControllerUtilities.displayServerConnectionErrorAlert(viewController, message: error.description)
+    }
+    
+    class func getAccount() -> Account? {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        return appDelegate.account
+    }
+    
 }

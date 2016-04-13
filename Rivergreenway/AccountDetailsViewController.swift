@@ -31,23 +31,27 @@ class AccountDetailsViewController: DraweredTableViewController {
         var newPasswordConfirmField: UITextField?
         
         let alert = UIAlertController(title: "Change Password", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel,
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,
             handler: { action in
-                self.passwordOkButtonPressed(oldPasswordField!.text, newPassword: newPasswordConfirmField!.text, newPasswordConfirmed: newPasswordConfirmField!.text)
+                self.passwordOkButtonPressed(action, oldPassword: oldPasswordField!.text, newPassword: newPasswordField!.text, newPasswordConfirmed: newPasswordConfirmField!.text)
             }
+            
         ))
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         alert.addTextFieldWithConfigurationHandler{ (textField : UITextField!) -> Void in
             textField.placeholder = "Old Password"
+            textField.secureTextEntry = true
             oldPasswordField = textField
         }
         alert.addTextFieldWithConfigurationHandler{ (textField : UITextField!) -> Void in
             textField.placeholder = "New Password"
+            textField.secureTextEntry = true
             textField.layoutMargins.top = 8;
             newPasswordField = textField
         }
         alert.addTextFieldWithConfigurationHandler{ (textField : UITextField!) -> Void in
             textField.placeholder = "New Password (Confirm)"
+            textField.secureTextEntry = true
             textField.layoutMargins.top = 8;
             newPasswordConfirmField = textField
         }
@@ -80,7 +84,7 @@ class AccountDetailsViewController: DraweredTableViewController {
         // We subtract 1 from the selected segment index to remove the 'N/A' option.
         newAccount!.sex = Sex.all[sexSegmentedControl.selectedSegmentIndex - 1]
         
-        WebStore.editAccount(account, password: newPassword,
+        WebStore.editAccount(newAccount!, password: newPassword,
             errorCallback: { error in
                 dispatch_async(dispatch_get_main_queue(),{
                     self.onEditAccountFailure(error)
@@ -103,36 +107,43 @@ class AccountDetailsViewController: DraweredTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        account = appDelegate.account!
+        account = ViewControllerUtilities.getAccount()!
+        
         
         birthYearField.text = (account.birthYear != nil) ? String(account.birthYear!) : ""
+        
         
         // Sex.all is {Male, Female} but segmented control is {N/A, Male, Female}.
         // We add 1 to the Sex.all index to account for the 'N/A' in the segmented control.
         sexSegmentedControl.selectedSegmentIndex = (account.sex != nil) ? Sex.all.indexOf(account.sex!)! + 1 : 0
+        
+        
         heightField.text = (account.height != nil) ? String(account.height!) : ""
         weightField.text = (account.weight != nil) ? String(account.weight!) : ""
         usernameField.text = account.username
+        
     }
     
     func onEditAccountSuccess() {
         SVProgressHUD.dismiss()
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.account = newAccount!
-        ViewControllerUtilities.transitionDrawered(self, destination: ViewIdentifier.RecordActivityNavController)
+        // ViewControllerUtilities.transitionDrawered(self, destination: ViewIdentifier.RecordActivityNavController)
 
     }
     
     func onEditAccountFailure(error: WebStoreError) {
-        
+        ViewControllerUtilities.genericErrorHandler(self, error: error)
     }
     
-    func passwordOkButtonPressed(oldPassword: String?, newPassword: String?, newPasswordConfirmed: String?) {
+    func passwordOkButtonPressed(action: UIAlertAction, oldPassword: String?, newPassword: String?, newPasswordConfirmed: String?) {
         let alert = UIAlertController(title: "Change Password", message: "Success!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
         if (oldPassword != nil && newPassword != nil && newPasswordConfirmed != nil) && (!oldPassword!.isEmpty && !newPassword!.isEmpty && !newPasswordConfirmed!.isEmpty) {
             
-            if newPassword != newPasswordConfirmed {
+            if oldPassword != WebStore.lastPassword {
+                alert.message = "Incorrect value for old password."
+            } else if newPassword != newPasswordConfirmed {
                 alert.message = "New password and confirmation password must match."
             } else {
                 self.newPassword = newPassword

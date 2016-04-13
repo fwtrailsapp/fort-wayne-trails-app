@@ -187,7 +187,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zas-MV-jVJ">
                                                     <rect key="frame" x="28" y="7" width="544" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -207,7 +207,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rUW-3u-p5b">
                                                     <rect key="frame" x="28" y="7" width="544" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1866,7 +1866,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="birthYearField" destination="a6b-fo-3XA" id="V3H-WA-ecc"/>
-                        <outlet property="heightField" destination="ewR-Y5-GJm" id="rcp-8d-Kxo"/>
+                        <outlet property="heightField" destination="6we-aT-KZ2" id="Dcd-Xd-VOq"/>
                         <outlet property="sexSegmentedControl" destination="GtE-Vd-yNy" id="lbX-O2-AsJ"/>
                         <outlet property="usernameField" destination="yy8-ec-WDL" id="y97-r1-EyG"/>
                         <outlet property="weightField" destination="eN3-ba-8Cl" id="xWY-J5-x68"/>

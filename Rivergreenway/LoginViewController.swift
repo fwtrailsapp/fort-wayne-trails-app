@@ -31,15 +31,57 @@ class LoginViewController: BaseViewController {
     
     @IBAction func loginButtonPressed(sender: UIButton) {
         
-        if usernameField.text != nil && passwordField.text != nil {
-            if !usernameField.text!.isEmpty && !passwordField.text!.isEmpty {
-                let username = usernameField.text!
-                let password = passwordField.text!
-                
-                // log in
-            }
+        if (usernameField.text != nil && passwordField.text != nil) && (!usernameField.text!.isEmpty && !passwordField.text!.isEmpty) {
+            let username = usernameField.text!
+            let password = passwordField.text!
+            
+            // 3rd party spinner library
+            SVProgressHUD.show()
+            
+            WebStore.login(username, password: password,
+                errorCallback: {error in
+                    dispatch_async(dispatch_get_main_queue(),{
+                        ViewControllerUtilities.genericErrorHandler(self, error: error)
+                    })},
+                successCallback: {
+                    dispatch_async(dispatch_get_main_queue(),{
+                        self.onLoginSuccess()
+                    })
+                }
+            )
+        } else {
+            displayMissingCredentialsAlert()
         }
+    }
+    
+    func onLoginSuccess() {
         
+        // if the login is successful, attempt to get the account information from
+        // the server
+        WebStore.getAccount( errorCallback: {error in
+            dispatch_async(dispatch_get_main_queue(),{
+                ViewControllerUtilities.genericErrorHandler(self, error: error)
+            })},
+            successCallback: { account in
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.onGetAccountSuccess(account)
+                })
+            }
+        )
+    }
+    
+    func onGetAccountSuccess(account: Account) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        // set the account the app will use throughout
+        appDelegate.account = account
+        SVProgressHUD.dismiss()
         ViewControllerUtilities.transitionDrawered(self, destination: ViewIdentifier.RecordActivityNavController)
+    }
+    
+    func displayMissingCredentialsAlert() {
+        let alert = UIAlertController(title: "Cannot Log In", message: "Please enter a username and password.", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: false, completion: nil)
     }
 }

@@ -47,7 +47,7 @@ class AccountStatisticsViewController: DraweredTableViewController {
         WebStore.getUserStatistics(
             errorCallback: {error in
                 dispatch_async(dispatch_get_main_queue(),{
-                    self.onGetUserStatisticsError()
+                    ViewControllerUtilities.genericErrorHandler(self, error: error)
                 })
             },
             successCallback: {response in
@@ -84,11 +84,6 @@ class AccountStatisticsViewController: DraweredTableViewController {
                 populateFieldsForSingleStatistic(userStatisticsResponse!.stats[statIndex])
             }
         }
-    }
-    
-    func onGetUserStatisticsError() {
-        ViewControllerUtilities.displayServerConnectionErrorAlert(self, message: WebStoreError.InvalidCommunication.description)
-        SVProgressHUD.dismiss()
     }
     
     func populateFieldsForSingleStatistic(statistic: SingleStatistic) {

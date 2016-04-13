@@ -24,7 +24,7 @@ class ActivityHistoryViewController: DraweredTableViewController {
         WebStore.getActivityHistory(
             errorCallback: {error in
                 dispatch_async(dispatch_get_main_queue(),{
-                    self.onActivityHistoryGetError()
+                    ViewControllerUtilities.genericErrorHandler(self, error: error)
                 })
             },
             successCallback: {trails in
@@ -36,11 +36,6 @@ class ActivityHistoryViewController: DraweredTableViewController {
     
     func onActivityHistoryGetSuccess(response: TrailActivityHistoryResponse) {        activities = response.activities
         self.tableView.reloadData()
-        SVProgressHUD.dismiss()
-    }
-    
-    func onActivityHistoryGetError() {
-        ViewControllerUtilities.displayServerConnectionErrorAlert(self, message: WebStoreError.InvalidCommunication.description)
         SVProgressHUD.dismiss()
     }
     
