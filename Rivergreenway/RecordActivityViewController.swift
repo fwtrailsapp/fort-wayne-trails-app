@@ -347,12 +347,12 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             // activity.
             SVProgressHUD.show()
             WebStore.createNewActivity(recorder!.getActivity(),
-                errorCallback: {error in
-                    dispatch_async(dispatch_get_main_queue(),{
-                        self.onActivityPostError(action)
+                errorCallback: { error in
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.onActivityPostError(action, error: error)
                     })
                 }, successCallback: {
-                    dispatch_async(dispatch_get_main_queue(),{
+                    dispatch_async(dispatch_get_main_queue(), {
                         self.onActivityPostSuccess(action)
                     })
             })

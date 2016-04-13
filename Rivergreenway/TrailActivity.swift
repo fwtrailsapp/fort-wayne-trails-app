@@ -63,7 +63,7 @@ class TrailActivity : DictionarySerializable {
             "time_started": Converter.dateToString(self.startTime),
             "duration": Converter.timeIntervalToString(self.duration),
             "mileage": self.distance,
-            "calories_burned": self.caloriesBurned,
+            "calories_burned": Int(self.caloriesBurned),
             "exercise_type": self.exerciseType.rawValue]
         
         if let realPath = self.path {
