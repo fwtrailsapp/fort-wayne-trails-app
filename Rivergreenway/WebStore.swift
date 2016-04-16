@@ -94,8 +94,8 @@ class WebStore {
         }
         
         genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true, errorCallback: errorCallback,
-                       successCallback: { response in
-                        successCallback()
+            successCallback: { response in
+                successCallback()
             }
         )
     }
