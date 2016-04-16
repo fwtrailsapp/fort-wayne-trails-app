@@ -70,12 +70,11 @@ class WebStore {
         genericRequest(HTTPVerb.GET, url: url, params: nil, tryAutoLogin: true,
             errorCallback: errorCallback,
             successCallback: { response in
-                let oAcct = try? Account(JSONDecoder(response.data))
+                let oAcct = try? Account(JSONDecoder(response.data), username: lastUsername!)
                 guard let acct = oAcct else {
                     errorCallback(error: WebStoreError.InvalidCommunication)
                     return
                 }
-                acct.username = lastUsername! //use the one we logged in with
                 successCallback(acct)
             }
         )

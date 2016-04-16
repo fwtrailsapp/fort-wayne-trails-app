@@ -28,28 +28,20 @@ class Account : DictionarySerializable {
         self.sex = sex
     }
     
-    init(_ decoder: JSONDecoder) throws {
-        let uUsername: String = "FIXME!" //try decoder["username"].getString()
-        let uBirthYear: Int = try decoder["birthyear"].getInt()
-        let uHeight: Double = try decoder["height"].getDouble()
-        let uWeight: Double = try decoder["weight"].getDouble()
-        let uSex: String = try decoder["sex"].getString()
+    //make an account from JSON. this needs username because for some reason the server's response doesn't provide it
+    init(_ decoder: JSONDecoder, username: String) throws {
+        self.username = username
+        self.birthYear = try decoder["birthyear"].getIntOptional()
+        self.height = try decoder["height"].getDoubleOptional()
+        self.weight = try decoder["weight"].getDoubleOptional()
         
-        let oUsername: String? = uUsername
-        let oBirthYear: Int? = uBirthYear
-        let oHeight: Double? = uHeight
-        let oWeight: Double? = uWeight
-        let oSex: Sex? = Sex.fromStringIgnoreCase(uSex)
-        
-        if oUsername == nil || oBirthYear == nil || oHeight == nil || oWeight == nil || oSex == nil {
-            throw JSONError.WrongType
+        //sex is transmitted as string, we need to convert to the Sex type
+        let optStrSex: String? = try decoder["sex"].getStringOptional()
+        if let strSex = optStrSex {
+            self.sex = Sex.fromStringIgnoreCase(strSex)
+        } else {
+            self.sex = nil
         }
-        
-        self.username = oUsername!
-        self.birthYear = oBirthYear!
-        self.height = oHeight!
-        self.weight = oWeight!
-        self.sex = oSex!
     }
     
     func BMR() -> Double? {
