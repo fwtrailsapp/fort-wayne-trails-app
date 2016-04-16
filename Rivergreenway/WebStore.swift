@@ -75,6 +75,7 @@ class WebStore {
                     errorCallback(error: WebStoreError.InvalidCommunication)
                     return
                 }
+                acct.username = lastUsername! //use the one we logged in with
                 successCallback(acct)
             }
         )
