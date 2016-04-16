@@ -372,10 +372,10 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
      Displays an alert view to alert the user that their connection to the 
      server failed.
      */
-    func onActivityPostError(action: UIAlertAction) {
+    func onActivityPostError(action: UIAlertAction, error: WebStoreError) {
         self.discardHandler(action)
         SVProgressHUD.dismiss()
-        ViewControllerUtilities.displayServerConnectionErrorAlert(self, message: WebStoreError.InvalidCommunication.description)
+        ViewControllerUtilities.displayServerConnectionErrorAlert(self, message: error.description)
     }
     
     /**
