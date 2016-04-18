@@ -91,7 +91,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
         
         // schedule a timer to update the displayed activity duration every second
-        let _ = NSTimer.scheduledTimerWithTimeInterval( 1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
+        let _ = NSTimer.scheduledTimerWithTimeInterval( 1.0, target: self, selector: #selector(RecordActivityViewController.updateTime), userInfo: nil, repeats: true)
         
         overlayKML()
     }
