@@ -56,16 +56,17 @@ class Converter {
         var coords = [String]()
         
         for path in paths {
-            for index in 0...path.count() {
-                let thisCoord = path.coordinateAtIndex(index)
-                let lat = thisCoord.latitude
-                let long = thisCoord.longitude
-                coords.append("\(lat) \(long)")
+            if path.count() > 0 {
+                for index in 0...path.count() - 1 {
+                    let thisCoord = path.coordinateAtIndex(index)
+                    let lat = thisCoord.latitude
+                    let long = thisCoord.longitude
+                    coords.append("\(lat) \(long)")
+                }
             }
         }
         
         let joined = coords.joinWithSeparator(",")
-        
         return joined
     }
     

@@ -152,7 +152,6 @@ class TrailActivityRecorder {
             throw RecorderError.IncorrectTransition
         }
         path.append(segment)
-        segment.removeAllCoordinates()
         state = .Paused
     }
     
