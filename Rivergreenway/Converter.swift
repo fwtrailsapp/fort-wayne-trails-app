@@ -57,7 +57,7 @@ class Converter {
         
         for path in paths {
             if path.count() > 0 {
-                for index in 0...path.count() - 1 {
+                for index in 0..<path.count() {
                     let thisCoord = path.coordinateAtIndex(index)
                     let lat = thisCoord.latitude
                     let long = thisCoord.longitude
