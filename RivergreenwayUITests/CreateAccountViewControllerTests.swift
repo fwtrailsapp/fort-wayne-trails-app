@@ -25,6 +25,7 @@ class CreateAccountViewControllerTests: XCTestCase {
         XCUIApplication().launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app!.buttons["Create Account"].tap()
     }
     
     override func tearDown() {
@@ -33,39 +34,32 @@ class CreateAccountViewControllerTests: XCTestCase {
     }
 
     func testUsernameFieldHittable() {
-        app!.buttons["Create Account"].tap()
         assert(app!.tables.textFields["username"].hittable)
     }
     
     func testPasswordFieldHittable() {
-        app!.buttons["Create Account"].tap()
         assert(app!.tables.textFields["password"].hittable)
     }
     
     func testPasswordConfirmFieldHittable() {
-        app!.buttons["Create Account"].tap()
         assert(app!.tables.textFields["confirm password"].hittable)        
     }
     
     func testHeightFieldHittable() {
-        app!.buttons["Create Account"].tap()
         assert(app!.tables.textFields["height (inches)"].hittable)
         
     }
     
     func testWeightFieldHittable() {
-        app!.buttons["Create Account"].tap()
         assert(app!.tables.textFields["weight (pounds)"].hittable)
     }
     
     func testBirthYearFieldHittable() {
-        app!.buttons["Create Account"].tap()
         assert(app!.tables.textFields["birth year"].hittable)
         
     }
     
     func testGenderFieldHittable() {
-        app!.buttons["Create Account"].tap()
         assert(app!.tables.buttons["NotInterested"].hittable)
     }
 }
