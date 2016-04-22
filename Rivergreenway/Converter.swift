@@ -61,7 +61,8 @@ class Converter {
                     let thisCoord = path.coordinateAtIndex(index)
                     let lat = thisCoord.latitude
                     let long = thisCoord.longitude
-                    coords.append("\(lat) \(long)")
+                    let format = "%.7f"
+                    coords.append("\(String(format: format, lat)) \(String(format: format, long))")
                 }
             }
         }

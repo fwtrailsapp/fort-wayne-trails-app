@@ -91,20 +91,9 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
         
         // schedule a timer to update the displayed activity duration every second
-        let _ = NSTimer.scheduledTimerWithTimeInterval( 1.0, target: self, selector: #selector(RecordActivityViewController.updateTime), userInfo: nil, repeats: true)
+        let _ = NSTimer.scheduledTimerWithTimeInterval( 1.0, target: self, selector: #selector(RecordActivityViewController.tick), userInfo: nil, repeats: true)
         
         overlayKML()
-    }
-    
-    /**
-     Adds a shadow to the 'Control Panel' (the portion of the screen that displays calories, duration, etc.).
-     */
-    func addControlPanelShadow() {
-        controlPanelView.layer.shadowColor = UIColor.blackColor().CGColor
-        controlPanelView.layer.shadowOpacity = 1
-        controlPanelView.layer.shadowOffset = CGSizeZero
-        controlPanelView.layer.shadowRadius = 10
-        controlPanelView.layer.shouldRasterize = true
     }
     
     /**
@@ -120,22 +109,50 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         let myLocation: CLLocation = change![NSKeyValueChangeNewKey] as! CLLocation
         
         mapView.camera = GMSCameraPosition.cameraWithTarget(myLocation.coordinate, zoom: mapView.camera.zoom)
-        
-        // update the recorder with the new location if it is currently recording
-        if recorder != nil && recorder!.isRecording() {
-            do {
-                try recorder!.update(myLocation)
+    }
+    
+    /**
+     This method is called once per second. It updates the current activity time and the other
+     displayed fields. To maintain the accuracy of the time, it is updated first.
+     */
+    func tick() {
+        updateTime()
+        updateRecording()
+    }
+    
+    /**
+     Updates the trail activity recording using the user's current location.
+     */
+    func updateRecording() {
+        let myLocation = locationManager.location
+        if myLocation != nil {
+            // update the recorder with the new location if it is currently recording
+            if recorder != nil && recorder!.isRecording() {
+                do {
+                    try recorder!.update(myLocation!)
+                }
+                catch {
+                    // wait till next update
+                }
+                
+                // the polyline path needs to be refreshed
+                if let polyline = polylines.last {
+                    polyline.path = recorder!.getSegment()
+                }
+                updateStatistics()
             }
-            catch {
-                // wait till next update
-            }
-            
-            // the polyline path needs to be refreshed
-            if let polyline = polylines.last {
-                polyline.path = recorder!.getSegment()
-            }
-            updateStatistics()
         }
+    }
+    
+    /**
+     Adds a shadow to the 'Control Panel' (the portion of the screen that displays calories, duration, etc.).
+     */
+    func addControlPanelShadow() {
+        controlPanelView.layer.shadowColor = UIColor.blackColor().CGColor
+        controlPanelView.layer.shadowOpacity = 1
+        controlPanelView.layer.shadowOffset = CGSizeZero
+        controlPanelView.layer.shadowRadius = 10
+        controlPanelView.layer.shouldRasterize = true
     }
     
     /** 
@@ -220,7 +237,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
      */
     func start(exerciseType: ExerciseType) {
         do {
-            recorder = TrailActivityRecorder(startTime: NSDate(), exerciseType: exerciseType)
+            recorder = TrailActivityRecorder(startTime: NSDate(), exerciseType: exerciseType, BMR: ViewControllerUtilities.getAccount()!.BMR())
             try recorder!.start()
             startNewPolyline()
         } catch {
@@ -346,10 +363,11 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             // SVProgressHUD is a 3rd party library for a simple spinner - indicates
             // activity.
             SVProgressHUD.show()
-            WebStore.createNewActivity(recorder!.getActivity(),
+            let activity = recorder!.getActivity()
+            WebStore.createNewActivity(activity,
                 errorCallback: { error in
                     dispatch_async(dispatch_get_main_queue(), {
-                        self.onActivityPostError(action, error: error)
+                        self.onActivityPostError(action, error: error, activity: activity)
                     })
                 }, successCallback: {
                     dispatch_async(dispatch_get_main_queue(), {
