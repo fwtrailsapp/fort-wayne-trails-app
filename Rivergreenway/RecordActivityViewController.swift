@@ -129,7 +129,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             // update the recorder with the new location if it is currently recording
             if recorder != nil && recorder!.isRecording() {
                 do {
-                    try recorder!.update(myLocation!, duration: displayTime)
+                    try recorder!.update(myLocation!)
                 }
                 catch {
                     // wait till next update
@@ -208,6 +208,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         if recorder != nil && (recorder!.isRecording()) {
             displayTime += 1;
             durationLabel.text = Converter.timeIntervalToString(displayTime)
+            recorder?.updateDuration(displayTime)
         }
     }
     

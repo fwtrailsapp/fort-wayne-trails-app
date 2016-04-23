@@ -92,8 +92,43 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
     }
     
     func onAccountCreateSuccess() {
-        SVProgressHUD.dismiss()
+        WebStore.login(usernameField.text!, password: passwordField.text!,
+           errorCallback: {error in
+                dispatch_async(dispatch_get_main_queue(),{
+                    ViewControllerUtilities.genericErrorHandler(self, error: error)
+                })
+            },
+            successCallback: {
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.onLoginSuccess()
+                })
+            }
+        )
+    }
+    
+    func onLoginSuccess() {
+        WebStore.getAccount(
+            errorCallback: {error in
+                dispatch_async(dispatch_get_main_queue(),{
+                    ViewControllerUtilities.genericErrorHandler(self, error: error)
+                })
+            },
+            successCallback: { account in
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.onGetAccountSuccess(account)
+                })
+            }
+        )
+    }
+    
+    func onGetAccountSuccess(account: Account) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        // set the account the app will use throughout
+        appDelegate.account = account
+        
         ViewControllerUtilities.transitionDrawered(self, destination: ViewIdentifier.RecordActivityNavController)
+        SVProgressHUD.dismiss()
     }
     
     func onAccountCreateError(error: WebStoreError) {

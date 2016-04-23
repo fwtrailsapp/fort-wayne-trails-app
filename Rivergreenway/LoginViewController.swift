@@ -75,8 +75,9 @@ class LoginViewController: BaseViewController {
         
         // set the account the app will use throughout
         appDelegate.account = account
-        SVProgressHUD.dismiss()
+        
         ViewControllerUtilities.transitionDrawered(self, destination: ViewIdentifier.RecordActivityNavController)
+        SVProgressHUD.dismiss()
     }
     
     func displayMissingCredentialsAlert() {
