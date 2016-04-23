@@ -108,7 +108,7 @@ class TrailActivityRecorder {
      Updates the recording with a new GPS location. The location is used to update the
      path, the distance, the duration, and the calories for this recording.
      */
-    func update(newLocation: CLLocation) throws {
+    func update(newLocation: CLLocation, duration: NSTimeInterval) throws {
         if !isRecording() {
             throw RecorderError.IncorrectState
         }
@@ -119,7 +119,7 @@ class TrailActivityRecorder {
         // update the aggregate distance and duration and calories
         let tempDistance = lastLocation != nil ? Converter.metersToFeet(currLocation!.distanceFromLocation(lastLocation!)) : 0
         distance += tempDistance / 5280
-        duration += lastLocation != nil ? currLocation!.timestamp.timeIntervalSinceDate(lastLocation!.timestamp) : 0
+        self.duration = duration
         calories =  (BMR / 24) * exerciseType.MET * (duration / 3600)
     }
     
@@ -127,16 +127,12 @@ class TrailActivityRecorder {
         return distance
     }
     
-    func getDuration() -> NSTimeInterval {
-        return duration
-    }
-    
     func getCalories() -> Double {
         return calories
     }
     
     func getSpeed() -> Double {
-        return currLocation != nil ? currLocation!.speed : 0
+        return currLocation != nil && currLocation!.speed >= 0 ? currLocation!.speed : 0
     }
     
     func start() throws {

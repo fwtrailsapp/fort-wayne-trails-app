@@ -61,7 +61,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     // Stores the recording time for the activity -
     // is meant to be updated every second
-    private var displayTime:NSTimeInterval = 0
+    private var displayTime: NSTimeInterval = 0
     
     // list of polylines drawn on the map
     private var polylines: [GMSPolyline] = [GMSPolyline]()
@@ -129,7 +129,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             // update the recorder with the new location if it is currently recording
             if recorder != nil && recorder!.isRecording() {
                 do {
-                    try recorder!.update(myLocation!)
+                    try recorder!.update(myLocation!, duration: displayTime)
                 }
                 catch {
                     // wait till next update
