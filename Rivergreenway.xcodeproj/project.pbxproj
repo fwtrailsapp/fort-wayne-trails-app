@@ -41,6 +41,7 @@
 		D26E6C161C4AC25500186A9A /* TrailActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C151C4AC25500186A9A /* TrailActivity.swift */; };
 		D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */; };
 		D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */; };
+		D275A4D71CBF00170008A5BB /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D275A4D61CBF00170008A5BB /* TestUtils.swift */; };
 		D28DEE851CB1B2090076D414 /* DictionarySerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28DEE841CB1B2090076D414 /* DictionarySerializable.swift */; };
 		D2AFFEB01C8FBEA600687A7B /* RecordActivityStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFFEAF1C8FBEA600687A7B /* RecordActivityStatCell.swift */; };
 		D2BD1DEE1C6ACB7C009E4F2F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */; };
@@ -129,6 +130,7 @@
 		D26E6C151C4AC25500186A9A /* TrailActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivity.swift; sourceTree = "<group>"; };
 		D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityState.swift; sourceTree = "<group>"; };
 		D26E6C191C4AC26E00186A9A /* TrailActivityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityTests.swift; sourceTree = "<group>"; };
+		D275A4D61CBF00170008A5BB /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		D28DEE841CB1B2090076D414 /* DictionarySerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySerializable.swift; sourceTree = "<group>"; };
 		D2AFFEAF1C8FBEA600687A7B /* RecordActivityStatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordActivityStatCell.swift; sourceTree = "<group>"; };
 		D2BD1DED1C6ACB7C009E4F2F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 				7FF11D7F1C558C64009A7D44 /* ToolsTests */,
 				D26E6BFE1C4AC22C00186A9A /* Info.plist */,
 				D26E6C1B1C4AC27200186A9A /* ModelTests */,
+				D275A4D61CBF00170008A5BB /* TestUtils.swift */,
 			);
 			path = RivergreenwayTests;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				7FAFA3E41C794EB30009A06D /* WebStoreTests.swift in Sources */,
 				D2612DF91C53EC20009232AC /* ConverterTests.swift in Sources */,
 				D26E6C1A1C4AC26E00186A9A /* TrailActivityTests.swift in Sources */,
+				D275A4D71CBF00170008A5BB /* TestUtils.swift in Sources */,
 				D2D2125E1C5C1FC7001AFF9C /* TrailActivityRecorderTests.swift in Sources */,
 				7FF11D811C558C83009A7D44 /* OverlayerTests.swift in Sources */,
 				D232FEF11C52F27C00BDFCE8 /* AccountTests.swift in Sources */,
