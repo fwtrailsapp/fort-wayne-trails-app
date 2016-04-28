@@ -69,4 +69,10 @@ class ConverterTests: XCTestCase {
         XCTAssertNotNil(interval)
         XCTAssert(interval! == 93784.123)
     }
+    
+    func testPathToString() {
+        let activity = TestUtils.createTrailActivity()
+        
+        print(activity.toDictionary())
+    }
 }

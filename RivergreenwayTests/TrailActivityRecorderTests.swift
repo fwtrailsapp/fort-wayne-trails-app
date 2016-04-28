@@ -30,7 +30,6 @@ class TrailActivityRecorderTests: XCTestCase {
         assert(recorderNil.getCalories() == 0)
         assert(recorderNil.getSpeed() == 0)
         assert(recorderNil.getDistance() == 0)
-        assert(recorderNil.getDuration() == 0)
     }
     
     func testStart() {
@@ -156,24 +155,6 @@ class TrailActivityRecorderTests: XCTestCase {
             }
         }
         XCTAssertEqualWithAccuracy(recorder!.getDistance(), 1264 / 5280, accuracy: 0.05)
-    }
-    
-    func testGetDuration() {
-        do {
-            try recorder!.start()
-        } catch {
-            assert(false)
-        }
-        
-        let locs = initializeLocations()
-        for loc in locs {
-            do {
-                try recorder!.update(loc)
-            } catch {
-                assert(false)
-            }
-        }
-        assert(recorder!.getDuration() == 600)
     }
     
     /*
