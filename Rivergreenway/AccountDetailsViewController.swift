@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountDetailsViewController: DraweredTableViewController {
+class AccountDetailsViewController: DraweredTableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     // MARK : - Properties
     
@@ -98,11 +98,13 @@ class AccountDetailsViewController: DraweredTableViewController {
     }
 
     @IBAction func didBeginEditingDateTextField(sender: UITextField) {
-        let datePickerView:UIDatePicker = UIDatePicker()
-        datePickerView.datePickerMode = UIDatePickerMode.Date
-        sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: #selector(AccountDetailsViewController.datePickerValueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        let yearPickerView:UIPickerView = UIPickerView()
+        yearPickerView.dataSource = self
+        yearPickerView.delegate = self
+        sender.inputView = yearPickerView
     }
+    
+    private var years: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,6 +123,14 @@ class AccountDetailsViewController: DraweredTableViewController {
         heightField.text = (account.height != nil) ? String(account.height!) : ""
         weightField.text = (account.weight != nil) ? String(account.weight!) : ""
         usernameField.text = account.username
+        
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Year], fromDate: date)
+        let currYear =  Int(components.year)
+        for year in 1900...currYear {
+            years.append(String(year))
+        }
         
     }
     
@@ -155,11 +165,21 @@ class AccountDetailsViewController: DraweredTableViewController {
         
         self.presentViewController(alert, animated: false, completion: nil)
     }
-
-    func datePickerValueChanged(sender:UIDatePicker) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
-        birthYearField.text = dateFormatter.stringFromDate(sender.date)
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return years.count;
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return years[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        birthYearField.text = years[row]
     }
 }
