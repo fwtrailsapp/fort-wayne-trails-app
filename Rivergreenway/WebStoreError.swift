@@ -11,6 +11,7 @@ import Foundation
 enum WebStoreError: CustomStringConvertible {
     case BadCredentials
     case InvalidCommunication
+    case AlreadyInUse
     case Unknown(msg: String)
     
     var description: String {
@@ -19,6 +20,8 @@ enum WebStoreError: CustomStringConvertible {
             return "Cannot login with that username or password."
         case .InvalidCommunication:
             return "Either the server did not understand us, or we did not understand the server."
+        case .AlreadyInUse:
+            return "This username already in use."
         case let .Unknown(msg):
             return msg
         }

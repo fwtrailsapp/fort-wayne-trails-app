@@ -237,6 +237,8 @@ class WebStore {
                 return WebStoreError.BadCredentials
             case 404:
                 return WebStoreError.InvalidCommunication
+            case 409:
+                return WebStoreError.AlreadyInUse
             default: break
             }
         }
