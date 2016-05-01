@@ -368,7 +368,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             WebStore.createNewActivity(activity,
                 errorCallback: { error in
                     dispatch_async(dispatch_get_main_queue(), {
-                        self.onActivityPostError(action, error: error, activity: activity)
+                        self.onActivityPostError(action, error: error)
                     })
                 }, successCallback: {
                     dispatch_async(dispatch_get_main_queue(), {
