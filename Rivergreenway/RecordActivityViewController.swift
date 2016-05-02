@@ -295,7 +295,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         do {
             try self.overlayer!.loadKMLFromURL("https://gist.githubusercontent.com/libjared/4b703481eccad557807c/raw/78ebe13d134c8fdb4c14c62c37cad5b2a02af133/dude.kml")
         } catch {
-            print("caught dis shit")
+            print("Couldn't load KML")
         }
     }
     
