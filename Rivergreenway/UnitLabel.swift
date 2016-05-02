@@ -16,7 +16,7 @@
 // THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 //
-//  RecordActivityStatUnit.swift
+//  UnitLabel.swift
 //  Rivergreenway
 //
 //  Created by Scott Weidenkopf on 2/26/16.

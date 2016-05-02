@@ -175,6 +175,9 @@ class WebStore {
         lastPassword = nil
     }
     
+    /**
+     The first layer of generic requests wraps it around an automatic re-login if the first request returns HTTP 401
+     */
     class private func genericRequest(verb: HTTPVerb, url: String, params: [String: NSObject]?,
                                       tryAutoLogin: Bool,
                                       errorCallback: (error: WebStoreError) -> Void,
@@ -205,6 +208,9 @@ class WebStore {
         )
     }
     
+    /**
+     Helper method for the awful way swift handles enums
+     */
     class private func isBadCredentials(error: WebStoreError) -> Bool {
         switch error {
         case .BadCredentials:
@@ -214,6 +220,9 @@ class WebStore {
         }
     }
     
+    /**
+     The lowest layer of generic request is the one which interfaces directly with SwiftHTTP
+     */
     class private func genericRequestInternal(verb: HTTPVerb, url: String, params: [String: NSObject]?,
         errorCallback: (error: WebStoreError) -> Void,
         successCallback: (Response) -> Void)
@@ -221,6 +230,7 @@ class WebStore {
         let serializer = JSONParameterSerializer()
         let opt: HTTP
         
+        //add login token if available
         var headers = [String: String]()
         if let realAuthToken = authToken {
             headers["Trails-Api-Key"] = realAuthToken
