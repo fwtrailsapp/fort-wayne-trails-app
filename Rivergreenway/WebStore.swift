@@ -28,7 +28,7 @@ import SwiftHTTP
 import JSONJoy
 
 class WebStore {
-    private static let baseUrl = "http://68.39.46.187:50000/GreenwayCap/DataRelay.svc/trails/api/1/"
+    private static let baseUrl = "http://173.30.163.31:50000/GreenwayCap/DataRelay.svc/trails/api/1/"
     private static var authToken : String? = nil
     static var lastUsername : String? = nil
     static var lastPassword : String? = nil
