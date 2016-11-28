@@ -5,10 +5,10 @@
 // including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 // and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
 // subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all copies
 // or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 // LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 // IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
@@ -37,7 +37,7 @@ import UIKit
  or 'Resumed', they can view live updates for the duration of their activity, the distance
  they have traveled, their current speed, and calories burned. Regardless of the recording
  state, they will also receive live location updates provided by GPS data and displayed
- on a Google Maps GMSMapView object. 
+ on a Google Maps GMSMapView object.
  
  In addition to live location, speed, distance, duration, and calories burned updates, the
  view will also overlay a map of the Fort Wayne Regional Trail Network trails as well as an
@@ -46,7 +46,7 @@ import UIKit
  their recording is paused, there will be gaps in their path overlay on the map.
  
  When a user decides to finish recording their activity, they are presented with two options
- for the fate of their activity: Discard or Save. If they discard the activity, all of the 
+ for the fate of their activity: Discard or Save. If they discard the activity, all of the
  activity data will be lost. If the user opts to save the activity, its data will be sent
  to the central server using the REST API. In any event, whether the activity is saved or
  discarded, the view is updated: the user's path on the GMSMapView Object is erased, as is
@@ -54,7 +54,7 @@ import UIKit
  
  */
 class RecordActivityViewController: DraweredViewController, CLLocationManagerDelegate,UIPopoverPresentationControllerDelegate, GMSMapViewDelegate, StartPauseDelegate, ResumeFinishDelegate {
-
+    
     // MARK : - Properties
     
     @IBOutlet weak var startPauseButtonContainerView: UIView!
@@ -172,7 +172,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         controlPanelView.layer.shouldRasterize = true
     }
     
-    /** 
+    /**
      This method is called whenever this view controller (or its children) is segueing to
      another view controller.
      
@@ -190,7 +190,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         }
     }
     
-    /** 
+    /**
      This method is needed to correctly display Popovers. For the RecordActivityViewController,
      the only popover used is for selecting exercise types at when a recording is started.
      */
@@ -217,7 +217,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         }
     }
     
-    /** 
+    /**
      Increments the duration label by one if the recorder is currently
      recording (i.e. it is in the 'Resumed' or 'Started' state).
      */
@@ -229,7 +229,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         }
     }
     
-    /** 
+    /**
      Swaps the StartPauseViewController with the ResumeFinishController by using the alpha property
      - it determines which view is on top and actually visible. The higher the alpha, the higher the
      view is.
@@ -296,7 +296,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     /**
      This method is from the ResumeFinishDelegate protocol. When the finish button is pressed in
-     the ResumeFinishViewController, this method is called. It displays the finish alert view - 
+     the ResumeFinishViewController, this method is called. It displays the finish alert view -
      the user is given the option to cancel, to discard the activity, or to save the activity.
      */
     func finish() {
@@ -383,10 +383,10 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             SVProgressHUD.show()
             let activity = recorder!.getActivity()
             WebStore.createNewActivity(activity,
-                errorCallback: { error in
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.onActivityPostError(action, error: error)
-                    })
+                                       errorCallback: { error in
+                                        dispatch_async(dispatch_get_main_queue(), {
+                                            self.onActivityPostError(action, error: error)
+                                        })
                 }, successCallback: {
                     dispatch_async(dispatch_get_main_queue(), {
                         self.onActivityPostSuccess(action)
@@ -405,7 +405,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
     
     /**
      Callback for an unsuccessful transmission of the activity to the server.
-     Displays an alert view to alert the user that their connection to the 
+     Displays an alert view to alert the user that their connection to the
      server failed.
      */
     func onActivityPostError(action: UIAlertAction, error: WebStoreError) {

@@ -33,7 +33,7 @@ class WebStoreTests: XCTestCase {
         WebStore.clearState()
     }
     
-    func login(callback: () -> Void) {
+    func login(_ callback: @escaping () -> Void) {
         WebStore.login("iostest", password: "iostest",
             errorCallback: { error in
                 XCTFail(error.description)
@@ -45,21 +45,21 @@ class WebStoreTests: XCTestCase {
     }
     
     func testLogin() {
-        let exp = expectationWithDescription("testLogin")
+        let exp = expectation(description: "testLogin")
         login({
             XCTAssert(WebStore.hasAuthToken)
             exp.fulfill()
         })
         
-        waitForExpectationsWithTimeout(5, handler: { error in
+        waitForExpectations(timeout: 5, handler: { error in
             XCTAssertNil(error, "Error")
         })
     }
     
     func testAccountCreate() {
-        let exp = expectationWithDescription("testAccountCreate")
-        let uuid = NSUUID().UUIDString
-        let uuidSub = uuid.substringToIndex(uuid.startIndex.advancedBy(5))
+        let exp = expectation(description: "testAccountCreate")
+        let uuid = UUID().uuidString
+        let uuidSub = uuid.substring(to: uuid.characters.index(uuid.startIndex, offsetBy: 5))
         let acct = Account(username: "xcode\(uuidSub)", birthYear: 1994, height: 256, weight: 256, sex: Sex.Male)
         WebStore.createAccount(acct, password: "forreal",
             errorCallback: { error in
@@ -69,13 +69,13 @@ class WebStoreTests: XCTestCase {
                 exp.fulfill()
             })
         
-        waitForExpectationsWithTimeout(5, handler: { error in
+        waitForExpectations(timeout: 5, handler: { error in
             XCTAssertNil(error, "Error")
         })
     }
     
     func testAccountGet() {
-        let exp = expectationWithDescription("testAccountGet")
+        let exp = expectation(description: "testAccountGet")
         
         login({
             WebStore.getAccount(
@@ -88,14 +88,14 @@ class WebStoreTests: XCTestCase {
             )
         })
         
-        waitForExpectationsWithTimeout(5, handler: { error in
+        waitForExpectations(timeout: 5, handler: { error in
             XCTAssertNil(error, "Error")
         })
 
     }
     
     func testCreateNewActivity() {
-        let exp = expectationWithDescription("testCreateNewActivity")
+        let exp = expectation(description: "testCreateNewActivity")
         
         let activity = TestUtils.createTrailActivity()
         
@@ -110,13 +110,13 @@ class WebStoreTests: XCTestCase {
             )
         })
         
-        waitForExpectationsWithTimeout(5, handler: { error in
+        waitForExpectations(timeout: 5, handler: { error in
             XCTAssertNil(error, "Error")
         })
     }
     
     func testGetActivityHistory() {
-        let exp = expectationWithDescription("testGetActivityHistory")
+        let exp = expectation(description: "testGetActivityHistory")
         
         login({
             WebStore.getActivityHistory(
@@ -129,13 +129,13 @@ class WebStoreTests: XCTestCase {
             )
         })
         
-        waitForExpectationsWithTimeout(5, handler: { error in
+        waitForExpectations(timeout: 5, handler: { error in
             XCTAssertNil(error, "Error")
         })
     }
     
     func testGetUserStatistics() {
-        let exp = expectationWithDescription("testGetUserStatistics")
+        let exp = expectation(description: "testGetUserStatistics")
         
         login({
             WebStore.getUserStatistics(
@@ -152,7 +152,7 @@ class WebStoreTests: XCTestCase {
             )
         })
         
-        waitForExpectationsWithTimeout(5, handler: { error in
+        waitForExpectations(timeout: 5, handler: { error in
             XCTAssertNil(error, "Error")
         })
     }

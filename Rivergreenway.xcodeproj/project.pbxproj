@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29B3C523D37E3307F3977A18 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
-		49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
+		056063541D612D0B0032CD4D /* Pods_Rivergreenway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056063531D612D0B0032CD4D /* Pods_Rivergreenway.framework */; };
+		05CBE9981DAEAF8D00E588FD /* ReportProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBE9971DAEAF8D00E588FD /* ReportProblemViewController.swift */; };
+		4F93F1C79224506D777E9824 /* Pods_Rivergreenway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168B9736A1454E70AB76EAF1 /* Pods_Rivergreenway.framework */; };
 		7F2CF7101C9F7D8B003F48BA /* TrailActivityHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2CF70F1C9F7D8B003F48BA /* TrailActivityHistoryResponse.swift */; };
 		7F77C9441C99305200FB0BB8 /* AccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77C9431C99305100FB0BB8 /* AccountResponse.swift */; };
 		7F77C9461C9A284F00FB0BB8 /* WebStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F77C9451C9A284F00FB0BB8 /* WebStoreError.swift */; };
@@ -19,7 +20,8 @@
 		7FF11D7E1C558C3D009A7D44 /* Overlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF11D7D1C558C3D009A7D44 /* Overlayer.swift */; };
 		7FF11D811C558C83009A7D44 /* OverlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF11D801C558C83009A7D44 /* OverlayerTests.swift */; };
 		7FF11D861C5598B7009A7D44 /* Trails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 7FF11D851C5598B7009A7D44 /* Trails.kml */; };
-		BE3C88ED84B1EB7C5EC0124A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9013802832BC7175DACC38D2 /* Pods.framework */; };
+		83BB66E0DBAAAAD09E5205C7 /* Pods_RivergreenwayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80975115B4EA1401B055CE4D /* Pods_RivergreenwayUITests.framework */; };
+		B164C607ED47FEE2190DF4F9 /* Pods_RivergreenwayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5560FF2EF18D62B2EC8BE4 /* Pods_RivergreenwayTests.framework */; };
 		D2271F561C81392A00FE4E4B /* UnitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2271F551C81392A00FE4E4B /* UnitLabel.swift */; };
 		D232FEE01C505CE400BDFCE8 /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */; };
 		D232FEE51C51C28100BDFCE8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232FEE41C51C28100BDFCE8 /* Account.swift */; };
@@ -89,8 +91,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		050D11F41D5A9BD900ADDBFB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		050D11F61D5A9BE300ADDBFB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		050D11F81D5A9BEE00ADDBFB /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		050D11FA1D5A9BF700ADDBFB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		050D11FC1D5A9C0800ADDBFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		050D11FE1D5A9C0F00ADDBFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		050D12001D5A9C1600ADDBFB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		050D12021D5A9C1F00ADDBFB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		050D12041D5A9C2A00ADDBFB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		050D12061D5A9C7900ADDBFB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		050D12081D5A9C8A00ADDBFB /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		050D120A1D5A9C9200ADDBFB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		050D120C1D5A9C9E00ADDBFB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		050D120E1D5A9CAA00ADDBFB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		050D12101D5A9CB300ADDBFB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		050D12121D5A9CBD00ADDBFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		056063531D612D0B0032CD4D /* Pods_Rivergreenway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Rivergreenway.framework; path = "../../Library/Developer/Xcode/DerivedData/Rivergreenway-eywymgcrioqjdiaiwffukfsonkls/Build/Products/Debug-iphonesimulator/Pods_Rivergreenway.framework"; sourceTree = "<group>"; };
+		05CBE9971DAEAF8D00E588FD /* ReportProblemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
+		168B9736A1454E70AB76EAF1 /* Pods_Rivergreenway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rivergreenway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19E3EF975DAD60D675EB0B00 /* Pods-RivergreenwayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RivergreenwayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RivergreenwayUITests/Pods-RivergreenwayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D4174D778A7BB0FF1BAA866 /* Pods-Rivergreenway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rivergreenway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rivergreenway/Pods-Rivergreenway.debug.xcconfig"; sourceTree = "<group>"; };
 		7F2CF70F1C9F7D8B003F48BA /* TrailActivityHistoryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailActivityHistoryResponse.swift; sourceTree = "<group>"; };
 		7F77C9431C99305100FB0BB8 /* AccountResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountResponse.swift; sourceTree = "<group>"; };
 		7F77C9451C9A284F00FB0BB8 /* WebStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebStoreError.swift; sourceTree = "<group>"; };
@@ -101,7 +122,10 @@
 		7FF11D7D1C558C3D009A7D44 /* Overlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overlayer.swift; sourceTree = "<group>"; };
 		7FF11D801C558C83009A7D44 /* OverlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayerTests.swift; sourceTree = "<group>"; };
 		7FF11D851C5598B7009A7D44 /* Trails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Trails.kml; path = DataFiles/Trails.kml; sourceTree = "<group>"; };
+		80975115B4EA1401B055CE4D /* Pods_RivergreenwayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RivergreenwayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9013802832BC7175DACC38D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DBD1DFDDCC5B3EFA6445723 /* Pods-RivergreenwayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RivergreenwayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RivergreenwayTests/Pods-RivergreenwayTests.release.xcconfig"; sourceTree = "<group>"; };
+		A772891551B42D94311F8263 /* Pods-RivergreenwayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RivergreenwayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RivergreenwayUITests/Pods-RivergreenwayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D2271F551C81392A00FE4E4B /* UnitLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitLabel.swift; sourceTree = "<group>"; };
 		D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
 		D232FEE11C507E5700BDFCE8 /* Rivergreenway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rivergreenway-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -158,6 +182,9 @@
 		D2F4B9351C66C43C006FACED /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		D2F4B9371C66C45A006FACED /* CreateAccountViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateAccountViewControllerTests.swift; path = ../RivergreenwayUITests/CreateAccountViewControllerTests.swift; sourceTree = "<group>"; };
 		D2F846EB1CB0597000141BE8 /* ViewControllerUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtilities.swift; sourceTree = "<group>"; };
+		DD5560FF2EF18D62B2EC8BE4 /* Pods_RivergreenwayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RivergreenwayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2E02F4FAD429F0FD88DB05 /* Pods-Rivergreenway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rivergreenway.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rivergreenway/Pods-Rivergreenway.release.xcconfig"; sourceTree = "<group>"; };
+		EEE3122C26A872566D88325E /* Pods-RivergreenwayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RivergreenwayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RivergreenwayTests/Pods-RivergreenwayTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +192,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49533F7CBC22ED39D3B1D63A /* Pods.framework in Frameworks */,
+				056063541D612D0B0032CD4D /* Pods_Rivergreenway.framework in Frameworks */,
+				4F93F1C79224506D777E9824 /* Pods_Rivergreenway.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29B3C523D37E3307F3977A18 /* Pods.framework in Frameworks */,
+				B164C607ED47FEE2190DF4F9 /* Pods_RivergreenwayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3C88ED84B1EB7C5EC0124A /* Pods.framework in Frameworks */,
+				83BB66E0DBAAAAD09E5205C7 /* Pods_RivergreenwayUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +219,27 @@
 		541F92E6E8AB20D2D1F1A551 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				056063531D612D0B0032CD4D /* Pods_Rivergreenway.framework */,
+				050D12121D5A9CBD00ADDBFB /* SystemConfiguration.framework */,
+				050D12101D5A9CB300ADDBFB /* Security.framework */,
+				050D120E1D5A9CAA00ADDBFB /* QuartzCore.framework */,
+				050D120C1D5A9C9E00ADDBFB /* OpenGLES.framework */,
+				050D120A1D5A9C9200ADDBFB /* libz.tbd */,
+				050D12081D5A9C8A00ADDBFB /* libicucore.tbd */,
+				050D12061D5A9C7900ADDBFB /* libc++.tbd */,
+				050D12041D5A9C2A00ADDBFB /* ImageIO.framework */,
+				050D12021D5A9C1F00ADDBFB /* GLKit.framework */,
+				050D12001D5A9C1600ADDBFB /* CoreText.framework */,
+				050D11FE1D5A9C0F00ADDBFB /* CoreLocation.framework */,
+				050D11FC1D5A9C0800ADDBFB /* CoreGraphics.framework */,
+				050D11FA1D5A9BF700ADDBFB /* CoreData.framework */,
+				050D11F81D5A9BEE00ADDBFB /* CoreBluetooth.framework */,
+				050D11F61D5A9BE300ADDBFB /* AVFoundation.framework */,
+				050D11F41D5A9BD900ADDBFB /* Accelerate.framework */,
 				9013802832BC7175DACC38D2 /* Pods.framework */,
+				168B9736A1454E70AB76EAF1 /* Pods_Rivergreenway.framework */,
+				DD5560FF2EF18D62B2EC8BE4 /* Pods_RivergreenwayTests.framework */,
+				80975115B4EA1401B055CE4D /* Pods_RivergreenwayUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,11 +289,15 @@
 			name = DataFiles;
 			sourceTree = "<group>";
 		};
-		B00C470C0FABE4A846973151 /* Pods */ = {
+		A1D8AEE04ACE618084F629EB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */,
-				01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */,
+				4D4174D778A7BB0FF1BAA866 /* Pods-Rivergreenway.debug.xcconfig */,
+				ED2E02F4FAD429F0FD88DB05 /* Pods-Rivergreenway.release.xcconfig */,
+				EEE3122C26A872566D88325E /* Pods-RivergreenwayTests.debug.xcconfig */,
+				9DBD1DFDDCC5B3EFA6445723 /* Pods-RivergreenwayTests.release.xcconfig */,
+				19E3EF975DAD60D675EB0B00 /* Pods-RivergreenwayUITests.debug.xcconfig */,
+				A772891551B42D94311F8263 /* Pods-RivergreenwayUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -266,6 +318,7 @@
 				D2C52FA81C70159D00DA78A7 /* AccountStatisticsViewController.swift */,
 				D2C52FAA1C70FCDC00DA78A7 /* AccountDetailsViewController.swift */,
 				D2C52FAC1C7100B500DA78A7 /* AboutViewController.swift */,
+				05CBE9971DAEAF8D00E588FD /* ReportProblemViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -296,8 +349,8 @@
 				D26E6BFB1C4AC22C00186A9A /* RivergreenwayTests */,
 				D26E6C061C4AC22C00186A9A /* RivergreenwayUITests */,
 				D26E6BE01C4AC22C00186A9A /* Products */,
-				B00C470C0FABE4A846973151 /* Pods */,
 				541F92E6E8AB20D2D1F1A551 /* Frameworks */,
+				A1D8AEE04ACE618084F629EB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -430,12 +483,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D26E6C0C1C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "Rivergreenway" */;
 			buildPhases = (
-				3AC556B8866E57A2D6B06016 /* Check Pods Manifest.lock */,
+				729F7918204F090FE300A9C0 /* [CP] Check Pods Manifest.lock */,
 				D26E6BDB1C4AC22C00186A9A /* Sources */,
 				D26E6BDC1C4AC22C00186A9A /* Frameworks */,
 				D26E6BDD1C4AC22C00186A9A /* Resources */,
-				E82D1255BA782D2FCE92B225 /* Embed Pods Frameworks */,
-				01EF67450B2173178C069F4D /* Copy Pods Resources */,
+				AF76C2313F322B13CBE539AD /* [CP] Embed Pods Frameworks */,
+				14C679F20CCF4A77F571BD90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -450,12 +503,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D26E6C0F1C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "RivergreenwayTests" */;
 			buildPhases = (
-				AB007E130388B0AE4FBC4EB6 /* Check Pods Manifest.lock */,
+				0C752DE716270E72453801EA /* [CP] Check Pods Manifest.lock */,
 				D26E6BF41C4AC22C00186A9A /* Sources */,
 				D26E6BF51C4AC22C00186A9A /* Frameworks */,
 				D26E6BF61C4AC22C00186A9A /* Resources */,
-				6DF922BD6658051154C098B2 /* Embed Pods Frameworks */,
-				D5C208FD65BBC23E584FFCC0 /* Copy Pods Resources */,
+				158C322421D526CA9BA68357 /* [CP] Embed Pods Frameworks */,
+				2944FE6734CED2344FC4430A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -471,11 +524,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D26E6C121C4AC22C00186A9A /* Build configuration list for PBXNativeTarget "RivergreenwayUITests" */;
 			buildPhases = (
-				544DD8144539576B69084DA1 /* Check Pods Manifest.lock */,
+				84A663E1CBE07A9975A47127 /* [CP] Check Pods Manifest.lock */,
 				D26E6BFF1C4AC22C00186A9A /* Sources */,
 				D26E6C001C4AC22C00186A9A /* Frameworks */,
 				D26E6C011C4AC22C00186A9A /* Resources */,
-				DFC05F982725941BC2B14B18 /* Copy Pods Resources */,
+				5EFE6311BD3DEE8429DBFE4F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -494,19 +547,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "City of Fort Wayne Greenways and Trails Department";
 				TargetAttributes = {
 					D26E6BDE1C4AC22C00186A9A = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 6V2NLDVNQH;
+						DevelopmentTeam = MEFEU95VQ8;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					D26E6BF71C4AC22C00186A9A = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D26E6BDE1C4AC22C00186A9A;
 					};
 					D26E6C021C4AC22C00186A9A = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D26E6BDE1C4AC22C00186A9A;
 					};
 				};
@@ -560,29 +621,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01EF67450B2173178C069F4D /* Copy Pods Resources */ = {
+		0C752DE716270E72453801EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3AC556B8866E57A2D6B06016 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,14 +636,74 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		544DD8144539576B69084DA1 /* Check Pods Manifest.lock */ = {
+		14C679F20CCF4A77F571BD90 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rivergreenway/Pods-Rivergreenway-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		158C322421D526CA9BA68357 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RivergreenwayTests/Pods-RivergreenwayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2944FE6734CED2344FC4430A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RivergreenwayTests/Pods-RivergreenwayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EFE6311BD3DEE8429DBFE4F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RivergreenwayUITests/Pods-RivergreenwayUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		729F7918204F090FE300A9C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,29 +711,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6DF922BD6658051154C098B2 /* Embed Pods Frameworks */ = {
+		84A663E1CBE07A9975A47127 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB007E130388B0AE4FBC4EB6 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,49 +726,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D5C208FD65BBC23E584FFCC0 /* Copy Pods Resources */ = {
+		AF76C2313F322B13CBE539AD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DFC05F982725941BC2B14B18 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E82D1255BA782D2FCE92B225 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rivergreenway/Pods-Rivergreenway-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -707,6 +768,7 @@
 				7F77C9441C99305200FB0BB8 /* AccountResponse.swift in Sources */,
 				D2F4B9361C66C43C006FACED /* CreateAccountViewController.swift in Sources */,
 				7F79DDB61CC1D2B90089C6A0 /* Extensions.swift in Sources */,
+				05CBE9981DAEAF8D00E588FD /* ReportProblemViewController.swift in Sources */,
 				D2BD1DF41C6ACFF9009E4F2F /* StoryboardIdentifier.swift in Sources */,
 				D2C52FB21C7540D000DA78A7 /* StartPauseViewController.swift in Sources */,
 				D2612DF61C53EB94009232AC /* Converter.swift in Sources */,
@@ -807,8 +869,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -830,7 +894,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -852,8 +916,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -869,9 +935,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -879,15 +946,16 @@
 		};
 		D26E6C0D1C4AC22C00186A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 4D4174D778A7BB0FF1BAA866 /* Pods-Rivergreenway.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"${PODS_ROOT}/GoogleMaps/Frameworks\"",
+					"$(PROJECT_DIR)/Rivergreenway",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -898,26 +966,28 @@
 				INFOPLIST_FILE = Rivergreenway/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.Rivergreenway;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rawly50.Rivergreenway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Rivergreenway/Rivergreenway-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D26E6C0E1C4AC22C00186A9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */;
+			baseConfigurationReference = ED2E02F4FAD429F0FD88DB05 /* Pods-Rivergreenway.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"${PODS_ROOT}/GoogleMaps/Frameworks\"",
+					"$(PROJECT_DIR)/Rivergreenway",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -928,18 +998,20 @@
 				INFOPLIST_FILE = Rivergreenway/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.Rivergreenway;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rawly50.Rivergreenway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Rivergreenway/Rivergreenway-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		D26E6C101C4AC22C00186A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */;
+			baseConfigurationReference = EEE3122C26A872566D88325E /* Pods-RivergreenwayTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -951,14 +1023,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rivergreenway.app/Rivergreenway";
 			};
 			name = Debug;
 		};
 		D26E6C111C4AC22C00186A9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 9DBD1DFDDCC5B3EFA6445723 /* Pods-RivergreenwayTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -970,18 +1044,21 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rivergreenway.app/Rivergreenway";
 			};
 			name = Release;
 		};
 		D26E6C131C4AC22C00186A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1018B0549E704BFB51C2729A /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 19E3EF975DAD60D675EB0B00 /* Pods-RivergreenwayUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = RivergreenwayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Rivergreenway;
 				USES_XCTRUNNER = YES;
 			};
@@ -989,12 +1066,14 @@
 		};
 		D26E6C141C4AC22C00186A9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01AD7E2D99D10D9DB2FDF1A8 /* Pods.release.xcconfig */;
+			baseConfigurationReference = A772891551B42D94311F8263 /* Pods-RivergreenwayUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = RivergreenwayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fortwayne.RivergreenwayUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Rivergreenway;
 				USES_XCTRUNNER = YES;
 			};

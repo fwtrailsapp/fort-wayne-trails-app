@@ -40,6 +40,7 @@ enum ViewIdentifier: String {
     case AccountDetailsView = "AccountDetailsView"
     case AccountStatisticsView = "AccountStatisticsView"
     case AboutView = "AboutView"
+    case ReportProblemView = "ReportProblemView"
     
     // MARK: - Nav Controllers
     case RecordActivityNavController = "RecordActivityNavController"
@@ -50,6 +51,7 @@ enum ViewIdentifier: String {
     case AccountDetailsNavController = "AccountDetailsNavController"
     case AccountStatisticsNavController = "AccountStatisticsNavController"
     case AboutNavController = "AboutNavController"
+    case ReportProblemNavController = "ReportProblemNavController"
     
     // MARK: - Segues
     case StartPauseSegue = "StartPauseSegue"

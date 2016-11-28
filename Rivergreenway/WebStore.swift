@@ -5,10 +5,10 @@
 // including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 // and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
 // subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all copies
 // or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 // LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 // IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
@@ -28,11 +28,11 @@ import SwiftHTTP
 import JSONJoy
 
 class WebStore {
-    private static let baseUrl = "http://173.30.163.31:50000/GreenwayCap/DataRelay.svc/trails/api/1/"
+    private static let baseUrl = "http://23.97.29.252:50000/Capstone/DataRelay.svc/trails/api/1/"
     private static var authToken : String? = nil
     static var lastUsername : String? = nil
     static var lastPassword : String? = nil
-
+    
     class func login(username: String, password: String,
                      errorCallback: (error: WebStoreError) -> Void,
                      successCallback: () -> Void)
@@ -45,16 +45,16 @@ class WebStore {
         let params = ["username": username, "password": password]
         
         genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: false,
-            errorCallback: errorCallback,
-            successCallback: { response in
-                let json = JSONDecoder(response.data)
-                let token = try? json["token"].getString()
-                guard let realToken = token else {
-                    errorCallback(error: WebStoreError.InvalidCommunication)
-                    return
-                }
-                authToken = realToken
-                successCallback()
+                       errorCallback: errorCallback,
+                       successCallback: { response in
+                        let json = JSONDecoder(response.data)
+                        let token = try? json["token"].getString()
+                        guard let realToken = token else {
+                            errorCallback(error: WebStoreError.InvalidCommunication)
+                            return
+                        }
+                        authToken = realToken
+                        successCallback()
             }
         )
     }
@@ -62,8 +62,8 @@ class WebStore {
     class var hasAuthToken: Bool { get { return authToken != nil } }
     
     class func createAccount(acct: Account, password: String,
-        errorCallback: (error: WebStoreError) -> Void,
-        successCallback: () -> Void)
+                             errorCallback: (error: WebStoreError) -> Void,
+                             successCallback: () -> Void)
     {
         let url = baseUrl + "account/create"
         
@@ -71,9 +71,9 @@ class WebStore {
         params["password"] = password
         
         genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true,
-            errorCallback: errorCallback,
-            successCallback: { response in
-                successCallback()
+                       errorCallback: errorCallback,
+                       successCallback: { response in
+                        successCallback()
             }
         )
     }
@@ -85,14 +85,14 @@ class WebStore {
         let url = baseUrl + "account"
         
         genericRequest(HTTPVerb.GET, url: url, params: nil, tryAutoLogin: true,
-            errorCallback: errorCallback,
-            successCallback: { response in
-                let oAcct = try? Account(JSONDecoder(response.data), username: lastUsername!)
-                guard let acct = oAcct else {
-                    errorCallback(error: WebStoreError.InvalidCommunication)
-                    return
-                }
-                successCallback(acct)
+                       errorCallback: errorCallback,
+                       successCallback: { response in
+                        let oAcct = try? Account(JSONDecoder(response.data), username: lastUsername!)
+                        guard let acct = oAcct else {
+                            errorCallback(error: WebStoreError.InvalidCommunication)
+                            return
+                        }
+                        successCallback(acct)
             }
         )
     }
@@ -110,15 +110,15 @@ class WebStore {
         }
         
         genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true, errorCallback: errorCallback,
-            successCallback: { response in
-                successCallback()
+                       successCallback: { response in
+                        successCallback()
             }
         )
     }
     
     class func createNewActivity(act: TrailActivity,
-        errorCallback: (error: WebStoreError) -> Void,
-        successCallback: () -> Void)
+                                 errorCallback: (error: WebStoreError) -> Void,
+                                 successCallback: () -> Void)
     {
         guard act.getPath() != nil else {
             errorCallback(error: WebStoreError.Unknown(msg: "This activity has no path associated with it."))
@@ -139,13 +139,13 @@ class WebStore {
         let url = baseUrl + "activity"
         
         genericRequest(HTTPVerb.GET, url: url, params: nil, tryAutoLogin: true,
-            errorCallback: errorCallback, successCallback: { response in
-                let oActHist = try? TrailActivityHistoryResponse(JSONDecoder(response.data))
-                guard let actHist = oActHist else {
-                    errorCallback(error: WebStoreError.InvalidCommunication)
-                    return
-                }
-                successCallback(actHist)
+                       errorCallback: errorCallback, successCallback: { response in
+                        let oActHist = try? TrailActivityHistoryResponse(JSONDecoder(response.data))
+                        guard let actHist = oActHist else {
+                            errorCallback(error: WebStoreError.InvalidCommunication)
+                            return
+                        }
+                        successCallback(actHist)
             }
         )
     }
@@ -157,13 +157,13 @@ class WebStore {
         let url = baseUrl + "statistics"
         
         genericRequest(HTTPVerb.GET, url: url, params: nil, tryAutoLogin: true,
-            errorCallback: errorCallback, successCallback: { response in
-                let oUserStats = try? UserStatisticsResponse(JSONDecoder(response.data))
-                guard let userStats = oUserStats else {
-                    errorCallback(error: WebStoreError.InvalidCommunication)
-                    return
-                }
-                successCallback(userStats)
+                       errorCallback: errorCallback, successCallback: { response in
+                        let oUserStats = try? UserStatisticsResponse(JSONDecoder(response.data))
+                        guard let userStats = oUserStats else {
+                            errorCallback(error: WebStoreError.InvalidCommunication)
+                            return
+                        }
+                        successCallback(userStats)
             }
         )
     }
@@ -184,7 +184,7 @@ class WebStore {
                                       successCallback: (Response) -> Void)
     {
         genericRequestInternal(verb, url: url, params: params,
-            errorCallback:
+                               errorCallback:
             { error in
                 if (isBadCredentials(error) && tryAutoLogin && lastUsername != nil && lastPassword != nil) {
                     login(lastUsername!, password: lastPassword!,
@@ -224,8 +224,8 @@ class WebStore {
      The lowest layer of generic request is the one which interfaces directly with SwiftHTTP
      */
     class private func genericRequestInternal(verb: HTTPVerb, url: String, params: [String: NSObject]?,
-        errorCallback: (error: WebStoreError) -> Void,
-        successCallback: (Response) -> Void)
+                                              errorCallback: (error: WebStoreError) -> Void,
+                                              successCallback: (Response) -> Void)
     {
         let serializer = JSONParameterSerializer()
         let opt: HTTP
@@ -238,7 +238,7 @@ class WebStore {
         
         do {
             opt = try HTTP.New(url, method: verb, requestSerializer: serializer,
-                parameters: params, headers: headers)
+                               parameters: params, headers: headers)
         } catch let errorEx {
             errorCallback(error: WebStoreError.Unknown(msg: "Exception: \(errorEx)"))
             return

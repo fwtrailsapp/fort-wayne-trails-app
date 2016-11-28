@@ -5,10 +5,10 @@
 // including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 // and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
 // subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all copies
 // or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 // LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 // IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
@@ -26,7 +26,7 @@
 import UIKit
 
 class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
+    
     @IBAction func createButtonPressed(sender: UIBarButtonItem) {
         
         if (usernameField.text != nil && passwordField.text != nil && confirmPasswordField.text != nil) && (!usernameField.text!.isEmpty && !passwordField.text!.isEmpty && !confirmPasswordField.text!.isEmpty) {
@@ -50,10 +50,10 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
             let newAccount = Account(username: usernameField.text!, birthYear: birthYear, height: height, weight: weight, sex: sex)
             
             WebStore.createAccount(newAccount, password: password,
-                errorCallback: {error in
-                    dispatch_async(dispatch_get_main_queue(),{
-                        self.onAccountCreateError(error)
-                    })
+                                   errorCallback: {error in
+                                    dispatch_async(dispatch_get_main_queue(),{
+                                        self.onAccountCreateError(error)
+                                    })
                 }, successCallback: {
                     dispatch_async(dispatch_get_main_queue(),{
                         self.onAccountCreateSuccess()
@@ -70,13 +70,13 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
     
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Discard Changes",
-            message: "Are you sure you wish to discard these changes?",
-            preferredStyle: UIAlertControllerStyle.Alert)
+                                      message: "Are you sure you wish to discard these changes?",
+                                      preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: discardHandler))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
-        
+    
     @IBAction func didBeginEditingDateTextField(sender: UITextField) {
         let yearPickerView:UIPickerView = UIPickerView()
         yearPickerView.dataSource = self
@@ -110,15 +110,15 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
     
     func onAccountCreateSuccess() {
         WebStore.login(usernameField.text!, password: passwordField.text!,
-           errorCallback: {error in
-                dispatch_async(dispatch_get_main_queue(),{
-                    ViewControllerUtilities.genericErrorHandler(self, error: error)
-                })
+                       errorCallback: {error in
+                        dispatch_async(dispatch_get_main_queue(),{
+                            ViewControllerUtilities.genericErrorHandler(self, error: error)
+                        })
             },
-            successCallback: {
-                dispatch_async(dispatch_get_main_queue(),{
-                    self.onLoginSuccess()
-                })
+                       successCallback: {
+                        dispatch_async(dispatch_get_main_queue(),{
+                            self.onLoginSuccess()
+                        })
             }
         )
     }

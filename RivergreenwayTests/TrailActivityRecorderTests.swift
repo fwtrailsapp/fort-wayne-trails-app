@@ -33,7 +33,7 @@ class TrailActivityRecorderTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        recorder = TrailActivityRecorder(startTime: NSDate(), exerciseType: ExerciseType.Bike)
+        recorder = TrailActivityRecorder(startTime: Date(), exerciseType: ExerciseType.Bike)
     }
     
     override func tearDown() {
@@ -42,7 +42,7 @@ class TrailActivityRecorderTests: XCTestCase {
     }
     
     func testConstructor() {
-        let recorderNil = TrailActivityRecorder(startTime: NSDate(), exerciseType: ExerciseType.Bike)
+        let recorderNil = TrailActivityRecorder(startTime: Date(), exerciseType: ExerciseType.Bike)
         assert(recorderNil.getState() == .Created)
         assert(recorderNil.getCalories() == 0)
         assert(recorderNil.getSpeed() == 0)
@@ -178,11 +178,11 @@ class TrailActivityRecorderTests: XCTestCase {
         -85.189383,40.9806756,0.0 -85.1909924,40.9795255,0.0 -85.1926017,40.9782133,0.0
     */
     func initializeLocations() -> [CLLocation] {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm"
-        let date1 = dateFormatter.dateFromString("10:30")
-        let date2 = dateFormatter.dateFromString("10:35")
-        let date3 = dateFormatter.dateFromString("10:40")
+        let date1 = dateFormatter.date(from: "10:30")
+        let date2 = dateFormatter.date(from: "10:35")
+        let date3 = dateFormatter.date(from: "10:40")
         
         var locs = [CLLocation]()
         let coord1 = CLLocationCoordinate2D(latitude: -85.189383,longitude: 40.9806756)

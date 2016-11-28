@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xIz-iG-RVU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xIz-iG-RVU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -381,7 +381,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call" translatesAutoresizingMaskIntoConstraints="NO" id="ceb-A3-Hkf">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Problem" translatesAutoresizingMaskIntoConstraints="NO" id="ceb-A3-Hkf">
                                         <rect key="frame" x="359" y="120" width="24" height="24"/>
                                     </imageView>
                                 </subviews>
@@ -1954,6 +1954,69 @@
             </objects>
             <point key="canvasLocation" x="1247" y="2116"/>
         </scene>
+        <!--Report Problem-->
+        <scene sceneID="zlk-Yh-W5A">
+            <objects>
+                <viewController storyboardIdentifier="ReportProblemView" id="3rB-1Q-TAW" userLabel="Report Problem" customClass="ReportProblemViewController" customModule="Current - Rivergreenway" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JvX-sl-aXa"/>
+                        <viewControllerLayoutGuide type="bottom" id="21d-yW-Izk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fxw-Lr-OsJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-n7-VW3">
+                                <rect key="frame" x="130" y="98" width="340" height="307"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2u0-Bp-9w8" userLabel="Submit">
+                                <rect key="frame" x="531" y="72" width="49" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="3rB-1Q-TAW" eventType="touchUpInside" id="G0P-dS-RFe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Please explain the problem" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYy-L4-0AQ">
+                                <rect key="frame" x="130" y="519" width="340" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4h-7c-Uca">
+                                <rect key="frame" x="233" y="451" width="134" height="30"/>
+                                <state key="normal" title="Open Photo Library"/>
+                                <connections>
+                                    <action selector="openPhotoLibraryButton:" destination="3rB-1Q-TAW" eventType="touchUpInside" id="TWA-SB-eQ8"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V17-K7-g0O" userLabel="Problem Type">
+                                <rect key="frame" x="0.0" y="489" width="600" height="22"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHQ-0S-Jij">
+                                <rect key="frame" x="253" y="413" width="95" height="30"/>
+                                <state key="normal" title="Open Camera"/>
+                                <connections>
+                                    <action selector="openCameraButton:" destination="3rB-1Q-TAW" eventType="touchUpInside" id="Frg-Sh-QJI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="g6X-y2-CSz"/>
+                    <connections>
+                        <outlet property="imagePicked" destination="Yxx-n7-VW3" id="gzh-Vq-Uxy"/>
+                        <outlet property="openCameraButton" destination="bHQ-0S-Jij" id="3Ed-fW-hH3"/>
+                        <outlet property="openPhotoLibraryButton" destination="I4h-7c-Uca" id="00D-oY-saQ"/>
+                        <outlet property="problemType" destination="V17-K7-g0O" id="GJe-OZ-5gd"/>
+                        <outlet property="submitButton" destination="2u0-Bp-9w8" id="X7U-7n-Bsr"/>
+                        <outlet property="textfieldReportProblem" destination="eYy-L4-0AQ" id="qws-vH-gip"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aka-0v-Aqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="-1664"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bDl-5E-QWL">
             <objects>
@@ -2053,15 +2116,33 @@
             </objects>
             <point key="canvasLocation" x="-473" y="-557"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qiw-7N-YJd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eug-tO-sBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="ReportProblemNavController" automaticallyAdjustsScrollViewInsets="NO" id="LMv-yL-1id" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pcX-Ko-HfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3rB-1Q-TAW" kind="relationship" relationship="rootViewController" id="zYm-7s-8Kn"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="592" y="-1664"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Account" width="24" height="24"/>
-        <image name="Call" width="24" height="24"/>
         <image name="Explore" width="24" height="24"/>
         <image name="FullMap" width="394" height="342"/>
         <image name="History" width="24" height="24"/>
         <image name="Info" width="24" height="24"/>
         <image name="NotInterested" width="24" height="24"/>
+        <image name="Problem" width="29" height="26"/>
         <image name="Run" width="24" height="24"/>
         <image name="Seal" width="426" height="425"/>
         <image name="Stars" width="24" height="24"/>

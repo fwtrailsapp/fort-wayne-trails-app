@@ -5,10 +5,10 @@
 // including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 // and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
 // subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all copies
 // or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 // LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 // IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
@@ -29,14 +29,14 @@ import UIKit
  Displays the account statistics for the user. The statistics are displayed in
  two categories: overall statistics and per-exercise-type statistics. Each category
  has its own section in a static table view controller (see the main storyboard for the
- exact look). 
+ exact look).
  
  The per-exercise-type section has a segmented control for selecting an exercise type;
  once selected, the per-exercise-type section is populated with the data for that
  exercise type.
  */
 class AccountStatisticsViewController: DraweredTableViewController {
-
+    
     
     @IBOutlet weak var overallDurationLabel: UILabel!
     @IBOutlet weak var overallDistanceLabel: UILabel!
@@ -49,7 +49,7 @@ class AccountStatisticsViewController: DraweredTableViewController {
     @IBOutlet weak var exerciseTypeControl: UISegmentedControl!
     
     var userStatisticsResponse: UserStatisticsResponse?
-
+    
     @IBAction func exerciseTypeControlChanged(sender: UISegmentedControl) {
         populateFieldsFromExerciseTypeControl()
     }
@@ -114,5 +114,5 @@ class AccountStatisticsViewController: DraweredTableViewController {
             typeCaloriesLabel.text = "\(statistic.calories)"
         }
     }
-
+    
 }

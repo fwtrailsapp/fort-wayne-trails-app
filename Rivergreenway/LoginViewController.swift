@@ -5,10 +5,10 @@
 // including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 // and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
 // subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all copies
 // or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 // LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 // IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
@@ -26,7 +26,7 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
-
+    
     // MARK: - View Components
     
     @IBOutlet weak var usernameField: UITextField!
@@ -35,10 +35,10 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -56,14 +56,14 @@ class LoginViewController: BaseViewController {
             SVProgressHUD.show()
             
             WebStore.login(username, password: password,
-                errorCallback: {error in
-                    dispatch_async(dispatch_get_main_queue(),{
-                        ViewControllerUtilities.genericErrorHandler(self, error: error)
-                    })},
-                successCallback: {
-                    dispatch_async(dispatch_get_main_queue(),{
-                        self.onLoginSuccess()
-                    })
+                           errorCallback: {error in
+                            dispatch_async(dispatch_get_main_queue(),{
+                                ViewControllerUtilities.genericErrorHandler(self, error: error)
+                            })},
+                           successCallback: {
+                            dispatch_async(dispatch_get_main_queue(),{
+                                self.onLoginSuccess()
+                            })
                 }
             )
         } else {
@@ -79,10 +79,10 @@ class LoginViewController: BaseViewController {
             dispatch_async(dispatch_get_main_queue(),{
                 ViewControllerUtilities.genericErrorHandler(self, error: error)
             })},
-            successCallback: { account in
-                dispatch_async(dispatch_get_main_queue(),{
-                    self.onGetAccountSuccess(account)
-                })
+                             successCallback: { account in
+                                dispatch_async(dispatch_get_main_queue(),{
+                                    self.onGetAccountSuccess(account)
+                                })
             }
         )
     }

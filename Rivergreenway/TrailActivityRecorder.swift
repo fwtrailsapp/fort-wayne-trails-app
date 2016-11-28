@@ -5,10 +5,10 @@
 // including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 // and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
 // subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all copies
 // or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 // LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 // IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
@@ -33,13 +33,13 @@ import Foundation
  
  The recorder has a TrailActivityState field, which follows a well-defined control flow:
  
-                           Stopped
-                             ^
-                             |
-     Created -> Started -> Paused -> Resumed
-                             ^         |
-                             |         |
-                             +---------+
+ Stopped
+ ^
+ |
+ Created -> Started -> Paused -> Resumed
+ ^         |
+ |         |
+ +---------+
  
  Each of the transitions in the control flow has its own method (e.g. start()).
  
@@ -105,7 +105,7 @@ class TrailActivityRecorder {
     }
     
     /**
-     Since the path may have gaps in it caused by starting and stopping, the activity's path is 
+     Since the path may have gaps in it caused by starting and stopping, the activity's path is
      represented as an array of GMSMutablePath objects. This method returns the GMSMutablePath
      object that is actively being updated.
      */

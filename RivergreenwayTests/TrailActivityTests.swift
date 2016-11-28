@@ -64,7 +64,7 @@ class TrailActivityTests : XCTestCase {
     }
     
     func initializeEmptyActivity() {
-        let startTime = NSDate()
+        let startTime = Date()
         let duration: Double = 0
         let exerciseType = ExerciseType.Run
         let caloriesBurned: Double = 0
@@ -73,7 +73,7 @@ class TrailActivityTests : XCTestCase {
     }
     
     func initializeBasicActivity() {
-        let startTime = NSDate()
+        let startTime = Date()
         let duration: Double = 60 // add a minute
         let exerciseType = ExerciseType.Run
         let caloriesBurned: Double = 1000
@@ -82,9 +82,9 @@ class TrailActivityTests : XCTestCase {
         let coord3 = CLLocationCoordinate2D(latitude: -85.1926017,longitude: 40.9782133)
         var path = [GMSMutablePath]()
         let path1 = GMSMutablePath()
-        path1.addCoordinate(coord1)
-        path1.addCoordinate(coord2)
-        path1.addCoordinate(coord3)
+        path1.add(coord1)
+        path1.add(coord2)
+        path1.add(coord3)
         path.append(path1)
         self.basicActivity = TrailActivity(startTime: startTime, duration: duration, distance: 1264/5280, path: path, exerciseType: exerciseType, caloriesBurned: caloriesBurned)
     }

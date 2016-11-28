@@ -5,10 +5,10 @@
 // including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 // and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
 // subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all copies
 // or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 // LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 // IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
@@ -26,7 +26,7 @@
 import UIKit
 
 class AccountDetailsViewController: DraweredTableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
+    
     // MARK : - Properties
     
     @IBOutlet weak var birthYearField: UITextField!
@@ -54,7 +54,7 @@ class AccountDetailsViewController: DraweredTableViewController, UIPickerViewDat
                 self.passwordOkButtonPressed(action, oldPassword: oldPasswordField!.text, newPassword: newPasswordField!.text, newPasswordConfirmed: newPasswordConfirmField!.text)
             }
             
-        ))
+            ))
         alert.addTextFieldWithConfigurationHandler{ (textField : UITextField!) -> Void in
             textField.placeholder = "Old Password"
             textField.secureTextEntry = true
@@ -102,10 +102,10 @@ class AccountDetailsViewController: DraweredTableViewController, UIPickerViewDat
         newAccount!.sex = Sex.all[sexSegmentedControl.selectedSegmentIndex - 1]
         
         WebStore.editAccount(newAccount!, password: newPassword,
-            errorCallback: { error in
-                dispatch_async(dispatch_get_main_queue(),{
-                    self.onEditAccountFailure(error)
-                })
+                             errorCallback: { error in
+                                dispatch_async(dispatch_get_main_queue(),{
+                                    self.onEditAccountFailure(error)
+                                })
             }, successCallback: {
                 dispatch_async(dispatch_get_main_queue(),{
                     self.onEditAccountSuccess()
@@ -113,7 +113,7 @@ class AccountDetailsViewController: DraweredTableViewController, UIPickerViewDat
             }
         )
     }
-
+    
     @IBAction func didBeginEditingDateTextField(sender: UITextField) {
         let yearPickerView:UIPickerView = UIPickerView()
         yearPickerView.dataSource = self
@@ -156,7 +156,7 @@ class AccountDetailsViewController: DraweredTableViewController, UIPickerViewDat
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.account = newAccount!
         // ViewControllerUtilities.transitionDrawered(self, destination: ViewIdentifier.RecordActivityNavController)
-
+        
     }
     
     func onEditAccountFailure(error: WebStoreError) {

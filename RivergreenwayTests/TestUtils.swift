@@ -29,7 +29,7 @@ import Foundation
 class TestUtils {
     
     class func createTrailActivity() -> TrailActivity {
-        let startTime = NSDate()
+        let startTime = Date()
         let duration = 20.0
         let distance = 1337.0
         let path = createMutablePaths()
@@ -40,12 +40,12 @@ class TestUtils {
     
     class func createMutablePaths() -> [GMSMutablePath] {
         let firstPath = GMSMutablePath()
-        firstPath.addCoordinate(CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
-        firstPath.addCoordinate(CLLocationCoordinate2D(latitude: 0.1, longitude: 0.1))
+        firstPath.add(CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
+        firstPath.add(CLLocationCoordinate2D(latitude: 0.1, longitude: 0.1))
         
         let secondPath = GMSMutablePath()
-        secondPath.addCoordinate(CLLocationCoordinate2D(latitude: 0.2, longitude: 0.2))
-        secondPath.addCoordinate(CLLocationCoordinate2D(latitude: 0.3, longitude: 0.3))
+        secondPath.add(CLLocationCoordinate2D(latitude: 0.2, longitude: 0.2))
+        secondPath.add(CLLocationCoordinate2D(latitude: 0.3, longitude: 0.3))
         
         var manyPaths = [GMSMutablePath]()
         manyPaths.append(firstPath)

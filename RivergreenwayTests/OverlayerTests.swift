@@ -46,7 +46,7 @@ class OverlayerTests: XCTestCase {
     }
     
     func testPathsLoaded() {
-        measureBlock() {
+        measure() {
             self.loadGoodUrl()
         }
         assert(ov!.geometryCount >= 1)
@@ -55,7 +55,7 @@ class OverlayerTests: XCTestCase {
     func testBadUrl() {
         do {
             try ov!.loadKMLFromURL("https://www.google.com")
-        } catch (OverlayerError.CannotLoadURL) {
+        } catch (OverlayerError.cannotLoadURL) {
             return
         } catch {
             XCTFail("Should have gotten a CannotLoadURL error first")
