@@ -60,6 +60,7 @@ enum ViewIdentifier: String {
 
 // MARK: - Nav Drawer Cell Identifiers
 enum CellIdentifier: String {
+    case ReportProblemCell = "ReportProblemCell"
     case RecordActivityCell = "RecordActivityCell"
     case ActivityHistoryCell = "ActivityHistoryCell"
     case AchievementsCell = "AchievementsCell"

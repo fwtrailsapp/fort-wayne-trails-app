@@ -36,44 +36,15 @@ import UIKit
 class NavDrawerViewController: UIViewController, UIGestureRecognizerDelegate, NavTableDelegate {
     
     private var selectedCell: CellIdentifier = CellIdentifier.RecordActivityCell
-    
-    @IBOutlet weak var reportProblemLabel: UILabel!
-    @IBOutlet weak var reportProblemImage: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addProblemReportingGestureRecognizers()
     }
-    
-    /**
-     Programmatically adds gesture recognizers to the 'Report a Problem' label and
-     the 'Call' icon such that they open the iPhone's dialer.
-     */
-    func addProblemReportingGestureRecognizers() {
-        let labelTap = UITapGestureRecognizer(target: self, action: #selector(NavDrawerViewController.openDialer))
-        let imageTap = UITapGestureRecognizer(target: self, action: #selector(NavDrawerViewController.openDialer))
-        labelTap.delegate = self
-        reportProblemImage.userInteractionEnabled = true
-        reportProblemLabel.userInteractionEnabled = true
-        
-        reportProblemImage.addGestureRecognizer(imageTap)
-        reportProblemLabel.addGestureRecognizer(labelTap)
-    }
-    
-    var newViewController: UIViewController?
-    let mainStoryboard: UIStoryboard = UIStoryboard(name: ViewIdentifier.MAIN_STORYBOARD.rawValue, bundle: nil)
-    /**
-     Opens the phone's dialer and sets the dial number to 311. Note that this does not actually
-     start the phone call.
-     */
-    
-    func openDialer() {
-        newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ReportProblemNavController.rawValue)    }
+
     
     /**
      Because the table view is contained in its own view controller, it is presented in the nav
-     drawer via a segue. This method is called in preparation for that segue, and assigns this
+     drawer via a egue. This method is called in preparation for that segue, and assigns this
      view controller as a delegate for the table view controller so that the table view controller
      can notify this view controller whenever its cells are pressed.
      */
@@ -100,6 +71,9 @@ class NavDrawerViewController: UIViewController, UIGestureRecognizerDelegate, Na
         
         
         switch(cellID) {
+        case .ReportProblemCell:
+            newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.ReportProblemNavController.rawValue)
+            break
         case .RecordActivityCell:
             newViewController = mainStoryboard.instantiateViewControllerWithIdentifier(ViewIdentifier.RecordActivityNavController.rawValue)
             break
