@@ -5,8 +5,8 @@ def myPods
 pod 'MMDrawerController', '~> 0.5.7'
 pod 'GoogleMaps'
 pod 'iOS-KML-Framework'
-pod 'SwiftHTTP'
-pod 'JSONJoy-Swift'
+pod 'SwiftHTTP’, ‘1.0.5’
+pod 'JSONJoy-Swift', ‘2.0.0’
 pod 'SVProgressHUD'
 end
 
