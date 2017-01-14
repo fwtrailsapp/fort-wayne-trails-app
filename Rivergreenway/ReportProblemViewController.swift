@@ -132,8 +132,11 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         imagePicked.image = image
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
         self.dismissViewControllerAnimated(true, completion: nil);
             }
+    
+    
     
     var pickerDataSource = ["Tree/Branch", "Glass", "High Water", "Vandalism", "Litter", "Overgrown Trail", "Trash Full", "Pothole", "Other"];
     
@@ -182,6 +185,12 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         let title = titleProblem.text
         let additional = additionalDetails.text
         
+        let account = ViewControllerUtilities.getAccount()!
+        let username = account.username
+        
+        
+        
+        
         
         //Where calling the web API will happen
         
@@ -189,6 +198,7 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         let alert = UIAlertController(title: "Thank You.", message: "You have successfully submitted the problem.", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
         self.presentViewController(alert, animated: false, completion: nil)
+        
         return
     }
     
