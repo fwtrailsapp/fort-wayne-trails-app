@@ -43,7 +43,7 @@ class WebStore {
         let url = baseUrl + "login"
         
         let params = ["username": username, "password": password]
-        
+    
         genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: false,
                        errorCallback: errorCallback,
                        successCallback: { response in
@@ -54,6 +54,23 @@ class WebStore {
                             return
                         }
                         authToken = realToken
+                        successCallback()
+            }
+        )
+    }
+    
+    //REPORT PROBLEM
+    class func reportProblem(act: ReportProblem,
+                             errorCallback: (error: WebStoreError) -> Void,
+                             successCallback: () -> Void)
+    {
+        let url = baseUrl + "iOSTest"
+        
+        let params = act.toDictionary()
+        NSLog(String(params))
+        genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true,
+                       errorCallback: errorCallback,
+                       successCallback: { response in
                         successCallback()
             }
         )
@@ -127,6 +144,7 @@ class WebStore {
         
         let url = baseUrl + "activity"
         let params = act.toDictionary()
+        NSLog(String(params))
         genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true, errorCallback: errorCallback, successCallback: { response in
             successCallback()
         })

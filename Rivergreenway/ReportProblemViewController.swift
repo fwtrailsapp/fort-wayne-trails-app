@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource, UIPickerViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource, UIPickerViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate{
+
+    private var latitude : Double?
+    private var longitude : Double?
     
     func animateProblemType(textField: UITextField, up: Bool)
     {
@@ -117,6 +121,7 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
             imagePicker.allowsEditing = false
             self.presentViewController(imagePicker, animated: true, completion: nil)
+            
         }
     }
     
@@ -132,11 +137,19 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         imagePicked.image = image
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
         self.dismissViewControllerAnimated(true, completion: nil);
-            }
-    
-    
+        
+        let locManager = CLLocationManager()
+        var currentLocation: CLLocation!
+        locManager.requestWhenInUseAuthorization()
+        
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways){
+            currentLocation = locManager.location
+            latitude = currentLocation.coordinate.latitude
+            longitude = currentLocation.coordinate.longitude
+        }
+    }
     
     var pickerDataSource = ["Tree/Branch", "Glass", "High Water", "Vandalism", "Litter", "Overgrown Trail", "Trash Full", "Pothole", "Other"];
     
@@ -180,26 +193,44 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
     
     //Where the fields are sent on submit
     func submitHandler(action: UIAlertAction) {
-        let image = imagePicked.image
-        let problem = problemType.text
-        let title = titleProblem.text
-        let additional = additionalDetails.text
-        
-        let account = ViewControllerUtilities.getAccount()!
-        let username = account.username
-        
-        
-        
-        
+
+        SVProgressHUD.show()
         
         //Where calling the web API will happen
-        
+        let newProblem = ReportProblem(problem: problemType.text!)
+
+        WebStore.reportProblem(newProblem,
+                               errorCallback: {error in
+                                dispatch_async(dispatch_get_main_queue(),{
+                                    self.onReportProblemError(error)
+                                })
+            }, successCallback: {
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.onReportProblemSuccess()
+                })
+            }
+        )
+    }
+
+    /**
+     Callback for a successful transmission of the activity to the server.
+     */
+    func onReportProblemSuccess() {
+        SVProgressHUD.dismiss()
         
         let alert = UIAlertController(title: "Thank You.", message: "You have successfully submitted the problem.", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
         self.presentViewController(alert, animated: false, completion: nil)
-        
-        return
+    }
+    
+    /**
+     Callback for an unsuccessful transmission of the activity to the server.
+     Displays an alert view to alert the user that their connection to the
+     server failed.
+     */
+    func onReportProblemError(error: WebStoreError) {
+        SVProgressHUD.dismiss()
+        ViewControllerUtilities.displayServerConnectionErrorAlert(self, message: error.description)
     }
     
     override func viewDidLoad() {

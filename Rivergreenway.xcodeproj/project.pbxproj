@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054394411E4A3BED005A8F04 /* ReportProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054394401E4A3BED005A8F04 /* ReportProblem.swift */; };
 		055702FC1DECDED10058C0CD /* ReportProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055702FB1DECDED10058C0CD /* ReportProblemViewController.swift */; };
 		056063541D612D0B0032CD4D /* Pods_Rivergreenway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056063531D612D0B0032CD4D /* Pods_Rivergreenway.framework */; };
 		4F93F1C79224506D777E9824 /* Pods_Rivergreenway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168B9736A1454E70AB76EAF1 /* Pods_Rivergreenway.framework */; };
@@ -107,6 +108,7 @@
 		050D120E1D5A9CAA00ADDBFB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		050D12101D5A9CB300ADDBFB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		050D12121D5A9CBD00ADDBFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		054394401E4A3BED005A8F04 /* ReportProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProblem.swift; sourceTree = "<group>"; };
 		055702FB1DECDED10058C0CD /* ReportProblemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
 		056063531D612D0B0032CD4D /* Pods_Rivergreenway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Rivergreenway.framework; path = "../../Library/Developer/Xcode/DerivedData/Rivergreenway-eywymgcrioqjdiaiwffukfsonkls/Build/Products/Debug-iphonesimulator/Pods_Rivergreenway.framework"; sourceTree = "<group>"; };
 		168B9736A1454E70AB76EAF1 /* Pods_Rivergreenway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rivergreenway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -420,11 +422,12 @@
 		D26E6C1C1C4AC27A00186A9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				054394401E4A3BED005A8F04 /* ReportProblem.swift */,
+				D232FEE41C51C28100BDFCE8 /* Account.swift */,
 				7F77C9451C9A284F00FB0BB8 /* WebStoreError.swift */,
 				D26E6C151C4AC25500186A9A /* TrailActivity.swift */,
 				D26E6C171C4AC25F00186A9A /* TrailActivityState.swift */,
 				D232FEDF1C505CE400BDFCE8 /* ExerciseType.swift */,
-				D232FEE41C51C28100BDFCE8 /* Account.swift */,
 				D232FEEC1C52EC7200BDFCE8 /* Sex.swift */,
 				7F77C9431C99305100FB0BB8 /* AccountResponse.swift */,
 				7F2CF70F1C9F7D8B003F48BA /* TrailActivityHistoryResponse.swift */,
@@ -786,6 +789,7 @@
 				D2F846EC1CB0597000141BE8 /* ViewControllerUtilities.swift in Sources */,
 				7F77C9461C9A284F00FB0BB8 /* WebStoreError.swift in Sources */,
 				D26E6C181C4AC25F00186A9A /* TrailActivityState.swift in Sources */,
+				054394411E4A3BED005A8F04 /* ReportProblem.swift in Sources */,
 				D2BD1DF01C6ACB90009E4F2F /* BaseTableViewController.swift in Sources */,
 				D2647CFB1C55AF2300796D51 /* LoginViewController.swift in Sources */,
 				D2C52FAD1C7100B500DA78A7 /* AboutViewController.swift in Sources */,
