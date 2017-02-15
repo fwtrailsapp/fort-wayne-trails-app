@@ -14,6 +14,39 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
     private var latitude : Double?
     private var longitude : Double?
     
+    @IBOutlet weak var problemType: UITextField!
+    
+    @IBAction func didBeginEditingProblemTypeTextField(sender: UITextField) {
+        self.animateProblemType(problemType, up:true)
+        let problemTypePickerView:UIPickerView = UIPickerView()
+        problemTypePickerView.dataSource = self
+        problemTypePickerView.delegate = self
+        sender.inputView = problemTypePickerView
+    }
+
+    var pickerDataSource = ["Tree/Branch", "Broken Glass", "High Water", "Vandalism", "Litter", "Overgrown Brush", "Trash Full", "Pothole", "Other"];
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSource.count;
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        problemType.text = pickerDataSource[row]
+    }
+    
+    @IBAction func didEndEditingProblemTextField(sender: UITextField) {
+        self.animateProblemType(problemType, up:false)
+    }
+    
     func animateProblemType(textField: UITextField, up: Bool)
     {
         let movementDistance:CGFloat = -160
@@ -35,19 +68,16 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         UIView.commitAnimations()
     }
     
-    @IBAction func didBeginEditingProblemTypeTextField(sender: UITextField) {
-        self.animateProblemType(problemType, up:true)
-        let problemTypePickerView:UIPickerView = UIPickerView()
-        problemTypePickerView.dataSource = self
-        problemTypePickerView.delegate = self
-        sender.inputView = problemTypePickerView
-    }
-    
-    @IBAction func didEndEditingProblemTextField(sender: UITextField) {
-        self.animateProblemType(problemType, up:false)
-    }
-    
     @IBOutlet weak var titleProblem: UITextField!
+    
+    @IBAction func didBeginEditingTitleProblemTextField(sender: UITextField) {
+        self.animateTitleProblem(titleProblem, up:true)
+    }
+    
+    
+    @IBAction func didEndEditingTitleProblemTextField(sender: UITextField) {
+        self.animateTitleProblem(titleProblem, up:false)
+    }
     
     func animateTitleProblem(textField: UITextField, up: Bool)
     {
@@ -70,16 +100,15 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         UIView.commitAnimations()
     }
     
-    @IBAction func didBeginEditingTitleProblemTextField(sender: UITextField) {
-        self.animateTitleProblem(titleProblem, up:true)
-    }
-    
-    
-    @IBAction func didEndEditingTitleProblemTextField(sender: UITextField) {
-        self.animateTitleProblem(titleProblem, up:false)
-    }
-    
     @IBOutlet weak var additionalDetails: UITextField!
+    
+    @IBAction func didBeginEditingAdditionalDetailsTextField(sender: UITextField) {
+        self.animateAdditionalDetails(additionalDetails, up:true)
+    }
+    
+    @IBAction func didEndEditingAdditionalDetailsTextField(sender: UITextField) {
+        self.animateAdditionalDetails(additionalDetails, up:false)
+    }
     
     func animateAdditionalDetails(textField: UITextField, up: Bool)
     {
@@ -102,16 +131,6 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         UIView.commitAnimations()
     }
     
-    @IBAction func didBeginEditingAdditionalDetailsTextField(sender: UITextField) {
-        self.animateAdditionalDetails(additionalDetails, up:true)
-    }
-    
-    @IBAction func didEndEditingAdditionalDetailsTextField(sender: UITextField) {
-        self.animateAdditionalDetails(additionalDetails, up:false)
-    }
-    
-    @IBOutlet weak var problemType: UITextField!
-    
     @IBOutlet weak var imagePicked: UIImageView!
     
     @IBAction func openCameraButton(sender: AnyObject) {
@@ -124,21 +143,14 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
             
         }
     }
-    
-    @IBAction func openPhotoLibrary(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
-            imagePicker.allowsEditing = true
-            self.presentViewController(imagePicker, animated: true, completion: nil)
-        }
-    }
+   
+    @IBOutlet weak var imageWillShowHere: UILabel!
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         imagePicked.image = image
         self.dismissViewControllerAnimated(true, completion: nil);
-        
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        imageWillShowHere.hidden = true
         let locManager = CLLocationManager()
         var currentLocation: CLLocation!
         locManager.requestWhenInUseAuthorization()
@@ -150,26 +162,6 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
             longitude = currentLocation.coordinate.longitude
         }
     }
-    
-    var pickerDataSource = ["Tree/Branch", "Glass", "High Water", "Vandalism", "Litter", "Overgrown Trail", "Trash Full", "Pothole", "Other"];
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerDataSource.count;
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerDataSource[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
-        problemType.text = pickerDataSource[row]
-    }
-    
     
     //Action once the Submit button is pressed
     @IBAction func pressSubmitButton(sender: AnyObject) {
@@ -196,8 +188,18 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
 
         SVProgressHUD.show()
         
+        let curr = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "MMMM dd, yyyy - h:mm a"
+        let date = formatter.stringFromDate(curr)
+        
+        let account = ViewControllerUtilities.getAccount()!
+        
+        let imageData = UIImagePNGRepresentation(imagePicked.image!)
+        let imgLink = imageData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+        
         //Where calling the web API will happen
-        let newProblem = ReportProblem(problem: problemType.text!)
+        let newProblem = ReportProblem(type: problemType.text!, description: additionalDetails.text!, active: 1, imgLink: imgLink, latitude: latitude, longitude : longitude, title: titleProblem.text!, date: date, username: account.username, notes: nil, dateClosed: nil)
 
         WebStore.reportProblem(newProblem,
                                errorCallback: {error in

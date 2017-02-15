@@ -82,7 +82,7 @@ class ActivityHistoryViewController: DraweredTableViewController {
             cell.durationLabel.text = Converter.timeIntervalToString(activity.getDuration())
             cell.distanceLabel.text = Converter.doubleToString(activity.getDistance())
             cell.calorieLabel.text = Converter.doubleToString(activity.getCaloriesBurned())
-            cell.dateLabel.text = Converter.dateToString(activity.getStartTime(), format: "yyyy-MM-dd")
+            cell.dateLabel.text = Converter.dateToString(activity.getStartTime(), format: "MM/dd/yy")
         }
         
         return cell

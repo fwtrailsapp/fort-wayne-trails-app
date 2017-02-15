@@ -64,10 +64,10 @@ class WebStore {
                              errorCallback: (error: WebStoreError) -> Void,
                              successCallback: () -> Void)
     {
-        let url = baseUrl + "iOSTest"
+        let url = baseUrl + "Ticket/Create"
         
         let params = act.toDictionary()
-        NSLog(String(params))
+
         genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true,
                        errorCallback: errorCallback,
                        successCallback: { response in
@@ -144,7 +144,7 @@ class WebStore {
         
         let url = baseUrl + "activity"
         let params = act.toDictionary()
-        NSLog(String(params))
+
         genericRequest(HTTPVerb.POST, url: url, params: params, tryAutoLogin: true, errorCallback: errorCallback, successCallback: { response in
             successCallback()
         })
@@ -245,6 +245,7 @@ class WebStore {
                                               errorCallback: (error: WebStoreError) -> Void,
                                               successCallback: (Response) -> Void)
     {
+        
         let serializer = JSONParameterSerializer()
         let opt: HTTP
         
