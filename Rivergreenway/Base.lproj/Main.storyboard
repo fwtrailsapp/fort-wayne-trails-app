@@ -29,9 +29,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=compact" misplaced="YES">
-                                            <rect key="frame" x="209" y="63" width="183" height="15"/>
-                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-TZ-Lid">
                                         <rect key="frame" x="247" y="140" width="107" height="31"/>
@@ -46,9 +43,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ane-os-cU5" secondAttribute="centerY" multiplier="4:2" id="LXZ-DD-6k6"/>
+                                    <constraint firstAttribute="bottom" secondItem="ane-os-cU5" secondAttribute="centerY" multiplier="4:2" id="LXZ-DD-6k6">
+                                        <variation key="heightClass=compact" constant="9"/>
+                                    </constraint>
                                     <constraint firstItem="DPZ-TZ-Lid" firstAttribute="centerX" secondItem="86M-Dw-hnm" secondAttribute="centerX" id="egM-aE-5lD"/>
-                                    <constraint firstItem="DPZ-TZ-Lid" firstAttribute="height" secondItem="ane-os-cU5" secondAttribute="height" id="gRL-kF-vc4"/>
+                                    <constraint firstItem="DPZ-TZ-Lid" firstAttribute="height" secondItem="ane-os-cU5" secondAttribute="height" id="gRL-kF-vc4">
+                                        <variation key="heightClass=compact" constant="-10"/>
+                                    </constraint>
                                     <constraint firstAttribute="bottom" secondItem="DPZ-TZ-Lid" secondAttribute="centerY" multiplier="4:3" id="rdo-ut-5uE"/>
                                     <constraint firstItem="ane-os-cU5" firstAttribute="centerX" secondItem="86M-Dw-hnm" secondAttribute="centerX" id="xYZ-v2-U3m"/>
                                     <constraint firstItem="DPZ-TZ-Lid" firstAttribute="top" secondItem="ane-os-cU5" secondAttribute="bottom" constant="20" id="ySo-hY-qsg"/>
@@ -82,6 +83,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVr-gl-tIb">
+                                        <rect key="frame" x="281" y="118" width="38" height="42"/>
+                                        <state key="normal" title="Login"/>
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="281" y="91" width="38" height="21"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="xIz-iG-RVU" eventType="touchUpInside" id="wAO-hD-bNo"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1DM-gw-Ijm">
                                         <rect key="frame" x="200" y="78" width="200" height="30"/>
                                         <constraints>
@@ -90,30 +101,26 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
                                         <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="200" y="45" width="200" height="30"/>
+                                            <rect key="frame" x="200" y="53" width="200" height="30"/>
                                         </variation>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVr-gl-tIb">
-                                        <rect key="frame" x="281" y="118" width="38" height="42"/>
-                                        <state key="normal" title="Login"/>
-                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="281" y="85" width="38" height="9"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="loginButtonPressed:" destination="xIz-iG-RVU" eventType="touchUpInside" id="wAO-hD-bNo"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="N5f-4m-cto" firstAttribute="centerX" secondItem="GOO-6Q-51s" secondAttribute="centerX" id="1fD-wh-1PM"/>
                                     <constraint firstAttribute="bottom" secondItem="N5f-4m-cto" secondAttribute="centerY" multiplier="4:1" id="2Si-kO-3AH"/>
                                     <constraint firstItem="1DM-gw-Ijm" firstAttribute="centerX" secondItem="GOO-6Q-51s" secondAttribute="centerX" id="A5v-hi-pxD"/>
-                                    <constraint firstAttribute="bottom" secondItem="1DM-gw-Ijm" secondAttribute="centerY" multiplier="4:2" id="LSj-Fw-uKq"/>
+                                    <constraint firstAttribute="bottom" secondItem="1DM-gw-Ijm" secondAttribute="centerY" multiplier="4:2" id="LSj-Fw-uKq">
+                                        <variation key="heightClass=compact" constant="-16"/>
+                                    </constraint>
                                     <constraint firstItem="1DM-gw-Ijm" firstAttribute="top" secondItem="N5f-4m-cto" secondAttribute="bottom" constant="20" id="QDg-EO-Ar3"/>
                                     <constraint firstItem="UVr-gl-tIb" firstAttribute="centerX" secondItem="GOO-6Q-51s" secondAttribute="centerX" id="efQ-u9-UU1"/>
-                                    <constraint firstItem="UVr-gl-tIb" firstAttribute="top" secondItem="1DM-gw-Ijm" secondAttribute="bottom" constant="10" id="gCp-P1-ndU"/>
-                                    <constraint firstAttribute="bottom" secondItem="UVr-gl-tIb" secondAttribute="centerY" multiplier="4:3" constant="1" id="iD5-WH-UeB"/>
+                                    <constraint firstItem="UVr-gl-tIb" firstAttribute="top" secondItem="1DM-gw-Ijm" secondAttribute="bottom" constant="10" id="gCp-P1-ndU">
+                                        <variation key="heightClass=compact" constant="8"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="UVr-gl-tIb" secondAttribute="centerY" multiplier="4:3" constant="1" id="iD5-WH-UeB">
+                                        <variation key="heightClass=compact" constant="-15.333333333333314"/>
+                                    </constraint>
                                     <constraint firstItem="1DM-gw-Ijm" firstAttribute="height" secondItem="N5f-4m-cto" secondAttribute="height" id="q1P-qs-5TM"/>
                                 </constraints>
                                 <variation key="default">
@@ -2108,9 +2115,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeN-dw-O1r">
                                 <rect key="frame" x="185" y="3" width="55" height="30"/>
                                 <state key="normal" title="Resume"/>
-                                <variation key="heightClass=compact" misplaced="YES">
-                                    <rect key="frame" x="185" y="3" width="55" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="resumeButtonPressed:" destination="q43-px-STL" eventType="touchUpInside" id="luk-VT-kB0"/>
                                 </connections>
@@ -2118,9 +2122,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWU-aK-RAD">
                                 <rect key="frame" x="360" y="3" width="41" height="30"/>
                                 <state key="normal" title="Finish"/>
-                                <variation key="heightClass=compact" misplaced="YES">
-                                    <rect key="frame" x="360" y="3" width="41" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="finishButtonPressed:" destination="q43-px-STL" eventType="touchUpInside" id="84q-6V-CFM"/>
                                 </connections>
