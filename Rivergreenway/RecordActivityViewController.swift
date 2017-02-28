@@ -106,7 +106,8 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         // sets this view controller as an observer for the myLocation property of
         // the map view.
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
-        
+        mapView.animateToZoom(17)
+        mapView.setMinZoom(15, maxZoom: 20)
         // schedule a timer to update the displayed activity duration every second
         let _ = NSTimer.scheduledTimerWithTimeInterval( 1.0, target: self, selector: #selector(RecordActivityViewController.tick), userInfo: nil, repeats: true)
         

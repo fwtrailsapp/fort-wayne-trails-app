@@ -133,6 +133,8 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
     
     @IBOutlet weak var imagePicked: UIImageView!
     
+    @IBOutlet weak var openCameraButton: UIButton!
+    
     @IBAction func openCameraButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             let imagePicker = UIImagePickerController()
@@ -151,6 +153,8 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         self.dismissViewControllerAnimated(true, completion: nil);
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
         imageWillShowHere.hidden = true
+        imagePicked.layer.borderWidth = 0.0
+        openCameraButton.setTitle("Retake Photo?", forState: .Normal)
         let locManager = CLLocationManager()
         var currentLocation: CLLocation!
         locManager.requestWhenInUseAuthorization()
@@ -187,10 +191,10 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
     func submitHandler(action: UIAlertAction) {
 
         SVProgressHUD.show()
-        
+
         let curr = NSDate()
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "MMMM dd, yyyy - h:mm a"
+        formatter.dateFormat = "yyyy-MM-dd"
         let date = formatter.stringFromDate(curr)
         
         let account = ViewControllerUtilities.getAccount()!
@@ -199,7 +203,7 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         let imgLink = imageData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
         
         //Where calling the web API will happen
-        let newProblem = ReportProblem(type: problemType.text!, description: additionalDetails.text!, active: 1, imgLink: imgLink, latitude: latitude, longitude : longitude, title: titleProblem.text!, date: date, username: account.username, notes: nil, dateClosed: nil)
+        let newProblem = ReportProblem(type: problemType.text!, description: additionalDetails.text!, active: 1, imgLink: imgLink, latitude: latitude, longitude : longitude, title: titleProblem.text!, date: date, username: account.username, notes: "", dateClosed: "")
 
         WebStore.reportProblem(newProblem,
                                errorCallback: {error in
@@ -237,7 +241,8 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
+        let borderColor = UIColor(red:0, green:0, blue:0, alpha:1.0)
+        imagePicked.layer.borderColor = borderColor.CGColor
+        imagePicked.layer.borderWidth = 2.0    }
     
 }
