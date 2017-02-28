@@ -717,8 +717,12 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="mN4-xb-dK8" firstAttribute="centerY" secondItem="G2j-pD-vuq" secondAttribute="centerY" id="4uu-PQ-qg9"/>
-                                                    <constraint firstItem="KKi-Xx-BFd" firstAttribute="centerX" secondItem="G2j-pD-vuq" secondAttribute="centerX" id="Chn-vg-R3A"/>
+                                                    <constraint firstItem="mN4-xb-dK8" firstAttribute="centerY" secondItem="G2j-pD-vuq" secondAttribute="centerY" id="4uu-PQ-qg9">
+                                                        <variation key="heightClass=compact" constant="-0.5"/>
+                                                    </constraint>
+                                                    <constraint firstItem="KKi-Xx-BFd" firstAttribute="centerX" secondItem="G2j-pD-vuq" secondAttribute="centerX" id="Chn-vg-R3A">
+                                                        <variation key="heightClass=compact" constant="-109"/>
+                                                    </constraint>
                                                     <constraint firstItem="KKi-Xx-BFd" firstAttribute="top" secondItem="G2j-pD-vuq" secondAttribute="top" id="G3c-LP-9p6"/>
                                                     <constraint firstItem="mN4-xb-dK8" firstAttribute="centerX" secondItem="G2j-pD-vuq" secondAttribute="centerX" id="WCD-y5-FgR"/>
                                                 </constraints>
@@ -726,12 +730,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mh5-OZ-TxG" userLabel="Distance View" customClass="RecordActivityStatCell" customModule="Rivergreenway" customModuleProvider="target">
                                                 <rect key="frame" x="300" y="0.0" width="300" height="72"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEA-EG-QzG">
-                                                        <rect key="frame" x="117" y="0.0" width="67" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVJ-qs-k84" customClass="RecordActivityStatLabel" customModule="Rivergreenway" customModuleProvider="target">
                                                         <rect key="frame" x="133" y="26" width="35" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -744,12 +742,20 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEA-EG-QzG">
+                                                        <rect key="frame" x="117" y="0.0" width="67" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="bVJ-qs-k84" firstAttribute="centerY" secondItem="Mh5-OZ-TxG" secondAttribute="centerY" id="Cz3-hF-dNc"/>
                                                     <constraint firstItem="jDJ-6b-au7" firstAttribute="firstBaseline" secondItem="bVJ-qs-k84" secondAttribute="firstBaseline" id="HZN-s3-bZ3"/>
-                                                    <constraint firstItem="IEA-EG-QzG" firstAttribute="centerX" secondItem="Mh5-OZ-TxG" secondAttribute="centerX" id="VTe-Hm-BWb"/>
+                                                    <constraint firstItem="IEA-EG-QzG" firstAttribute="centerX" secondItem="Mh5-OZ-TxG" secondAttribute="centerX" id="VTe-Hm-BWb">
+                                                        <variation key="heightClass=compact" constant="-108.5"/>
+                                                    </constraint>
                                                     <constraint firstItem="jDJ-6b-au7" firstAttribute="leading" secondItem="bVJ-qs-k84" secondAttribute="trailing" constant="8" id="c97-fa-Lk9"/>
                                                     <constraint firstItem="IEA-EG-QzG" firstAttribute="top" secondItem="Mh5-OZ-TxG" secondAttribute="top" id="gKe-WV-Nyi"/>
                                                     <constraint firstItem="bVJ-qs-k84" firstAttribute="centerX" secondItem="Mh5-OZ-TxG" secondAttribute="centerX" id="kZS-pv-qfN"/>
@@ -764,12 +770,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-Us-V7n" userLabel="Calories View" customClass="RecordActivityStatCell" customModule="Rivergreenway" customModuleProvider="target">
                                                 <rect key="frame" x="300" y="72" width="300" height="72"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa3-8y-VPL">
-                                                        <rect key="frame" x="119" y="0.0" width="63" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zc-uo-YbV" customClass="RecordActivityStatLabel" customModule="Rivergreenway" customModuleProvider="target">
                                                         <rect key="frame" x="133" y="25" width="35" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -782,10 +782,18 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa3-8y-VPL">
+                                                        <rect key="frame" x="119" y="0.0" width="63" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="Wa3-8y-VPL" firstAttribute="centerX" secondItem="5JU-Us-V7n" secondAttribute="centerX" id="0zK-DE-J5a"/>
+                                                    <constraint firstItem="Wa3-8y-VPL" firstAttribute="centerX" secondItem="5JU-Us-V7n" secondAttribute="centerX" id="0zK-DE-J5a">
+                                                        <variation key="heightClass=compact" constant="-110.5"/>
+                                                    </constraint>
                                                     <constraint firstItem="7zc-uo-YbV" firstAttribute="centerX" secondItem="5JU-Us-V7n" secondAttribute="centerX" id="1FJ-w1-an1"/>
                                                     <constraint firstItem="P4e-d7-RWv" firstAttribute="centerY" secondItem="5JU-Us-V7n" secondAttribute="centerY" id="6lE-Z8-T6H"/>
                                                     <constraint firstItem="P4e-d7-RWv" firstAttribute="firstBaseline" secondItem="7zc-uo-YbV" secondAttribute="firstBaseline" id="Fdj-zm-6YN"/>
@@ -802,12 +810,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDm-eU-E4R" userLabel="Speed View" customClass="RecordActivityStatCell" customModule="Rivergreenway" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="72" width="300" height="72"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92M-WH-BO2">
-                                                        <rect key="frame" x="125" y="0.0" width="50" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rt-RA-y82" customClass="RecordActivityStatLabel" customModule="Rivergreenway" customModuleProvider="target">
                                                         <rect key="frame" x="132" y="26" width="35" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -820,6 +822,12 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92M-WH-BO2">
+                                                        <rect key="frame" x="125" y="0.0" width="50" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -828,7 +836,9 @@
                                                     <constraint firstItem="eb0-Ev-n5P" firstAttribute="baseline" secondItem="7rt-RA-y82" secondAttribute="baseline" id="Jox-PU-IcD"/>
                                                     <constraint firstItem="eb0-Ev-n5P" firstAttribute="leading" secondItem="7rt-RA-y82" secondAttribute="trailing" constant="8" id="PIN-K3-zj0"/>
                                                     <constraint firstItem="7rt-RA-y82" firstAttribute="centerX" secondItem="RDm-eU-E4R" secondAttribute="centerX" id="l07-DL-oJg"/>
-                                                    <constraint firstItem="92M-WH-BO2" firstAttribute="centerX" secondItem="RDm-eU-E4R" secondAttribute="centerX" id="xdW-27-gee"/>
+                                                    <constraint firstItem="92M-WH-BO2" firstAttribute="centerX" secondItem="RDm-eU-E4R" secondAttribute="centerX" id="xdW-27-gee">
+                                                        <variation key="heightClass=compact" constant="-117"/>
+                                                    </constraint>
                                                     <constraint firstItem="eb0-Ev-n5P" firstAttribute="centerY" secondItem="RDm-eU-E4R" secondAttribute="centerY" id="yJW-4G-Olr"/>
                                                 </constraints>
                                                 <variation key="default">
