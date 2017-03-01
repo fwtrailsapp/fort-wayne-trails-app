@@ -86,7 +86,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVr-gl-tIb">
                                         <rect key="frame" x="281" y="118" width="38" height="42"/>
                                         <state key="normal" title="Login"/>
-                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES">
                                             <rect key="frame" x="281" y="91" width="38" height="21"/>
                                         </variation>
                                         <connections>
@@ -100,7 +100,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
-                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES">
                                             <rect key="frame" x="200" y="53" width="200" height="30"/>
                                         </variation>
                                     </textField>

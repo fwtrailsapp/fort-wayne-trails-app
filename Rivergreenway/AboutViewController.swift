@@ -34,14 +34,14 @@ class AboutViewController: DraweredViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let licenseString = "<br>Copyright &#169; 2016 Jared Perry, Jaron Somers, Warren Barnes, Scott Weidenkopf, Grant Grimm, Neil Rawlins, Austin Wolfe, Justin Chadwell and Brendan Fullenkamp<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute,sublicense,and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The above copyright notice and this permission notice shall be included in all copies<br>or substantial portions of the Software.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+        let licenseString = "<br>Copyright &#169; 2016 Jared Perry, Scott Weidenkopf and Neil Rawlins<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute,sublicense,and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
         
         let attrStr = try! NSAttributedString(
             data: licenseString.dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)!,
             options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
             documentAttributes: nil
         )
-        // NSFontAttributeName: UIFont(name: "Helvetica Neue", size: 18.0)!
+
         licenseLabel.attributedText = attrStr
     }
     
