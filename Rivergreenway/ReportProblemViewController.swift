@@ -191,17 +191,17 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
     func submitHandler(action: UIAlertAction) {
 
         SVProgressHUD.show()
-
-        let curr = NSDate()
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let date = formatter.stringFromDate(curr)
+        
+        let date = Converter.dateToString(NSDate())
         
         let account = ViewControllerUtilities.getAccount()!
         
-        let imageData = UIImagePNGRepresentation(imagePicked.image!)
+        var resizedImage = imagePicked.image!
+        resizedImage = self.resizeImage(resizedImage, targetSize: CGSizeMake(500.0, 500.0))
+        let imageData = UIImageJPEGRepresentation(resizedImage, 1.0)
+        imageData?.length
         let imgLink = imageData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
-        
+
         //Where calling the web API will happen
         let newProblem = ReportProblem(type: problemType.text!, description: additionalDetails.text!, active: 1, imgLink: imgLink, latitude: latitude, longitude : longitude, title: titleProblem.text!, date: date, username: account.username, notes: "", dateClosed: "")
 
@@ -218,6 +218,32 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         )
     }
 
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+        
+        let widthRatio  = targetSize.width  / image.size.width
+        let heightRatio = targetSize.height / image.size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSizeMake(size.width * heightRatio, size.height * heightRatio)
+        } else {
+            newSize = CGSizeMake(size.width * widthRatio,  size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRectMake(0, 0, newSize.width, newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.drawInRect(rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
     /**
      Callback for a successful transmission of the activity to the server.
      */
