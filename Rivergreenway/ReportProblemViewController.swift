@@ -13,21 +13,25 @@ import CoreLocation
 
 class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource, UIPickerViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate{
 
+    //Latitude and Longitude for the GPS coordinates
     private var latitude : Double?
     private var longitude : Double?
     
+    //Type of problem that the user finds
     @IBOutlet weak var problemType: UITextField!
     
     @IBAction func didBeginEditingProblemTypeTextField(sender: UITextField) {
-        self.animateProblemType(problemType, up:true)
+        self.animateProblemType(problemType, up:true) //Slides the page up so the user can see the screen and keyboard
         let problemTypePickerView:UIPickerView = UIPickerView()
         problemTypePickerView.dataSource = self
         problemTypePickerView.delegate = self
         sender.inputView = problemTypePickerView
     }
 
+    //The preset types of problems the user can choose
     var pickerDataSource = ["Tree/Branch", "Broken Glass", "High Water", "Vandalism", "Litter", "Overgrown Brush", "Trash Full", "Pothole", "Other"];
     
+    //These next four methods control the Picker View
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -49,6 +53,7 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         self.animateProblemType(problemType, up:false)
     }
     
+    //Controls how high the page slides up so the keyboard will not overlap with the page.
     func animateProblemType(textField: UITextField, up: Bool)
     {
         let movementDistance:CGFloat = -160
@@ -70,6 +75,7 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         UIView.commitAnimations()
     }
     
+    //A text field where the user will describe the problem in 1 sentence
     @IBOutlet weak var titleProblem: UITextField!
     
     @IBAction func didBeginEditingTitleProblemTextField(sender: UITextField) {
@@ -102,6 +108,7 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         UIView.commitAnimations()
     }
     
+    //Where the user will add any additional details about the problem. This field is optional for the user
     @IBOutlet weak var additionalDetails: UITextField!
     
     @IBAction func didBeginEditingAdditionalDetailsTextField(sender: UITextField) {
@@ -133,10 +140,13 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         UIView.commitAnimations()
     }
     
+    //The image view that will hold the UIImage
     @IBOutlet weak var imagePicked: UIImageView!
     
+    //This outlet is used to change the text to "Retake Photo?" after an image is selected by the user.
     @IBOutlet weak var openCameraButton: UIButton!
     
+    //This function opens the camera on the iPhone.
     @IBAction func openCameraButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             let imagePicker = UIImagePickerController()
@@ -148,15 +158,22 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         }
     }
    
+    //A label that is hidden after a user selects an image from the camera
     @IBOutlet weak var imageWillShowHere: UILabel!
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        //Displays the image taken from the camera in the UIImage view
         imagePicked.image = image
         self.dismissViewControllerAnimated(true, completion: nil);
+        //Saves the image to the user's camera roll
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        //Hides the label
         imageWillShowHere.hidden = true
+        //Hides the black border
         imagePicked.layer.borderWidth = 0.0
+        //Changes the button text
         openCameraButton.setTitle("Retake Photo?", forState: .Normal)
+        //Gets the GPS coordinates from the user
         let locManager = CLLocationManager()
         var currentLocation: CLLocation!
         locManager.requestWhenInUseAuthorization()
@@ -198,13 +215,16 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         
         let account = ViewControllerUtilities.getAccount()!
         
+        //This resizes the image to an appropriate size
         var resizedImage = imagePicked.image!
         resizedImage = self.resizeImage(resizedImage, targetSize: CGSizeMake(500.0, 500.0))
+        //Changes the UIImage to a JPEG representation with a compression of 1 (least ammount of compression on a scale of 0.0 to 1.0, resulting in the highest quality)
         let imageData = UIImageJPEGRepresentation(resizedImage, 1.0)
         imageData?.length
+        //Encodes the JPEG representation to a base64 string. This is decoded on the server and returned to a JPEG image.
         let imgLink = imageData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
 
-        //Where calling the web API will happen
+        //Sends everything necessary to the server as a JSON object
         let newProblem = ReportProblem(type: problemType.text!, description: additionalDetails.text!, active: 1, imgLink: imgLink, latitude: latitude, longitude : longitude, title: titleProblem.text!, date: date, username: account.username, notes: "", dateClosed: "")
 
         WebStore.reportProblem(newProblem,
@@ -220,6 +240,7 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         )
     }
 
+    //The function that resizes the image
     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
         let size = image.size
         

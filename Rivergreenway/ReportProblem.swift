@@ -13,19 +13,22 @@
 import Foundation
 import JSONJoy
 
+/**
+ Represents a reported problem
+ */
 class ReportProblem : DictionarySerializable {
 
     var type: String
     var description: String?
-    var active: Int
-    var imgLink: String?
-    var latitude: Double?
+    var active: Int //Always will be 1
+    var imgLink: String? //The base64 string
+    var latitude: Double? //If user doesn't have location services on then latitude and longitude will be nil
     var longitude: Double?
     var title: String
-    var date: String?
+    var date: String? //yyyy-MM-dd'T'HH:mm:ss    
     var username: String
-    var notes: String?
-    var dateClosed: String?
+    var notes: String? //Will always be nil (This field is for web app when creating a ticket)
+    var dateClosed: String? //Will always be nil (This field is for web app when closing a ticket)
     
     init(type: String, description: String? = nil, active: Int, imgLink: String? = nil, latitude: Double? = nil, longitude: Double? = nil, title: String, date: String? = nil, username: String, notes: String? = nil, dateClosed: String? = nil) {
         self.type = type
@@ -55,6 +58,10 @@ class ReportProblem : DictionarySerializable {
         self.dateClosed = try decoder["dateClosed"].getStringOptional()
     }
 
+    /**
+     Implements DictionarySerializable protocol's toDictionary function. This returns
+     this Account object as a dictionary.
+     */
     func toDictionary() -> [String: NSObject] {
         return [
             "type" : self.type,
