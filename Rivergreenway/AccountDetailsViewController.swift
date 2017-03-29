@@ -164,7 +164,7 @@ class AccountDetailsViewController: DraweredTableViewController, UIPickerViewDat
     }
     
     func passwordOkButtonPressed(action: UIAlertAction, oldPassword: String?, newPassword: String?, newPasswordConfirmed: String?) {
-        let alert = UIAlertController(title: "Change Password", message: "Success!", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Change Password", message: "\nSuccess!\n\nRemember to press the Save button to save the changes.", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
         if (oldPassword != nil && newPassword != nil && newPasswordConfirmed != nil) && (!oldPassword!.isEmpty && !newPassword!.isEmpty && !newPasswordConfirmed!.isEmpty) {
             
