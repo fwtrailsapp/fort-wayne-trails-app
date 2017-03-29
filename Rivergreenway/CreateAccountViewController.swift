@@ -39,6 +39,13 @@ class CreateAccountViewController: BaseTableViewController, UIPickerViewDataSour
                 return
             }
             
+            if usernameField.text!.characters.count > 20 {
+                let alert = UIAlertController(title: "Cannot Create Account", message: "Please enter a username that is 20 characters or less.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
+                self.presentViewController(alert, animated: false, completion: nil)
+                return
+            }
+            
             SVProgressHUD.show()
             
             let password = passwordField.text!
