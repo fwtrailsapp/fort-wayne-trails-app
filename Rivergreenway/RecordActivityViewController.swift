@@ -99,6 +99,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
         // to request authorization to access the user's location
         locationManager.requestWhenInUseAuthorization()
         
+        //allows the gps to run in the background
         locationManager.allowsBackgroundLocationUpdates = true
         
         // enable 'My Location' and the 'My Location' button on the map view
