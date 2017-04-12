@@ -276,6 +276,13 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         let alert = UIAlertController(title: "Thank You.", message: "You have successfully submitted the problem.", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
         self.presentViewController(alert, animated: false, completion: nil)
+        
+        imagePicked.image = nil
+        imagePicked.layer.borderWidth = 2.0
+        imageWillShowHere.hidden = false
+        problemType.text = ""
+        titleProblem.text = ""
+        additionalDetails.text = ""
     }
     
     /**
