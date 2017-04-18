@@ -227,7 +227,8 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
      */
     func updateTime() {
         if recorder != nil && (recorder!.isRecording()) {
-            displayTime += 1;
+
+             displayTime += 1;
             durationLabel.text = Converter.timeIntervalToString(displayTime)
             recorder?.updateDuration(displayTime)
         }
@@ -262,6 +263,7 @@ class RecordActivityViewController: DraweredViewController, CLLocationManagerDel
             recorder = TrailActivityRecorder(startTime: NSDate(), exerciseType: exerciseType, BMR: ViewControllerUtilities.getAccount()!.BMR())
             try recorder!.start()
             startNewPolyline()
+            
         } catch {
             print("error starting")
         }

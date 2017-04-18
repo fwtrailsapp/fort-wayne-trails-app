@@ -283,6 +283,7 @@ class ReportProblemViewContoller: DraweredViewController, UIPickerViewDataSource
         problemType.text = ""
         titleProblem.text = ""
         additionalDetails.text = ""
+        openCameraButton.setTitle("Open Camera", forState: .Normal)
     }
     
     /**
